@@ -42,6 +42,7 @@ public class Usewod {
                 }
             }).map(Usewod::parseToOp).forEach((Op op)-> {
                 SSE.write(op);
+
             });
 //            int count = 0;
 //            for (String line : (Iterable<String>) lines::iterator) {
@@ -63,5 +64,3 @@ public class Usewod {
         return op;
     }
 }
-
-

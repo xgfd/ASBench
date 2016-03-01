@@ -15,12 +15,13 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="module-library" exported="">
-      <library name="jena-arq-3.0.1.jar">
+      <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/jena-arq-3.0.1.jar!/" />
+          <root url="file://$MODULE_DIR$/lib" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/lib" recursive="false" />
       </library>
     </orderEntry>
   </component>
