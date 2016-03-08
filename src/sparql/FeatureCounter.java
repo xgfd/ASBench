@@ -98,7 +98,6 @@ public class FeatureCounter implements OpVisitor {
 
     @Override
     public void visit(OpAssign opAssign) {
-        opAssign.getVarExprList();
 
     }
 
