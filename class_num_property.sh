@@ -1,6 +1,6 @@
 classA=dbo:$1
 
-query="CONSTRUCT+{${classA}+?p+?range}+WHERE+{+[]+a+${classA};+?p+[].+?p+rdfs:range+?range.+FILTER+regex(?range,+\"^http://www.w3.org/2001/XMLSchema#\",+\"i\")}"
+query="CONSTRUCT+{${classA}+?p+?range}+WHERE+{?p+rdfs:range+?range.+FILTER+regex(?range,+\"^http://www.w3.org/2001/XMLSchema%23\",+\"i\")+{SELECT+DISTINCT+?p+WHERE+{+[]+a+${classA};+?p+[].+}+}+}"
 
 echo \#${query}
 

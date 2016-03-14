@@ -59,3 +59,17 @@ where {
             #limit 1000
         }
 } order by ?range
+
+SELECT *
+WHERE 
+{?p rdfs:range ?range. FILTER regex(?range, "^http://www.w3.org/2001/XMLSchema#", "i")
+    {SELECT ?p
+        WHERE { [] a dbo:Person; ?p []. 
+            {SELECT DISTINCT ?p 
+                WHERE {
+                    ?p rdf:type rdf:Property.
+                }
+            }
+        }
+    }
+}

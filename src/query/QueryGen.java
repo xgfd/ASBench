@@ -14,10 +14,7 @@ import org.apache.jena.sparql.core.Var;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Random;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -25,23 +22,23 @@ import java.util.stream.Stream;
  * Created by xgfd on 11/03/2016.
  */
 public class QueryGen {
-    private static List<String> numericProperties;
+    private static List<String> priories;
     private static List<String> ignore;
+    private static final Node a = NodeFactory.createURI("http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
     private static Resource lastNode;
 
+    private static final double SELECT_P = 0.7;
+    private static final double SELECT_NUM_P = 0.3;
+    private static final double GROW_STEM = 0.7;
+
     public static void main(String[] args) {
-        String inputFileName = args[0],
-                rootURI = "<http://dbpedia.org/ontology/Person>";
+        String[] inputFileNames = args;
 
-        if (args.length > 1) {
-            rootURI = args[1];
-        }
-
-        Model model = loadRDF(inputFileName);
+        Model model = loadRDF(inputFileNames);
 
         //read file into stream, try-with-resources
-        try (Stream<String> stream = Files.lines(Paths.get("./properties.txt")); Stream<String> ignoreStream = Files.lines(Paths.get("./ignore.txt"))) {
-            numericProperties = stream.collect(Collectors.toList());
+        try (Stream<String> prioryStream = Files.lines(Paths.get("./properties.txt")); Stream<String> ignoreStream = Files.lines(Paths.get("./ignore.txt"))) {
+            priories = prioryStream.collect(Collectors.toList());
             ignore = ignoreStream.collect(Collectors.toList());
 
             Set<Resource> roots = getRoots(model, 5);
@@ -73,12 +70,14 @@ public class QueryGen {
         return resSet;
     }
 
-    private static Model loadRDF(String inputFileName) {
+    private static Model loadRDF(String[] inputFileNames) {
         // create an empty model
         Model model = ModelFactory.createDefaultModel();
         // read the RDF file
         System.out.println("Loading RDF...");
-        model.read(inputFileName);
+        for (int i = 0; i < inputFileNames.length; i++) {
+            model.read(inputFileNames[i]);
+        }
         System.out.println("Loading finished");
         return model;
     }
@@ -112,25 +111,21 @@ public class QueryGen {
                 continue;
             }
 
-            if (numericProperties.contains(p.toString())) {
+            if (priories.contains(p.toString()) && ran.nextDouble() < SELECT_NUM_P) {
                 // property whose range is a numerical value
                 leaves.add(statement);
             } else {
                 // property whose range is not a numerical value
                 RDFNode obj = statement.getObject();
-                if (obj.isURIResource() && obj != lastNode) {
-
-                    if (ran.nextDouble() > 0.7) {
-                        //discard 30% properties
-                        continue;
-                    }
+                if (obj.isURIResource() && obj != lastNode && ran.nextDouble() < SELECT_P) {
 
                     Resource objNode = (Resource) obj;
 
                     // 50% chance to extend the current chain
-                    boolean growStem = ran.nextBoolean();
+                    boolean growStem = ran.nextDouble() < GROW_STEM;
 
                     if (growStem) {
+                        lastNode = objNode;
                         //grow a stem node to form a chain
                         stem.add(statement);
                         //continue walk a stem node
@@ -147,11 +142,12 @@ public class QueryGen {
     }
 
     private static void addNumProperties(Resource node, Set<Statement> list) {
+        Random ran = new Random();
         StmtIterator iter = node.listProperties();
         while (iter.hasNext()) {
             Statement statement = iter.nextStatement();
             Resource p = statement.getPredicate();
-            if (numericProperties.contains(p.toString())) {
+            if (priories.contains(p.toString()) && ran.nextDouble() < SELECT_NUM_P) {
                 // property whose range is a numerical value
                 list.add(statement);
             }
@@ -165,18 +161,15 @@ public class QueryGen {
         Op op;
         BasicPattern pat = new BasicPattern();                 // Make a pattern
 
-        final boolean[] isLastNodeVar = {false};
-
         nonNumP.stream()
                 .map((s) -> {
                     boolean sub = false;
                     boolean obj = false;
 
-                    if (!isLastNodeVar[0]) {
+                    if (variables.contains(s.getSubject())) {
                         sub = true;
                         if (ran.nextBoolean()) {
                             obj = true;
-                            isLastNodeVar[0] = true;
                         }
                     } else {
                         if (ran.nextBoolean()) {
@@ -185,7 +178,6 @@ public class QueryGen {
 
                         if (ran.nextBoolean()) {
                             obj = true;
-                            isLastNodeVar[0] = true;
                         }
                     }
 
@@ -213,13 +205,44 @@ public class QueryGen {
         numP.stream()
                 .map((s) -> {
                     boolean sub = false;
-                    boolean obj = false;
+                    boolean obj = true;
                     if (variables.contains(s.getSubject())) {
                         sub = true;
                     }
                     return tripleToQuery(s, sub, obj);
                 })
                 .forEach(pat::add);
+
+        List<Triple> triples = pat.getList();
+
+        Set<Triple> toAdd = new HashSet<>();
+        Set<Triple> toRemove = new HashSet<>();
+
+        triples.stream().forEach(t -> {
+            Node sub = t.getSubject();
+            Node obj = t.getObject();
+
+            if (sub.isConcrete()) {
+                Node inst = Var.alloc("instOf" + sub.getLocalName());
+                Triple t1 = Triple.create(inst, a, sub);
+                Triple t2 = Triple.create(inst, t.getPredicate(), obj);
+                toAdd.add(t1);
+                toAdd.add(t2);
+                toRemove.add(t);
+            }
+
+            if (obj.isConcrete()) {
+                Node inst = Var.alloc("instOf" + obj.getLocalName());
+                Triple t1 = Triple.create(inst, a, obj);
+                Triple t2 = Triple.create(sub, t.getPredicate(), inst);
+                toAdd.add(t1);
+                toAdd.add(t2);
+                toRemove.add(t);
+            }
+        });
+
+        triples.removeAll(toRemove);
+        triples.addAll(toAdd);
 
         op = new OpBGP(pat);                                   // Make a BGP from this pattern
         Query q = OpAsQuery.asQuery(op);                       // Convert to a query
