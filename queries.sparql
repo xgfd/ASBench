@@ -45,3 +45,17 @@ select ?showB ?subjCountShowAB ?subjCountShowA ?subjCountShowB (strdt(?subjCount
                 } group by ?showB ?subjCountShowAB ?subjCountShowA
         }
     } order by desc(?subjScore) limit 100
+
+
+select *
+where {
+    ?p rdfs:range ?range.
+        FILTER regex(?range, "^http://www.w3.org/2001/XMLSchema#", "i")
+        {
+            select distinct ?p 
+                where {
+                    ?p rdf:type rdf:Property.
+                }           
+            #limit 1000
+        }
+} order by ?range
