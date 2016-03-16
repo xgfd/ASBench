@@ -54,16 +54,17 @@ public class QueryGen {
         }
     }
 
-    private static Set<Resource> getRoots(Model model, int cap) {
+    private static Set<Resource> getRoots(Model model, double cap) {
         ResIterator resIterator = model.listSubjects();
-        Set<Resource> resSet = resIterator.toSet();
-        float thresh = cap / resSet.size();
+        Set<Resource> resSet = new HashSet<>();
+        double thresh = cap / model.listSubjects().toSet().size();
 
         Random ran = new Random();
 
         while (resIterator.hasNext()) {
-            if (ran.nextDouble() > thresh) {
-                resSet.remove(resIterator.nextResource());
+            Resource sub = resIterator.nextResource();
+            if (ran.nextDouble() < thresh) {
+                resSet.add(sub);
             }
         }
 
