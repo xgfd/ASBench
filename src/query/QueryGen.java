@@ -10,6 +10,7 @@ import org.apache.jena.sparql.algebra.OpAsQuery;
 import org.apache.jena.sparql.algebra.op.OpBGP;
 import org.apache.jena.sparql.core.BasicPattern;
 import org.apache.jena.sparql.core.Var;
+import utils.GraphViz;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -25,11 +26,13 @@ public class QueryGen {
     private static List<String> priories;
     private static List<String> ignore;
     private static final Node a = NodeFactory.createURI("http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
+    private static final String xsd = "http://www.w3.org/2001/XMLSchema#";
     private static Resource lastNode;
 
     private static final double SELECT_P = 0.7;
     private static final double SELECT_NUM_P = 0.3;
     private static final double GROW_STEM = 0.7;
+    private static final int STEM_LENGTH = 4;
 
     public static void main(String[] args) {
         String[] inputFileNames = args;
@@ -46,6 +49,7 @@ public class QueryGen {
             roots.stream()
                     .forEach((res) -> {
                         System.out.println("Generating query from " + res);
+                        varId = 0;
                         Query query = randomWalk(model, res.getURI());
                         System.out.println(query);
                     });
@@ -104,7 +108,7 @@ public class QueryGen {
         Random ran = new Random();
         StmtIterator iter = node.listProperties();
 
-        while (iter.hasNext() && stem.size() < 6 && leaves.size() < 10) {
+        while (iter.hasNext() && stem.size() < STEM_LENGTH && leaves.size() < 10) {
             Statement statement = iter.nextStatement();
             Resource p = statement.getPredicate();
 
@@ -157,7 +161,7 @@ public class QueryGen {
 
     private static Query toQuery(Set<Statement> numP, Set<Statement> nonNumP) {
         Random ran = new Random();
-        Set<Resource> variables = new HashSet<>();
+        Set<String> variables = new HashSet<>();
 
         Op op;
         BasicPattern pat = new BasicPattern();                 // Make a pattern
@@ -167,7 +171,10 @@ public class QueryGen {
                     boolean sub = false;
                     boolean obj = false;
 
-                    if (variables.contains(s.getSubject())) {
+                    String sUri = s.getSubject().getURI();
+                    String oUri = ((Resource) s.getObject()).getURI();
+
+                    if (variables.contains(sUri)) {
                         sub = true;
                         if (ran.nextBoolean()) {
                             obj = true;
@@ -182,20 +189,20 @@ public class QueryGen {
                         }
                     }
 
-                    if (variables.contains(s.getSubject())) {
+                    if (variables.contains(sUri)) {
                         sub = true;
                     }
 
-                    if (variables.contains(s.getObject())) {
+                    if (variables.contains(oUri)) {
                         obj = true;
                     }
 
                     if (sub) {
-                        variables.add(s.getSubject());
+                        variables.add(sUri);
                     }
 
                     if (obj) {
-                        variables.add((Resource) s.getObject());
+                        variables.add(oUri);
                     }
 
                     return tripleToQuery(s, sub, obj);
@@ -245,6 +252,29 @@ public class QueryGen {
         triples.removeAll(toRemove);
         triples.addAll(toAdd);
 
+        //to graphviz
+        GraphViz gv = new GraphViz();
+        for (int i = 0; i < triples.size(); i++) {
+            Triple t = triples.get(i);
+            String v1, v2;
+
+            if (t.getSubject().isVariable()) {
+                v1 = "?" + t.getSubject().getName();
+            } else {
+                v1 = "dbo:" + t.getSubject().getLocalName();
+            }
+
+            if (t.getObject().isVariable()) {
+                v2 = "?" + t.getObject().getName();
+            } else {
+                v2 = "dbo:" + t.getObject().getLocalName();
+            }
+
+            gv.addEdge(v1, t.getPredicate().getLocalName(), v2);
+        }
+
+        System.out.println(gv.toString());
+
         op = new OpBGP(pat);                                   // Make a BGP from this pattern
         Query q = OpAsQuery.asQuery(op);                       // Convert to a query
         q.setQuerySelectType();
@@ -257,10 +287,17 @@ public class QueryGen {
         return pattern;
     }
 
+    private static int varId = 0;
+
     private static Node resToNode(Resource r, boolean toVar) {
         Node n;
         if (toVar) {
             String name = r.getLocalName();
+
+            if (r.getURI().contains(xsd)) {
+                name += varId++;
+            }
+
             n = Var.alloc(name);
         } else {
             n = NodeFactory.createURI(r.getURI());
