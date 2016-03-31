@@ -1,5 +1,5 @@
 declare -a classNames
-classNames=(`cat $1`)
+classNames=(`cat ${1?Require a file of class names}`)
 
 for ((i = 0; i < ${#classNames[@]}; i++))
     do
@@ -8,7 +8,7 @@ for ((i = 0; i < ${#classNames[@]}; i++))
                 classA=${classNames[$i]}
                 classB=${classNames[$j]}
                 echo "Processing pair: ${classA} - ${classB}"
-                sh pair_relations.sh ${classA} ${classB} >> class_properties.ttl
+                sh c2p.sh ${classA} ${classB} >> class_properties.ttl
                 printf '\n\n' >> class_properties.ttl
             done
     done

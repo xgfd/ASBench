@@ -1,0 +1,30 @@
+CONSTRUCT {dbo:$1 dbo:$2 ?count}
+WHERE
+{SELECT (COUNT (*) AS ?count)
+  WHERE
+  {
+    SELECT DISTINCT ?n1 ?n2 ?n3 ?n4 ?p1 ?p2 ?p3 ?p4 ?p5
+    WHERE
+    {
+      ?s a dbo:$1.
+      ?e a dbo:$2.
+
+      ?n1 a ?c1.
+      ?n2 a ?c2.
+      ?n3 a ?c3.
+      ?n4 a ?c4.
+
+      FILTER (!sameTerm(?c1, owl:Thing))
+      FILTER (!sameTerm(?c2, owl:Thing))
+      FILTER (!sameTerm(?c3, owl:Thing))
+      FILTER (!sameTerm(?c4, owl:Thing))
+
+      ?s ?p1 ?n1.
+      ?n1 ?p2 ?n2.
+      ?n2 ?p3 ?n3.
+      ?n3 ?p4 ?n4.
+      ?n4 ?p5 ?e.
+    }
+    limit 500000
+  }
+}

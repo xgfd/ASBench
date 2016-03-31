@@ -28,6 +28,7 @@ public class QueryGen {
     private static final Node a = NodeFactory.createURI("http://www.w3.org/1999/02/22-rdf-syntax-ns#type");
     private static final String xsd = "http://www.w3.org/2001/XMLSchema#";
     private static Resource lastNode;
+    private static Model model;
 
     private static final double SELECT_P = 0.7;
     private static final double SELECT_NUM_P = 0.3;
@@ -38,13 +39,14 @@ public class QueryGen {
         String[] inputFileNames = args;
 
         Model model = loadRDF(inputFileNames);
+        model.setNsPrefix("rdf", "http://www.w3.org/1999/02/22-rdf-syntax-ns#");
 
         //read file into stream, try-with-resources
         try (Stream<String> prioryStream = Files.lines(Paths.get("./properties.txt")); Stream<String> ignoreStream = Files.lines(Paths.get("./ignore.txt"))) {
             priories = prioryStream.collect(Collectors.toList());
             ignore = ignoreStream.collect(Collectors.toList());
 
-            Set<Resource> roots = getRoots(model, 5);
+            Set<Resource> roots = getRoots(model);
 
             roots.stream()
                     .forEach((res) -> {
@@ -58,26 +60,34 @@ public class QueryGen {
         }
     }
 
-    private static Set<Resource> getRoots(Model model, double cap) {
-        ResIterator resIterator = model.listSubjects();
+    private static Set<Resource> getRoots(Model model) {
+
         Set<Resource> resSet = new HashSet<>();
-        double thresh = cap / model.listSubjects().toSet().size();
 
-        Random ran = new Random();
-
-        while (resIterator.hasNext()) {
-            Resource sub = resIterator.nextResource();
-            if (ran.nextDouble() < thresh) {
-                resSet.add(sub);
-            }
+        try (Stream<String> seeds = Files.lines(Paths.get("./seeds.txt"))) {
+            resSet = seeds.map(uri -> model.getResource(model.expandPrefix("dbo:" + uri))).collect(Collectors.toSet());
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+
+//        ResIterator resIterator = model.listSubjects();
+//        double thresh = cap / model.listSubjects().toSet().size();
+//
+//        Random ran = new Random();
+//
+//        while (resIterator.hasNext()) {
+//            Resource sub = resIterator.nextResource();
+//            if (ran.nextDouble() < thresh) {
+//                resSet.add(sub);
+//            }
+//        }
 
         return resSet;
     }
 
     private static Model loadRDF(String[] inputFileNames) {
         // create an empty model
-        Model model = ModelFactory.createDefaultModel();
+        model = ModelFactory.createDefaultModel();
         // read the RDF file
         System.out.println("Loading RDF...");
         for (int i = 0; i < inputFileNames.length; i++) {
@@ -168,56 +178,59 @@ public class QueryGen {
 
         nonNumP.stream()
                 .map((s) -> {
-                    boolean sub = false;
-                    boolean obj = false;
+//                    boolean sub = false;
+//                    boolean obj = false;
 
-                    String sUri = s.getSubject().getURI();
-                    String oUri = ((Resource) s.getObject()).getURI();
+//                    String sUri = s.getSubject().getURI();
+//                    String oUri = ((Resource) s.getObject()).getURI();
+//
+//                    while (!sub && !obj) {
+//                        if (variables.contains(sUri)) {
+//                            sub = true;
+//                        }
+//
+//                        if (variables.contains(oUri)) {
+//                            obj = true;
+//                        }
+//                    }
+//
+//                    if (variables.contains(sUri)) {
+//                        sub = true;
+//                        if (ran.nextBoolean()) {
+//                            obj = true;
+//                        }
+//                    } else {
+//                        if (ran.nextBoolean()) {
+//                            sub = true;
+//                        }
+//
+//                        if (ran.nextBoolean()) {
+//                            obj = true;
+//                        }
+//                    }
+//
+//
+//                    if (sub) {
+//                        variables.add(sUri);
+//                    }
+//
+//                    if (obj) {
+//                        variables.add(oUri);
+//                    }
 
-                    if (variables.contains(sUri)) {
-                        sub = true;
-                        if (ran.nextBoolean()) {
-                            obj = true;
-                        }
-                    } else {
-                        if (ran.nextBoolean()) {
-                            sub = true;
-                        }
-
-                        if (ran.nextBoolean()) {
-                            obj = true;
-                        }
-                    }
-
-                    if (variables.contains(sUri)) {
-                        sub = true;
-                    }
-
-                    if (variables.contains(oUri)) {
-                        obj = true;
-                    }
-
-                    if (sub) {
-                        variables.add(sUri);
-                    }
-
-                    if (obj) {
-                        variables.add(oUri);
-                    }
-
-                    return tripleToQuery(s, sub, obj);
+                    return tripleToQuery(s, true, true);
                 })
                 // Add our pattern match
                 .forEach(pat::add);
 
         numP.stream()
                 .map((s) -> {
-                    boolean sub = false;
-                    boolean obj = true;
-                    if (variables.contains(s.getSubject())) {
-                        sub = true;
-                    }
-                    return tripleToQuery(s, sub, obj);
+//                    boolean sub = false;
+//                    boolean obj = true;
+//                    if (variables.contains(s.getSubject())) {
+//                        sub = true;
+//                    }
+                    return tripleToQuery(s, true, true);
                 })
                 .forEach(pat::add);
 
@@ -252,28 +265,7 @@ public class QueryGen {
         triples.removeAll(toRemove);
         triples.addAll(toAdd);
 
-        //to graphviz
-        GraphViz gv = new GraphViz();
-        for (int i = 0; i < triples.size(); i++) {
-            Triple t = triples.get(i);
-            String v1, v2;
-
-            if (t.getSubject().isVariable()) {
-                v1 = "?" + t.getSubject().getName();
-            } else {
-                v1 = "dbo:" + t.getSubject().getLocalName();
-            }
-
-            if (t.getObject().isVariable()) {
-                v2 = "?" + t.getObject().getName();
-            } else {
-                v2 = "dbo:" + t.getObject().getLocalName();
-            }
-
-            gv.addEdge(v1, t.getPredicate().getLocalName(), v2);
-        }
-
-        System.out.println(gv.toString());
+        System.out.println(toGraphviz(triples).toString());
 
         op = new OpBGP(pat);                                   // Make a BGP from this pattern
         Query q = OpAsQuery.asQuery(op);                       // Convert to a query
@@ -303,5 +295,32 @@ public class QueryGen {
             n = NodeFactory.createURI(r.getURI());
         }
         return n;
+    }
+
+    private static String toGraphviz(Collection<Triple> triples) {
+
+        //to graphviz
+        GraphViz gv = new GraphViz();
+        Iterator<Triple> iter = triples.iterator();
+        while (iter.hasNext()) {
+            Triple t = iter.next();
+            String v1, v2;
+
+            if (t.getSubject().isVariable()) {
+                v1 = "?" + t.getSubject().getName();
+            } else {
+                v1 = "dbo:" + t.getSubject().getLocalName();
+            }
+
+            if (t.getObject().isVariable()) {
+                v2 = "?" + t.getObject().getName();
+            } else {
+                v2 = "dbo:" + t.getObject().getLocalName();
+            }
+
+            gv.addEdge(v1, model.qnameFor(t.getPredicate().getURI()), v2);
+        }
+
+        return gv.toString();
     }
 }

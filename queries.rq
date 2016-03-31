@@ -52,24 +52,135 @@ where {
     ?p rdfs:range ?range.
         FILTER regex(?range, "^http://www.w3.org/2001/XMLSchema#", "i")
         {
-            select distinct ?p 
+            select distinct ?p
                 where {
                     ?p rdf:type rdf:Property.
-                }           
+                }
             #limit 1000
         }
 } order by ?range
 
 SELECT *
-WHERE 
+WHERE
 {?p rdfs:range ?range. FILTER regex(?range, "^http://www.w3.org/2001/XMLSchema#", "i")
     {SELECT ?p
-        WHERE { [] a dbo:Person; ?p []. 
-            {SELECT DISTINCT ?p 
+        WHERE { [] a dbo:Person; ?p [].
+            {SELECT DISTINCT ?p
                 WHERE {
                     ?p rdf:type rdf:Property.
                 }
             }
         }
     }
+}
+
+SELECT DISTINCT ?p1 ?c1 ?p2 ?c2 ?p3 ?c3 ?p4 ?c4 ?p5
+CONSTRUCT
+{
+  dbo:Person ?p1 ?c1.
+  ?c1 ?p2 ?c2.
+  ?c2 ?p3 ?c3.
+  ?c3 ?p4 ?c4.
+  ?c4 ?p5 dbo:Event.
+}
+WHERE
+{
+  ?s a dbo:Person.
+  ?e a dbo:Event.
+
+  ?n1 a ?c1.
+  ?n2 a ?c2.
+  ?n3 a ?c3.
+  ?n4 a ?c4.
+
+  FILTER (!sameTerm(?c1, owl:Thing))
+  FILTER (!sameTerm(?c2, owl:Thing))
+  FILTER (!sameTerm(?c3, owl:Thing))
+  FILTER (!sameTerm(?c4, owl:Thing))
+
+  ?s ?p1 ?n1.
+  ?n1 ?p2 ?n2.
+  ?n2 ?p3 ?n3.
+  ?n3 ?p4 ?n4.
+  ?n4 ?p5 ?e.
+}
+
+#ci4c 398776089  239/100000
+SELECT (COUNT (DISTINCT *) AS ?count)
+WHERE
+{
+  SELECT REDUCED ?n1 ?n2 ?n3 ?n4 ?p1 ?p2 ?p3 ?p4 ?p5
+  WHERE
+  {
+    ?s a dbo:Person.
+    ?e a dbo:Event.
+
+    ?n1 a ?c1.
+    ?n2 a ?c2.
+    ?n3 a ?c3.
+    ?n4 a ?c4.
+
+    FILTER (!sameTerm(?c1, owl:Thing))
+    FILTER (!sameTerm(?c2, owl:Thing))
+    FILTER (!sameTerm(?c3, owl:Thing))
+    FILTER (!sameTerm(?c4, owl:Thing))
+
+    ?s ?p1 ?n1.
+    ?n1 ?p2 ?n2.
+    ?n2 ?p3 ?n3.
+    ?n3 ?p4 ?n4.
+    ?n4 ?p5 ?e.
+  }
+}
+
+#c6 3802341 100000/100000
+SELECT (COUNT (DISTINCT *) AS ?count)
+WHERE
+{
+  SELECT REDUCED ?c1 ?c2 ?c3 ?c4 ?p1 ?p2 ?p3 ?p4 ?p5
+  WHERE
+  {
+    ?s a dbo:Person.
+    ?e a dbo:Event.
+
+    ?n1 a ?c1.
+    ?n2 a ?c2.
+    ?n3 a ?c3.
+    ?n4 a ?c4.
+
+    FILTER (!sameTerm(?c1, owl:Thing))
+    FILTER (!sameTerm(?c2, owl:Thing))
+    FILTER (!sameTerm(?c3, owl:Thing))
+    FILTER (!sameTerm(?c4, owl:Thing))
+
+    ?s ?p1 ?n1.
+    ?n1 ?p2 ?n2.
+    ?n2 ?p3 ?n3.
+    ?n3 ?p4 ?n4.
+    ?n4 ?p5 ?e.
+  }
+}
+
+#i* 467105204
+SELECT (COUNT (*) AS ?count)
+WHERE
+{
+  ?s a dbo:Person.
+  ?e a dbo:Event.
+
+  ?n1 a ?c1.
+  ?n2 a ?c2.
+  ?n3 a ?c3.
+  ?n4 a ?c4.
+
+  FILTER (!sameTerm(?c1, owl:Thing))
+  FILTER (!sameTerm(?c2, owl:Thing))
+  FILTER (!sameTerm(?c3, owl:Thing))
+  FILTER (!sameTerm(?c4, owl:Thing))
+
+  ?s ?p1 ?n1.
+  ?n1 ?p2 ?n2.
+  ?n2 ?p3 ?n3.
+  ?n3 ?p4 ?n4.
+  ?n4 ?p5 ?e.
 }
