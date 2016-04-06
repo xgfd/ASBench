@@ -42,7 +42,7 @@ public class QueryGen {
         model.setNsPrefix("rdf", "http://www.w3.org/1999/02/22-rdf-syntax-ns#");
 
         //read file into stream, try-with-resources
-        try (Stream<String> prioryStream = Files.lines(Paths.get("./properties.txt")); Stream<String> ignoreStream = Files.lines(Paths.get("./ignore.txt"))) {
+        try (Stream<String> prioryStream = Files.lines(Paths.get("./np.txt")); Stream<String> ignoreStream = Files.lines(Paths.get("./ignore.txt"))) {
             priories = prioryStream.collect(Collectors.toList());
             ignore = ignoreStream.collect(Collectors.toList());
 
@@ -52,7 +52,7 @@ public class QueryGen {
                     .forEach((res) -> {
                         System.out.println("Generating query from " + res);
                         varId = 0;
-                        Query query = randomWalk(model, res.getURI());
+                        Query query = randomWalk(model, res);
                         System.out.println(query);
                     });
         } catch (IOException e) {
@@ -61,26 +61,28 @@ public class QueryGen {
     }
 
     private static Set<Resource> getRoots(Model model) {
+        int cap = 20;
 
         Set<Resource> resSet = new HashSet<>();
 
-        try (Stream<String> seeds = Files.lines(Paths.get("./seeds.txt"))) {
-            resSet = seeds.map(uri -> model.getResource(model.expandPrefix("dbo:" + uri))).collect(Collectors.toSet());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-//        ResIterator resIterator = model.listSubjects();
-//        double thresh = cap / model.listSubjects().toSet().size();
-//
-//        Random ran = new Random();
-//
-//        while (resIterator.hasNext()) {
-//            Resource sub = resIterator.nextResource();
-//            if (ran.nextDouble() < thresh) {
-//                resSet.add(sub);
-//            }
+//        try (Stream<String> seeds = Files.lines(Paths.get("./seeds.txt"))) {
+//            resSet = seeds.map(uri -> model.getResource(model.expandPrefix("dbo:" + uri))).collect(Collectors.toSet());
+//        } catch (IOException e) {
+//            e.printStackTrace();
 //        }
+
+        ResIterator resIterator = model.listSubjects();
+        double size = model.listSubjects().toSet().size();
+        double thresh = cap / size;
+
+        Random ran = new Random();
+
+        while (resIterator.hasNext()) {
+            Resource sub = resIterator.nextResource();
+            if (ran.nextDouble() < thresh) {
+                resSet.add(sub);
+            }
+        }
 
         return resSet;
     }
@@ -97,9 +99,9 @@ public class QueryGen {
         return model;
     }
 
-    private static Query randomWalk(Model model, String root) {
+    private static Query randomWalk(Model model, Resource node) {
 
-        Resource node = model.getResource(root);
+//        Resource node = model.getResource(root);
         Set<Statement> numP = new HashSet();
         Set<Statement> nonNumP = new HashSet();
 

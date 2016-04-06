@@ -10,7 +10,7 @@ for ((i = 0; i < ${#classNames[@]}; i++))
                 classA=${classNames[$i]}
                 classB=${classNames[$j]}
                 echo "Processing pair: ${classA} - ${classB}; index $index"
-                sh ci4cp.sh ${classA} ${classB} $classA$index $classB$index >> ci4cp.ttl
+                sh ci4cp.sh ${classA} ${classB} $classA_$index $classB_$index >> ci4cp.ttl
                 printf '\n\n' >> ci4cp.ttl
                 ((index++))
             done
