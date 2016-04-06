@@ -33,7 +33,7 @@ public class QueryGen {
     private static final double SELECT_P = 0.7;
     private static final double SELECT_NUM_P = 0.3;
     private static final double GROW_STEM = 0.7;
-    private static final int STEM_LENGTH = 4;
+    private static final int STEM_LENGTH = 6;
 
     public static void main(String[] args) {
         String[] inputFileNames = args;
