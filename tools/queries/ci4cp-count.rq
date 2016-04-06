@@ -1,6 +1,7 @@
 CONSTRUCT {dbo:$1 dbo:$2 ?count}
 WHERE
-{SELECT (COUNT (*) AS ?count)
+{
+  SELECT (COUNT (*) AS ?count)
   WHERE
   {
     SELECT DISTINCT ?n1 ?n2 ?n3 ?n4 ?p1 ?p2 ?p3 ?p4 ?p5
