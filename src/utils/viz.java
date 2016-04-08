@@ -29,6 +29,7 @@ import java.util.stream.Stream;
  * Created by xgfd on 07/04/2016.
  */
 public class viz {
+
     public static void main(String[] args) {
         boolean isRDF = args.length > 1 && args[1].contains("--t");
 

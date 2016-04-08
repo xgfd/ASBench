@@ -1,0 +1,33 @@
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+SELECT DISTINCT ?Museum (SAMPLE(?name) as ?name) (SAMPLE(?abstract) as ?abstract) (SAMPLE(?thumbnail) as ?thumbnail) (MAX(?latitude) as ?latitude) (MAX(?longitude) as ?longitude) (SAMPLE(?established) as ?established) (SAMPLE(?website) as ?website) (SAMPLE(?homepage) as ?homepage) (SAMPLE(?wikilink) as ?wikilink)
+WHERE
+{
+  ?Museum a dbpedia-owl:Museum ;
+  dbpprop:name ?name ;
+  dbpedia-owl:abstract ?abstract ;
+  dbpedia-owl:thumbnail ?thumbnail ;
+  geo:lat ?latitude ;
+  geo:long ?longitude ;
+  dbpprop:established ?established;
+  dbpprop:website ?website ;
+  foaf:homepage ?homepage ;
+  foaf:isPrimaryTopicOf ?wikilink .
+  FILTER langMatches( lang(?abstract), "ES")
+}
+GROUP BY ?Museum  LIMIT 10 OFFSET 0
+
+#digraph{
+#"?Museum"->"?homepage"[label="foaf:homepage"];
+#"?Museum"->"?established"[label="dbpprop:established"];
+#"?Museum"->"?website"[label="dbpprop:website"];
+#"?Museum"->"?abstract"[label="dbpedia-owl:abstract"];
+#"?Museum"->"?longitude"[label="geo:long"];
+#"?Museum"->"?latitude"[label="geo:lat"];
+#"?Museum"->"?wikilink"[label="foaf:isPrimaryTopicOf"];
+#"?Museum"->"dbpedia-owl:Museum"[label="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
+#"?Museum"->"?thumbnail"[label="dbpedia-owl:thumbnail"];
+#"?Museum"->"?name"[label="dbpprop:name"];
+#}
