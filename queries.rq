@@ -104,3 +104,89 @@ WHERE
       <http://dbpedia.org/property/stylisticOrigins>  ?Rock_music .
   ?Noise_rock  <http://dbpedia.org/property/stylisticOrigins>  ?Noise_music
 }
+
+digraph{
+"?Phoenician_alphabet"->"?Group15"[label="dbp:fam"];
+"?Phoenician_alphabet"->"?Proto-Sinaitic_script"[label="dbp:fam"];
+"?Cyrillic_script"->"?Group15"[label="dbp:fam"];
+"?Proto-Sinaitic_script"->"?Group15"[label="dbp:fam"];
+"?Oklahoma"->"?Cherokee_language"[label="dbo:language"];
+"?Cyrillic_script"->"?Group636"[label="dbp:fam"];
+"?Phoenician_alphabet"->"?Group2016"[label="dbp:fam"];
+"?Proto-Sinaitic_script"->"?Group636"[label="dbp:fam"];
+"?Latin_script"->"?Group1809"[label="dbp:fam"];
+"?Cyrillic_script"->"?Group774"[label="dbp:fam"];
+"?Texas"->"?Organisation489"[label="dbp:lowerhouse"];
+"?Cyrillic_script"->"?Group2016"[label="dbp:fam"];
+"?Proto-Sinaitic_script"->"?Group498"[label="dbp:fam"];
+"?Texas"->"?_Texas"[label="dbo:capital"];
+"?George_W_Bush"->"?Sport761"[label="dbo:profession"];
+"?Proto-Sinaitic_script"->"?Group1809"[label="dbp:fam"];
+"?Phoenician_alphabet"->"?Group1809"[label="dbp:fam"];
+"?Cyrillic_script"->"?Coptic_alphabet"[label="dbp:sisters"];
+"?Cyrillic_script"->"?Proto-Sinaitic_script"[label="dbp:fam"];
+"?George_W_Bush"->"?PoliticalParty560"[label="dbp:party"];
+"?_Texas"->"?Texas"[label="dbo:isPartOf"];
+"?Brian_Sandoval"->"?George_W_Bush"[label="dbp:nominator"];
+"?George_W_Bush"->"?Ann_Richards"[label="dbo:predecessor"];
+"?Cherokee_language"->"?Latin_script"[label="dbp:script"];
+"?Cyrillic_script"->"?Phoenician_alphabet"[label="dbp:fam"];
+"?Phoenician_alphabet"->"?Group498"[label="dbp:fam"];
+"?Ann_Richards"->"?Texas"[label="dbo:birthPlace"];
+"?Texas"->"?Oklahoma"[label="dbp:borderingstates"];
+"?George_W_Bush"->"?Sport554"[label="dbo:profession"];
+"?Latin_script"->"?Cyrillic_script"[label="dbp:sisters"];
+}
+SELECT  *
+WHERE
+  { ?Texas    <http://dbpedia.org/property/lowerhouse>  ?Organisation489 .
+    ?Oklahoma  <http://dbpedia.org/ontology/language>  ?Cherokee_language .
+    ?_Texas   <http://dbpedia.org/ontology/isPartOf>  ?Texas .
+    ?Cyrillic_script
+              <http://dbpedia.org/property/fam>  ?Group15 .
+    ?Latin_script
+              <http://dbpedia.org/property/fam>  ?Group1809 .
+    ?Texas    <http://dbpedia.org/ontology/capital>  ?_Texas .
+    ?Proto_Sinaitic_script
+              <http://dbpedia.org/property/fam>  ?Group498 .
+    ?George_W_Bush
+              <http://dbpedia.org/ontology/profession>  ?Sport761 .
+    ?Texas    <http://dbpedia.org/property/borderingstates>  ?Oklahoma .
+    ?Phoenician_alphabet
+              <http://dbpedia.org/property/fam>  ?Group2016 ;
+              <http://dbpedia.org/property/fam>  ?Proto_Sinaitic_script .
+    ?Ann_Richards
+              <http://dbpedia.org/ontology/birthPlace>  ?Texas .
+    ?Brian_Sandoval
+              <http://dbpedia.org/property/nominator>  ?George_W_Bush .
+    ?Proto_Sinaitic_script
+              <http://dbpedia.org/property/fam>  ?Group1809 .
+    ?Cyrillic_script
+              <http://dbpedia.org/property/fam>  ?Phoenician_alphabet ;
+              <http://dbpedia.org/property/fam>  ?Group636 .
+    ?George_W_Bush
+              <http://dbpedia.org/ontology/predecessor>  ?Ann_Richards .
+    ?Latin_script
+              <http://dbpedia.org/property/sisters>  ?Cyrillic_script .
+    ?George_W_Bush
+              <http://dbpedia.org/ontology/profession>  ?Sport554 .
+    ?Cherokee_language
+              <http://dbpedia.org/property/script>  ?Latin_script .
+    ?Phoenician_alphabet
+              <http://dbpedia.org/property/fam>  ?Group1809 .
+    ?Proto_Sinaitic_script
+              <http://dbpedia.org/property/fam>  ?Group636 .
+    ?Phoenician_alphabet
+              <http://dbpedia.org/property/fam>  ?Group15 ;
+              <http://dbpedia.org/property/fam>  ?Group498 .
+    ?Cyrillic_script
+              <http://dbpedia.org/property/fam>  ?Group774 ;
+              <http://dbpedia.org/property/fam>  ?Proto_Sinaitic_script ;
+              <http://dbpedia.org/property/sisters>  ?Coptic_alphabet .
+    ?George_W_Bush
+              <http://dbpedia.org/property/party>  ?PoliticalParty560 .
+    ?Cyrillic_script
+              <http://dbpedia.org/property/fam>  ?Group2016 .
+    ?Proto_Sinaitic_script
+              <http://dbpedia.org/property/fam>  ?Group15
+  }

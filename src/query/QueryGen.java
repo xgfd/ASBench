@@ -306,21 +306,7 @@ public class QueryGen {
         Iterator<Triple> iter = triples.iterator();
         while (iter.hasNext()) {
             Triple t = iter.next();
-            String v1, v2;
-
-            if (t.getSubject().isVariable()) {
-                v1 = "?" + t.getSubject().getName();
-            } else {
-                v1 = "dbo:" + t.getSubject().getLocalName();
-            }
-
-            if (t.getObject().isVariable()) {
-                v2 = "?" + t.getObject().getName();
-            } else {
-                v2 = "dbo:" + t.getObject().getLocalName();
-            }
-
-            gv.addEdge(v1, model.qnameFor(t.getPredicate().getURI()), v2);
+            gv.addTriple(t, model);
         }
 
         return gv.toString();
