@@ -1,22 +1,39 @@
-PREFIX bsbm-inst: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/>
-PREFIX bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-
-SELECT ?product ?label
-WHERE {
-    ?product rdfs:label ?label .
-    ?product a %ProductType% .
-	?product bsbm:productFeature %ProductFeature1% .
-	?product bsbm:productPropertyNumeric1 ?p1 .
-	FILTER ( ?p1 > %x% ) 
-	?product bsbm:productPropertyNumeric3 ?p3 .
-	FILTER (?p3 < %y% )
-    OPTIONAL { 
-        ?product bsbm:productFeature %ProductFeature2% .
-        ?product rdfs:label ?testVar }
-    FILTER (!bound(?testVar)) 
+# https://blog.semantic-web.at/2015/11/06/if-you-like-friends-you-probably-also-will-like-veronicas-closet-find-out-with-sparql-why/
+PREFIX dbp:<http://dbpedia.org/ontology/>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+PREFIX dcterms:<http://purl.org/dc/terms/>
+PREFIX dbr:<http://dbpedia.org/resource/>
+SELECT ?showB ?subjCountShowAB ?subjCountShowA ?subjCountShowB (STRDT(?subjCountShowAB,xsd:double) / (?subjCountShowA + ?subjCountShowB - ?subjCountShowAB) AS ?subjScore)
+WHERE
+{
+  SELECT ?showB ?subjCountShowAB ?subjCountShowA (COUNT(?subject) AS ?subjCountShowB)
+  WHERE
+  {
+    ?showB dcterms:subject ?subject .
+    {
+      SELECT ?showB (COUNT(?subject) AS ?subjCountShowAB) ?subjCountShowA
+      WHERE
+      {
+        ?showA dcterms:subject ?subject .
+        ?showB dcterms:subject ?subject FILTER(!sameTerm(?showA,?showB)) .
+        {
+          SELECT ?showA (COUNT(?subject) AS ?subjCountShowA)
+          WHERE
+          {
+            ?showA dcterms:subject ?subject FILTER(sameTerm(?showA,dbr:Friends)) .
+          }
+          GROUP BY ?showA
+        }
+      }
+      GROUP BY ?showB ?subjCountShowA
+    }
+  }
+  GROUP BY ?showB ?subjCountShowAB ?subjCountShowA
 }
-ORDER BY ?label
-LIMIT 10
+ORDER BY desc(?subjScore) LIMIT 100
 
+# digraph{
+# "?showA"->"?subject"[label="dcterms:subject"];
+# "?showB"->"?subject"[label="dcterms:subject"];
+# }

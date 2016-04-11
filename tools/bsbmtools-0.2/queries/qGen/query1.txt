@@ -1,3 +1,4 @@
+# from usewod dbpedia query log
 PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
 PREFIX dbpprop: <http://dbpedia.org/property/>
 PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
@@ -19,15 +20,15 @@ WHERE
 }
 GROUP BY ?Museum  LIMIT 10 OFFSET 0
 
-#digraph{
-#"?Museum"->"?homepage"[label="foaf:homepage"];
-#"?Museum"->"?established"[label="dbpprop:established"];
-#"?Museum"->"?website"[label="dbpprop:website"];
-#"?Museum"->"?abstract"[label="dbpedia-owl:abstract"];
-#"?Museum"->"?longitude"[label="geo:long"];
-#"?Museum"->"?latitude"[label="geo:lat"];
-#"?Museum"->"?wikilink"[label="foaf:isPrimaryTopicOf"];
-#"?Museum"->"dbpedia-owl:Museum"[label="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
-#"?Museum"->"?thumbnail"[label="dbpedia-owl:thumbnail"];
-#"?Museum"->"?name"[label="dbpprop:name"];
-#}
+# digraph{
+# "?Museum"->"?homepage"[label="foaf:homepage"];
+# "?Museum"->"?established"[label="dbpprop:established"];
+# "?Museum"->"?website"[label="dbpprop:website"];
+# "?Museum"->"?abstract"[label="dbpedia-owl:abstract"];
+# "?Museum"->"?longitude"[label="geo:long"];
+# "?Museum"->"?latitude"[label="geo:lat"];
+# "?Museum"->"?wikilink"[label="foaf:isPrimaryTopicOf"];
+# "?Museum"->"dbpedia-owl:Museum"[label="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
+# "?Museum"->"?thumbnail"[label="dbpedia-owl:thumbnail"];
+# "?Museum"->"?name"[label="dbpprop:name"];
+# }

@@ -1,28 +1,30 @@
-PREFIX bsbm-inst: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/>
-PREFIX bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbp:<http://dbpedia.org/ontology/>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
+PREFIX dcterms:<http://purl.org/dc/terms/>
+PREFIX dbr:<http://dbpedia.org/resource/>
 
-SELECT DISTINCT ?product ?label ?propertyTextual
-WHERE {
-    { 
-       ?product rdfs:label ?label .
-       ?product rdf:type %ProductType% .
-       ?product bsbm:productFeature %ProductFeature1% .
-	   ?product bsbm:productFeature %ProductFeature2% .
-       ?product bsbm:productPropertyTextual1 ?propertyTextual .
-	   ?product bsbm:productPropertyNumeric1 ?p1 .
-	   FILTER ( ?p1 > %x% )
-    } UNION {
-       ?product rdfs:label ?label .
-       ?product rdf:type %ProductType% .
-       ?product bsbm:productFeature %ProductFeature1% .
-	   ?product bsbm:productFeature %ProductFeature3% .
-       ?product bsbm:productPropertyTextual1 ?propertyTextual .
-	   ?product bsbm:productPropertyNumeric2 ?p2 .
-	   FILTER ( ?p2> %y% ) 
-    } 
-}
-ORDER BY ?label
-OFFSET 5
-LIMIT 10
+SELECT  (COUNT(DISTINCT ?Toyota) AS ?Toyota_Count) (COUNT(DISTINCT ?Lexus) AS ?Lexus_Count) (COUNT(DISTINCT ?Nippon_Life) AS ?Nippon_Life_Count) (COUNT(DISTINCT ?Akio_Toyoda) AS ?Akio_Toyoda_Count) (COUNT(DISTINCT ?Toyota_Ractis) AS ?Toyota_Ractis_Count) (COUNT(DISTINCT ?Bank79) AS ?Bank79_Count)
+WHERE
+  { ?Toyota   <http://dbpedia.org/property/divisions>  ?Lexus .
+    ?Lexus    <http://dbpedia.org/ontology/owningCompany>  ?Toyota .
+    #?Nippon_Life  <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>  ?Nippon_Life .
+    ?Toyota   <http://dbpedia.org/property/keyPeople>  ?Akio_Toyoda .
+    ?Toyota_Ractis
+              <http://dbpedia.org/ontology/manufacturer>  ?Toyota .
+    ?Toyota   <http://dbpedia.org/ontology/owner>  ?Nippon_Life ;
+              <http://dbpedia.org/property/owner>  ?Bank79 ;
+              <http://dbpedia.org/property/owner>  ?Nippon_Life ;
+              <http://dbpedia.org/ontology/owner>  ?Bank79
+  }
+
+  # digraph{
+  # "?Toyota_Ractis"->"?Toyota"[label="dbo:manufacturer"];
+  # "?Lexus"->"?Toyota"[label="dbo:owningCompany"];
+  # "?Toyota"->"?Nippon_Life"[label="dbo:owner"];
+  # "?Toyota"->"?Akio_Toyoda"[label="dbp:keyPeople"];
+  # "?Toyota"->"?Nippon_Life"[label="dbp:owner"];
+  # "?Toyota"->"?Bank79"[label="dbp:owner"];
+  # "?Toyota"->"?Bank79"[label="dbo:owner"];
+  # "?Toyota"->"?Lexus"[label="dbp:divisions"];
+  # }

@@ -53,6 +53,7 @@ public class QueryGen {
                         System.out.println("Generating query from " + res);
                         varId = 0;
                         Query query = randomWalk(model, res);
+                        QueryDressing.countDistinctAll(query);
                         System.out.println(query);
                     });
         } catch (IOException e) {
