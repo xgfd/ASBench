@@ -1,11 +1,100 @@
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
+PREFIX  dbo:  <http://dbpedia.org/ontology/>
+PREFIX  dbp:  <http://dbpedia.org/property/>
+PREFIX  dbr:  <http://dbpedia.org/resource/>
+PREFIX  xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX  dcterms: <http://purl.org/dc/terms/>
+PREFIX  rdfs: <http://www.w3.org/2000/01/rdf_schema#>
 
-SELECT ?product ?label
-WHERE {
-	?product rdfs:label ?label .
-    ?product rdf:type bsbm:Product .
-	FILTER regex(?label, "%word1%")
-}
+SELECT DISTINCT  ?Texas (COUNT(DISTINCT ?_Texas) AS ?_Texas_CountExpr) (COUNT(DISTINCT ?Texas) AS ?Texas_CountExpr) (COUNT(DISTINCT ?List_of_counties_in_Texas) AS ?List_of_counties_in_Texas_CountExpr) (COUNT(DISTINCT ?Robert_Mueller_Municipal_Airport) AS ?Robert_Mueller_Municipal_Airport_CountExpr) (COUNT(DISTINCT ?Oklahoma) AS ?Oklahoma_CountExpr) (COUNT(DISTINCT ?Organisation489) AS ?Organisation489_CountExpr)
+WHERE
+  { ?_Texas   dbo:isPartOf         ?Texas ;
+              dbp:subdivisionType  ?List_of_counties_in_Texas .
+    ?List_of_counties_in_Texas
+              dbp:territory        ?Texas .
+    ?Robert_Mueller_Municipal_Airport
+              dbo:location         ?_Texas .
+    ?Texas    dbo:capital          ?_Texas ;
+              dbp:borderingstates  ?Oklahoma ;
+              dbp:lowerhouse       ?Organisation489
+  }
+GROUP BY ?Texas
 
+# digraph{
+# "?_Texas"->"?List_of_counties_in_Texas"[label="dbp:subdivisionType"];
+# "?List_of_counties_in_Texas"->"?Texas"[label="dbp:territory"];
+# "?Robert_Mueller_Municipal_Airport"->"?_Texas"[label="dbo:location"];
+# "?_Texas"->"?Texas"[label="dbo:isPartOf"];
+# "?Texas"->"?Oklahoma"[label="dbp:borderingstates"];
+# "?Texas"->"?Organisation489"[label="dbp:lowerhouse"];
+# "?Texas"->"?_Texas"[label="dbo:capital"];
+# }
+
+# Texas,_Texas_CountExpr,Texas_CountExpr,List_of_counties_in_Texas_CountExpr,Robert_Mueller_Municipal_Airport_CountExpr,Oklahoma_CountExpr,Organisation489_CountExpr
+# dbr:Texas,1,1,1,351,4,1
+# dbr:Kansas,1,1,1,58,4,1
+# dbr:Rhode_Island,1,1,1,247,2,1
+# dbr:Oregon,1,1,1,85,2,1
+# dbr:Jokerit,3,1,5,6,6,26
+# dbr:Dinamo_Riga_(original),1,1,1,3,1,3
+# dbr:Lake_Erie_Monsters,1,1,1,1,1,1
+# dbr:New_Jersey_Devils,23,1,27,58,22,64
+# dbr:St._Louis_Braves,1,1,1,2,1,12
+# dbr:New_York_Islanders,38,1,46,78,39,54
+# dbr:Hartford_Whalers,21,1,22,33,17,64
+# dbr:San_Jose_Sharks,19,1,20,44,19,48
+# dbr:HC_Olomouc,1,1,2,3,1,15
+# dbr:Bryn�s_IF,1,1,1,2,1,9
+# dbr:Carolina_Hurricanes,6,1,7,11,6,18
+# dbr:Los_Angeles_Kings,41,1,43,74,37,90
+# dbr:HC_Asiago,1,1,1,2,1,7
+# dbr:New_Brunswick_Hawks,2,1,2,7,1,11
+# dbr:Cleveland_Barons_(NHL),4,1,4,5,4,10
+# dbr:HC_CSKA_Moscow,8,1,10,12,9,10
+# dbr:Modo_Hockey,2,1,1,9,2,11
+# dbr:Minnesota_Wild,16,1,19,29,19,38
+# dbr:Phoenix_Roadrunners_(WHA),1,1,2,3,1,5
+# dbr:Moncton_Hawks,1,1,1,2,1,4
+# dbr:Ilves,1,1,1,1,1,13
+# dbr:Dallas_Stars,22,1,25,57,22,63
+# dbr:Springfield_Indians,3,1,3,8,3,15
+# dbr:Flint_Generals_(1969�85),1,1,1,3,1,10
+# dbr:Torpedo_Nizhny_Novgorod,1,1,1,1,1,1
+# dbr:Chicago_Cougars,1,1,1,2,1,12
+# dbr:Johnstown_Jets,1,1,1,1,1,4
+# dbr:Toronto_St._Patricks,1,1,1,2,1,4
+# dbr:Montreal_Maroons,3,1,2,5,3,8
+# dbr:Baltimore_Skipjacks,1,1,1,3,1,10
+# dbr:SC_Bern,1,1,1,1,1,13
+# dbr:Wheeling_Nailers,1,1,1,1,1,12
+# dbr:Baltimore_Clippers,1,1,1,3,1,8
+# dbr:HC_Dukla_Jihlava,2,1,3,4,2,19
+# dbr:Central_Professional_Hockey_League,1,1,1,3,1,10
+# dbr:St._Louis_Blues,48,1,61,107,56,76
+# dbr:Krylya_Sovetov_Moscow,2,1,3,5,3,6
+# dbr:Houston_Apollos,1,1,1,3,1,10
+# dbr:Skellefte�_AIK,1,1,1,3,1,9
+# dbr:Ottawa_Senators,6,1,6,8,7,34
+# dbr:Adirondack_Red_Wings,1,1,1,3,1,10
+# dbr:Cincinnati_Stingers,4,1,4,9,4,16
+# dbr:SKA_Saint_Petersburg,2,1,2,5,2,6
+# dbr:Detroit_Falcons_(CoHL),1,1,1,2,1,11
+# dbr:Carolina_Thunderbirds,1,1,1,2,1,11
+# dbr:Hamburg_Freezers,1,1,2,3,1,15
+# dbr:Tulsa_Oilers,1,1,1,3,1,10
+# dbr:Toronto_Ontarios,2,1,2,3,2,5
+# dbr:Salt_Lake_Golden_Eagles,2,1,2,6,2,21
+# dbr:Toronto_Blueshirts,1,1,1,1,1,4
+# dbr:Columbus_Blue_Jackets,3,1,3,5,3,12
+# dbr:California_Golden_Seals,6,1,6,13,6,26
+# dbr:HC_Ko_ice,1,1,1,1,1,2
+# dbr:Hamilton_Tigers,1,1,1,2,1,4
+# dbr:Edmonton_Oilers,37,1,37,71,34,89
+# dbr:Washington_Capitals,26,1,27,37,28,62
+# dbr:Buffalo_Sabres,43,1,48,81,45,58
+# dbr:�ss�t,1,1,2,3,1,5
+# dbr:Arizona_Coyotes,7,1,8,11,8,17
+# dbr:Binghamton_Whalers,2,1,2,4,2,18
+# dbr:Flint_Spirits,1,1,1,3,1,10
+# dbr:Chicago_Blackhawks,87,1,96,174,88,99
+# dbr:New_Haven_Nighthawks,3,1,3,6,3,22
+# dbr:Buffalo_Bisons_(AHL),3,1,4,8,4,13

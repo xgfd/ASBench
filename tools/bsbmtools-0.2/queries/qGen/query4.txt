@@ -1,22 +1,23 @@
-PREFIX dbp:<http://dbpedia.org/ontology/>
-PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
-PREFIX dcterms:<http://purl.org/dc/terms/>
-PREFIX dbr:<http://dbpedia.org/resource/>
+PREFIX  dbo:  <http://dbpedia.org/ontology/>
+PREFIX  dbp:  <http://dbpedia.org/property/>
+PREFIX  dbr:  <http://dbpedia.org/resource/>
+PREFIX  xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX  dcterms: <http://purl.org/dc/terms/>
+PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT  (COUNT(DISTINCT ?Toyota) AS ?Toyota_Count) (COUNT(DISTINCT ?Lexus) AS ?Lexus_Count) (COUNT(DISTINCT ?Nippon_Life) AS ?Nippon_Life_Count) (COUNT(DISTINCT ?Akio_Toyoda) AS ?Akio_Toyoda_Count) (COUNT(DISTINCT ?Toyota_Ractis) AS ?Toyota_Ractis_Count) (COUNT(DISTINCT ?Bank79) AS ?Bank79_Count)
+SELECT DISTINCT  ?Toyota (COUNT(DISTINCT ?Toyota) AS ?Toyota_Count) (COUNT(DISTINCT ?Lexus) AS ?Lexus_Count) (COUNT(DISTINCT ?Nippon_Life) AS ?Nippon_Life_Count) (COUNT(DISTINCT ?Akio_Toyoda) AS ?Akio_Toyoda_Count) (COUNT(DISTINCT ?Toyota_Ractis) AS ?Toyota_Ractis_Count) (COUNT(DISTINCT ?Bank79) AS ?Bank79_Count)
 WHERE
-  { ?Toyota   <http://dbpedia.org/property/divisions>  ?Lexus .
-    ?Lexus    <http://dbpedia.org/ontology/owningCompany>  ?Toyota .
-    #?Nippon_Life  <http://xmlns.com/foaf/0.1/isPrimaryTopicOf>  ?Nippon_Life .
-    ?Toyota   <http://dbpedia.org/property/keyPeople>  ?Akio_Toyoda .
+  { ?Toyota   dbp:divisions      ?Lexus .
+    ?Lexus    dbo:owningCompany  ?Toyota .
+    ?Toyota   dbp:keyPeople      ?Akio_Toyoda .
     ?Toyota_Ractis
-              <http://dbpedia.org/ontology/manufacturer>  ?Toyota .
-    ?Toyota   <http://dbpedia.org/ontology/owner>  ?Nippon_Life ;
-              <http://dbpedia.org/property/owner>  ?Bank79 ;
-              <http://dbpedia.org/property/owner>  ?Nippon_Life ;
-              <http://dbpedia.org/ontology/owner>  ?Bank79
+              dbo:manufacturer   ?Toyota .
+    ?Toyota   dbo:owner          ?Nippon_Life ;
+              dbp:owner          ?Bank79 ;
+              dbp:owner          ?Nippon_Life ;
+              dbo:owner          ?Bank79
   }
+GROUP BY ?Toyota
 
   # digraph{
   # "?Toyota_Ractis"->"?Toyota"[label="dbo:manufacturer"];
@@ -28,3 +29,9 @@ WHERE
   # "?Toyota"->"?Bank79"[label="dbo:owner"];
   # "?Toyota"->"?Lexus"[label="dbp:divisions"];
   # }
+
+  # result
+  # Toyota,Toyota_Count,Lexus_Count,Nippon_Life_Count,Akio_Toyoda_Count,Toyota_Ractis_Count,Bank79_Count
+  # dbr:Sega,1,1,4,3,16,4
+  # dbr:Lexus,1,1,1,5,16,1
+  # dbr:Toyota,1,1,5,2,275,5

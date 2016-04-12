@@ -1,29 +1,87 @@
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX rev: <http://purl.org/stuff/rev#>
-PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-PREFIX bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
-PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX  dbo:  <http://dbpedia.org/ontology/>
+PREFIX  dbp:  <http://dbpedia.org/property/>
+PREFIX  dbr:  <http://dbpedia.org/resource/>
+PREFIX  xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX  dcterms: <http://purl.org/dc/terms/>
+PREFIX  rdfs: <http://www.w3.org/2000/01/rdf_schema#>
 
-SELECT ?productLabel ?offer ?price ?vendor ?vendorTitle ?review ?revTitle 
-       ?reviewer ?revName ?rating1 ?rating2
-WHERE { 
-	%ProductXYZ% rdfs:label ?productLabel .
-    OPTIONAL {
-        ?offer bsbm:product %ProductXYZ% .
-		?offer bsbm:price ?price .
-		?offer bsbm:vendor ?vendor .
-		?vendor rdfs:label ?vendorTitle .
-        ?vendor bsbm:country <http://downlode.org/rdf/iso-3166/countries#DE> .
-        ?offer dc:publisher ?vendor . 
-        ?offer bsbm:validTo ?date .
-        FILTER (?date > %currentDate% )
-    }
-    OPTIONAL {
-	?review bsbm:reviewFor %ProductXYZ% .
-	?review rev:reviewer ?reviewer .
-	?reviewer foaf:name ?revName .
-	?review dc:title ?revTitle .
-    OPTIONAL { ?review bsbm:rating1 ?rating1 . }
-    OPTIONAL { ?review bsbm:rating2 ?rating2 . } 
-    }
-}
+SELECT DISTINCT  ?SoccerLeague (COUNT(DISTINCT ?Tamires_Cássia_Dias_Gomes) AS ?Tamires_Cássia_Dias_Gomes_CountExpr) (COUNT(DISTINCT ?team) AS ?team_CountExpr) (COUNT(DISTINCT ?SoccerLeague) AS ?SoccerLeague_CountExpr) (COUNT(DISTINCT ?Campeonato_Brasileiro_de_Futebol_Feminino) AS ?Campeonato_Brasileiro_de_Futebol_Feminino_CountExpr)
+WHERE
+  { ?Tamires_Cássia_Dias_Gomes
+              dbo:team    ?team .
+    ?team     dbp:league  ?SoccerLeague ;
+              dbp:league  ?Campeonato_Brasileiro_de_Futebol_Feminino .
+    ?Tamires_Cássia_Dias_Gomes
+              dbp:clubs   ?team
+  }
+GROUP BY ?SoccerLeague
+LIMIT   100
+
+# digraph{
+# "?Tamires_Cássia_Dias_Gomes"->"?team"[label="dbo:team"];
+# "?team"->"?Campeonato_Brasileiro_de_Futebol_Feminino"[label="dbp:league"];
+# "?team"->"?SoccerLeague"[label="dbp:league"];
+# "?Tamires_Cássia_Dias_Gomes"->"?team"[label="dbp:clubs"];
+# }
+
+#   SoccerLeague,Tamires_C��ssia_Dias_Gomes_CountExpr,team_CountExpr,SoccerLeague_CountExpr,Campeonato_Brasileiro_de_Futebol_Feminino_CountExpr,Oklahoma_CountExpr,Organisation489_CountExpr
+# dbr:Kerry_District_League,2,1,1,1,4,1
+# dbr:Indonesian_Premier_League,104,4,1,1,2,1
+# dbr:Austrian_Regional_League,59,2,1,1,1,1
+# dbr:Division_2_(Swedish_ice_hockey),2,1,1,1,1,12
+# dbr:A-Klasa,8,1,1,1,39,54
+# dbr:TT_Pro_League,170,14,1,1,17,64
+# dbr:Tanzanian_Premier_League,73,10,1,1,19,48
+# dbr:United_Soccer_Leagues,52,4,1,5,1,5
+# dbr:Bangladesh_Championship_League,4,3,1,1,1,8
+# dbr:Czech_Fourth_Division,3,1,1,1,2,13
+# dbr:National_Youth_League_(Australia),39,3,1,3,1,9
+# dbr:Campeonato_Carioca_(lower_levels),56,4,1,1,6,18
+# dbr:Qatar_Stars_League,666,17,1,1,37,90
+# dbr:First_League_of_the_Federation_of_Bosnia_and_Herzegovina,141,17,1,1,1,7
+# dbr:BUCS_MARS_Midlands_Division_1A,6,1,1,1,1,9
+# dbr:Malian_Second_Division,1,1,1,1,1,11
+# dbr:Bangladesh_Football_Premier_League,109,10,1,1,4,10
+# dbr:Campeonato_Capixaba_(lower_levels),3,1,1,1,1,5
+# dbr:Premier_Development_League,2087,146,1,5,1,4
+# dbr:Moldovan_National_Division,650,18,1,1,1,13
+# dbr:AFA_Senior_Male_League,5,1,1,1,6,36
+# dbr:Superliga_Femenina_de_Voleibol,1,1,1,2,1,12
+# dbr:Norwegian_First_Division,321,5,1,2,1,4
+# dbr:Soviet_Second_League,72,1,1,2,1,6
+# dbr:Bulgarian_South-East_V_AFG,252,12,1,1,3,8
+# dbr:FA_Women's_Premier_League_National_Division,43,2,1,1,1,15
+# dbr:Qatargas_League,12,1,1,1,1,10
+# dbr:Liga_Indonesia_Premier_Division,611,67,1,1,1,13
+# dbr:Essex_and_Suffolk_Border_Football_League,18,1,1,2,1,8
+# dbr:Algerian_Ligue_Professionnelle_1,631,19,1,1,2,19
+# dbr:Martinique_Championnat_National,10,6,1,1,1,10
+# dbr:Primera_Divisi�n_(women),195,20,1,1,56,76
+# dbr:Mid-sussex_Football_Federation,1,1,1,1,3,6
+# dbr:Liga_Nacional_B,32,2,1,1,86,234
+# dbr:Kabul_Premier_League,14,4,1,1,1,10
+# dbr:National_League_2_South,8,2,1,2,7,31
+# dbr:Sekshon_Amat�r,1,1,1,1,3,15
+# dbr:C�te_d'Ivoire_Ligue_2,7,1,1,1,4,22
+# dbr:Portuguese_District_Football_Associations,8,1,1,1,2,6
+# dbr:Swedish_Division_4,4,2,1,1,4,28
+# dbr:Prima_Categoria,71,7,1,1,1,6
+# dbr:London_2_South_East,1,1,1,1,1,11
+# dbr:Hoofdklasse_(women),9,1,1,1,1,15
+# dbr:Th�ringenliga,2,1,1,1,2,5
+# dbr:Women's_National_League_(Ireland),10,3,1,1,2,21
+# dbr:Torneo_Argentino_B,197,31,1,2,1,9
+# dbr:Kazakhstan_Premier_League,835,19,1,1,1,10
+# dbr:FA_Women's_Premier_League_Northern_Division,36,6,1,1,1,4
+# 1947,1,1,1,5,3,12
+# dbr:Albanian_Third_Division,5,3,1,1,1,4
+# 3,5433,386,1,3,34,89
+# dbr:Welsh_Premier_League,567,13,1,3,28,62
+# dbr:Berlin-Liga,70,7,1,1,3,20
+# dbr:Seconda_Categoria,22,4,1,1,45,58
+# dbr:Liga_III,201,25,1,1,1,5
+# dbr:Verbandsliga_Hessen-Mitte,21,8,1,1,1,9
+# dbr:Uzbekistan_2nd_division,23,1,1,1,2,18
+# dbr:Paraguayan_Divisi�n_Intermedia,138,10,1,1,1,9
+# dbr:Libyan_Second_Division,2,1,1,1,1,10
+# dbr:Regionalliga_Bayern,673,16,1,1,88,99

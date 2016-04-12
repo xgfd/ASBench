@@ -1,28 +1,30 @@
 # source: https://blog.semantic-web.at/2015/09/29/sparql-analytics-proves-boxers-live-dangerously/
-PREFIX dbp:<http://dbpedia.org/ontology/>
-PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
-SELECT ?athleteGroupEN (COUNT(?athlete) AS ?count) (AVG(?age) AS ?ageAvg)
+PREFIX  xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbp:  <http://dbpedia.org/ontology/>
+
+SELECT  ?athleteGroupEN (COUNT(?athlete) AS ?count) (AVG(?age) AS ?ageAvg)
 WHERE
-{
-  FILTER(?age >= 20 && ?age <= 100) .
-  {
-    SELECT DISTINCT ?athleteGroupEN ?athlete (?deathYear - ?birthYear AS ?age)
-    WHERE
-    {
-      ?subOfAthlete rdfs:subClASsOf dbp:Athlete .
-      ?subOfAthlete rdfs:label ?athleteGroup FILTER(LANG(?athleteGroup) = "en") .
-      BIND(STR(?athleteGroup) AS ?athleteGroupEN)
-      ?athlete a ?subOfAthlete .
-      ?athlete dbp:birthDate ?birth FILTER(DATATYPE(?birth) = xsd:date) .
-      ?athlete dbp:deathDate ?death FILTER(DATATYPE(?death) = xsd:date) .
-      BIND (STRDT(REPLACE(?birth,"^(\\d+)-.*","$1"),xsd:integer) AS ?birthYear) .
-      BIND (STRDT(REPLACE(?death,"^(\\d+)-.*","$1"),xsd:integer) AS ?deathYear) .
+  { FILTER ( ( ?age >= 20 ) && ( ?age <= 100 ) )
+    { SELECT DISTINCT  ?athleteGroupEN ?athlete (( ?deathYear - ?birthYear ) AS ?age)
+      WHERE
+        { ?subOfAthlete
+                    rdfs:subClassOf  dbp:Athlete ;
+                    rdfs:label       ?athleteGroup
+          FILTER ( lang(?athleteGroup) = "en" )
+          BIND(str(?athleteGroup) AS ?athleteGroupEN)
+          ?athlete  a                     ?subOfAthlete ;
+                    dbp:birthDate         ?birth
+          FILTER ( datatype(?birth) = xsd:date )
+          ?athlete  dbp:deathDate  ?death
+          FILTER ( datatype(?death) = xsd:date )
+          BIND(strdt(replace(?birth, "^(\\d+)-.*", "$1"), xsd:integer) AS ?birthYear)
+          BIND(strdt(replace(?death, "^(\\d+)-.*", "$1"), xsd:integer) AS ?deathYear)
+        }
     }
   }
-}
 GROUP BY ?athleteGroupEN
-HAVING (COUNT(?athlete) >= 25)
+HAVING ( COUNT(?athlete) >= 25 )
 ORDER BY ?ageAvg
 
 # digraph{
@@ -32,3 +34,32 @@ ORDER BY ?ageAvg
 # "?athlete"->"?subOfAthlete"[label="rdf:type"];
 # "?subOfAthlete"->"dbp:Athlete"[label="rdfs:subClASsOf"];
 # }
+
+# athleteGroupEN,count,ageAvg
+# volleyball player,45,53.68888889
+# motorsport racer,1142,57.77232925
+# wrestler,667,59.1934033
+# boxer,834,60.9352518
+# soccer player,6106,64.36537832
+# rower,55,65.09090909
+# national collegiate athletic association athlete,30,65.13333333
+# jockey (horse racer),137,66.03649635
+# gymnast,142,66.13380282
+# poker player,29,66.44827586
+# chess player,258,66.50775194
+# winter sport Player,1939,66.78390923
+# basketball player,797,67.35006274
+# rugby player,1471,67.774983
+# gridiron football player,4426,67.85223678
+# cyclist,1503,67.90818363
+# martial artist,193,68.02590674
+# table tennis player,37,68.2972973
+# cricketer,5142,68.4369895
+# baseball player,9352,68.67418734
+# Australian rules football player,3472,68.77160138
+# swimmer,377,69.15915119
+# snooker player,26,70.07692308
+# Gaelic games player,99,70.32323232
+# golf player,392,71.03316327
+# tennis player,599,71.44741235
+# horse rider,131,73.19083969

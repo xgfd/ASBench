@@ -1,19 +1,61 @@
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX bsbm: <http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/>
+PREFIX  dbo:  <http://dbpedia.org/ontology/>
+PREFIX  dbp:  <http://dbpedia.org/property/>
+PREFIX  dbr:  <http://dbpedia.org/resource/>
+PREFIX  xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX  dcterms: <http://purl.org/dc/terms/>
+PREFIX  rdfs: <http://www.w3.org/2000/01/rdf_schema#>
 
-SELECT DISTINCT ?product ?productLabel
-WHERE { 
-	?product rdfs:label ?productLabel .
-    FILTER (%ProductXYZ% != ?product)
-	%ProductXYZ% bsbm:productFeature ?prodFeature .
-	?product bsbm:productFeature ?prodFeature .
-	%ProductXYZ% bsbm:productPropertyNumeric1 ?origProperty1 .
-	?product bsbm:productPropertyNumeric1 ?simProperty1 .
-	FILTER (?simProperty1 < (?origProperty1 + 120) && ?simProperty1 > (?origProperty1 - 120))
-	%ProductXYZ% bsbm:productPropertyNumeric2 ?origProperty2 .
-	?product bsbm:productPropertyNumeric2 ?simProperty2 .
-	FILTER (?simProperty2 < (?origProperty2 + 170) && ?simProperty2 > (?origProperty2 - 170))
-}
-ORDER BY ?productLabel
-LIMIT 5
+SELECT DISTINCT  ?HockeyTeam471 (COUNT(DISTINCT ?Jean_Guy_Talbot) AS ?Jean_Guy_Talbot_CountExpr) (COUNT(DISTINCT ?HockeyTeam471) AS ?HockeyTeam471_CountExpr) (COUNT(DISTINCT ?Lou_Angotti) AS ?Lou_Angotti_CountExpr) (COUNT(DISTINCT ?_Sr) AS ?_Sr_CountExpr) (COUNT(DISTINCT ?Bill_Masterton) AS ?Bill_Masterton_CountExpr) (COUNT(DISTINCT ?HockeyTeam540) AS ?HockeyTeam540_CountExpr)
+WHERE
+  { ?Jean_Guy_Talbot
+              dbp:playedFor  ?HockeyTeam471 .
+    ?Lou_Angotti  dbp:before  ?Jean_Guy_Talbot .
+    ?_Sr      dbp:after      ?Jean_Guy_Talbot .
+    ?Lou_Angotti  dbp:after  ?Bill_Masterton .
+    ?Bill_Masterton
+              dbp:playedFor  ?HockeyTeam471 .
+    ?Jean_Guy_Talbot
+              dbp:before     ?_Sr ;
+              dbp:playedFor  ?HockeyTeam540 ;
+              dbp:after      ?Lou_Angotti
+  }
+GROUP BY ?HockeyTeam471
+LIMIT   100
+
+# digraph{
+# "?Lou_Angotti"_>"?Bill_Masterton"[label="dbp:after"];
+# "?Jean_Guy_Talbot"_>"?_Sr"[label="dbp:before"];
+# "?_Sr"_>"?Jean_Guy_Talbot"[label="dbp:after"];
+# "?Bill_Masterton"_>"?HockeyTeam471"[label="dbp:playedFor"];
+# "?Lou_Angotti"_>"?Jean_Guy_Talbot"[label="dbp:before"];
+# "?Jean_Guy_Talbot"_>"?HockeyTeam471"[label="dbp:playedFor"];
+# "?Jean_Guy_Talbot"_>"?Lou_Angotti"[label="dbp:after"];
+# "?Jean_Guy_Talbot"_>"?HockeyTeam540"[label="dbp:playedFor"];
+# }
+
+# HockeyTeam471,Jean_Guy_Talbot_CountExpr,HockeyTeam471_CountExpr,Lou_Angotti_CountExpr,_Sr_CountExpr,Bill_Masterton_CountExpr,HockeyTeam540_CountExpr
+# dbr:New_York_Americans,6,1,6,13,6,10
+# dbr:Rochester_Americans,1,1,1,2,1,12
+# dbr:Jokerit,3,1,5,6,6,26
+# dbr:Dinamo_Riga_(original),1,1,1,3,1,3
+# dbr:Lake_Erie_Monsters,1,1,1,1,1,1
+# dbr:New_Jersey_Devils,23,1,27,58,22,64
+# dbr:St._Louis_Braves,1,1,1,2,1,12
+# dbr:New_York_Islanders,38,1,46,78,39,54
+# dbr:Hartford_Whalers,21,1,22,33,17,64
+# dbr:San_Jose_Sharks,19,1,20,44,19,48
+# dbr:HC_Olomouc,1,1,2,3,1,15
+# dbr:Bryn�s_IF,1,1,1,2,1,9
+# dbr:Carolina_Hurricanes,6,1,7,11,6,18
+# dbr:Los_Angeles_Kings,41,1,43,74,37,90
+# dbr:HC_Asiago,1,1,1,2,1,7
+# dbr:New_Brunswick_Hawks,2,1,2,7,1,11
+# dbr:Cleveland_Barons_(NHL),4,1,4,5,4,10
+# dbr:HC_CSKA_Moscow,8,1,10,12,9,10
+# dbr:Modo_Hockey,2,1,1,9,2,11
+# dbr:Minnesota_Wild,16,1,19,29,19,38
+# dbr:Phoenix_Roadrunners_(WHA),1,1,2,3,1,5
+# dbr:Moncton_Hawks,1,1,1,2,1,4
+# dbr:Ilves,1,1,1,1,1,13
+# dbr:Dallas_Stars,22,1,25,57,22,63
+# dbr:Springfield_Indians,3,1,3,8,3,15

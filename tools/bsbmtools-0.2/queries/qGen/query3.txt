@@ -1,39 +1,140 @@
 # https://blog.semantic-web.at/2015/11/06/if-you-like-friends-you-probably-also-will-like-veronicas-closet-find-out-with-sparql-why/
-PREFIX dbp:<http://dbpedia.org/ontology/>
-PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>
-PREFIX dcterms:<http://purl.org/dc/terms/>
-PREFIX dbr:<http://dbpedia.org/resource/>
-SELECT ?showB ?subjCountShowAB ?subjCountShowA ?subjCountShowB (STRDT(?subjCountShowAB,xsd:double) / (?subjCountShowA + ?subjCountShowB - ?subjCountShowAB) AS ?subjScore)
+PREFIX  xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX  dcterms: <http://purl.org/dc/terms/>
+PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbp:  <http://dbpedia.org/ontology/>
+PREFIX  dbr:  <http://dbpedia.org/resource/>
+
+SELECT  ?showB ?subjCountShowAB ?subjCountShowA ?subjCountShowB (( strdt(?subjCountShowAB, xsd:double) / ( ( ?subjCountShowA + ?subjCountShowB ) - ?subjCountShowAB ) ) AS ?subjScore)
 WHERE
-{
-  SELECT ?showB ?subjCountShowAB ?subjCountShowA (COUNT(?subject) AS ?subjCountShowB)
-  WHERE
-  {
-    ?showB dcterms:subject ?subject .
-    {
-      SELECT ?showB (COUNT(?subject) AS ?subjCountShowAB) ?subjCountShowA
+  { { SELECT  ?showB ?subjCountShowAB ?subjCountShowA (COUNT(?subject) AS ?subjCountShowB)
       WHERE
-      {
-        ?showA dcterms:subject ?subject .
-        ?showB dcterms:subject ?subject FILTER(!sameTerm(?showA,?showB)) .
-        {
-          SELECT ?showA (COUNT(?subject) AS ?subjCountShowA)
-          WHERE
-          {
-            ?showA dcterms:subject ?subject FILTER(sameTerm(?showA,dbr:Friends)) .
+        { ?showB  dcterms:subject  ?subject
+          { SELECT  ?showB (COUNT(?subject) AS ?subjCountShowAB) ?subjCountShowA
+            WHERE
+              { ?showA  dcterms:subject  ?subject .
+                ?showB  dcterms:subject  ?subject
+                FILTER ( ! sameTerm(?showA, ?showB) )
+                { SELECT  ?showA (COUNT(?subject) AS ?subjCountShowA)
+                  WHERE
+                    { ?showA  dcterms:subject  ?subject
+                      FILTER sameTerm(?showA, dbr:Friends)
+                    }
+                  GROUP BY ?showA
+                }
+              }
+            GROUP BY ?showB ?subjCountShowA
           }
-          GROUP BY ?showA
         }
-      }
-      GROUP BY ?showB ?subjCountShowA
+      GROUP BY ?showB ?subjCountShowAB ?subjCountShowA
     }
   }
-  GROUP BY ?showB ?subjCountShowAB ?subjCountShowA
-}
-ORDER BY desc(?subjScore) LIMIT 100
+ORDER BY DESC(?subjScore)
+LIMIT   100
 
 # digraph{
 # "?showA"->"?subject"[label="dcterms:subject"];
 # "?showB"->"?subject"[label="dcterms:subject"];
 # }
+
+# showB,subjCountShowAB,subjCountShowA,subjCountShowB,subjScore
+# dbr:Will_&_Grace,10,16,18,0.416667
+# dbr:Sex_and_the_City,10,16,21,0.37037
+# dbr:Seinfeld,10,16,23,0.344828
+# dbr:Veronica's_Closet,7,16,12,0.333333
+# dbr:The_George_Carlin_Show,6,16,9,0.315789
+# dbr:Frasier,8,16,18,0.307692
+# dbr:Everybody_Loves_Raymond,7,16,14,0.304348
+# dbr:Madman_of_the_People,6,16,10,0.3
+# dbr:Night_Court,6,16,10,0.3
+# dbr:The_Single_Guy,6,16,11,0.285714
+# dbr:Jesse_(TV_series),6,16,11,0.285714
+# dbr:The_Help_(TV_series),5,16,7,0.277778
+# dbr:Just_Shoot_Me!,6,16,12,0.272727
+# dbr:Stark_Raving_Mad_(TV_series),6,16,12,0.272727
+# dbr:The_King_of_Queens,6,16,12,0.272727
+# dbr:Suddenly_Susan,6,16,12,0.272727
+# dbr:Caf�_Americain,5,16,8,0.263158
+# dbr:Conrad_Bloom,5,16,8,0.263158
+# dbr:Caroline_in_the_City,5,16,8,0.263158
+# dbr:Becker_(TV_series),6,16,13,0.26087
+# dbr:Mad_About_You,6,16,13,0.26087
+# dbr:Union_Square_(TV_series),5,16,9,0.25
+# dbr:Working_It_Out,5,16,9,0.25
+# dbr:Hope_and_Gloria,5,16,9,0.25
+# dbr:Muscle_(TV_series),5,16,9,0.25
+# dbr:Kirk_(TV_series),5,16,9,0.25
+# dbr:Fired_Up_(TV_series),5,16,9,0.25
+# dbr:The_Fresh_Prince_of_Bel-Air,6,16,14,0.25
+# dbr:Good_Morning,_Miami,5,16,9,0.25
+# dbr:The_Office_(U.S._TV_series),7,16,19,0.25
+# dbr:Better_with_You,5,16,9,0.25
+# dbr:Everything's_Relative_(1999_TV_series),5,16,9,0.25
+# dbr:The_Fanelli_Boys,5,16,9,0.25
+# dbr:The_Practice_(1976_TV_series),5,16,9,0.25
+# dbr:Working_Girl_(TV_series),5,16,10,0.238095
+# dbr:100_Questions,5,16,10,0.238095
+# dbr:What_I_Like_About_You_(TV_series),5,16,10,0.238095
+# dbr:Battery_Park_(TV_series),5,16,10,0.238095
+# dbr:Love,_Sidney,5,16,10,0.238095
+# dbr:Here_and_Now_(TV_series),5,16,10,0.238095
+# dbr:The_John_Larroquette_Show,5,16,10,0.238095
+# dbr:Minor_Adjustments,5,16,10,0.238095
+# dbr:Out_All_Night,5,16,10,0.238095
+# dbr:Common_Law_(1996_TV_series),5,16,10,0.238095
+# dbr:How_I_Met_Your_Mother,6,16,16,0.230769
+# dbr:The_Tracy_Morgan_Show,5,16,11,0.227273
+# dbr:My_Two_Dads,5,16,11,0.227273
+# dbr:Living_Single,5,16,11,0.227273
+# dbr:Ann_Jillian_(TV_series),5,16,11,0.227273
+# dbr:The_Office_(1995_TV_series),5,16,11,0.227273
+# dbr:The_Cosby_Show,7,16,22,0.225806
+# dbr:The_Martin_Short_Show_(1994_TV_series),4,16,6,0.222222
+# dbr:The_Tony_Danza_Show_(1997_TV_series),4,16,6,0.222222
+# dbr:Cheers,6,16,17,0.222222
+# dbr:30_Rock,7,16,23,0.21875
+# dbr:Oliver_Beene,5,16,12,0.217391
+# dbr:Spin_City,5,16,12,0.217391
+# dbr:NewsRadio,5,16,12,0.217391
+# dbr:Getting_By,5,16,12,0.217391
+# dbr:Kitchen_Confidential_(TV_series),5,16,12,0.217391
+# dbr:Boston_Common_(TV_series),5,16,12,0.217391
+# dbr:The_Drew_Carey_Show,5,16,12,0.217391
+# dbr:Joey_(TV_series),5,16,12,0.217391
+# dbr:Ally_McBeal,6,16,18,0.214286
+# dbr:Man_of_the_People_(TV_series),4,16,7,0.210526
+# dbr:Twenty_Good_Years,4,16,7,0.210526
+# dbr:I'm_with_Her,4,16,7,0.210526
+# dbr:The_Pursuit_of_Happiness_(TV_series),4,16,7,0.210526
+# dbr:Walter_&_Emily,4,16,7,0.210526
+# dbr:His_&_Hers_(TV_series),4,16,7,0.210526
+# dbr:The_Mullets,4,16,7,0.210526
+# dbr:The_Second_Half,4,16,7,0.210526
+# dbr:The_Days_and_Nights_of_Molly_Dodd,5,16,13,0.208333
+# dbr:704_Hauser,5,16,13,0.208333
+# dbr:Odd_Man_Out_(U.S._TV_series),5,16,13,0.208333
+# dbr:Head_of_the_Class,5,16,13,0.208333
+# dbr:That_'70s_Show,5,16,13,0.208333
+# dbr:Cosby,5,16,14,0.2
+# dbr:The_Best_Times_(TV_show),4,16,8,0.2
+# dbr:Joe_&_Valerie,4,16,8,0.2
+# dbr:Scorch_(TV_series),4,16,8,0.2
+# dbr:The_Dumplings_(TV_series),4,16,8,0.2
+# dbr:Whoopi,4,16,8,0.2
+# dbr:Trinity_(U.S._TV_series),4,16,8,0.2
+# dbr:Kristin_(TV_series),4,16,8,0.2
+# dbr:The_Fighting_Fitzgeralds,4,16,8,0.2
+# dbr:Hot_Properties_(TV_series),4,16,8,0.2
+# dbr:Daddio,4,16,8,0.2
+# dbr:Run_of_the_House,4,16,8,0.2
+# dbr:Come_to_Papa_(TV_series),4,16,8,0.2
+# dbr:Daddy's_Girls_(1994_TV_series),4,16,8,0.2
+# dbr:Room_for_Two_(TV_series),4,16,8,0.2
+# dbr:Built_to_Last_(TV_series),4,16,8,0.2
+# dbr:Muddling_Through,4,16,8,0.2
+# dbr:Rock_Me_Baby_(TV_series),4,16,8,0.2
+# dbr:Watching_Ellie,4,16,8,0.2
+# dbr:The_Preston_Episodes,4,16,8,0.2
+# dbr:3rd_Rock_from_the_Sun,5,16,14,0.2
+# dbr:High_Society_(1995_TV_series),4,16,8,0.2
+# dbr:Hank_(1965_TV_series),4,16,8,0.2
