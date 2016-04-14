@@ -1,4 +1,4 @@
-# Execute a query specifyed by a template that is filled by command arguments
+# Execute a query specified by a template that is filled by command arguments
 tempt=${1?"Usage: $0 template [template arguments]"}
 
 # consume the first arg,
