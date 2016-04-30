@@ -1,4 +1,4 @@
-SELECT  (COUNT(DISTINCT ?X11_color_names) AS ?X11_color_names_CountExpr) (COUNT(DISTINCT ?Sky_blue) AS ?Sky_blue_CountExpr) (COUNT(DISTINCT ?Shades_of_green) AS ?Shades_of_green_CountExpr)
+SELECT  (COUNT(DISTINCT ?X11_color_names) AS ?X11_color_names_CountExpr) 
 WHERE
   { ?X11_color_names
               <http://dbpedia.org/property/name>  ?Sky_blue ;
