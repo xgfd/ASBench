@@ -30,7 +30,6 @@ WHERE
     }
   }
 ORDER BY DESC(?subjScore)
-LIMIT   100
 
 # digraph{
 # "?showA"->"?subject"[label="dcterms:subject"];

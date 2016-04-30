@@ -19,8 +19,8 @@ WHERE
     FILTER langMatches(lang(?abstract), "ES")
   }
 GROUP BY ?Museum
-OFFSET  0
-LIMIT   10
+
+# 600
 # digraph{
 # "?Museum"->"?homepage"[label="foaf:homepage"];
 # "?Museum"->"?established"[label="dbpprop:established"];
