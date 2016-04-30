@@ -1,4 +1,4 @@
-SELECT  (COUNT(DISTINCT ?H._L._Dattu) AS ?H._L._Dattu_CountExpr) (COUNT(DISTINCT ?Pranab_Mukherjee) AS ?Pranab_Mukherjee_CountExpr) (COUNT(DISTINCT ?Rajendra_Mal_Lodha) AS ?Rajendra_Mal_Lodha_CountExpr) (COUNT(DISTINCT ?India) AS ?India_CountExpr) (COUNT(DISTINCT ?University2015) AS ?University2015_CountExpr) (COUNT(DISTINCT ?CricketLeague1806) AS ?CricketLeague1806_CountExpr) (COUNT(DISTINCT ?Manmohan_Singh) AS ?Manmohan_Singh_CountExpr) (COUNT(DISTINCT ?Sumitra_Mahajan) AS ?Sumitra_Mahajan_CountExpr)
+SELECT  (COUNT(DISTINCT ?H_L_Dattu) AS ?H_L_Dattu_CountExpr) (COUNT(DISTINCT ?Pranab_Mukherjee) AS ?Pranab_Mukherjee_CountExpr) (COUNT(DISTINCT ?Rajendra_Mal_Lodha) AS ?Rajendra_Mal_Lodha_CountExpr) (COUNT(DISTINCT ?India) AS ?India_CountExpr) (COUNT(DISTINCT ?University2015) AS ?University2015_CountExpr) (COUNT(DISTINCT ?CricketLeague1806) AS ?CricketLeague1806_CountExpr) (COUNT(DISTINCT ?Manmohan_Singh) AS ?Manmohan_Singh_CountExpr) (COUNT(DISTINCT ?Sumitra_Mahajan) AS ?Sumitra_Mahajan_CountExpr)
 WHERE
   { ?H_L_Dattu  <http://dbpedia.org/ontology/appointer>  ?Pranab_Mukherjee ;
               <http://dbpedia.org/property/predecessor>  ?Rajendra_Mal_Lodha .

@@ -1,7 +1,7 @@
-SELECT  (COUNT(DISTINCT ?Scott_Wynd) AS ?Scott_Wynd_CountExpr) (COUNT(DISTINCT ?Jim_Stynes) AS ?Jim_Stynes_CountExpr) (COUNT(DISTINCT ?Jack_C._Collins) AS ?Jack_C._Collins_CountExpr) (COUNT(DISTINCT ?Western_Bulldogs) AS ?Western_Bulldogs_CountExpr) (COUNT(DISTINCT ?Charlie_Sutton) AS ?Charlie_Sutton_CountExpr) (COUNT(DISTINCT ?Victoria_Australian_rules_football_team) AS ?Victoria_Australian_rules_football_team_CountExpr) (COUNT(DISTINCT ?) AS ?_CountExpr) (COUNT(DISTINCT ?Docklands_Stadium) AS ?Docklands_Stadium_CountExpr) (COUNT(DISTINCT ?Arthur_Olliver) AS ?Arthur_Olliver_CountExpr) (COUNT(DISTINCT ?Scott_West) AS ?Scott_West_CountExpr)
+SELECT  (COUNT(DISTINCT ?Scott_Wynd) AS ?Scott_Wynd_CountExpr) (COUNT(DISTINCT ?Jim_Stynes) AS ?Jim_Stynes_CountExpr) (COUNT(DISTINCT ?Jack_C_Collins) AS ?Jack_C_Collins_CountExpr) (COUNT(DISTINCT ?Western_Bulldogs) AS ?Western_Bulldogs_CountExpr) (COUNT(DISTINCT ?Charlie_Sutton) AS ?Charlie_Sutton_CountExpr)  (COUNT(DISTINCT ?Docklands_Stadium) AS ?Docklands_Stadium_CountExpr) (COUNT(DISTINCT ?Arthur_Olliver) AS ?Arthur_Olliver_CountExpr) (COUNT(DISTINCT ?Scott_West) AS ?Scott_West_CountExpr)
 WHERE
   { ?Scott_Wynd  <http://dbpedia.org/property/before>  ?Jim_Stynes .
-    ?Jack_C._Collins
+    ?Jack_C_Collins
               <http://dbpedia.org/property/clubs>  ?Western_Bulldogs .
     ?Western_Bulldogs
               <http://dbpedia.org/property/backpocket>  ?Charlie_Sutton .
@@ -17,7 +17,7 @@ WHERE
 # "?Western_Bulldogs"->"?Docklands_Stadium"[label="dbp:ground"];
 # "?Western_Bulldogs"->"?Arthur_Olliver"[label="dbp:interchange"];
 # "?Western_Bulldogs"->"?Scott_West"[label="dbp:ruckrover"];
-# "?Jack_C._Collins"->"?Western_Bulldogs"[label="dbp:clubs"];
+# "?Jack_C_Collins"->"?Western_Bulldogs"[label="dbp:clubs"];
 # "?Scott_Wynd"->"?Jim_Stynes"[label="dbp:before"];
 # "?Western_Bulldogs"->"?Charlie_Sutton"[label="dbp:backpocket"];
 # "?Western_Bulldogs"->"?Scott_Wynd"[label="dbp:interchange"];
