@@ -8,27 +8,20 @@ PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 SELECT DISTINCT  ?Toyota (COUNT(DISTINCT ?Toyota) AS ?Toyota_Count) (COUNT(DISTINCT ?Lexus) AS ?Lexus_Count) (COUNT(DISTINCT ?Nippon_Life) AS ?Nippon_Life_Count) (COUNT(DISTINCT ?Akio_Toyoda) AS ?Akio_Toyoda_Count) (COUNT(DISTINCT ?Toyota_Ractis) AS ?Toyota_Ractis_Count) (COUNT(DISTINCT ?Bank79) AS ?Bank79_Count)
 WHERE
   { ?Toyota   dbp:divisions      ?Lexus .
-    ?Lexus    dbo:owningCompany  ?Toyota .
     ?Toyota   dbp:keyPeople      ?Akio_Toyoda .
     ?Toyota_Ractis
               dbo:manufacturer   ?Toyota .
-    ?Toyota   dbo:owner          ?Nippon_Life ;
-              dbp:owner          ?Bank79 ;
-              dbp:owner          ?Nippon_Life ;
-              dbo:owner          ?Bank79
+    ?Toyota   dbp:owner          ?Bank79 ;
+              dbp:owner          ?Nippon_Life .
   }
 GROUP BY ?Toyota
-
-  # digraph{
-  # "?Toyota_Ractis"->"?Toyota"[label="dbo:manufacturer"];
-  # "?Lexus"->"?Toyota"[label="dbo:owningCompany"];
-  # "?Toyota"->"?Nippon_Life"[label="dbo:owner"];
-  # "?Toyota"->"?Akio_Toyoda"[label="dbp:keyPeople"];
-  # "?Toyota"->"?Nippon_Life"[label="dbp:owner"];
-  # "?Toyota"->"?Bank79"[label="dbp:owner"];
-  # "?Toyota"->"?Bank79"[label="dbo:owner"];
-  # "?Toyota"->"?Lexus"[label="dbp:divisions"];
-  # }
+# 95515
+# digraph{
+# "?Toyota"->"?Akio_Toyoda"[label="dbp:keyPeople"];
+# "?Toyota"->"?Nippon_Life"[label="dbp:owner"];
+# "?Toyota"->"?Bank79"[label="dbp:owner"];
+# "?Toyota"->"?Lexus"[label="dbp:divisions"];
+# }
 
   # result
   # Toyota,Toyota_Count,Lexus_Count,Nippon_Life_Count,Akio_Toyoda_Count,Toyota_Ractis_Count,Bank79_Count

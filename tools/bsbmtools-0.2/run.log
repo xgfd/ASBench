@@ -1,0 +1,697 @@
+2016-04-30 20:49:37,091 ALL   [main] benchmark.testdriver.SPARQLConnection: 
+
+	Query 1 of run 1 has been executed in 9.344043 seconds.
+
+	Query string:
+
+# from usewod dbpedia query log
+PREFIX  geo:  <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX  dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX  dbpprop: <http://dbpedia.org/property/>
+PREFIX  foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT  ?Museum (SAMPLE(?name) AS ?name_) (SAMPLE(?abstract) AS ?abstract_) (SAMPLE(?thumbnail) AS ?thumbnail_) (MAX(?latitude) AS ?latitude_) (MAX(?longitude) AS ?longitude_) (SAMPLE(?established) AS ?established_) (SAMPLE(?website) AS ?website_) (SAMPLE(?homepage) AS ?homepage_) (SAMPLE(?wikilink) AS ?wikilink__)
+WHERE
+  { ?Museum  a                     dbpedia-owl:Museum ;
+             dbpprop:name          ?name ;
+             dbpedia-owl:abstract  ?abstract ;
+             dbpedia-owl:thumbnail  ?thumbnail ;
+             geo:lat               ?latitude ;
+             geo:long              ?longitude ;
+             dbpprop:established   ?established ;
+             dbpprop:website       ?website ;
+             foaf:homepage         ?homepage ;
+             foaf:isPrimaryTopicOf  ?wikilink
+    FILTER langMatches(lang(?abstract), "ES")
+  }
+GROUP BY ?Museum
+OFFSET  0
+LIMIT   10
+# digraph{
+# "?Museum"->"?homepage"[label="foaf:homepage"];
+# "?Museum"->"?established"[label="dbpprop:established"];
+# "?Museum"->"?website"[label="dbpprop:website"];
+# "?Museum"->"?abstract"[label="dbpedia-owl:abstract"];
+# "?Museum"->"?longitude"[label="geo:long"];
+# "?Museum"->"?latitude"[label="geo:lat"];
+# "?Museum"->"?wikilink"[label="foaf:isPrimaryTopicOf"];
+# "?Museum"->"dbpedia-owl:Museum"[label="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"];
+# "?Museum"->"?thumbnail"[label="dbpedia-owl:thumbnail"];
+# "?Museum"->"?name"[label="dbpprop:name"];
+# }
+
+
+	Query results (10 results): 
+
+
+__________________________________________________________________________________
+
+2016-04-30 20:49:48,611 ALL   [main] benchmark.testdriver.SPARQLConnection: 
+
+	Query 2 of run 1 has been executed in 11.515068 seconds.
+
+	Query string:
+
+# source: https://blog.semantic-web.at/2015/09/29/sparql-analytics-proves-boxers-live-dangerously/
+PREFIX  xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbp:  <http://dbpedia.org/ontology/>
+
+SELECT  ?athleteGroupEN (COUNT(?athlete) AS ?count) (AVG(?age) AS ?ageAvg)
+WHERE
+  { FILTER ( ( ?age >= 20 ) && ( ?age <= 100 ) )
+    { SELECT DISTINCT  ?athleteGroupEN ?athlete (( ?deathYear - ?birthYear ) AS ?age)
+      WHERE
+        { ?subOfAthlete
+                    rdfs:subClassOf  dbp:Athlete ;
+                    rdfs:label       ?athleteGroup
+          FILTER ( lang(?athleteGroup) = "en" )
+          BIND(str(?athleteGroup) AS ?athleteGroupEN)
+          ?athlete  a                     ?subOfAthlete ;
+                    dbp:birthDate         ?birth
+          FILTER ( datatype(?birth) = xsd:date )
+          ?athlete  dbp:deathDate  ?death
+          FILTER ( datatype(?death) = xsd:date )
+          BIND(strdt(replace(?birth, "^(\\d+)-.*", "$1"), xsd:integer) AS ?birthYear)
+          BIND(strdt(replace(?death, "^(\\d+)-.*", "$1"), xsd:integer) AS ?deathYear)
+        }
+    }
+  }
+GROUP BY ?athleteGroupEN
+HAVING ( COUNT(?athlete) >= 25 )
+ORDER BY ?ageAvg
+
+# digraph{
+# "?athlete"->"?birth"[label="dbp:birthDate"];
+# "?subOfAthlete"->"?athleteGroup"[label="rdfs:label"];
+# "?athlete"->"?death"[label="dbp:deathDate"];
+# "?athlete"->"?subOfAthlete"[label="rdf:type"];
+# "?subOfAthlete"->"dbp:Athlete"[label="rdfs:subClASsOf"];
+# }
+
+# athleteGroupEN,count,ageAvg
+# volleyball player,45,53.68888889
+# motorsport racer,1142,57.77232925
+# wrestler,667,59.1934033
+# boxer,834,60.9352518
+# soccer player,6106,64.36537832
+# rower,55,65.09090909
+# national collegiate athletic association athlete,30,65.13333333
+# jockey (horse racer),137,66.03649635
+# gymnast,142,66.13380282
+# poker player,29,66.44827586
+# chess player,258,66.50775194
+# winter sport Player,1939,66.78390923
+# basketball player,797,67.35006274
+# rugby player,1471,67.774983
+# gridiron football player,4426,67.85223678
+# cyclist,1503,67.90818363
+# martial artist,193,68.02590674
+# table tennis player,37,68.2972973
+# cricketer,5142,68.4369895
+# baseball player,9352,68.67418734
+# Australian rules football player,3472,68.77160138
+# swimmer,377,69.15915119
+# snooker player,26,70.07692308
+# Gaelic games player,99,70.32323232
+# golf player,392,71.03316327
+# tennis player,599,71.44741235
+# horse rider,131,73.19083969
+
+
+	Query results (27 results): 
+
+
+__________________________________________________________________________________
+
+2016-04-30 20:49:48,944 ALL   [main] benchmark.testdriver.SPARQLConnection: 
+
+	Query 3 of run 1 has been executed in 0.324041 seconds.
+
+	Query string:
+
+# https://blog.semantic-web.at/2015/11/06/if-you-like-friends-you-probably-also-will-like-veronicas-closet-find-out-with-sparql-why/
+PREFIX  xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX  dcterms: <http://purl.org/dc/terms/>
+PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  dbp:  <http://dbpedia.org/ontology/>
+PREFIX  dbr:  <http://dbpedia.org/resource/>
+
+SELECT  ?showB ?subjCountShowAB ?subjCountShowA ?subjCountShowB (( strdt(?subjCountShowAB, xsd:double) / ( ( ?subjCountShowA + ?subjCountShowB ) - ?subjCountShowAB ) ) AS ?subjScore)
+WHERE
+  { { SELECT  ?showB ?subjCountShowAB ?subjCountShowA (COUNT(?subject) AS ?subjCountShowB)
+      WHERE
+        { ?showB  dcterms:subject  ?subject
+          { SELECT  ?showB (COUNT(?subject) AS ?subjCountShowAB) ?subjCountShowA
+            WHERE
+              { ?showA  dcterms:subject  ?subject .
+                ?showB  dcterms:subject  ?subject
+                FILTER ( ! sameTerm(?showA, ?showB) )
+                { SELECT  ?showA (COUNT(?subject) AS ?subjCountShowA)
+                  WHERE
+                    { ?showA  dcterms:subject  ?subject
+                      FILTER sameTerm(?showA, dbr:Friends)
+                    }
+                  GROUP BY ?showA
+                }
+              }
+            GROUP BY ?showB ?subjCountShowA
+          }
+        }
+      GROUP BY ?showB ?subjCountShowAB ?subjCountShowA
+    }
+  }
+ORDER BY DESC(?subjScore)
+LIMIT   100
+
+# digraph{
+# "?showA"->"?subject"[label="dcterms:subject"];
+# "?showB"->"?subject"[label="dcterms:subject"];
+# }
+
+# showB,subjCountShowAB,subjCountShowA,subjCountShowB,subjScore
+# dbr:Will_&_Grace,10,16,18,0.416667
+# dbr:Sex_and_the_City,10,16,21,0.37037
+# dbr:Seinfeld,10,16,23,0.344828
+# dbr:Veronica's_Closet,7,16,12,0.333333
+# dbr:The_George_Carlin_Show,6,16,9,0.315789
+# dbr:Frasier,8,16,18,0.307692
+# dbr:Everybody_Loves_Raymond,7,16,14,0.304348
+# dbr:Madman_of_the_People,6,16,10,0.3
+# dbr:Night_Court,6,16,10,0.3
+# dbr:The_Single_Guy,6,16,11,0.285714
+# dbr:Jesse_(TV_series),6,16,11,0.285714
+# dbr:The_Help_(TV_series),5,16,7,0.277778
+# dbr:Just_Shoot_Me!,6,16,12,0.272727
+# dbr:Stark_Raving_Mad_(TV_series),6,16,12,0.272727
+# dbr:The_King_of_Queens,6,16,12,0.272727
+# dbr:Suddenly_Susan,6,16,12,0.272727
+# dbr:Caf�_Americain,5,16,8,0.263158
+# dbr:Conrad_Bloom,5,16,8,0.263158
+# dbr:Caroline_in_the_City,5,16,8,0.263158
+# dbr:Becker_(TV_series),6,16,13,0.26087
+# dbr:Mad_About_You,6,16,13,0.26087
+# dbr:Union_Square_(TV_series),5,16,9,0.25
+# dbr:Working_It_Out,5,16,9,0.25
+# dbr:Hope_and_Gloria,5,16,9,0.25
+# dbr:Muscle_(TV_series),5,16,9,0.25
+# dbr:Kirk_(TV_series),5,16,9,0.25
+# dbr:Fired_Up_(TV_series),5,16,9,0.25
+# dbr:The_Fresh_Prince_of_Bel-Air,6,16,14,0.25
+# dbr:Good_Morning,_Miami,5,16,9,0.25
+# dbr:The_Office_(U.S._TV_series),7,16,19,0.25
+# dbr:Better_with_You,5,16,9,0.25
+# dbr:Everything's_Relative_(1999_TV_series),5,16,9,0.25
+# dbr:The_Fanelli_Boys,5,16,9,0.25
+# dbr:The_Practice_(1976_TV_series),5,16,9,0.25
+# dbr:Working_Girl_(TV_series),5,16,10,0.238095
+# dbr:100_Questions,5,16,10,0.238095
+# dbr:What_I_Like_About_You_(TV_series),5,16,10,0.238095
+# dbr:Battery_Park_(TV_series),5,16,10,0.238095
+# dbr:Love,_Sidney,5,16,10,0.238095
+# dbr:Here_and_Now_(TV_series),5,16,10,0.238095
+# dbr:The_John_Larroquette_Show,5,16,10,0.238095
+# dbr:Minor_Adjustments,5,16,10,0.238095
+# dbr:Out_All_Night,5,16,10,0.238095
+# dbr:Common_Law_(1996_TV_series),5,16,10,0.238095
+# dbr:How_I_Met_Your_Mother,6,16,16,0.230769
+# dbr:The_Tracy_Morgan_Show,5,16,11,0.227273
+# dbr:My_Two_Dads,5,16,11,0.227273
+# dbr:Living_Single,5,16,11,0.227273
+# dbr:Ann_Jillian_(TV_series),5,16,11,0.227273
+# dbr:The_Office_(1995_TV_series),5,16,11,0.227273
+# dbr:The_Cosby_Show,7,16,22,0.225806
+# dbr:The_Martin_Short_Show_(1994_TV_series),4,16,6,0.222222
+# dbr:The_Tony_Danza_Show_(1997_TV_series),4,16,6,0.222222
+# dbr:Cheers,6,16,17,0.222222
+# dbr:30_Rock,7,16,23,0.21875
+# dbr:Oliver_Beene,5,16,12,0.217391
+# dbr:Spin_City,5,16,12,0.217391
+# dbr:NewsRadio,5,16,12,0.217391
+# dbr:Getting_By,5,16,12,0.217391
+# dbr:Kitchen_Confidential_(TV_series),5,16,12,0.217391
+# dbr:Boston_Common_(TV_series),5,16,12,0.217391
+# dbr:The_Drew_Carey_Show,5,16,12,0.217391
+# dbr:Joey_(TV_series),5,16,12,0.217391
+# dbr:Ally_McBeal,6,16,18,0.214286
+# dbr:Man_of_the_People_(TV_series),4,16,7,0.210526
+# dbr:Twenty_Good_Years,4,16,7,0.210526
+# dbr:I'm_with_Her,4,16,7,0.210526
+# dbr:The_Pursuit_of_Happiness_(TV_series),4,16,7,0.210526
+# dbr:Walter_&_Emily,4,16,7,0.210526
+# dbr:His_&_Hers_(TV_series),4,16,7,0.210526
+# dbr:The_Mullets,4,16,7,0.210526
+# dbr:The_Second_Half,4,16,7,0.210526
+# dbr:The_Days_and_Nights_of_Molly_Dodd,5,16,13,0.208333
+# dbr:704_Hauser,5,16,13,0.208333
+# dbr:Odd_Man_Out_(U.S._TV_series),5,16,13,0.208333
+# dbr:Head_of_the_Class,5,16,13,0.208333
+# dbr:That_'70s_Show,5,16,13,0.208333
+# dbr:Cosby,5,16,14,0.2
+# dbr:The_Best_Times_(TV_show),4,16,8,0.2
+# dbr:Joe_&_Valerie,4,16,8,0.2
+# dbr:Scorch_(TV_series),4,16,8,0.2
+# dbr:The_Dumplings_(TV_series),4,16,8,0.2
+# dbr:Whoopi,4,16,8,0.2
+# dbr:Trinity_(U.S._TV_series),4,16,8,0.2
+# dbr:Kristin_(TV_series),4,16,8,0.2
+# dbr:The_Fighting_Fitzgeralds,4,16,8,0.2
+# dbr:Hot_Properties_(TV_series),4,16,8,0.2
+# dbr:Daddio,4,16,8,0.2
+# dbr:Run_of_the_House,4,16,8,0.2
+# dbr:Come_to_Papa_(TV_series),4,16,8,0.2
+# dbr:Daddy's_Girls_(1994_TV_series),4,16,8,0.2
+# dbr:Room_for_Two_(TV_series),4,16,8,0.2
+# dbr:Built_to_Last_(TV_series),4,16,8,0.2
+# dbr:Muddling_Through,4,16,8,0.2
+# dbr:Rock_Me_Baby_(TV_series),4,16,8,0.2
+# dbr:Watching_Ellie,4,16,8,0.2
+# dbr:The_Preston_Episodes,4,16,8,0.2
+# dbr:3rd_Rock_from_the_Sun,5,16,14,0.2
+# dbr:High_Society_(1995_TV_series),4,16,8,0.2
+# dbr:Hank_(1965_TV_series),4,16,8,0.2
+
+
+	Query results (100 results): 
+
+
+__________________________________________________________________________________
+
+2016-04-30 20:49:49,939 ALL   [main] benchmark.testdriver.SPARQLConnection: 
+
+	Query 4 of run 1 has been executed in 0.992151 seconds.
+
+	Query string:
+
+PREFIX  dbo:  <http://dbpedia.org/ontology/>
+PREFIX  dbp:  <http://dbpedia.org/property/>
+PREFIX  dbr:  <http://dbpedia.org/resource/>
+PREFIX  xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX  dcterms: <http://purl.org/dc/terms/>
+PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT  ?Toyota (COUNT(DISTINCT ?Toyota) AS ?Toyota_Count) (COUNT(DISTINCT ?Lexus) AS ?Lexus_Count) (COUNT(DISTINCT ?Nippon_Life) AS ?Nippon_Life_Count) (COUNT(DISTINCT ?Akio_Toyoda) AS ?Akio_Toyoda_Count) (COUNT(DISTINCT ?Toyota_Ractis) AS ?Toyota_Ractis_Count) (COUNT(DISTINCT ?Bank79) AS ?Bank79_Count)
+WHERE
+  { ?Toyota   dbp:divisions      ?Lexus .
+    ?Lexus    dbo:owningCompany  ?Toyota .
+    ?Toyota   dbp:keyPeople      ?Akio_Toyoda .
+    ?Toyota_Ractis
+              dbo:manufacturer   ?Toyota .
+    ?Toyota   dbo:owner          ?Nippon_Life ;
+              dbp:owner          ?Bank79 ;
+              dbp:owner          ?Nippon_Life ;
+              dbo:owner          ?Bank79
+  }
+GROUP BY ?Toyota
+
+  # digraph{
+  # "?Toyota_Ractis"->"?Toyota"[label="dbo:manufacturer"];
+  # "?Lexus"->"?Toyota"[label="dbo:owningCompany"];
+  # "?Toyota"->"?Nippon_Life"[label="dbo:owner"];
+  # "?Toyota"->"?Akio_Toyoda"[label="dbp:keyPeople"];
+  # "?Toyota"->"?Nippon_Life"[label="dbp:owner"];
+  # "?Toyota"->"?Bank79"[label="dbp:owner"];
+  # "?Toyota"->"?Bank79"[label="dbo:owner"];
+  # "?Toyota"->"?Lexus"[label="dbp:divisions"];
+  # }
+
+  # result
+  # Toyota,Toyota_Count,Lexus_Count,Nippon_Life_Count,Akio_Toyoda_Count,Toyota_Ractis_Count,Bank79_Count
+  # dbr:Sega,1,1,4,3,16,4
+  # dbr:Lexus,1,1,1,5,16,1
+  # dbr:Toyota,1,1,5,2,275,5
+
+
+	Query results (3 results): 
+
+
+__________________________________________________________________________________
+
+2016-04-30 20:49:51,915 ALL   [main] benchmark.testdriver.SPARQLConnection: 
+
+	Query 5 of run 1 has been executed in 1.968418 seconds.
+
+	Query string:
+
+PREFIX  dbo:  <http://dbpedia.org/ontology/>
+PREFIX  dbp:  <http://dbpedia.org/property/>
+PREFIX  dbr:  <http://dbpedia.org/resource/>
+PREFIX  xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX  dcterms: <http://purl.org/dc/terms/>
+PREFIX  rdfs: <http://www.w3.org/2000/01/rdf_schema#>
+
+SELECT DISTINCT  ?HockeyTeam471 (COUNT(DISTINCT ?Jean_Guy_Talbot) AS ?Jean_Guy_Talbot_CountExpr) (COUNT(DISTINCT ?HockeyTeam471) AS ?HockeyTeam471_CountExpr) (COUNT(DISTINCT ?Lou_Angotti) AS ?Lou_Angotti_CountExpr) (COUNT(DISTINCT ?_Sr) AS ?_Sr_CountExpr) (COUNT(DISTINCT ?Bill_Masterton) AS ?Bill_Masterton_CountExpr) (COUNT(DISTINCT ?HockeyTeam540) AS ?HockeyTeam540_CountExpr)
+WHERE
+  { ?Jean_Guy_Talbot
+              dbp:playedFor  ?HockeyTeam471 .
+    ?Lou_Angotti  dbp:before  ?Jean_Guy_Talbot .
+    ?_Sr      dbp:after      ?Jean_Guy_Talbot .
+    ?Lou_Angotti  dbp:after  ?Bill_Masterton .
+    ?Bill_Masterton
+              dbp:playedFor  ?HockeyTeam471 .
+    ?Jean_Guy_Talbot
+              dbp:before     ?_Sr ;
+              dbp:playedFor  ?HockeyTeam540 ;
+              dbp:after      ?Lou_Angotti
+  }
+GROUP BY ?HockeyTeam471
+LIMIT   100
+
+# digraph{
+# "?Lou_Angotti"_>"?Bill_Masterton"[label="dbp:after"];
+# "?Jean_Guy_Talbot"_>"?_Sr"[label="dbp:before"];
+# "?_Sr"_>"?Jean_Guy_Talbot"[label="dbp:after"];
+# "?Bill_Masterton"_>"?HockeyTeam471"[label="dbp:playedFor"];
+# "?Lou_Angotti"_>"?Jean_Guy_Talbot"[label="dbp:before"];
+# "?Jean_Guy_Talbot"_>"?HockeyTeam471"[label="dbp:playedFor"];
+# "?Jean_Guy_Talbot"_>"?Lou_Angotti"[label="dbp:after"];
+# "?Jean_Guy_Talbot"_>"?HockeyTeam540"[label="dbp:playedFor"];
+# }
+
+# HockeyTeam471,Jean_Guy_Talbot_CountExpr,HockeyTeam471_CountExpr,Lou_Angotti_CountExpr,_Sr_CountExpr,Bill_Masterton_CountExpr,HockeyTeam540_CountExpr
+# dbr:New_York_Americans,6,1,6,13,6,10
+# dbr:Rochester_Americans,1,1,1,2,1,12
+# dbr:Jokerit,3,1,5,6,6,26
+# dbr:Dinamo_Riga_(original),1,1,1,3,1,3
+# dbr:Lake_Erie_Monsters,1,1,1,1,1,1
+# dbr:New_Jersey_Devils,23,1,27,58,22,64
+# dbr:St._Louis_Braves,1,1,1,2,1,12
+# dbr:New_York_Islanders,38,1,46,78,39,54
+# dbr:Hartford_Whalers,21,1,22,33,17,64
+# dbr:San_Jose_Sharks,19,1,20,44,19,48
+# dbr:HC_Olomouc,1,1,2,3,1,15
+# dbr:Bryn�s_IF,1,1,1,2,1,9
+# dbr:Carolina_Hurricanes,6,1,7,11,6,18
+# dbr:Los_Angeles_Kings,41,1,43,74,37,90
+# dbr:HC_Asiago,1,1,1,2,1,7
+# dbr:New_Brunswick_Hawks,2,1,2,7,1,11
+# dbr:Cleveland_Barons_(NHL),4,1,4,5,4,10
+# dbr:HC_CSKA_Moscow,8,1,10,12,9,10
+# dbr:Modo_Hockey,2,1,1,9,2,11
+# dbr:Minnesota_Wild,16,1,19,29,19,38
+# dbr:Phoenix_Roadrunners_(WHA),1,1,2,3,1,5
+# dbr:Moncton_Hawks,1,1,1,2,1,4
+# dbr:Ilves,1,1,1,1,1,13
+# dbr:Dallas_Stars,22,1,25,57,22,63
+# dbr:Springfield_Indians,3,1,3,8,3,15
+
+
+	Query results (100 results): 
+
+
+__________________________________________________________________________________
+
+2016-04-30 20:49:53,116 ALL   [main] benchmark.testdriver.SPARQLConnection: 
+
+	Query 6 of run 1 has been executed in 1.196076 seconds.
+
+	Query string:
+
+PREFIX  dbo:  <http://dbpedia.org/ontology/>
+PREFIX  dbp:  <http://dbpedia.org/property/>
+PREFIX  dbr:  <http://dbpedia.org/resource/>
+PREFIX  xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX  dcterms: <http://purl.org/dc/terms/>
+PREFIX  rdfs: <http://www.w3.org/2000/01/rdf_schema#>
+
+SELECT DISTINCT  ?Texas (COUNT(DISTINCT ?_Texas) AS ?_Texas_CountExpr) (COUNT(DISTINCT ?Texas) AS ?Texas_CountExpr) (COUNT(DISTINCT ?List_of_counties_in_Texas) AS ?List_of_counties_in_Texas_CountExpr) (COUNT(DISTINCT ?Robert_Mueller_Municipal_Airport) AS ?Robert_Mueller_Municipal_Airport_CountExpr) (COUNT(DISTINCT ?Oklahoma) AS ?Oklahoma_CountExpr) (COUNT(DISTINCT ?Organisation489) AS ?Organisation489_CountExpr)
+WHERE
+  { ?_Texas   dbo:isPartOf         ?Texas ;
+              dbp:subdivisionType  ?List_of_counties_in_Texas .
+    ?List_of_counties_in_Texas
+              dbp:territory        ?Texas .
+    ?Robert_Mueller_Municipal_Airport
+              dbo:location         ?_Texas .
+    ?Texas    dbo:capital          ?_Texas ;
+              dbp:borderingstates  ?Oklahoma ;
+              dbp:lowerhouse       ?Organisation489
+  }
+GROUP BY ?Texas
+
+# digraph{
+# "?_Texas"->"?List_of_counties_in_Texas"[label="dbp:subdivisionType"];
+# "?List_of_counties_in_Texas"->"?Texas"[label="dbp:territory"];
+# "?Robert_Mueller_Municipal_Airport"->"?_Texas"[label="dbo:location"];
+# "?_Texas"->"?Texas"[label="dbo:isPartOf"];
+# "?Texas"->"?Oklahoma"[label="dbp:borderingstates"];
+# "?Texas"->"?Organisation489"[label="dbp:lowerhouse"];
+# "?Texas"->"?_Texas"[label="dbo:capital"];
+# }
+
+# Texas,_Texas_CountExpr,Texas_CountExpr,List_of_counties_in_Texas_CountExpr,Robert_Mueller_Municipal_Airport_CountExpr,Oklahoma_CountExpr,Organisation489_CountExpr
+# dbr:Texas,1,1,1,351,4,1
+# dbr:Kansas,1,1,1,58,4,1
+# dbr:Rhode_Island,1,1,1,247,2,1
+# dbr:Oregon,1,1,1,85,2,1
+# dbr:Jokerit,3,1,5,6,6,26
+# dbr:Dinamo_Riga_(original),1,1,1,3,1,3
+# dbr:Lake_Erie_Monsters,1,1,1,1,1,1
+# dbr:New_Jersey_Devils,23,1,27,58,22,64
+# dbr:St._Louis_Braves,1,1,1,2,1,12
+# dbr:New_York_Islanders,38,1,46,78,39,54
+# dbr:Hartford_Whalers,21,1,22,33,17,64
+# dbr:San_Jose_Sharks,19,1,20,44,19,48
+# dbr:HC_Olomouc,1,1,2,3,1,15
+# dbr:Bryn�s_IF,1,1,1,2,1,9
+# dbr:Carolina_Hurricanes,6,1,7,11,6,18
+# dbr:Los_Angeles_Kings,41,1,43,74,37,90
+# dbr:HC_Asiago,1,1,1,2,1,7
+# dbr:New_Brunswick_Hawks,2,1,2,7,1,11
+# dbr:Cleveland_Barons_(NHL),4,1,4,5,4,10
+# dbr:HC_CSKA_Moscow,8,1,10,12,9,10
+# dbr:Modo_Hockey,2,1,1,9,2,11
+# dbr:Minnesota_Wild,16,1,19,29,19,38
+# dbr:Phoenix_Roadrunners_(WHA),1,1,2,3,1,5
+# dbr:Moncton_Hawks,1,1,1,2,1,4
+# dbr:Ilves,1,1,1,1,1,13
+# dbr:Dallas_Stars,22,1,25,57,22,63
+# dbr:Springfield_Indians,3,1,3,8,3,15
+# dbr:Flint_Generals_(1969�85),1,1,1,3,1,10
+# dbr:Torpedo_Nizhny_Novgorod,1,1,1,1,1,1
+# dbr:Chicago_Cougars,1,1,1,2,1,12
+# dbr:Johnstown_Jets,1,1,1,1,1,4
+# dbr:Toronto_St._Patricks,1,1,1,2,1,4
+# dbr:Montreal_Maroons,3,1,2,5,3,8
+# dbr:Baltimore_Skipjacks,1,1,1,3,1,10
+# dbr:SC_Bern,1,1,1,1,1,13
+# dbr:Wheeling_Nailers,1,1,1,1,1,12
+# dbr:Baltimore_Clippers,1,1,1,3,1,8
+# dbr:HC_Dukla_Jihlava,2,1,3,4,2,19
+# dbr:Central_Professional_Hockey_League,1,1,1,3,1,10
+# dbr:St._Louis_Blues,48,1,61,107,56,76
+# dbr:Krylya_Sovetov_Moscow,2,1,3,5,3,6
+# dbr:Houston_Apollos,1,1,1,3,1,10
+# dbr:Skellefte�_AIK,1,1,1,3,1,9
+# dbr:Ottawa_Senators,6,1,6,8,7,34
+# dbr:Adirondack_Red_Wings,1,1,1,3,1,10
+# dbr:Cincinnati_Stingers,4,1,4,9,4,16
+# dbr:SKA_Saint_Petersburg,2,1,2,5,2,6
+# dbr:Detroit_Falcons_(CoHL),1,1,1,2,1,11
+# dbr:Carolina_Thunderbirds,1,1,1,2,1,11
+# dbr:Hamburg_Freezers,1,1,2,3,1,15
+# dbr:Tulsa_Oilers,1,1,1,3,1,10
+# dbr:Toronto_Ontarios,2,1,2,3,2,5
+# dbr:Salt_Lake_Golden_Eagles,2,1,2,6,2,21
+# dbr:Toronto_Blueshirts,1,1,1,1,1,4
+# dbr:Columbus_Blue_Jackets,3,1,3,5,3,12
+# dbr:California_Golden_Seals,6,1,6,13,6,26
+# dbr:HC_Ko_ice,1,1,1,1,1,2
+# dbr:Hamilton_Tigers,1,1,1,2,1,4
+# dbr:Edmonton_Oilers,37,1,37,71,34,89
+# dbr:Washington_Capitals,26,1,27,37,28,62
+# dbr:Buffalo_Sabres,43,1,48,81,45,58
+# dbr:�ss�t,1,1,2,3,1,5
+# dbr:Arizona_Coyotes,7,1,8,11,8,17
+# dbr:Binghamton_Whalers,2,1,2,4,2,18
+# dbr:Flint_Spirits,1,1,1,3,1,10
+# dbr:Chicago_Blackhawks,87,1,96,174,88,99
+# dbr:New_Haven_Nighthawks,3,1,3,6,3,22
+# dbr:Buffalo_Bisons_(AHL),3,1,4,8,4,13
+
+
+	Query results (4 results): 
+
+
+__________________________________________________________________________________
+
+2016-04-30 20:49:57,108 ALL   [main] benchmark.testdriver.SPARQLConnection: 
+
+	Query 7 of run 1 has been executed in 3.986108 seconds.
+
+	Query string:
+
+PREFIX  dbo:  <http://dbpedia.org/ontology/>
+PREFIX  dbp:  <http://dbpedia.org/property/>
+PREFIX  dbr:  <http://dbpedia.org/resource/>
+PREFIX  xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX  dcterms: <http://purl.org/dc/terms/>
+PREFIX  rdfs: <http://www.w3.org/2000/01/rdf_schema#>
+
+SELECT DISTINCT  ?SoccerLeague (COUNT(DISTINCT ?Tamires_Cássia_Dias_Gomes) AS ?Tamires_Cássia_Dias_Gomes_CountExpr) (COUNT(DISTINCT ?team) AS ?team_CountExpr) (COUNT(DISTINCT ?SoccerLeague) AS ?SoccerLeague_CountExpr) (COUNT(DISTINCT ?Campeonato_Brasileiro_de_Futebol_Feminino) AS ?Campeonato_Brasileiro_de_Futebol_Feminino_CountExpr)
+WHERE
+  { ?Tamires_Cássia_Dias_Gomes
+              dbo:team    ?team .
+    ?team     dbp:league  ?SoccerLeague ;
+              dbp:league  ?Campeonato_Brasileiro_de_Futebol_Feminino .
+    ?Tamires_Cássia_Dias_Gomes
+              dbp:clubs   ?team
+  }
+GROUP BY ?SoccerLeague
+LIMIT   100
+
+# digraph{
+# "?Tamires_Cássia_Dias_Gomes"->"?team"[label="dbo:team"];
+# "?team"->"?Campeonato_Brasileiro_de_Futebol_Feminino"[label="dbp:league"];
+# "?team"->"?SoccerLeague"[label="dbp:league"];
+# "?Tamires_Cássia_Dias_Gomes"->"?team"[label="dbp:clubs"];
+# }
+
+#   SoccerLeague,Tamires_C��ssia_Dias_Gomes_CountExpr,team_CountExpr,SoccerLeague_CountExpr,Campeonato_Brasileiro_de_Futebol_Feminino_CountExpr,Oklahoma_CountExpr,Organisation489_CountExpr
+# dbr:Kerry_District_League,2,1,1,1,4,1
+# dbr:Indonesian_Premier_League,104,4,1,1,2,1
+# dbr:Austrian_Regional_League,59,2,1,1,1,1
+# dbr:Division_2_(Swedish_ice_hockey),2,1,1,1,1,12
+# dbr:A-Klasa,8,1,1,1,39,54
+# dbr:TT_Pro_League,170,14,1,1,17,64
+# dbr:Tanzanian_Premier_League,73,10,1,1,19,48
+# dbr:United_Soccer_Leagues,52,4,1,5,1,5
+# dbr:Bangladesh_Championship_League,4,3,1,1,1,8
+# dbr:Czech_Fourth_Division,3,1,1,1,2,13
+# dbr:National_Youth_League_(Australia),39,3,1,3,1,9
+# dbr:Campeonato_Carioca_(lower_levels),56,4,1,1,6,18
+# dbr:Qatar_Stars_League,666,17,1,1,37,90
+# dbr:First_League_of_the_Federation_of_Bosnia_and_Herzegovina,141,17,1,1,1,7
+# dbr:BUCS_MARS_Midlands_Division_1A,6,1,1,1,1,9
+# dbr:Malian_Second_Division,1,1,1,1,1,11
+# dbr:Bangladesh_Football_Premier_League,109,10,1,1,4,10
+# dbr:Campeonato_Capixaba_(lower_levels),3,1,1,1,1,5
+# dbr:Premier_Development_League,2087,146,1,5,1,4
+# dbr:Moldovan_National_Division,650,18,1,1,1,13
+# dbr:AFA_Senior_Male_League,5,1,1,1,6,36
+# dbr:Superliga_Femenina_de_Voleibol,1,1,1,2,1,12
+# dbr:Norwegian_First_Division,321,5,1,2,1,4
+# dbr:Soviet_Second_League,72,1,1,2,1,6
+# dbr:Bulgarian_South-East_V_AFG,252,12,1,1,3,8
+# dbr:FA_Women's_Premier_League_National_Division,43,2,1,1,1,15
+# dbr:Qatargas_League,12,1,1,1,1,10
+# dbr:Liga_Indonesia_Premier_Division,611,67,1,1,1,13
+# dbr:Essex_and_Suffolk_Border_Football_League,18,1,1,2,1,8
+# dbr:Algerian_Ligue_Professionnelle_1,631,19,1,1,2,19
+# dbr:Martinique_Championnat_National,10,6,1,1,1,10
+# dbr:Primera_Divisi�n_(women),195,20,1,1,56,76
+# dbr:Mid-sussex_Football_Federation,1,1,1,1,3,6
+# dbr:Liga_Nacional_B,32,2,1,1,86,234
+# dbr:Kabul_Premier_League,14,4,1,1,1,10
+# dbr:National_League_2_South,8,2,1,2,7,31
+# dbr:Sekshon_Amat�r,1,1,1,1,3,15
+# dbr:C�te_d'Ivoire_Ligue_2,7,1,1,1,4,22
+# dbr:Portuguese_District_Football_Associations,8,1,1,1,2,6
+# dbr:Swedish_Division_4,4,2,1,1,4,28
+# dbr:Prima_Categoria,71,7,1,1,1,6
+# dbr:London_2_South_East,1,1,1,1,1,11
+# dbr:Hoofdklasse_(women),9,1,1,1,1,15
+# dbr:Th�ringenliga,2,1,1,1,2,5
+# dbr:Women's_National_League_(Ireland),10,3,1,1,2,21
+# dbr:Torneo_Argentino_B,197,31,1,2,1,9
+# dbr:Kazakhstan_Premier_League,835,19,1,1,1,10
+# dbr:FA_Women's_Premier_League_Northern_Division,36,6,1,1,1,4
+# 1947,1,1,1,5,3,12
+# dbr:Albanian_Third_Division,5,3,1,1,1,4
+# 3,5433,386,1,3,34,89
+# dbr:Welsh_Premier_League,567,13,1,3,28,62
+# dbr:Berlin-Liga,70,7,1,1,3,20
+# dbr:Seconda_Categoria,22,4,1,1,45,58
+# dbr:Liga_III,201,25,1,1,1,5
+# dbr:Verbandsliga_Hessen-Mitte,21,8,1,1,1,9
+# dbr:Uzbekistan_2nd_division,23,1,1,1,2,18
+# dbr:Paraguayan_Divisi�n_Intermedia,138,10,1,1,1,9
+# dbr:Libyan_Second_Division,2,1,1,1,1,10
+# dbr:Regionalliga_Bayern,673,16,1,1,88,99
+
+
+	Query results (100 results): 
+
+
+__________________________________________________________________________________
+
+2016-04-30 20:49:57,114 ALL   [main] benchmark.testdriver.TestDriver: Scale factor:           1
+Number of warmup runs:  0
+Seed:                   808080
+Number of query mix runs (without warmups): 1 times
+min/max Querymix runtime: 29.3259s / 29.3259s
+Total runtime:          29.326 seconds
+QMpH:                   122.76 query mixes per hour
+CQET:                   29.32591 seconds average runtime of query mix
+CQET (geom.):           29.32591 seconds geometric mean runtime of query mix
+
+Metrics for Query:      1
+Count:                  1 times executed in whole run
+AQET:                   9.344043 seconds (arithmetic mean)
+AQET(geom.):            9.344043 seconds (geometric mean)
+QPS:                    0.11 Queries per second
+minQET/maxQET:          9.34404252s / 9.34404252s
+Average result count:   10.00
+min/max result count:   10 / 10
+Number of timeouts:     0
+
+Metrics for Query:      2
+Count:                  1 times executed in whole run
+AQET:                   11.515068 seconds (arithmetic mean)
+AQET(geom.):            11.515068 seconds (geometric mean)
+QPS:                    0.09 Queries per second
+minQET/maxQET:          11.51506780s / 11.51506780s
+Average result count:   27.00
+min/max result count:   27 / 27
+Number of timeouts:     0
+
+Metrics for Query:      3
+Count:                  1 times executed in whole run
+AQET:                   0.324041 seconds (arithmetic mean)
+AQET(geom.):            0.324041 seconds (geometric mean)
+QPS:                    3.09 Queries per second
+minQET/maxQET:          0.32404149s / 0.32404149s
+Average result count:   100.00
+min/max result count:   100 / 100
+Number of timeouts:     0
+
+Metrics for Query:      4
+Count:                  1 times executed in whole run
+AQET:                   0.992151 seconds (arithmetic mean)
+AQET(geom.):            0.992151 seconds (geometric mean)
+QPS:                    1.01 Queries per second
+minQET/maxQET:          0.99215097s / 0.99215097s
+Average result count:   3.00
+min/max result count:   3 / 3
+Number of timeouts:     0
+
+Metrics for Query:      5
+Count:                  1 times executed in whole run
+AQET:                   1.968418 seconds (arithmetic mean)
+AQET(geom.):            1.968418 seconds (geometric mean)
+QPS:                    0.51 Queries per second
+minQET/maxQET:          1.96841837s / 1.96841837s
+Average result count:   100.00
+min/max result count:   100 / 100
+Number of timeouts:     0
+
+Metrics for Query:      6
+Count:                  1 times executed in whole run
+AQET:                   1.196076 seconds (arithmetic mean)
+AQET(geom.):            1.196076 seconds (geometric mean)
+QPS:                    0.84 Queries per second
+minQET/maxQET:          1.19607552s / 1.19607552s
+Average result count:   4.00
+min/max result count:   4 / 4
+Number of timeouts:     0
+
+Metrics for Query:      7
+Count:                  1 times executed in whole run
+AQET:                   3.986108 seconds (arithmetic mean)
+AQET(geom.):            3.986108 seconds (geometric mean)
+QPS:                    0.25 Queries per second
+minQET/maxQET:          3.98610838s / 3.98610838s
+Average result count:   100.00
+min/max result count:   100 / 100
+Number of timeouts:     0
+
+

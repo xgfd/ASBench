@@ -15,8 +15,7 @@ WHERE
               dbp:clubs   ?team
   }
 GROUP BY ?SoccerLeague
-LIMIT   100
-
+# 548454
 # digraph{
 # "?Tamires_Cássia_Dias_Gomes"->"?team"[label="dbo:team"];
 # "?team"->"?Campeonato_Brasileiro_de_Futebol_Feminino"[label="dbp:league"];

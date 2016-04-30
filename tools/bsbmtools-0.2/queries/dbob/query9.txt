@@ -1,0 +1,27 @@
+SELECT  (COUNT(DISTINCT ?Ernesto_Samper) AS ?Ernesto_Samper_CountExpr) (COUNT(DISTINCT ?Carlos_Lemos_Simmonds) AS ?Carlos_Lemos_Simmonds_CountExpr) (COUNT(DISTINCT ?Andrés_Pastrana_Arango) AS ?Andrés_Pastrana_Arango_CountExpr) (COUNT(DISTINCT ?Carolina_Barco) AS ?Carolina_Barco_CountExpr) (COUNT(DISTINCT ?Ambassador682) AS ?Ambassador682_CountExpr) (COUNT(DISTINCT ?President_of_Colombia) AS ?President_of_Colombia_CountExpr) (COUNT(DISTINCT ?Ambassador613) AS ?Ambassador613_CountExpr) (COUNT(DISTINCT ?María_Emma_Mejía_Vélez) AS ?María_Emma_Mejía_Vélez_CountExpr)
+WHERE
+  { ?Ernesto_Samper
+              <http://dbpedia.org/property/vicepresident>  ?Carlos_Lemos_Simmonds .
+    ?Andrés_Pastrana_Arango
+              <http://dbpedia.org/property/successor>  ?Carolina_Barco .
+    ?Ernesto_Samper
+              <http://dbpedia.org/property/successor>  ?Andrés_Pastrana_Arango .
+    ?Andrés_Pastrana_Arango
+              <http://dbpedia.org/property/successor>  ?Ambassador682 .
+    ?Ernesto_Samper
+              <http://dbpedia.org/property/title>  ?President_of_Colombia .
+    ?Andrés_Pastrana_Arango
+              <http://dbpedia.org/ontology/successor>  ?Ambassador613 .
+    ?Ernesto_Samper
+              <http://dbpedia.org/property/successor>  ?María_Emma_Mejía_Vélez .
+  }
+# 258799
+# digraph{
+# "?Andrés_Pastrana_Arango"->"?Ambassador613"[label="dbo:successor"];
+# "?Ernesto_Samper"->"?Andrés_Pastrana_Arango"[label="dbp:successor"];
+# "?Ernesto_Samper"->"?Carlos_Lemos_Simmonds"[label="dbp:vicepresident"];
+# "?Andrés_Pastrana_Arango"->"?Ambassador682"[label="dbp:successor"];
+# "?Andrés_Pastrana_Arango"->"?Carolina_Barco"[label="dbp:successor"];
+# "?Ernesto_Samper"->"?President_of_Colombia"[label="dbp:title"];
+# "?Ernesto_Samper"->"?María_Emma_Mejía_Vélez"[label="dbp:successor"];
+# }

@@ -10,26 +10,22 @@ WHERE
   { ?Jean_Guy_Talbot
               dbp:playedFor  ?HockeyTeam471 .
     ?Lou_Angotti  dbp:before  ?Jean_Guy_Talbot .
-    ?_Sr      dbp:after      ?Jean_Guy_Talbot .
     ?Lou_Angotti  dbp:after  ?Bill_Masterton .
     ?Bill_Masterton
               dbp:playedFor  ?HockeyTeam471 .
     ?Jean_Guy_Talbot
               dbp:before     ?_Sr ;
-              dbp:playedFor  ?HockeyTeam540 ;
-              dbp:after      ?Lou_Angotti
+              dbp:playedFor  ?HockeyTeam540 .
   }
 GROUP BY ?HockeyTeam471
-LIMIT   100
 
+# 59134
 # digraph{
 # "?Lou_Angotti"_>"?Bill_Masterton"[label="dbp:after"];
 # "?Jean_Guy_Talbot"_>"?_Sr"[label="dbp:before"];
-# "?_Sr"_>"?Jean_Guy_Talbot"[label="dbp:after"];
 # "?Bill_Masterton"_>"?HockeyTeam471"[label="dbp:playedFor"];
 # "?Lou_Angotti"_>"?Jean_Guy_Talbot"[label="dbp:before"];
 # "?Jean_Guy_Talbot"_>"?HockeyTeam471"[label="dbp:playedFor"];
-# "?Jean_Guy_Talbot"_>"?Lou_Angotti"[label="dbp:after"];
 # "?Jean_Guy_Talbot"_>"?HockeyTeam540"[label="dbp:playedFor"];
 # }
 

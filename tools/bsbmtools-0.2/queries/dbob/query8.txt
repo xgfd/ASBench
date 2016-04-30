@@ -1,0 +1,23 @@
+SELECT  (COUNT(DISTINCT ?Texas) AS ?Texas_CountExpr) (COUNT(DISTINCT ?Texas_House_of_Representatives) AS ?Texas_House_of_Representatives_CountExpr) (COUNT(DISTINCT ?_Texas) AS ?_Texas_CountExpr) (COUNT(DISTINCT ?Joe_Straus) AS ?Joe_Straus_CountExpr) (COUNT(DISTINCT ?University497) AS ?University497_CountExpr) (COUNT(DISTINCT ?Ronnie_Laws) AS ?Ronnie_Laws_CountExpr) (COUNT(DISTINCT ?Organisation489) AS ?Organisation489_CountExpr) (COUNT(DISTINCT ?Oklahoma) AS ?Oklahoma_CountExpr) (COUNT(DISTINCT ?Organisation75) AS ?Organisation75_CountExpr)
+WHERE
+  { ?Texas    <http://dbpedia.org/property/lowerhouse>  ?Texas_House_of_Representatives .
+    ?Texas_House_of_Representatives
+              <http://dbpedia.org/property/leader>  ?Joe_Straus .
+    ?Joe_Straus  <http://dbpedia.org/property/almaMater>  ?University497 .
+    ?Ronnie_Laws  <http://dbpedia.org/ontology/birthPlace>  ?Texas .
+    ?Texas    <http://dbpedia.org/ontology/capital>  ?_Texas ;
+              <http://dbpedia.org/property/lowerhouse>  ?Organisation489 ;
+              <http://dbpedia.org/property/borderingstates>  ?Oklahoma ;
+              <http://dbpedia.org/property/lowerhouse>  ?Organisation75
+  }
+# 120764
+# digraph{
+# "?Ronnie_Laws"->"?Texas"[label="dbo:birthPlace"];
+# "?Texas"->"?Texas_House_of_Representatives"[label="dbp:lowerhouse"];
+# "?Texas"->"?Organisation489"[label="dbp:lowerhouse"];
+# "?Texas"->"?Oklahoma"[label="dbp:borderingstates"];
+# "?Joe_Straus"->"?University497"[label="dbp:almaMater"];
+# "?Texas"->"?_Texas"[label="dbo:capital"];
+# "?Texas"->"?Organisation75"[label="dbp:lowerhouse"];
+# "?Texas_House_of_Representatives"->"?Joe_Straus"[label="dbp:leader"];
+# }

@@ -1,0 +1,12 @@
+SELECT  (COUNT(DISTINCT ?X11_color_names) AS ?X11_color_names_CountExpr) (COUNT(DISTINCT ?Sky_blue) AS ?Sky_blue_CountExpr) (COUNT(DISTINCT ?Shades_of_green) AS ?Shades_of_green_CountExpr)
+WHERE
+  { ?X11_color_names
+              <http://dbpedia.org/property/name>  ?Sky_blue ;
+              <http://dbpedia.org/property/name>  ?Shades_of_green
+  }
+
+# 81187172
+# digraph{
+# "?X11_color_names"->"?Sky_blue"[label="dbp:name"];
+# "?X11_color_names"->"?Shades_of_green"[label="dbp:name"];
+# }

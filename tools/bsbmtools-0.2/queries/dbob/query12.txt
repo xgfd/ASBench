@@ -1,0 +1,24 @@
+SELECT  (COUNT(DISTINCT ?H._L._Dattu) AS ?H._L._Dattu_CountExpr) (COUNT(DISTINCT ?Pranab_Mukherjee) AS ?Pranab_Mukherjee_CountExpr) (COUNT(DISTINCT ?Rajendra_Mal_Lodha) AS ?Rajendra_Mal_Lodha_CountExpr) (COUNT(DISTINCT ?India) AS ?India_CountExpr) (COUNT(DISTINCT ?University2015) AS ?University2015_CountExpr) (COUNT(DISTINCT ?CricketLeague1806) AS ?CricketLeague1806_CountExpr) (COUNT(DISTINCT ?Manmohan_Singh) AS ?Manmohan_Singh_CountExpr) (COUNT(DISTINCT ?Sumitra_Mahajan) AS ?Sumitra_Mahajan_CountExpr)
+WHERE
+  { ?H_L_Dattu  <http://dbpedia.org/ontology/appointer>  ?Pranab_Mukherjee ;
+              <http://dbpedia.org/property/predecessor>  ?Rajendra_Mal_Lodha .
+    ?India    <http://dbpedia.org/property/leaderName>  ?H_L_Dattu .
+    ?Rajendra_Mal_Lodha
+              <http://dbpedia.org/property/almaMater>  ?University2015 .
+    ?CricketLeague1806
+              <http://dbpedia.org/ontology/country>  ?India .
+    ?Pranab_Mukherjee
+              <http://dbpedia.org/ontology/predecessor>  ?Manmohan_Singh .
+    ?India    <http://dbpedia.org/property/leaderName>  ?Sumitra_Mahajan
+  }
+
+# 4958966
+# digraph{
+# "?Rajendra_Mal_Lodha"->"?University2015"[label="dbp:almaMater"];
+# "?H_L_Dattu"->"?Rajendra_Mal_Lodha"[label="dbp:predecessor"];
+# "?CricketLeague1806"->"?India"[label="dbo:country"];
+# "?India"->"?Sumitra_Mahajan"[label="dbp:leaderName"];
+# "?India"->"?H_L_Dattu"[label="dbp:leaderName"];
+# "?H_L_Dattu"->"?Pranab_Mukherjee"[label="dbo:appointer"];
+# "?Pranab_Mukherjee"->"?Manmohan_Singh"[label="dbo:predecessor"];
+# }

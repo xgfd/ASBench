@@ -62,7 +62,7 @@ public class QueryGen {
     }
 
     private static Set<Resource> getRoots(Model model) {
-        int cap = 20;
+        int cap = 40;
 
         Set<Resource> resSet = new HashSet<>();
 
