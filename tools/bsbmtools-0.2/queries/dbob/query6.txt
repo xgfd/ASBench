@@ -5,7 +5,7 @@ PREFIX  xsd:  <http://www.w3.org/2001/XMLSchema#>
 PREFIX  dcterms: <http://purl.org/dc/terms/>
 PREFIX  rdfs: <http://www.w3.org/2000/01/rdf_schema#>
 
-SELECT  (COUNT(DISTINCT ?Johann_Schneider-Ammann) AS ?Johann_Schneider-Ammann_CountExpr) (COUNT(DISTINCT ?FDP.The_Liberals) AS ?FDP.The_Liberals_CountExpr) (COUNT(DISTINCT ?School151) AS ?School151_CountExpr) (COUNT(DISTINCT ?School634) AS ?School634_CountExpr) (COUNT(DISTINCT ?Philipp_Müller) AS ?Philipp_Müller_CountExpr)
+SELECT  (COUNT(DISTINCT ?Johann_Schneider_Ammann) AS ?Johann_Schneider_Ammann_CountExpr) (COUNT(DISTINCT ?FDP.The_Liberals) AS ?FDP.The_Liberals_CountExpr) (COUNT(DISTINCT ?School151) AS ?School151_CountExpr) (COUNT(DISTINCT ?School634) AS ?School634_CountExpr) (COUNT(DISTINCT ?Philipp_Müller) AS ?Philipp_Müller_CountExpr)
 WHERE
   { ?Johann_Schneider_Ammann
               <http://dbpedia.org/property/party>  ?FDPThe_Liberals ;
@@ -18,7 +18,7 @@ WHERE
 # 65260
 # digraph{
 # "?FDP.The_Liberals"->"?Philipp_Müller"[label="dbp:leader1Name"];
-# "?Johann_Schneider-Ammann"->"?School151"[label="dbo:almaMater"];
-# "?Johann_Schneider-Ammann"->"?FDP.The_Liberals"[label="dbp:party"];
-# "?Johann_Schneider-Ammann"->"?School634"[label="dbp:almaMater"];
+# "?Johann_Schneider_Ammann"->"?School151"[label="dbo:almaMater"];
+# "?Johann_Schneider_Ammann"->"?FDP.The_Liberals"[label="dbp:party"];
+# "?Johann_Schneider_Ammann"->"?School634"[label="dbp:almaMater"];
 # }
