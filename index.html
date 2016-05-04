@@ -37,9 +37,9 @@
 
 <ul>
 <li>
-<a href="https://github.com/xgfd/ASPG/tree/master/src">scr</a> contains tools to generate OLAP queries from a RDF graph.</li>
+<code>[scr](https://github.com/xgfd/ASPG/tree/master/src)</code> contains tools to generate OLAP queries from a RDF graph.</li>
 <li>
-<a href="https://github.com/xgfd/ASPG/tree/master/tools">tools</a> contains tools to query or sample RDF graphs using query templates.</li>
+<code>[tools](https://github.com/xgfd/ASPG/tree/master/tools)</code> contains tools to query or sample RDF graphs using query templates.</li>
 </ul>
 
 <h3>
@@ -49,12 +49,12 @@
 
 <p><strong>Query1</strong> Source: DBpedia query log from <a href="http://eprints.soton.ac.uk/385344/">USEWOD 2016 Research Dataset</a>.</p>
 
-<p>PREFIX  geo:  <a href="http://www.w3.org/2003/01/geo/wgs84_pos#">http://www.w3.org/2003/01/geo/wgs84_pos#</a>
-PREFIX  dbpedia-owl: <a href="http://dbpedia.org/ontology/">http://dbpedia.org/ontology/</a>
-PREFIX  dbpprop: <a href="http://dbpedia.org/property/">http://dbpedia.org/property/</a>
-PREFIX  foaf: <a href="http://xmlns.com/foaf/0.1/">http://xmlns.com/foaf/0.1/</a></p>
+<pre><code>PREFIX  geo:  &lt;http://www.w3.org/2003/01/geo/wgs84_pos#&gt;
+PREFIX  dbpedia-owl: &lt;http://dbpedia.org/ontology/&gt;
+PREFIX  dbpprop: &lt;http://dbpedia.org/property/&gt;
+PREFIX  foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
 
-<p>SELECT DISTINCT  ?Museum (SAMPLE(?name) AS ?name_) (SAMPLE(?abstract) AS ?abstract_) (SAMPLE(?thumbnail) AS ?thumbnail_) (MAX(?latitude) AS ?latitude_) (MAX(?longitude) AS ?longitude_) (SAMPLE(?established) AS ?established_) (SAMPLE(?website) AS ?website_) (SAMPLE(?homepage) AS ?homepage_) (SAMPLE(?wikilink) AS ?wikilink__)
+SELECT DISTINCT  ?Museum (SAMPLE(?name) AS ?name_) (SAMPLE(?abstract) AS ?abstract_) (SAMPLE(?thumbnail) AS ?thumbnail_) (MAX(?latitude) AS ?latitude_) (MAX(?longitude) AS ?longitude_) (SAMPLE(?established) AS ?established_) (SAMPLE(?website) AS ?website_) (SAMPLE(?homepage) AS ?homepage_) (SAMPLE(?wikilink) AS ?wikilink__)
 WHERE
   { ?Museum  a                     dbpedia-owl:Museum ;
              dbpprop:name          ?name ;
@@ -68,15 +68,16 @@ WHERE
              foaf:isPrimaryTopicOf  ?wikilink
     FILTER langMatches(lang(?abstract), "ES")
   }
-GROUP BY ?Museum</p>
+GROUP BY ?Museum
+</code></pre>
 
 <p><strong>Query2</strong> Source: <a href="https://blog.semantic-web.at/2015/09/29/sparql-analytics-proves-boxers-live-dangerously/">https://blog.semantic-web.at/2015/09/29/sparql-analytics-proves-boxers-live-dangerously/</a></p>
 
-<p>PREFIX  xsd:  <a href="http://www.w3.org/2001/XMLSchema#">http://www.w3.org/2001/XMLSchema#</a>
-PREFIX  rdfs: <a href="http://www.w3.org/2000/01/rdf-schema#">http://www.w3.org/2000/01/rdf-schema#</a>
-PREFIX  dbp:  <a href="http://dbpedia.org/ontology/">http://dbpedia.org/ontology/</a></p>
+<pre><code>PREFIX  xsd:  &lt;http://www.w3.org/2001/XMLSchema#&gt;
+PREFIX  rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX  dbp:  &lt;http://dbpedia.org/ontology/&gt;
 
-<p>SELECT  ?athleteGroupEN (COUNT(?athlete) AS ?count) (AVG(?age) AS ?ageAvg)
+SELECT  ?athleteGroupEN (COUNT(?athlete) AS ?count) (AVG(?age) AS ?ageAvg)
 WHERE
   { FILTER ( ( ?age &gt;= 20 ) &amp;&amp; ( ?age &lt;= 100 ) )
     { SELECT DISTINCT  ?athleteGroupEN ?athlete (( ?deathYear - ?birthYear ) AS ?age)
@@ -91,24 +92,25 @@ WHERE
           FILTER ( datatype(?birth) = xsd:date )
           ?athlete  dbp:deathDate  ?death
           FILTER ( datatype(?death) = xsd:date )
-          BIND(strdt(replace(?birth, "^(\d+)-.<em>", "$1"), xsd:integer) AS ?birthYear)
-          BIND(strdt(replace(?death, "^(\d+)-.</em>", "$1"), xsd:integer) AS ?deathYear)
+          BIND(strdt(replace(?birth, "^(\\d+)-.*", "$1"), xsd:integer) AS ?birthYear)
+          BIND(strdt(replace(?death, "^(\\d+)-.*", "$1"), xsd:integer) AS ?deathYear)
         }
     }
   }
 GROUP BY ?athleteGroupEN
 HAVING ( COUNT(?athlete) &gt;= 25 )
-ORDER BY ?ageAvg</p>
+ORDER BY ?ageAvg
+</code></pre>
 
 <p><strong>Query3</strong> Source: <a href="https://blog.semantic-web.at/2015/11/06/if-you-like-friends-you-probably-also-will-like-veronicas-closet-find-out-with-sparql-why/">https://blog.semantic-web.at/2015/11/06/if-you-like-friends-you-probably-also-will-like-veronicas-closet-find-out-with-sparql-why/</a></p>
 
-<p>PREFIX  xsd:  <a href="http://www.w3.org/2001/XMLSchema#">http://www.w3.org/2001/XMLSchema#</a>
-PREFIX  dcterms: <a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a>
-PREFIX  rdfs: <a href="http://www.w3.org/2000/01/rdf-schema#">http://www.w3.org/2000/01/rdf-schema#</a>
-PREFIX  dbp:  <a href="http://dbpedia.org/ontology/">http://dbpedia.org/ontology/</a>
-PREFIX  dbr:  <a href="http://dbpedia.org/resource/">http://dbpedia.org/resource/</a></p>
+<pre><code>PREFIX  xsd:  &lt;http://www.w3.org/2001/XMLSchema#&gt;
+PREFIX  dcterms: &lt;http://purl.org/dc/terms/&gt;
+PREFIX  rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX  dbp:  &lt;http://dbpedia.org/ontology/&gt;
+PREFIX  dbr:  &lt;http://dbpedia.org/resource/&gt;
 
-<p>SELECT  ?showB ?subjCountShowAB ?subjCountShowA ?subjCountShowB (( strdt(?subjCountShowAB, xsd:double) / ( ( ?subjCountShowA + ?subjCountShowB ) - ?subjCountShowAB ) ) AS ?subjScore)
+SELECT  ?showB ?subjCountShowAB ?subjCountShowA ?subjCountShowB (( strdt(?subjCountShowAB, xsd:double) / ( ( ?subjCountShowA + ?subjCountShowB ) - ?subjCountShowAB ) ) AS ?subjScore)
 WHERE
   { { SELECT  ?showB ?subjCountShowAB ?subjCountShowA (COUNT(?subject) AS ?subjCountShowB)
       WHERE
@@ -132,18 +134,19 @@ WHERE
       GROUP BY ?showB ?subjCountShowAB ?subjCountShowA
     }
   }
-ORDER BY DESC(?subjScore)</p>
+ORDER BY DESC(?subjScore)
+</code></pre>
 
 <p><strong>Query4</strong></p>
 
-<p>PREFIX  dbo:  <a href="http://dbpedia.org/ontology/">http://dbpedia.org/ontology/</a>
-PREFIX  dbp:  <a href="http://dbpedia.org/property/">http://dbpedia.org/property/</a>
-PREFIX  dbr:  <a href="http://dbpedia.org/resource/">http://dbpedia.org/resource/</a>
-PREFIX  xsd:  <a href="http://www.w3.org/2001/XMLSchema#">http://www.w3.org/2001/XMLSchema#</a>
-PREFIX  dcterms: <a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a>
-PREFIX  rdfs: <a href="http://www.w3.org/2000/01/rdf-schema#">http://www.w3.org/2000/01/rdf-schema#</a></p>
+<pre><code>PREFIX  dbo:  &lt;http://dbpedia.org/ontology/&gt;
+PREFIX  dbp:  &lt;http://dbpedia.org/property/&gt;
+PREFIX  dbr:  &lt;http://dbpedia.org/resource/&gt;
+PREFIX  xsd:  &lt;http://www.w3.org/2001/XMLSchema#&gt;
+PREFIX  dcterms: &lt;http://purl.org/dc/terms/&gt;
+PREFIX  rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
 
-<p>SELECT DISTINCT  ?Toyota (COUNT(DISTINCT ?Toyota) AS ?Toyota_Count) (COUNT(DISTINCT ?Lexus) AS ?Lexus_Count) (COUNT(DISTINCT ?Nippon_Life) AS ?Nippon_Life_Count) (COUNT(DISTINCT ?Akio_Toyoda) AS ?Akio_Toyoda_Count) (COUNT(DISTINCT ?Toyota_Ractis) AS ?Toyota_Ractis_Count) (COUNT(DISTINCT ?Bank79) AS ?Bank79_Count)
+SELECT DISTINCT  ?Toyota (COUNT(DISTINCT ?Toyota) AS ?Toyota_Count) (COUNT(DISTINCT ?Lexus) AS ?Lexus_Count) (COUNT(DISTINCT ?Nippon_Life) AS ?Nippon_Life_Count) (COUNT(DISTINCT ?Akio_Toyoda) AS ?Akio_Toyoda_Count) (COUNT(DISTINCT ?Toyota_Ractis) AS ?Toyota_Ractis_Count) (COUNT(DISTINCT ?Bank79) AS ?Bank79_Count)
 WHERE
   { ?Toyota   dbp:divisions      ?Lexus .
     ?Toyota   dbp:keyPeople      ?Akio_Toyoda .
@@ -152,18 +155,19 @@ WHERE
     ?Toyota   dbp:owner          ?Bank79 ;
               dbp:owner          ?Nippon_Life .
   }
-GROUP BY ?Toyota</p>
+GROUP BY ?Toyota
+</code></pre>
 
 <p><strong>Query5</strong></p>
 
-<p>PREFIX  dbo:  <a href="http://dbpedia.org/ontology/">http://dbpedia.org/ontology/</a>
-PREFIX  dbp:  <a href="http://dbpedia.org/property/">http://dbpedia.org/property/</a>
-PREFIX  dbr:  <a href="http://dbpedia.org/resource/">http://dbpedia.org/resource/</a>
-PREFIX  xsd:  <a href="http://www.w3.org/2001/XMLSchema#">http://www.w3.org/2001/XMLSchema#</a>
-PREFIX  dcterms: <a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a>
-PREFIX  rdfs: <a href="http://www.w3.org/2000/01/rdf_schema#">http://www.w3.org/2000/01/rdf_schema#</a></p>
+<pre><code>PREFIX  dbo:  &lt;http://dbpedia.org/ontology/&gt;
+PREFIX  dbp:  &lt;http://dbpedia.org/property/&gt;
+PREFIX  dbr:  &lt;http://dbpedia.org/resource/&gt;
+PREFIX  xsd:  &lt;http://www.w3.org/2001/XMLSchema#&gt;
+PREFIX  dcterms: &lt;http://purl.org/dc/terms/&gt;
+PREFIX  rdfs: &lt;http://www.w3.org/2000/01/rdf_schema#&gt;
 
-<p>SELECT DISTINCT  ?HockeyTeam471 (COUNT(DISTINCT ?Jean_Guy_Talbot) AS ?Jean_Guy_Talbot_CountExpr) (COUNT(DISTINCT ?HockeyTeam471) AS ?HockeyTeam471_CountExpr) (COUNT(DISTINCT ?Lou_Angotti) AS ?Lou_Angotti_CountExpr) (COUNT(DISTINCT ?_Sr) AS ?_Sr_CountExpr) (COUNT(DISTINCT ?Bill_Masterton) AS ?Bill_Masterton_CountExpr) (COUNT(DISTINCT ?HockeyTeam540) AS ?HockeyTeam540_CountExpr)
+SELECT DISTINCT  ?HockeyTeam471 (COUNT(DISTINCT ?Jean_Guy_Talbot) AS ?Jean_Guy_Talbot_CountExpr) (COUNT(DISTINCT ?HockeyTeam471) AS ?HockeyTeam471_CountExpr) (COUNT(DISTINCT ?Lou_Angotti) AS ?Lou_Angotti_CountExpr) (COUNT(DISTINCT ?_Sr) AS ?_Sr_CountExpr) (COUNT(DISTINCT ?Bill_Masterton) AS ?Bill_Masterton_CountExpr) (COUNT(DISTINCT ?HockeyTeam540) AS ?HockeyTeam540_CountExpr)
 WHERE
   { ?Jean_Guy_Talbot
               dbp:playedFor  ?HockeyTeam471 .
@@ -175,38 +179,40 @@ WHERE
               dbp:before     ?_Sr ;
               dbp:playedFor  ?HockeyTeam540 .
   }
-GROUP BY ?HockeyTeam471</p>
+GROUP BY ?HockeyTeam471
+</code></pre>
 
 <p><strong>Query6</strong></p>
 
-<p>PREFIX  dbo:  <a href="http://dbpedia.org/ontology/">http://dbpedia.org/ontology/</a>
-PREFIX  dbp:  <a href="http://dbpedia.org/property/">http://dbpedia.org/property/</a>
-PREFIX  dbr:  <a href="http://dbpedia.org/resource/">http://dbpedia.org/resource/</a>
-PREFIX  xsd:  <a href="http://www.w3.org/2001/XMLSchema#">http://www.w3.org/2001/XMLSchema#</a>
-PREFIX  dcterms: <a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a>
-PREFIX  rdfs: <a href="http://www.w3.org/2000/01/rdf_schema#">http://www.w3.org/2000/01/rdf_schema#</a></p>
+<pre><code>PREFIX  dbo:  &lt;http://dbpedia.org/ontology/&gt;
+PREFIX  dbp:  &lt;http://dbpedia.org/property/&gt;
+PREFIX  dbr:  &lt;http://dbpedia.org/resource/&gt;
+PREFIX  xsd:  &lt;http://www.w3.org/2001/XMLSchema#&gt;
+PREFIX  dcterms: &lt;http://purl.org/dc/terms/&gt;
+PREFIX  rdfs: &lt;http://www.w3.org/2000/01/rdf_schema#&gt;
 
-<p>SELECT  (COUNT(DISTINCT ?FDPThe_Liberals) AS ?FDPThe_Liberals_CountExpr) (COUNT(DISTINCT ?School151) AS ?School151_CountExpr) (COUNT(DISTINCT ?School634) AS ?School634_CountExpr) (COUNT(DISTINCT ?Philipp_Muller) AS ?Philipp_Muller_CountExpr)
+SELECT  (COUNT(DISTINCT ?FDPThe_Liberals) AS ?FDPThe_Liberals_CountExpr) (COUNT(DISTINCT ?School151) AS ?School151_CountExpr) (COUNT(DISTINCT ?School634) AS ?School634_CountExpr) (COUNT(DISTINCT ?Philipp_Muller) AS ?Philipp_Muller_CountExpr)
 WHERE
   { ?Johann_Schneider_Ammann
-              <a href="http://dbpedia.org/property/party">http://dbpedia.org/property/party</a>  ?FDPThe_Liberals ;
-              <a href="http://dbpedia.org/ontology/almaMater">http://dbpedia.org/ontology/almaMater</a>  ?School151 ;
-              <a href="http://dbpedia.org/property/almaMater">http://dbpedia.org/property/almaMater</a>  ?School634 .
+              &lt;http://dbpedia.org/property/party&gt;  ?FDPThe_Liberals ;
+              &lt;http://dbpedia.org/ontology/almaMater&gt;  ?School151 ;
+              &lt;http://dbpedia.org/property/almaMater&gt;  ?School634 .
     ?FDPThe_Liberals
-              <a href="http://dbpedia.org/property/leader1Name">http://dbpedia.org/property/leader1Name</a>  ?Philipp_Muller
+              &lt;http://dbpedia.org/property/leader1Name&gt;  ?Philipp_Muller
   }
-GROUP BY ?Johann_Schneider_Ammann</p>
+GROUP BY ?Johann_Schneider_Ammann
+</code></pre>
 
 <p><strong>Query7</strong></p>
 
-<p>PREFIX  dbo:  <a href="http://dbpedia.org/ontology/">http://dbpedia.org/ontology/</a>
-PREFIX  dbp:  <a href="http://dbpedia.org/property/">http://dbpedia.org/property/</a>
-PREFIX  dbr:  <a href="http://dbpedia.org/resource/">http://dbpedia.org/resource/</a>
-PREFIX  xsd:  <a href="http://www.w3.org/2001/XMLSchema#">http://www.w3.org/2001/XMLSchema#</a>
-PREFIX  dcterms: <a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a>
-PREFIX  rdfs: <a href="http://www.w3.org/2000/01/rdf_schema#">http://www.w3.org/2000/01/rdf_schema#</a></p>
+<pre><code>PREFIX  dbo:  &lt;http://dbpedia.org/ontology/&gt;
+PREFIX  dbp:  &lt;http://dbpedia.org/property/&gt;
+PREFIX  dbr:  &lt;http://dbpedia.org/resource/&gt;
+PREFIX  xsd:  &lt;http://www.w3.org/2001/XMLSchema#&gt;
+PREFIX  dcterms: &lt;http://purl.org/dc/terms/&gt;
+PREFIX  rdfs: &lt;http://www.w3.org/2000/01/rdf_schema#&gt;
 
-<p>SELECT DISTINCT  ?SoccerLeague (COUNT(DISTINCT ?Tamires_Cássia_Dias_Gomes) AS ?Tamires_Cássia_Dias_Gomes_CountExpr) (COUNT(DISTINCT ?team) AS ?team_CountExpr) (COUNT(DISTINCT ?SoccerLeague) AS ?SoccerLeague_CountExpr) (COUNT(DISTINCT ?Campeonato_Brasileiro_de_Futebol_Feminino) AS ?Campeonato_Brasileiro_de_Futebol_Feminino_CountExpr)
+SELECT DISTINCT  ?SoccerLeague (COUNT(DISTINCT ?Tamires_Cássia_Dias_Gomes) AS ?Tamires_Cássia_Dias_Gomes_CountExpr) (COUNT(DISTINCT ?team) AS ?team_CountExpr) (COUNT(DISTINCT ?SoccerLeague) AS ?SoccerLeague_CountExpr) (COUNT(DISTINCT ?Campeonato_Brasileiro_de_Futebol_Feminino) AS ?Campeonato_Brasileiro_de_Futebol_Feminino_CountExpr)
 WHERE
   { ?Tamires_Cássia_Dias_Gomes
               dbo:team    ?team .
@@ -215,85 +221,89 @@ WHERE
     ?Tamires_Cássia_Dias_Gomes
               dbp:clubs   ?team
   }
-GROUP BY ?SoccerLeague</p>
+GROUP BY ?SoccerLeague
+</code></pre>
 
 <p><strong>Query8</strong></p>
 
-<p>PREFIX  dbo:  <a href="http://dbpedia.org/ontology/">http://dbpedia.org/ontology/</a>
-PREFIX  dbp:  <a href="http://dbpedia.org/property/">http://dbpedia.org/property/</a>
-PREFIX  dbr:  <a href="http://dbpedia.org/resource/">http://dbpedia.org/resource/</a>
-PREFIX  xsd:  <a href="http://www.w3.org/2001/XMLSchema#">http://www.w3.org/2001/XMLSchema#</a>
-PREFIX  dcterms: <a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a>
-PREFIX  rdfs: <a href="http://www.w3.org/2000/01/rdf_schema#">http://www.w3.org/2000/01/rdf_schema#</a></p>
+<pre><code>PREFIX  dbo:  &lt;http://dbpedia.org/ontology/&gt;
+PREFIX  dbp:  &lt;http://dbpedia.org/property/&gt;
+PREFIX  dbr:  &lt;http://dbpedia.org/resource/&gt;
+PREFIX  xsd:  &lt;http://www.w3.org/2001/XMLSchema#&gt;
+PREFIX  dcterms: &lt;http://purl.org/dc/terms/&gt;
+PREFIX  rdfs: &lt;http://www.w3.org/2000/01/rdf_schema#&gt;
 
-<p>SELECT  (COUNT(DISTINCT ?Texas_House_of_Representatives) AS ?Texas_House_of_Representatives_CountExpr) (COUNT(DISTINCT ?_Texas) AS ?_Texas_CountExpr) (COUNT(DISTINCT ?Joe_Straus) AS ?Joe_Straus_CountExpr) (COUNT(DISTINCT ?University497) AS ?University497_CountExpr) (COUNT(DISTINCT ?Ronnie_Laws) AS ?Ronnie_Laws_CountExpr) (COUNT(DISTINCT ?Organisation489) AS ?Organisation489_CountExpr) (COUNT(DISTINCT ?Oklahoma) AS ?Oklahoma_CountExpr) (COUNT(DISTINCT ?Organisation75) AS ?Organisation75_CountExpr)
+SELECT  (COUNT(DISTINCT ?Texas_House_of_Representatives) AS ?Texas_House_of_Representatives_CountExpr) (COUNT(DISTINCT ?_Texas) AS ?_Texas_CountExpr) (COUNT(DISTINCT ?Joe_Straus) AS ?Joe_Straus_CountExpr) (COUNT(DISTINCT ?University497) AS ?University497_CountExpr) (COUNT(DISTINCT ?Ronnie_Laws) AS ?Ronnie_Laws_CountExpr) (COUNT(DISTINCT ?Organisation489) AS ?Organisation489_CountExpr) (COUNT(DISTINCT ?Oklahoma) AS ?Oklahoma_CountExpr) (COUNT(DISTINCT ?Organisation75) AS ?Organisation75_CountExpr)
 WHERE
-  { ?Texas    <a href="http://dbpedia.org/property/lowerhouse">http://dbpedia.org/property/lowerhouse</a>  ?Texas_House_of_Representatives .
+  { ?Texas    &lt;http://dbpedia.org/property/lowerhouse&gt;  ?Texas_House_of_Representatives .
     ?Texas_House_of_Representatives
-              <a href="http://dbpedia.org/property/leader">http://dbpedia.org/property/leader</a>  ?Joe_Straus .
-    ?Joe_Straus  <a href="http://dbpedia.org/property/almaMater">http://dbpedia.org/property/almaMater</a>  ?University497 .
-    ?Ronnie_Laws  <a href="http://dbpedia.org/ontology/birthPlace">http://dbpedia.org/ontology/birthPlace</a>  ?Texas .
-    ?Texas    <a href="http://dbpedia.org/ontology/capital">http://dbpedia.org/ontology/capital</a>  ?_Texas ;
-              <a href="http://dbpedia.org/property/lowerhouse">http://dbpedia.org/property/lowerhouse</a>  ?Organisation489 ;
-              <a href="http://dbpedia.org/property/borderingstates">http://dbpedia.org/property/borderingstates</a>  ?Oklahoma ;
-              <a href="http://dbpedia.org/property/lowerhouse">http://dbpedia.org/property/lowerhouse</a>  ?Organisation75
+              &lt;http://dbpedia.org/property/leader&gt;  ?Joe_Straus .
+    ?Joe_Straus  &lt;http://dbpedia.org/property/almaMater&gt;  ?University497 .
+    ?Ronnie_Laws  &lt;http://dbpedia.org/ontology/birthPlace&gt;  ?Texas .
+    ?Texas    &lt;http://dbpedia.org/ontology/capital&gt;  ?_Texas ;
+              &lt;http://dbpedia.org/property/lowerhouse&gt;  ?Organisation489 ;
+              &lt;http://dbpedia.org/property/borderingstates&gt;  ?Oklahoma ;
+              &lt;http://dbpedia.org/property/lowerhouse&gt;  ?Organisation75
   }
-GROUP BY ?Texas</p>
+GROUP BY ?Texas
+</code></pre>
 
-<p>*<em>Query9</em></p>
+<p><strong>Query9</strong></p>
 
-<p>PREFIX  dbo:  <a href="http://dbpedia.org/ontology/">http://dbpedia.org/ontology/</a>
-PREFIX  dbp:  <a href="http://dbpedia.org/property/">http://dbpedia.org/property/</a>
-PREFIX  dbr:  <a href="http://dbpedia.org/resource/">http://dbpedia.org/resource/</a>
-PREFIX  xsd:  <a href="http://www.w3.org/2001/XMLSchema#">http://www.w3.org/2001/XMLSchema#</a>
-PREFIX  dcterms: <a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a>
-PREFIX  rdfs: <a href="http://www.w3.org/2000/01/rdf_schema#">http://www.w3.org/2000/01/rdf_schema#</a></p>
+<pre><code>PREFIX  dbo:  &lt;http://dbpedia.org/ontology/&gt;
+PREFIX  dbp:  &lt;http://dbpedia.org/property/&gt;
+PREFIX  dbr:  &lt;http://dbpedia.org/resource/&gt;
+PREFIX  xsd:  &lt;http://www.w3.org/2001/XMLSchema#&gt;
+PREFIX  dcterms: &lt;http://purl.org/dc/terms/&gt;
+PREFIX  rdfs: &lt;http://www.w3.org/2000/01/rdf_schema#&gt;
 
-<p>SELECT  (COUNT(DISTINCT ?Carlos_Lemos_Simmonds) AS ?Carlos_Lemos_Simmonds_CountExpr) (COUNT(DISTINCT ?Andrés_Pastrana_Arango) AS ?Andrés_Pastrana_Arango_CountExpr) (COUNT(DISTINCT ?Carolina_Barco) AS ?Carolina_Barco_CountExpr) (COUNT(DISTINCT ?Ambassador682) AS ?Ambassador682_CountExpr) (COUNT(DISTINCT ?President_of_Colombia) AS ?President_of_Colombia_CountExpr) (COUNT(DISTINCT ?Ambassador613) AS ?Ambassador613_CountExpr) (COUNT(DISTINCT ?María_Emma_Mejía_Vélez) AS ?María_Emma_Mejía_Vélez_CountExpr)
+SELECT  (COUNT(DISTINCT ?Carlos_Lemos_Simmonds) AS ?Carlos_Lemos_Simmonds_CountExpr) (COUNT(DISTINCT ?Andrés_Pastrana_Arango) AS ?Andrés_Pastrana_Arango_CountExpr) (COUNT(DISTINCT ?Carolina_Barco) AS ?Carolina_Barco_CountExpr) (COUNT(DISTINCT ?Ambassador682) AS ?Ambassador682_CountExpr) (COUNT(DISTINCT ?President_of_Colombia) AS ?President_of_Colombia_CountExpr) (COUNT(DISTINCT ?Ambassador613) AS ?Ambassador613_CountExpr) (COUNT(DISTINCT ?María_Emma_Mejía_Vélez) AS ?María_Emma_Mejía_Vélez_CountExpr)
 WHERE
   { ?Ernesto_Samper
-              <a href="http://dbpedia.org/property/vicepresident">http://dbpedia.org/property/vicepresident</a>  ?Carlos_Lemos_Simmonds .
+              &lt;http://dbpedia.org/property/vicepresident&gt;  ?Carlos_Lemos_Simmonds .
     ?Andrés_Pastrana_Arango
-              <a href="http://dbpedia.org/property/successor">http://dbpedia.org/property/successor</a>  ?Carolina_Barco .
+              &lt;http://dbpedia.org/property/successor&gt;  ?Carolina_Barco .
     ?Ernesto_Samper
-              <a href="http://dbpedia.org/property/successor">http://dbpedia.org/property/successor</a>  ?Andrés_Pastrana_Arango .
+              &lt;http://dbpedia.org/property/successor&gt;  ?Andrés_Pastrana_Arango .
     ?Andrés_Pastrana_Arango
-              <a href="http://dbpedia.org/property/successor">http://dbpedia.org/property/successor</a>  ?Ambassador682 .
+              &lt;http://dbpedia.org/property/successor&gt;  ?Ambassador682 .
     ?Ernesto_Samper
-              <a href="http://dbpedia.org/property/title">http://dbpedia.org/property/title</a>  ?President_of_Colombia .
+              &lt;http://dbpedia.org/property/title&gt;  ?President_of_Colombia .
     ?Andrés_Pastrana_Arango
-              <a href="http://dbpedia.org/ontology/successor">http://dbpedia.org/ontology/successor</a>  ?Ambassador613 .
+              &lt;http://dbpedia.org/ontology/successor&gt;  ?Ambassador613 .
     ?Ernesto_Samper
-              <a href="http://dbpedia.org/property/successor">http://dbpedia.org/property/successor</a>  ?María_Emma_Mejía_Vélez .
+              &lt;http://dbpedia.org/property/successor&gt;  ?María_Emma_Mejía_Vélez .
   }
-GROUP BY ?Ernesto_Samper</p>
+GROUP BY ?Ernesto_Samper
+</code></pre>
 
 <p><strong>Query10</strong></p>
 
-<p>PREFIX  dbo:  <a href="http://dbpedia.org/ontology/">http://dbpedia.org/ontology/</a>
-PREFIX  dbp:  <a href="http://dbpedia.org/property/">http://dbpedia.org/property/</a>
-PREFIX  dbr:  <a href="http://dbpedia.org/resource/">http://dbpedia.org/resource/</a>
-PREFIX  xsd:  <a href="http://www.w3.org/2001/XMLSchema#">http://www.w3.org/2001/XMLSchema#</a>
-PREFIX  dcterms: <a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a>
-PREFIX  rdfs: <a href="http://www.w3.org/2000/01/rdf_schema#">http://www.w3.org/2000/01/rdf_schema#</a></p>
+<pre><code>PREFIX  dbo:  &lt;http://dbpedia.org/ontology/&gt;
+PREFIX  dbp:  &lt;http://dbpedia.org/property/&gt;
+PREFIX  dbr:  &lt;http://dbpedia.org/resource/&gt;
+PREFIX  xsd:  &lt;http://www.w3.org/2001/XMLSchema#&gt;
+PREFIX  dcterms: &lt;http://purl.org/dc/terms/&gt;
+PREFIX  rdfs: &lt;http://www.w3.org/2000/01/rdf_schema#&gt;
 
-<p>SELECT  (COUNT(DISTINCT ?X11_color_names) AS ?X11_color_names_CountExpr) 
+SELECT  (COUNT(DISTINCT ?X11_color_names) AS ?X11_color_names_CountExpr) 
 WHERE
   { ?X11_color_names
-              <a href="http://dbpedia.org/property/name">http://dbpedia.org/property/name</a>  ?Sky_blue ;
-              <a href="http://dbpedia.org/property/name">http://dbpedia.org/property/name</a>  ?Shades_of_green
-  }</p>
+              &lt;http://dbpedia.org/property/name&gt;  ?Sky_blue ;
+              &lt;http://dbpedia.org/property/name&gt;  ?Shades_of_green
+  }
+</code></pre>
 
 <p><strong>Query11</strong></p>
 
-<p>PREFIX  dbo:  <a href="http://dbpedia.org/ontology/">http://dbpedia.org/ontology/</a>
+<pre><code>PREFIX  dbo:  http://dbpedia.org/ontology/
 PREFIX  dbp:  dbp:
-PREFIX  dbr:  <a href="http://dbpedia.org/resource/">http://dbpedia.org/resource/</a>
-PREFIX  xsd:  <a href="http://www.w3.org/2001/XMLSchema#">http://www.w3.org/2001/XMLSchema#</a>
-PREFIX  dcterms: <a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a>
-PREFIX  rdfs: <a href="http://www.w3.org/2000/01/rdf_schema#">http://www.w3.org/2000/01/rdf_schema#</a></p>
+PREFIX  dbr:  http://dbpedia.org/resource/
+PREFIX  xsd:  http://www.w3.org/2001/XMLSchema#
+PREFIX  dcterms: http://purl.org/dc/terms/
+PREFIX  rdfs: http://www.w3.org/2000/01/rdf_schema#
 
-<p>SELECT  (COUNT(DISTINCT ?Jim_Stynes) AS ?Jim_Stynes_CountExpr) (COUNT(DISTINCT ?Jack_C_Collins) AS ?Jack_C_Collins_CountExpr) (COUNT(DISTINCT ?Western_Bulldogs) AS ?Western_Bulldogs_CountExpr) (COUNT(DISTINCT ?Charlie_Sutton) AS ?Charlie_Sutton_CountExpr)  (COUNT(DISTINCT ?Docklands_Stadium) AS ?Docklands_Stadium_CountExpr) (COUNT(DISTINCT ?Arthur_Olliver) AS ?Arthur_Olliver_CountExpr) (COUNT(DISTINCT ?Scott_West) AS ?Scott_West_CountExpr)
+SELECT  (COUNT(DISTINCT ?Jim_Stynes) AS ?Jim_Stynes_CountExpr) (COUNT(DISTINCT ?Jack_C_Collins) AS ?Jack_C_Collins_CountExpr) (COUNT(DISTINCT ?Western_Bulldogs) AS ?Western_Bulldogs_CountExpr) (COUNT(DISTINCT ?Charlie_Sutton) AS ?Charlie_Sutton_CountExpr)  (COUNT(DISTINCT ?Docklands_Stadium) AS ?Docklands_Stadium_CountExpr) (COUNT(DISTINCT ?Arthur_Olliver) AS ?Arthur_Olliver_CountExpr) (COUNT(DISTINCT ?Scott_West) AS ?Scott_West_CountExpr)
 WHERE
   { ?Scott_Wynd  dbp:before  ?Jim_Stynes .
     ?Jack_C_Collins
@@ -306,18 +316,19 @@ WHERE
               dbp:interchange  ?Arthur_Olliver ;
               dbp:ruckrover  ?Scott_West
   }
-GROUP BY ?Scott_Wynd</p>
+GROUP BY ?Scott_Wynd
+</code></pre>
 
 <p><strong>Query12</strong></p>
 
-<p>PREFIX  dbo:  dbo:
+<pre><code>PREFIX  dbo:  dbo:
 PREFIX  dbp:  dbp:
-PREFIX  dbr:  <a href="http://dbpedia.org/resource/">http://dbpedia.org/resource/</a>
-PREFIX  xsd:  <a href="http://www.w3.org/2001/XMLSchema#">http://www.w3.org/2001/XMLSchema#</a>
-PREFIX  dcterms: <a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a>
-PREFIX  rdfs: <a href="http://www.w3.org/2000/01/rdf_schema#">http://www.w3.org/2000/01/rdf_schema#</a></p>
+PREFIX  dbr:  http://dbpedia.org/resource/
+PREFIX  xsd:  http://www.w3.org/2001/XMLSchema#
+PREFIX  dcterms: http://purl.org/dc/terms/
+PREFIX  rdfs: http://www.w3.org/2000/01/rdf_schema#
 
-<p>SELECT  (COUNT(DISTINCT ?H_L_Dattu) AS ?H_L_Dattu_CountExpr) (COUNT(DISTINCT ?Pranab_Mukherjee) AS ?Pranab_Mukherjee_CountExpr) (COUNT(DISTINCT ?Rajendra_Mal_Lodha) AS ?Rajendra_Mal_Lodha_CountExpr)  (COUNT(DISTINCT ?University2015) AS ?University2015_CountExpr) (COUNT(DISTINCT ?CricketLeague1806) AS ?CricketLeague1806_CountExpr) (COUNT(DISTINCT ?Manmohan_Singh) AS ?Manmohan_Singh_CountExpr) (COUNT(DISTINCT ?Sumitra_Mahajan) AS ?Sumitra_Mahajan_CountExpr)
+SELECT  (COUNT(DISTINCT ?H_L_Dattu) AS ?H_L_Dattu_CountExpr) (COUNT(DISTINCT ?Pranab_Mukherjee) AS ?Pranab_Mukherjee_CountExpr) (COUNT(DISTINCT ?Rajendra_Mal_Lodha) AS ?Rajendra_Mal_Lodha_CountExpr)  (COUNT(DISTINCT ?University2015) AS ?University2015_CountExpr) (COUNT(DISTINCT ?CricketLeague1806) AS ?CricketLeague1806_CountExpr) (COUNT(DISTINCT ?Manmohan_Singh) AS ?Manmohan_Singh_CountExpr) (COUNT(DISTINCT ?Sumitra_Mahajan) AS ?Sumitra_Mahajan_CountExpr)
 WHERE
   { ?H_L_Dattu  dbo:appointer  ?Pranab_Mukherjee ;
               dbp:predecessor  ?Rajendra_Mal_Lodha .
@@ -330,7 +341,8 @@ WHERE
               dbo:predecessor  ?Manmohan_Singh .
     ?India    dbp:leaderName  ?Sumitra_Mahajan
   }
-GROUP BY ?India</p>
+GROUP BY ?India
+</code></pre>
       </section>
       <footer>
         <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
