@@ -1,4 +1,11 @@
-SELECT  (COUNT(DISTINCT ?Ernesto_Samper) AS ?Ernesto_Samper_CountExpr) (COUNT(DISTINCT ?Carlos_Lemos_Simmonds) AS ?Carlos_Lemos_Simmonds_CountExpr) (COUNT(DISTINCT ?Andrés_Pastrana_Arango) AS ?Andrés_Pastrana_Arango_CountExpr) (COUNT(DISTINCT ?Carolina_Barco) AS ?Carolina_Barco_CountExpr) (COUNT(DISTINCT ?Ambassador682) AS ?Ambassador682_CountExpr) (COUNT(DISTINCT ?President_of_Colombia) AS ?President_of_Colombia_CountExpr) (COUNT(DISTINCT ?Ambassador613) AS ?Ambassador613_CountExpr) (COUNT(DISTINCT ?María_Emma_Mejía_Vélez) AS ?María_Emma_Mejía_Vélez_CountExpr)
+PREFIX  dbo:  <http://dbpedia.org/ontology/>
+PREFIX  dbp:  <http://dbpedia.org/property/>
+PREFIX  dbr:  <http://dbpedia.org/resource/>
+PREFIX  xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX  dcterms: <http://purl.org/dc/terms/>
+PREFIX  rdfs: <http://www.w3.org/2000/01/rdf_schema#>
+
+SELECT  (COUNT(DISTINCT ?Carlos_Lemos_Simmonds) AS ?Carlos_Lemos_Simmonds_CountExpr) (COUNT(DISTINCT ?Andrés_Pastrana_Arango) AS ?Andrés_Pastrana_Arango_CountExpr) (COUNT(DISTINCT ?Carolina_Barco) AS ?Carolina_Barco_CountExpr) (COUNT(DISTINCT ?Ambassador682) AS ?Ambassador682_CountExpr) (COUNT(DISTINCT ?President_of_Colombia) AS ?President_of_Colombia_CountExpr) (COUNT(DISTINCT ?Ambassador613) AS ?Ambassador613_CountExpr) (COUNT(DISTINCT ?María_Emma_Mejía_Vélez) AS ?María_Emma_Mejía_Vélez_CountExpr)
 WHERE
   { ?Ernesto_Samper
               <http://dbpedia.org/property/vicepresident>  ?Carlos_Lemos_Simmonds .
@@ -15,6 +22,7 @@ WHERE
     ?Ernesto_Samper
               <http://dbpedia.org/property/successor>  ?María_Emma_Mejía_Vélez .
   }
+GROUP BY ?Ernesto_Samper
 # 258799
 # digraph{
 # "?Andrés_Pastrana_Arango"->"?Ambassador613"[label="dbo:successor"];

@@ -1,25 +1,32 @@
-SELECT  (COUNT(DISTINCT ?Scott_Wynd) AS ?Scott_Wynd_CountExpr) (COUNT(DISTINCT ?Jim_Stynes) AS ?Jim_Stynes_CountExpr) (COUNT(DISTINCT ?Jack_C_Collins) AS ?Jack_C_Collins_CountExpr) (COUNT(DISTINCT ?Western_Bulldogs) AS ?Western_Bulldogs_CountExpr) (COUNT(DISTINCT ?Charlie_Sutton) AS ?Charlie_Sutton_CountExpr)  (COUNT(DISTINCT ?Docklands_Stadium) AS ?Docklands_Stadium_CountExpr) (COUNT(DISTINCT ?Arthur_Olliver) AS ?Arthur_Olliver_CountExpr) (COUNT(DISTINCT ?Scott_West) AS ?Scott_West_CountExpr)
-WHERE
-  { ?Scott_Wynd  <http://dbpedia.org/property/before>  ?Jim_Stynes .
-    ?Jack_C_Collins
-              <http://dbpedia.org/property/clubs>  ?Western_Bulldogs .
-    ?Western_Bulldogs
-              <http://dbpedia.org/property/backpocket>  ?Charlie_Sutton .
-    ?Western_Bulldogs
-              <http://dbpedia.org/property/interchange>  ?Scott_Wynd ;
-              <http://dbpedia.org/property/ground>  ?Docklands_Stadium ;
-              <http://dbpedia.org/property/interchange>  ?Arthur_Olliver ;
-              <http://dbpedia.org/property/ruckrover>  ?Scott_West
-  }
+PREFIX  dbo:  http://dbpedia.org/ontology/
+PREFIX  dbp:  dbp:
+PREFIX  dbr:  http://dbpedia.org/resource/
+PREFIX  xsd:  http://www.w3.org/2001/XMLSchema#
+PREFIX  dcterms: http://purl.org/dc/terms/
+PREFIX  rdfs: http://www.w3.org/2000/01/rdf_schema#
 
+SELECT  (COUNT(DISTINCT ?Jim_Stynes) AS ?Jim_Stynes_CountExpr) (COUNT(DISTINCT ?Jack_C_Collins) AS ?Jack_C_Collins_CountExpr) (COUNT(DISTINCT ?Western_Bulldogs) AS ?Western_Bulldogs_CountExpr) (COUNT(DISTINCT ?Charlie_Sutton) AS ?Charlie_Sutton_CountExpr)  (COUNT(DISTINCT ?Docklands_Stadium) AS ?Docklands_Stadium_CountExpr) (COUNT(DISTINCT ?Arthur_Olliver) AS ?Arthur_Olliver_CountExpr) (COUNT(DISTINCT ?Scott_West) AS ?Scott_West_CountExpr)
+WHERE
+  { ?Scott_Wynd  dbp:before  ?Jim_Stynes .
+    ?Jack_C_Collins
+              dbp:clubs  ?Western_Bulldogs .
+    ?Western_Bulldogs
+              dbp:backpocket  ?Charlie_Sutton .
+    ?Western_Bulldogs
+              dbp:interchange  ?Scott_Wynd ;
+              dbp:ground  ?Docklands_Stadium ;
+              dbp:interchange  ?Arthur_Olliver ;
+              dbp:ruckrover  ?Scott_West
+  }
+GROUP BY ?Scott_Wynd
 # 175540
 # digraph{
-# "?Western_Bulldogs"->"?Docklands_Stadium"[label="dbp:ground"];
-# "?Western_Bulldogs"->"?Arthur_Olliver"[label="dbp:interchange"];
-# "?Western_Bulldogs"->"?Scott_West"[label="dbp:ruckrover"];
-# "?Jack_C_Collins"->"?Western_Bulldogs"[label="dbp:clubs"];
-# "?Scott_Wynd"->"?Jim_Stynes"[label="dbp:before"];
-# "?Western_Bulldogs"->"?Charlie_Sutton"[label="dbp:backpocket"];
-# "?Western_Bulldogs"->"?Scott_Wynd"[label="dbp:interchange"];
+# "?Western_Bulldogs"-"?Docklands_Stadium"[label="dbp:ground"];
+# "?Western_Bulldogs"-"?Arthur_Olliver"[label="dbp:interchange"];
+# "?Western_Bulldogs"-"?Scott_West"[label="dbp:ruckrover"];
+# "?Jack_C_Collins"-"?Western_Bulldogs"[label="dbp:clubs"];
+# "?Scott_Wynd"-"?Jim_Stynes"[label="dbp:before"];
+# "?Western_Bulldogs"-"?Charlie_Sutton"[label="dbp:backpocket"];
+# "?Western_Bulldogs"-"?Scott_Wynd"[label="dbp:interchange"];
 # }
 #

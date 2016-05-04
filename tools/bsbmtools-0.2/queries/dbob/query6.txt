@@ -5,7 +5,7 @@ PREFIX  xsd:  <http://www.w3.org/2001/XMLSchema#>
 PREFIX  dcterms: <http://purl.org/dc/terms/>
 PREFIX  rdfs: <http://www.w3.org/2000/01/rdf_schema#>
 
-SELECT  (COUNT(DISTINCT ?Johann_Schneider_Ammann) AS ?Johann_Schneider_Ammann_CountExpr) (COUNT(DISTINCT ?FDPThe_Liberals) AS ?FDPThe_Liberals_CountExpr) (COUNT(DISTINCT ?School151) AS ?School151_CountExpr) (COUNT(DISTINCT ?School634) AS ?School634_CountExpr) (COUNT(DISTINCT ?Philipp_Muller) AS ?Philipp_Muller_CountExpr)
+SELECT  (COUNT(DISTINCT ?FDPThe_Liberals) AS ?FDPThe_Liberals_CountExpr) (COUNT(DISTINCT ?School151) AS ?School151_CountExpr) (COUNT(DISTINCT ?School634) AS ?School634_CountExpr) (COUNT(DISTINCT ?Philipp_Muller) AS ?Philipp_Muller_CountExpr)
 WHERE
   { ?Johann_Schneider_Ammann
               <http://dbpedia.org/property/party>  ?FDPThe_Liberals ;
@@ -14,6 +14,7 @@ WHERE
     ?FDPThe_Liberals
               <http://dbpedia.org/property/leader1Name>  ?Philipp_Muller
   }
+GROUP BY ?Johann_Schneider_Ammann
 
 # 65260
 # digraph{

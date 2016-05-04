@@ -1,4 +1,11 @@
-SELECT  (COUNT(DISTINCT ?Texas) AS ?Texas_CountExpr) (COUNT(DISTINCT ?Texas_House_of_Representatives) AS ?Texas_House_of_Representatives_CountExpr) (COUNT(DISTINCT ?_Texas) AS ?_Texas_CountExpr) (COUNT(DISTINCT ?Joe_Straus) AS ?Joe_Straus_CountExpr) (COUNT(DISTINCT ?University497) AS ?University497_CountExpr) (COUNT(DISTINCT ?Ronnie_Laws) AS ?Ronnie_Laws_CountExpr) (COUNT(DISTINCT ?Organisation489) AS ?Organisation489_CountExpr) (COUNT(DISTINCT ?Oklahoma) AS ?Oklahoma_CountExpr) (COUNT(DISTINCT ?Organisation75) AS ?Organisation75_CountExpr)
+PREFIX  dbo:  <http://dbpedia.org/ontology/>
+PREFIX  dbp:  <http://dbpedia.org/property/>
+PREFIX  dbr:  <http://dbpedia.org/resource/>
+PREFIX  xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX  dcterms: <http://purl.org/dc/terms/>
+PREFIX  rdfs: <http://www.w3.org/2000/01/rdf_schema#>
+
+SELECT  (COUNT(DISTINCT ?Texas_House_of_Representatives) AS ?Texas_House_of_Representatives_CountExpr) (COUNT(DISTINCT ?_Texas) AS ?_Texas_CountExpr) (COUNT(DISTINCT ?Joe_Straus) AS ?Joe_Straus_CountExpr) (COUNT(DISTINCT ?University497) AS ?University497_CountExpr) (COUNT(DISTINCT ?Ronnie_Laws) AS ?Ronnie_Laws_CountExpr) (COUNT(DISTINCT ?Organisation489) AS ?Organisation489_CountExpr) (COUNT(DISTINCT ?Oklahoma) AS ?Oklahoma_CountExpr) (COUNT(DISTINCT ?Organisation75) AS ?Organisation75_CountExpr)
 WHERE
   { ?Texas    <http://dbpedia.org/property/lowerhouse>  ?Texas_House_of_Representatives .
     ?Texas_House_of_Representatives
@@ -10,6 +17,7 @@ WHERE
               <http://dbpedia.org/property/borderingstates>  ?Oklahoma ;
               <http://dbpedia.org/property/lowerhouse>  ?Organisation75
   }
+GROUP BY ?Texas
 # 120764
 # digraph{
 # "?Ronnie_Laws"->"?Texas"[label="dbo:birthPlace"];
