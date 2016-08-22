@@ -1,0 +1,14 @@
+SELECT ?p ?s_count ?o_count ?t ((?t/?s_count) AS ?card) ((?t/?o_count) AS ?inverseCard)
+WHERE {
+
+    {SELECT ?p (COUNT (*) AS ?t) (COUNT (DISTINCT ?s) AS ?s_count) (COUNT (DISTINCT ?o) AS ?o_count)
+        WHERE { VALUES ?p {$1} ?s ?p ?o}} 
+}
+#
+#    {SELECT ?s (COUNT (*) AS ?t_s) 
+#        WHERE {?s dbo:$1 ?o} 
+#        GROUP BY ?s}
+#
+#    {SELECT ?o (COUNT (*) AS ?t_o) 
+#        WHERE {?s dbo:$1 ?o} 
+#        GROUP BY ?o}

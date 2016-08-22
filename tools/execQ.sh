@@ -16,4 +16,4 @@ done < $tempt
 
 # echo $query
 
-curl -G "http://dbpedia.org/sparql?timeout=300000" --data-urlencode "query=${query//'\n'/ }" --data-urlencode "default-graph-uri=http://dbpedia.org" #-H 'Accept: text/csv' #replace newline by a space
+curl -G "http://dbpedia.org/sparql?timeout=300000" --data-urlencode "query=${query//'\n'/ }" --data-urlencode "default-graph-uri=http://dbpedia.org" -H 'Accept: text/csv' #replace newline by a space
