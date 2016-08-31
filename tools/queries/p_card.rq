@@ -1,4 +1,4 @@
-SELECT ?p ?s_count ?o_count ?t ((?t/?s_count) AS ?card) ((?t/?o_count) AS ?inverseCard)
+SELECT ?p ?s_count ?o_count ?t ((xsd:float(?t)/xsd:float(?s_count)) AS ?card) ((xsd:float(?t)/xsd:float(?o_count)) AS ?inverseCard)
 WHERE {
 
     {SELECT ?p (COUNT (*) AS ?t) (COUNT (DISTINCT ?s) AS ?s_count) (COUNT (DISTINCT ?o) AS ?o_count)
