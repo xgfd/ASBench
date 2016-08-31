@@ -77,10 +77,12 @@ public class viz {
         Model model = ModelFactory.createDefaultModel();
 
         if (isPath(s)) {
+            System.out.println("Parsing file " + s);
             model.read(s);
         } else {
             try {
-                RDFDataMgr.read(model, new ByteArrayInputStream(s.getBytes("UTF-8")), Lang.N3);
+                System.out.println("Parsing RDF string " + s);
+                RDFDataMgr.read(model, new ByteArrayInputStream(s.getBytes("UTF-8")), Lang.TTL);
             } catch (UnsupportedEncodingException e) {
                 e.printStackTrace();
             }
@@ -102,7 +104,7 @@ public class viz {
     }
 
     private static boolean isPath(String s) {
-        String regex = "([a-zA-Z]:)?(\\\\[a-zA-Z0-9_.-]+)+\\\\?";
+        String regex = "^[. /]?.*\\.(nt|ttl|nq|trig|rdf|owl|jsonld|trdf|rt|rj|trix)(.gz)?";
         return Pattern.matches(regex, s);
     }
 }
