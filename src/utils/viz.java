@@ -77,11 +77,11 @@ public class viz {
         Model model = ModelFactory.createDefaultModel();
 
         if (isPath(s)) {
-            System.out.println("Parsing file " + s);
+//            System.out.println("Parsing file " + s);
             model.read(s);
         } else {
             try {
-                System.out.println("Parsing RDF string " + s);
+//                System.out.println("Parsing RDF string " + s);
                 RDFDataMgr.read(model, new ByteArrayInputStream(s.getBytes("UTF-8")), Lang.TTL);
             } catch (UnsupportedEncodingException e) {
                 e.printStackTrace();

@@ -21,10 +21,10 @@ do
         # # echo 'h'
         # header="$2"
         # ;;
-        -g|--default)
+        # -g|--default)
         # echo 'g'
-        g="$2"
-        ;;
+        # g="$2"
+        # ;;
 
         -*)
         # all other parameters
@@ -44,7 +44,7 @@ done
 
 : ${endpoint:="http://dbpedia.org/sparql?timeout=300000"}
 # : ${header:="Accept: application/sparql-results+json"}
-: ${g:="default-graph-uri=http://dbpedia.org"}
+# : ${g:="default-graph-uri=http://dbpedia.org"}
 
 # execute a query specified by a template that is filled by command arguments
 template=${1?"Usage: $0 template [template arguments]"}
@@ -56,10 +56,12 @@ shift
 query=""
 while read line
 do
-    line=$(echo $line | sed 's/\([;(*)]\)/\\\1/g') # escape ; ( ) *
+    line=$(echo $line | sed 's/\([;(<*>)]\)/\\\1/g') # escape ; ( ) *
     # echo $line
     query+=$(eval echo "$line") # escape command separator ;
     query+="\n"
 done < $template
 
-eval "curl  -G \"$endpoint\" --data-urlencode \"query=${query//'\n'/ }\" --data-urlencode \"$g\" $arguments" #replace newline by a space
+# echo $query
+
+eval "curl  -G \"$endpoint\" --data-urlencode \"query=${query//'\n'/ }\" $arguments" #replace newline by a space
