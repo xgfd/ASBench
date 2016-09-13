@@ -1,3 +1,4 @@
+# compute the cardinality of predicates given in a file
 declare -a predicates
 predicates=(`cat ${1?Require a file of predicates}`)
 
