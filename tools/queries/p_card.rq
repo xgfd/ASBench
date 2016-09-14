@@ -1,19 +1,5 @@
-# PREFIX  xsd:  <http://www.w3.org/2001/XMLSchema#>
-# PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-SELECT ?p ?s_count ?o_count ?t ((xsd:float(?t)/xsd:float(?s_count)) AS ?card) ((xsd:float(?t)/xsd:float(?o_count)) AS ?inverseCard)
+SELECT (SAMPLE(?pred) AS ?p) ?s (COUNT(*) AS ?card)
 WHERE {
-    {
-        SELECT ?p (COUNT (*) AS ?t) (COUNT (DISTINCT ?s) AS ?s_count) (COUNT (DISTINCT ?o) AS ?o_count)
-        WHERE {
-                VALUES ?p {$1} ?s ?p ?o
-            } GROUP BY ?p
-    }
-}
-#
-#    {SELECT ?s (COUNT (*) AS ?t_s) 
-#        WHERE {?s dbo:$1 ?o} 
-#        GROUP BY ?s}
-#
-#    {SELECT ?o (COUNT (*) AS ?t_o) 
-#        WHERE {?s dbo:$1 ?o} 
-#        GROUP BY ?o}
+    VALUES ?pred {$1}
+    ?s $1 ?o
+} GROUP BY ?s

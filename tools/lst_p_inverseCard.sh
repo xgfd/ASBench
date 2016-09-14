@@ -6,7 +6,7 @@ for ((j = 0; j < ${#predicates[@]}; j++))
 do
     p=${predicates[$j]}
     echo "Processing predicate: ${p}"
-    sh p_card.sh ${p} >> card.csv
-    printf '\n\n' >> card.csv
+    sh p_inverseCard.sh ${p} >> inverseCard.csv
+    printf '\n\n' >> inverseCard.csv
 done
 echo Finished!
