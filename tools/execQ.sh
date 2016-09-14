@@ -54,7 +54,7 @@ template=${1?"Usage: $0 template [template arguments]"}
 shift
 
 query=""
-while read line
+while IFS= read -r line || [ -n "$line" ]; # http://stackoverflow.com/a/31398490/2399278
 do
     line=$(echo $line | sed 's/\([;(<*>)]\)/\\\1/g') # escape ; ( ) *
     # echo $line

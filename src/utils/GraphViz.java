@@ -51,9 +51,10 @@ public class GraphViz {
 
         while (eiter.hasNext()) {
             List<String> e = eiter.next();
-            String v1 = e.get(0), v2 = e.get(2);
-            String label = e.get(1);
-//          "$v1"->"$v2"[label="${label}"]
+            String v1 = e.get(0).replaceAll("\"", "'");
+            String v2 = e.get(2).replaceAll("\"", "'");
+            String label = e.get(1).replaceAll("\"", "'");
+//          "$v1"->"$v2"[label="$label"]
             String edge = "\"" + v1 + "\"->\"" + v2 + "\"[label=\"" + label + "\"];\n";
             graph += edge;
         }
