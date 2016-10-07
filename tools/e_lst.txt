@@ -1,0 +1,15 @@
+<http://yago-knowledge.org/resource/wordnet_academician_109759069>
+<http://yago-knowledge.org/resource/wordnet_abbot_109754404>
+<http://yago-knowledge.org/resource/wordnet_abbreviation_107091587>
+<http://yago-knowledge.org/resource/wordnet_academy_108279298>
+<http://yago-knowledge.org/resource/wordnet_abnormality_114501726>
+<http://yago-knowledge.org/resource/wordnet_academic_degree_106697331>
+<http://yago-knowledge.org/resource/wordnet_academic_administrator_109758885>
+<http://yago-knowledge.org/resource/wordnet_abbess_109754217>
+<http://yago-knowledge.org/resource/wordnet_abstractionist_109758424>
+<http://yago-knowledge.org/resource/wordnet_academician_109759501>
+<http://yago-knowledge.org/resource/wordnet_abolitionist_109756637>
+<http://yago-knowledge.org/resource/wordnet_abbey_102667576>
+<http://yago-knowledge.org/resource/wordnet_abortifacient_102667906>
+<http://yago-knowledge.org/resource/wordnet_abrasive_114799244>
+<http://yago-knowledge.org/resource/wordnet_abattoir_102666943>

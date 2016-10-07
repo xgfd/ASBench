@@ -1,0 +1,89 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.4' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2311,         81]
+NotebookOptionsPosition[      1957,         64]
+NotebookOutlinePosition[      2313,         80]
+CellTagsIndexPosition[      2270,         77]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Get", "[", 
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<distDef.m\>\""}], 
+     "}"}], "]"}], "]"}], ";"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.6801139825768414`*^9, 3.680114005709865*^9}, 
+   3.6801147507416353`*^9},
+ FontSize->16],
+
+Cell[BoxData[
+ StyleBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"ci90", "[", 
+     RowBox[{"t_", ",", "a_", ",", "c_"}], "]"}], ":=", 
+    RowBox[{"Quantile", "[", 
+     RowBox[{
+      RowBox[{"dist2", "[", 
+       RowBox[{"t", ",", "a", ",", "c"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"0.05", ",", "0.95"}], "}"}]}], "]"}]}], ";"}], "Input",
+  FontSize->16]], "Input",
+ CellChangeTimes->{{3.6848328220620728`*^9, 3.684832839606423*^9}, 
+   3.684832874843073*^9, {3.684840146211049*^9, 3.6848401897371597`*^9}, {
+   3.68484027277413*^9, 3.68484027277911*^9}, 3.6848429925892887`*^9},
+ FontSize->16],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"n0", "=", 
+   RowBox[{"Import", "[", "\"\<n0.csv\>\"", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"n4", "=", 
+   RowBox[{"Import", "[", "\"\<n4.csv\>\"", "]"}]}], 
+  ";"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.684842854094088*^9, 3.684842893372272*^9}, 
+   3.684843045970886*^9, {3.684843543391509*^9, 3.684843599585526*^9}},
+ FontSize->16]
+},
+WindowSize->{640, 751},
+WindowMargins->{{Automatic, 509}, {Automatic, 203}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 28, \
+2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 368, 11, 79, "Input",
+ InitializationCell->True],
+Cell[929, 33, 606, 16, 63, "Input"],
+Cell[1538, 51, 415, 11, 89, "Input"]
+}
+]
+*)
+

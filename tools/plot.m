@@ -5,4 +5,4 @@ out = $ScriptCommandLine[[3]];
 # Print[in]
 # Print[out]
 
-Export[out, Import[in, EdgeLabels -> None, ImageSize -> 2000]]
+Export[out, Import[in, VertexLabels -> None, ImageSize -> 2000]]
