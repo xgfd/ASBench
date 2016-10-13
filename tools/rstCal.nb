@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      2311,         81]
-NotebookOptionsPosition[      1957,         64]
-NotebookOutlinePosition[      2313,         80]
-CellTagsIndexPosition[      2270,         77]
+NotebookDataLength[      4859,        146]
+NotebookOptionsPosition[      4541,        130]
+NotebookOutlinePosition[      4897,        146]
+CellTagsIndexPosition[      4854,        143]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -31,7 +31,7 @@ Cell[BoxData[
    3.6801147507416353`*^9},
  FontSize->16],
 
-Cell[BoxData[
+Cell[BoxData[{
  StyleBox[
   RowBox[{
    RowBox[{
@@ -43,27 +43,93 @@ Cell[BoxData[
        RowBox[{"t", ",", "a", ",", "c"}], "]"}], ",", 
       RowBox[{"{", 
        RowBox[{"0.05", ",", "0.95"}], "}"}]}], "]"}]}], ";"}], "Input",
-  FontSize->16]], "Input",
- CellChangeTimes->{{3.6848328220620728`*^9, 3.684832839606423*^9}, 
-   3.684832874843073*^9, {3.684840146211049*^9, 3.6848401897371597`*^9}, {
-   3.68484027277413*^9, 3.68484027277911*^9}, 3.6848429925892887`*^9},
- FontSize->16],
-
-Cell[BoxData[{
+  FontSize->16], "\n", 
  RowBox[{
   RowBox[{"n0", "=", 
-   RowBox[{"Import", "[", "\"\<n0.csv\>\"", "]"}]}], 
-  ";"}], "\[IndentingNewLine]", 
+   RowBox[{"Import", "[", 
+    RowBox[{"FileNameJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<../i4/n0.csv\>\""}],
+       "}"}], "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"n4", "=", 
-   RowBox[{"Import", "[", "\"\<n4.csv\>\"", "]"}]}], 
-  ";"}], "\[IndentingNewLine]"}], "Input",
- CellChangeTimes->{{3.684842854094088*^9, 3.684842893372272*^9}, 
-   3.684843045970886*^9, {3.684843543391509*^9, 3.684843599585526*^9}},
+   RowBox[{"Import", "[", 
+    RowBox[{"FileNameJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<../i4/n4.csv\>\""}],
+       "}"}], "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"name", "[", 
+    RowBox[{"lst_", ",", "i_"}], "]"}], ":=", 
+   RowBox[{"lst", "[", 
+    RowBox[{"[", 
+     RowBox[{"i", ",", "1"}], "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"val", "[", 
+    RowBox[{"lst_", ",", "i_"}], "]"}], ":=", 
+   RowBox[{"lst", "[", 
+    RowBox[{"[", 
+     RowBox[{"i", ",", "2"}], "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"computeCI90", "[", 
+    RowBox[{"i_", ",", "j_"}], "]"}], ":=", 
+   RowBox[{"Join", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"name", "[", 
+        RowBox[{"n0", ",", "i"}], "]"}], ",", 
+       RowBox[{"name", "[", 
+        RowBox[{"n4", ",", "j"}], "]"}]}], "}"}], ",", 
+     RowBox[{"ci90", "[", 
+      RowBox[{"9684", ",", 
+       RowBox[{"val", "[", 
+        RowBox[{"n0", ",", "i"}], "]"}], ",", 
+       RowBox[{"val", "[", 
+        RowBox[{"n4", ",", "j"}], "]"}]}], "]"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ciTable", "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{
+     RowBox[{"Array", "[", 
+      RowBox[{"computeCI90", ",", 
+       RowBox[{"{", 
+        RowBox[{"1111", ",", 
+         RowBox[{"Length", "[", "n4", "]"}]}], "}"}]}], "]"}], ",", "1"}], 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Export", "[", 
+  RowBox[{
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<i4_ci90.csv\>\""}], 
+     "}"}], "]"}], ",", "ciTable"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6848328220620728`*^9, 3.684832839606423*^9}, 
+   3.684832874843073*^9, {3.684840146211049*^9, 3.6848401897371597`*^9}, {
+   3.68484027277413*^9, 3.68484027277911*^9}, 3.6848429925892887`*^9, 
+   3.685182956006885*^9, {3.685183211793037*^9, 3.685183239985196*^9}, {
+   3.685183305136918*^9, 3.685183381052256*^9}, {3.6851854200761538`*^9, 
+   3.685185453477339*^9}, 3.685185561558408*^9, {3.6851857280401373`*^9, 
+   3.68518574817732*^9}, {3.685185792672831*^9, 3.685185842758173*^9}, {
+   3.6851858778933907`*^9, 3.685185901215171*^9}, {3.6851859984401073`*^9, 
+   3.6851860356996727`*^9}, {3.685186343149263*^9, 3.685186432923917*^9}, {
+   3.685186484268978*^9, 3.685186509435987*^9}, {3.685186562886986*^9, 
+   3.685186580998693*^9}, {3.685186667176475*^9, 3.6851867524970703`*^9}, {
+   3.685186806172909*^9, 3.685186866676915*^9}, {3.6851881571869917`*^9, 
+   3.685188171455472*^9}, {3.685188216828883*^9, 3.68518821709778*^9}, {
+   3.6851883452394857`*^9, 3.6851883594590273`*^9}, {3.68518854823811*^9, 
+   3.685188599178887*^9}, {3.6851886462276697`*^9, 3.685188679184326*^9}, 
+   3.685190080036333*^9},
  FontSize->16]
 },
 WindowSize->{640, 751},
-WindowMargins->{{Automatic, 509}, {Automatic, 203}},
+WindowMargins->{{Automatic, 431}, {103, Automatic}},
 FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 28, \
 2016)",
 StyleDefinitions->"Default.nb"
@@ -81,8 +147,7 @@ CellTagsIndex->{}
 Notebook[{
 Cell[558, 20, 368, 11, 79, "Input",
  InitializationCell->True],
-Cell[929, 33, 606, 16, 63, "Input"],
-Cell[1538, 51, 415, 11, 89, "Input"]
+Cell[929, 33, 3608, 95, 479, "Input"]
 }
 ]
 *)
