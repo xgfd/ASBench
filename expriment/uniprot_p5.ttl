@@ -1,0 +1,98 @@
+
+<http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-dt-nullable> a <http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#default> <http://www.openlinksw.com/schemas/virtrdf#qmfSubFormatForRefs> <http://www.openlinksw.com/virtrdf-data-formats#default-iid> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-nullable-SuperFormats> a <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#default> <http://www.openlinksw.com/schemas/virtrdf#qmfSuperFormats> <http://www.openlinksw.com/virtrdf-data-formats#default-SuperFormats> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#default-iid-nonblank-nullable> <http://www.openlinksw.com/schemas/virtrdf#qmfSuperFormats> <http://www.openlinksw.com/virtrdf-data-formats#default-iid-nonblank-nullable-SuperFormats> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#default-nullable> <http://www.openlinksw.com/schemas/virtrdf#qmfSuperFormats> <http://www.openlinksw.com/virtrdf-data-formats#default-nullable-SuperFormats> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#default-iid-nonblank-nullable> <http://www.openlinksw.com/schemas/virtrdf#inheritFrom> <http://www.openlinksw.com/virtrdf-data-formats#default-iid> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#default-iid-nonblank> <http://www.openlinksw.com/schemas/virtrdf#inheritFrom> <http://www.openlinksw.com/virtrdf-data-formats#default-iid> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#default-SuperFormats> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://www.openlinksw.com/virtrdf-data-formats#default-nullable> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#default-iid-SuperFormats> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://www.openlinksw.com/virtrdf-data-formats#default-nullable> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#default-nullable-SuperFormats> a <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#default-iid-SuperFormats> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://www.openlinksw.com/virtrdf-data-formats#default> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#default-iid-nullable> <http://www.openlinksw.com/schemas/virtrdf#inheritFrom> <http://www.openlinksw.com/virtrdf-data-formats#default-iid> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#default-iid> a <http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#default-iid-SuperFormats> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://www.openlinksw.com/virtrdf-data-formats#default-iid-nullable> .
+
+<http://www.openlinksw.com/sparql/virtrdf-data-formats.ttl> <http://www.openlinksw.com/schemas/virtrdf#item> <http://www.openlinksw.com/virtrdf-data-formats#default-iid-nullable> , <http://www.openlinksw.com/virtrdf-data-formats#default-iid-nonblank> , <http://www.openlinksw.com/virtrdf-data-formats#default-iid> , <http://www.openlinksw.com/virtrdf-data-formats#default-nullable> , <http://www.openlinksw.com/virtrdf-data-formats#sql-varchar> , <http://www.openlinksw.com/virtrdf-data-formats#default-iid-nonblank-nullable> , <http://www.openlinksw.com/virtrdf-data-formats#default> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#default-iid-nullable> a <http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#default-iid-nonblank-nullable-SuperFormats> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://www.openlinksw.com/virtrdf-data-formats#default-iid-nullable> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#default-SuperFormats> a <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#default> a <http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#default-iid-nullable-SuperFormats> a <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#default-iid-nonblank-SuperFormats> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_5> <http://www.openlinksw.com/virtrdf-data-formats#default-nullable> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-dt-nullable> <http://www.openlinksw.com/schemas/virtrdf#inheritFrom> <http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-dt> ;
+	<http://www.openlinksw.com/schemas/virtrdf#qmfSuperFormats> <http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-dt-nullable-SuperFormats> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-dt-SuperFormats> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-dt-nullable> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-dt> <http://www.openlinksw.com/schemas/virtrdf#qmfSuperFormats> <http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-dt-SuperFormats> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#default-iid-nonblank-SuperFormats> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://www.openlinksw.com/virtrdf-data-formats#default-iid-nullable> ;
+	<http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://www.openlinksw.com/virtrdf-data-formats#default-iid> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-nullable> <http://www.openlinksw.com/schemas/virtrdf#qmfSuperFormats> <http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-nullable-SuperFormats> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#sql-varchar> a <http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#default-nullable> a <http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat> .
+
+<http://www.openlinksw.com/sparql/virtrdf-data-formats.ttl> <http://www.openlinksw.com/schemas/virtrdf#item> <http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-dt-nullable> , <http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-nullable> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-nullable> <http://www.openlinksw.com/schemas/virtrdf#inheritFrom> <http://www.openlinksw.com/virtrdf-data-formats#sql-varchar> .
+
+<http://www.openlinksw.com/sparql/virtrdf-data-formats.ttl> <http://www.openlinksw.com/schemas/virtrdf#item> <http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-dt> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#default-iid-nonblank-SuperFormats> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_4> <http://www.openlinksw.com/virtrdf-data-formats#default> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-SuperFormats> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-nullable> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#sql-varchar> <http://www.openlinksw.com/schemas/virtrdf#qmfSuperFormats> <http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-SuperFormats> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#default-iid-nullable-SuperFormats> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://www.openlinksw.com/virtrdf-data-formats#default-nullable> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-dt> a <http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#default-iid> <http://www.openlinksw.com/schemas/virtrdf#qmfSuperFormats> <http://www.openlinksw.com/virtrdf-data-formats#default-iid-SuperFormats> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-dt-nullable-SuperFormats> a <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#default-iid-nonblank-nullable-SuperFormats> a <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#default-iid-nonblank> <http://www.openlinksw.com/schemas/virtrdf#qmfSuperFormats> <http://www.openlinksw.com/virtrdf-data-formats#default-iid-nonblank-SuperFormats> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#default-iid-nonblank-nullable-SuperFormats> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://www.openlinksw.com/virtrdf-data-formats#default-nullable> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#default-iid-nullable> <http://www.openlinksw.com/schemas/virtrdf#qmfSuperFormats> <http://www.openlinksw.com/virtrdf-data-formats#default-iid-nullable-SuperFormats> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#sql-varchar-nullable> a <http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#default-nullable> <http://www.openlinksw.com/schemas/virtrdf#inheritFrom> <http://www.openlinksw.com/virtrdf-data-formats#default> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#default-iid-SuperFormats> a <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#default-nullable> <http://www.openlinksw.com/schemas/virtrdf#qmfSubFormatForRefs> <http://www.openlinksw.com/virtrdf-data-formats#default-iid-nullable> .
+
+<http://www.openlinksw.com/virtrdf-data-formats#default-iid-nonblank-SuperFormats> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://www.openlinksw.com/virtrdf-data-formats#default-iid-nonblank-nullable> .

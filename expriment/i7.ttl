@@ -1,0 +1,2494 @@
+@prefix owl:	<http://www.w3.org/2002/07/owl#> .
+@prefix yago:	<http://dbpedia.org/class/yago/> .
+@prefix yago-res:	<http://yago-knowledge.org/resource/> .
+yago:Abstraction100002137	owl:equivalentClass	yago-res:wordnet_abstraction_100002137 .
+@prefix rdfs:	<http://www.w3.org/2000/01/rdf-schema#> .
+yago:AdministrativeDistrict108491826	rdfs:subClassOf	yago:District108552138 .
+yago:AncientLanguages	rdfs:subClassOf	yago:Language106282651 .
+yago:AncientPeoples	rdfs:subClassOf	yago:People107942152 .
+yago:Anthem107048928	rdfs:subClassOf	yago:Song107048000 .
+yago:ArchaeologicalSitesInArmenia	rdfs:subClassOf	yago:Site108651247 .
+yago:Area108497294	owl:equivalentClass	yago-res:wordnet_area_108497294 ;
+	rdfs:subClassOf	yago:Region108630985 .
+yago:AuditoryCommunication107109019	owl:equivalentClass	yago-res:wordnet_auditory_communication_107109019 ;
+	rdfs:subClassOf	yago:Communication100033020 .
+yago:Capital108518505	owl:equivalentClass	yago-res:wordnet_capital_108518505 ;
+	rdfs:subClassOf	yago:Seat108647945 .
+yago:CapitalsOfFormerNations	rdfs:subClassOf	yago:Capital108518505 .
+yago:CausalAgent100007347	owl:equivalentClass	yago-res:wordnet_causal_agent_100007347 ;
+	rdfs:subClassOf	yago:PhysicalEntity100001930 .
+yago:Center108523483	owl:equivalentClass	yago-res:wordnet_center_108523483 ;
+	rdfs:subClassOf	yago:Area108497294 .
+yago:Communication100033020	owl:equivalentClass	yago-res:wordnet_communication_100033020 ;
+	rdfs:subClassOf	yago:Abstraction100002137 .
+yago:Communicator109610660	owl:equivalentClass	yago-res:wordnet_communicator_109610660 ;
+	rdfs:subClassOf	yago:Person100007846 .
+yago:Currency113385913	rdfs:subClassOf	yago:MediumOfExchange113372961 .
+yago:District108552138	owl:equivalentClass	yago-res:wordnet_district_108552138 ;
+	rdfs:subClassOf	yago:Region108630985 .
+yago:EthnicGroup107967382	rdfs:subClassOf	yago:Group100031264 .
+yago:Group100031264	owl:equivalentClass	yago-res:wordnet_group_100031264 ;
+	rdfs:subClassOf	yago:Abstraction100002137 .
+yago:HeadOfState110164747	owl:equivalentClass	yago-res:wordnet_head_of_state_110164747 ;
+	rdfs:subClassOf	yago:Representative110522035 .
+yago:Language106282651	owl:equivalentClass	yago-res:wordnet_language_106282651 ;
+	rdfs:subClassOf	yago:Communication100033020 .
+yago:LivingThing100004258	owl:equivalentClass	yago-res:wordnet_living_thing_100004258 ;
+	rdfs:subClassOf	yago:Whole100003553 .
+yago:Location100027167	owl:equivalentClass	yago-res:wordnet_location_100027167 ;
+	rdfs:subClassOf	yago:Object100002684 ,
+		yago:YagoGeoEntity ,
+		yago:YagoLegalActorGeo .
+yago:Music107020895	owl:equivalentClass	yago-res:wordnet_music_107020895 ;
+	rdfs:subClassOf	yago:AuditoryCommunication107109019 .
+yago:MusicalComposition107037465	owl:equivalentClass	yago-res:wordnet_musical_composition_107037465 ;
+	rdfs:subClassOf	yago:Music107020895 .
+yago:Negotiator110351874	owl:equivalentClass	yago-res:wordnet_negotiator_110351874 ;
+	rdfs:subClassOf	yago:Communicator109610660 .
+yago:Object100002684	owl:equivalentClass	yago-res:wordnet_object_100002684 ;
+	rdfs:subClassOf	yago:PhysicalEntity100001930 .
+yago:Organism100004475	owl:equivalentClass	yago-res:wordnet_organism_100004475 ;
+	rdfs:subClassOf	yago:LivingThing100004258 .
+yago:People107942152	owl:equivalentClass	yago-res:wordnet_people_107942152 ;
+	rdfs:subClassOf	yago:Group100031264 .
+yago:Person100007846	owl:equivalentClass	yago-res:wordnet_person_100007846 ;
+	rdfs:subClassOf	yago:CausalAgent100007347 ,
+		yago:Organism100004475 ,
+		yago:YagoLegalActor .
+yago:PoliticalSystem108367880	rdfs:subClassOf	yago:SocialGroup107950920 .
+yago:Region108630985	owl:equivalentClass	yago-res:wordnet_region_108630985 ;
+	rdfs:subClassOf	yago:Location100027167 .
+yago:Representative110522035	owl:equivalentClass	yago-res:wordnet_representative_110522035 ;
+	rdfs:subClassOf	yago:Negotiator110351874 .
+yago:Ruler110541229	owl:equivalentClass	yago-res:wordnet_ruler_110541229 ;
+	rdfs:subClassOf	yago:Person100007846 .
+yago:Seat108647945	owl:equivalentClass	yago-res:wordnet_seat_108647945 ;
+	rdfs:subClassOf	yago:Center108523483 .
+yago:Signal106791372	owl:equivalentClass	yago-res:wordnet_signal_106791372 ;
+	rdfs:subClassOf	yago:Communication100033020 .
+yago:Site108651247	owl:equivalentClass	yago-res:wordnet_site_108651247 ;
+	rdfs:subClassOf	yago:Tract108673395 .
+yago:SocialGroup107950920	owl:equivalentClass	yago-res:wordnet_social_group_107950920 ;
+	rdfs:subClassOf	yago:Group100031264 .
+yago:Song107048000	owl:equivalentClass	yago-res:wordnet_song_107048000 ;
+	rdfs:subClassOf	yago:MusicalComposition107037465 .
+yago:Sovereign110628644	rdfs:subClassOf	yago:HeadOfState110164747 ,
+		yago:Ruler110541229 .
+yago:Standard107260623	rdfs:subClassOf	yago:SystemOfMeasurement113577171 .
+yago:Symbol106806469	rdfs:subClassOf	yago:Signal106791372 .
+yago:SystemOfMeasurement113577171	owl:equivalentClass	yago-res:wordnet_system_of_measurement_113577171 ;
+	rdfs:subClassOf	yago:Measure100033615 .
+yago:Tract108673395	owl:equivalentClass	yago-res:wordnet_tract_108673395 ;
+	rdfs:subClassOf	yago:GeographicalArea108574314 .
+yago:Whole100003553	owl:equivalentClass	yago-res:wordnet_whole_100003553 ;
+	rdfs:subClassOf	yago:Object100002684 .
+yago:YagoGeoEntity	owl:equivalentClass	yago-res:yagoGeoEntity ;
+	rdfs:subClassOf	yago:YagoPermanentlyLocatedEntity .
+yago:YagoLegalActorGeo	owl:equivalentClass	yago-res:yagoLegalActorGeo .
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dbr:	<http://dbpedia.org/resource/> .
+dbr:Armenian_dram	rdf:type	yago:Standard107260623 ,
+		yago:Currency113385913 ,
+		yago:SystemOfMeasurement113577171 .
+@prefix dct:	<http://purl.org/dc/terms/> .
+@prefix dbc:	<http://dbpedia.org/resource/Category:> .
+dbr:Armenian_dram	dct:subject	dbc:Economy_of_Armenia .
+@prefix dbo:	<http://dbpedia.org/ontology/> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Hortus_Deliciarum,_Die_Kreuzigung_Jesu_Christi.JPG?width=300>	rdf:type	dbo:Image .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Hortus_Deliciarum,_Die_Kreuzigung_Jesu_Christi.JPG>	rdf:type	dbo:Image .
+@prefix skos:	<http://www.w3.org/2004/02/skos/core#> .
+dbc:Indigenous_peoples_of_Western_Asia	rdf:type	skos:Concept ;
+	dbo:wikiPageID	35116477 ;
+	dbo:wikiPageRevisionID	582403277 .
+@prefix wikidata:	<http://www.wikidata.org/entity/> .
+dbc:Indigenous_peoples_of_Western_Asia	owl:sameAs	wikidata:Q8546688 .
+@prefix dbpedia-wikidata:	<http://wikidata.dbpedia.org/resource/> .
+dbc:Indigenous_peoples_of_Western_Asia	owl:sameAs	dbpedia-wikidata:Q8546688 ;
+	rdfs:label	"Indigenous peoples of Western Asia"@en ;
+	skos:broader	dbc:Western_Asia ,
+		dbc:Indigenous_peoples_of_Asia ,
+		dbc:West_Asian_people ;
+	skos:prefLabel	"Indigenous peoples of Western Asia"@en .
+@prefix prov:	<http://www.w3.org/ns/prov#> .
+dbc:Indigenous_peoples_of_Western_Asia	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Indigenous_peoples_of_Western_Asia?oldid=582403277> .
+dbc:Ancient_Armenia	skos:broader	dbc:Ancient_history_by_country ,
+		dbc:History_of_Armenia_by_period .
+dbc:Archaic_words_and_phrases	rdf:type	skos:Concept ;
+	dbo:wikiPageID	30351005 ;
+	dbo:wikiPageRevisionID	546081201 .
+@prefix ns13:	<http://de.dbpedia.org/resource/Kategorie:> .
+dbc:Archaic_words_and_phrases	owl:sameAs	ns13:Archaismus .
+@prefix ns14:	<http://ja.dbpedia.org/resource/Category:> .
+dbc:Archaic_words_and_phrases	owl:sameAs	ns14:古語 ,
+		dbpedia-wikidata:Q7076509 ,
+		wikidata:Q7076509 ;
+	rdfs:label	"Archaic words and phrases"@en ;
+	skos:broader	dbc:Words_and_phrases ,
+		dbc:Language_histories ;
+	skos:prefLabel	"Archaic words and phrases"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Archaic_words_and_phrases?oldid=546081201> .
+dbc:Geography-related_lists_by_country	rdf:type	skos:Concept ;
+	dbo:wikiPageID	31123978 ;
+	dbo:wikiPageRevisionID	675519232 ;
+	owl:sameAs	dbpedia-wikidata:Q6362748 .
+@prefix ns15:	<http://pl.dbpedia.org/resource/Kategoria:> .
+dbc:Geography-related_lists_by_country	owl:sameAs	ns15:Listy_geograficzne_według_państw .
+@prefix ns16:	<http://id.dbpedia.org/resource/Kategori:> .
+dbc:Geography-related_lists_by_country	owl:sameAs	ns16:Daftar_bertopik_geografi_menurut_negara ,
+		wikidata:Q6362748 .
+@prefix ns17:	<http://pt.dbpedia.org/resource/Categoria:> .
+dbc:Geography-related_lists_by_country	owl:sameAs	ns17:Listas_de_geografia_por_país ;
+	rdfs:label	"Geography-related lists by country"@en ;
+	skos:broader	dbc:Lists_by_topic_and_country ,
+		dbc:Categories_by_country ,
+		dbc:Science-related_lists_by_country ,
+		dbc:Geography_by_country ,
+		dbc:Geography-related_lists ;
+	skos:prefLabel	"Geography-related lists by country"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Geography-related_lists_by_country?oldid=675519232> .
+dbc:History_of_Iran_by_period	rdf:type	skos:Concept ;
+	dbo:wikiPageID	30282583 ;
+	dbo:wikiPageRevisionID	674828318 ;
+	owl:sameAs	wikidata:Q8518324 ,
+		dbpedia-wikidata:Q8518324 ;
+	rdfs:label	"History of Iran by period"@en ;
+	skos:broader	dbc:History_of_Iran ,
+		dbc:History_of_countries_by_period ,
+		dbc:History_of_the_Middle_East_by_period ;
+	skos:prefLabel	"History of Iran by period"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:History_of_Iran_by_period?oldid=674828318> .
+dbc:Prehistoric_Asia	rdf:type	skos:Concept ;
+	dbo:wikiPageID	30132125 ;
+	dbo:wikiPageRevisionID	681560432 ;
+	owl:sameAs	ns16:Prasejarah_Asia ,
+		wikidata:Q6805629 .
+@prefix ns18:	<http://es.dbpedia.org/resource/Categor\u00EDa:> .
+dbc:Prehistoric_Asia	owl:sameAs	ns18:Prehistoria_de_Asia .
+@prefix ns19:	<http://ko.dbpedia.org/resource/\uBD84\uB958:> .
+dbc:Prehistoric_Asia	owl:sameAs	ns19:아시아의_선사_시대 ,
+		<http://fr.dbpedia.org/resource/Cat\u00E9gorie:Pr\u00E9histoire_de_l\u0027Asie> ,
+		dbpedia-wikidata:Q6805629 ;
+	rdfs:label	"Prehistoric Asia"@en ;
+	skos:broader	dbc:History_of_Asia ,
+		dbc:Prehistory_by_region ;
+	skos:prefLabel	"Prehistoric Asia"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Prehistoric_Asia?oldid=681560432> .
+dbr:Middle_Persian	rdf:type	yago:Communication100033020 ,
+		yago:Language106282651 ;
+	dct:subject	dbc:Middle_Persian ,
+		dbc:Classical_languages .
+<http://dbpedia.org/resource/Category:1st-millennium_BC_disestablishments_in_Asia>	rdf:type	skos:Concept ;
+	dbo:wikiPageID	39709449 ;
+	dbo:wikiPageRevisionID	675340596 ;
+	owl:sameAs	wikidata:Q15129789 ,
+		dbpedia-wikidata:Q15129789 ;
+	rdfs:label	"1st-millennium BC disestablishments in Asia"@en ;
+	skos:broader	dbc:Disestablishments_in_Asia_by_millennium ,
+		<http://dbpedia.org/resource/Category:1st-millennium_BC_disestablishments_by_continent> ,
+		<http://dbpedia.org/resource/Category:1st_millennium_BC_in_Asia> ;
+	skos:prefLabel	"1st-millennium BC disestablishments in Asia"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:1st-millennium_BC_disestablishments_in_Asia?oldid=675340596> .
+<http://dbpedia.org/resource/Category:1st-millennium_BC_establishments_in_Asia>	rdf:type	skos:Concept ;
+	dbo:wikiPageID	39707846 ;
+	dbo:wikiPageRevisionID	677574554 ;
+	owl:sameAs	wikidata:Q15129796 ,
+		dbpedia-wikidata:Q15129796 ;
+	rdfs:label	"1st-millennium BC establishments in Asia"@en ;
+	skos:broader	<http://dbpedia.org/resource/Category:1st-millennium_BC_establishments_by_continent> ,
+		dbc:Establishments_in_Asia_by_millennium ,
+		<http://dbpedia.org/resource/Category:1st_millennium_BC_in_Asia> ;
+	skos:prefLabel	"1st-millennium BC establishments in Asia"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:1st-millennium_BC_establishments_in_Asia?oldid=677574554> .
+dbc:Disestablishments_in_Asia_by_century	rdf:type	skos:Concept ;
+	dbo:wikiPageID	39709459 ;
+	dbo:wikiPageRevisionID	664516510 ;
+	owl:sameAs	dbpedia-wikidata:Q15252882 ,
+		wikidata:Q15252882 ;
+	rdfs:label	"Disestablishments in Asia by century"@en ;
+	skos:broader	dbc:Disestablishments_in_Asia ,
+		dbc:Centuries_in_Asia ,
+		dbc:Disestablishments_by_century ;
+	skos:prefLabel	"Disestablishments in Asia by century"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Disestablishments_in_Asia_by_century?oldid=664516510> .
+dbc:Establishments_in_Asia_by_century	rdf:type	skos:Concept ;
+	dbo:wikiPageID	39707859 ;
+	dbo:wikiPageRevisionID	641915724 ;
+	owl:sameAs	wikidata:Q15255449 ,
+		dbpedia-wikidata:Q15255449 ,
+		ns17:Fundações_na_Ásia_por_século ;
+	rdfs:label	"Establishments in Asia by century"@en ;
+	skos:broader	dbc:Establishments_by_century ,
+		dbc:Centuries_in_Asia ,
+		dbc:Establishments_in_Asia ;
+	skos:prefLabel	"Establishments in Asia by century"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Establishments_in_Asia_by_century?oldid=641915724> .
+dbr:Armenian_orthography_reform	dct:subject	dbc:Armenian_Soviet_Socialist_Republic ,
+		<http://dbpedia.org/resource/Category:20th_century_in_Armenia> ,
+		dbc:Armenian_alphabet ,
+		dbc:Orthography_reform ,
+		<http://dbpedia.org/resource/Category:1922_in_Armenia> .
+dbc:Archaeology_of_the_Caucasus	rdf:type	skos:Concept ;
+	dbo:wikiPageID	13430115 ;
+	dbo:wikiPageRevisionID	581413339 ;
+	owl:sameAs	dbpedia-wikidata:Q7604469 ,
+		wikidata:Q7604469 ;
+	rdfs:label	"Archaeology of the Caucasus"@en ;
+	skos:broader	dbc:Asian_archaeology ,
+		dbc:European_archaeology ,
+		dbc:History_of_the_Caucasus ;
+	skos:prefLabel	"Archaeology of the Caucasus"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Archaeology_of_the_Caucasus?oldid=581413339> .
+dbc:Lists_of_political_office-holders	rdf:type	skos:Concept ;
+	dbo:wikiPageID	13739125 ;
+	dbo:wikiPageRevisionID	195974932 ;
+	owl:sameAs	wikidata:Q7015798 ,
+		dbpedia-wikidata:Q7015798 ;
+	rdfs:label	"Lists of political office-holders"@en ;
+	skos:broader	dbc:Lists_of_office-holders ,
+		dbc:Political_office-holders ,
+		dbc:Lists_of_politicians ;
+	skos:prefLabel	"Lists of political office-holders"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Lists_of_political_office-holders?oldid=195974932> .
+dbc:Ethnic_groups_in_Europe_by_country	rdf:type	skos:Concept ;
+	dbo:wikiPageID	14512978 ;
+	dbo:wikiPageRevisionID	547611035 .
+@prefix ns20:	<http://it.dbpedia.org/resource/Categoria:> .
+dbc:Ethnic_groups_in_Europe_by_country	owl:sameAs	ns20:Gruppi_etnici_in_Europa_per_stato ,
+		dbpedia-wikidata:Q8425771 ,
+		wikidata:Q8425771 ,
+		ns17:Grupos_étnicos_da_Europa_por_país ;
+	rdfs:label	"Ethnic groups in Europe by country"@en ;
+	skos:broader	dbc:Ethnic_groups_in_Europe ,
+		dbc:Categories_by_country ,
+		dbc:Ethnic_groups_by_country ;
+	skos:prefLabel	"Ethnic groups in Europe by country"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Ethnic_groups_in_Europe_by_country?oldid=547611035> .
+dbc:Language_policy	rdf:type	skos:Concept ;
+	dbo:wikiPageID	13993074 ;
+	dbo:wikiPageRevisionID	647532156 ;
+	owl:sameAs	ns14:言語政策 ,
+		ns15:Polityka_językowa ,
+		ns13:Sprachpolitik .
+@prefix ns21:	<http://fr.dbpedia.org/resource/Cat\u00E9gorie:> .
+dbc:Language_policy	owl:sameAs	ns21:Politique_linguistique ,
+		dbpedia-wikidata:Q7451490 ,
+		ns19:언어_정책 .
+@prefix ns22:	<http://cs.dbpedia.org/resource/Kategorie:> .
+dbc:Language_policy	owl:sameAs	ns22:Jazyková_politika ,
+		wikidata:Q7451490 ,
+		ns18:Política_lingüística ;
+	rdfs:label	"Language policy"@en ;
+	skos:broader	dbc:Politics_by_issue ,
+		dbc:Education_policy ,
+		dbc:Social_policy ,
+		dbc:Language ,
+		dbc:Ethnicity_in_politics ,
+		dbc:Cultural_assimilation ;
+	skos:prefLabel	"Language policy"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Language_policy?oldid=647532156> .
+dbc:Prime_Ministers_of_Armenia	skos:broader	dbc:Prime_Ministers_by_country ,
+		dbc:Government_ministers_of_Armenia ,
+		dbc:Heads_of_government_in_Europe .
+dbr:Semi-presidential_system	rdf:type	yago:Group100031264 ,
+		yago:SocialGroup107950920 ,
+		yago:PoliticalSystem108367880 .
+<http://dbpedia.org/resource/National_Assembly_(Armenia)>	rdf:type	dbo:Legislature ,
+		dbo:Organisation ,
+		dbo:Agent ;
+	dct:subject	<http://dbpedia.org/resource/Category:1938_establishments_in_Armenia> ,
+		dbc:Unicameral_legislatures .
+dbr:List_of_municipalities_of_Armenia	dct:subject	dbc:Subdivisions_of_Armenia ,
+		dbc:Lists_of_municipalities ,
+		dbc:Armenia_geography-related_lists ,
+		dbc:Country_subdivisions_of_Europe ,
+		dbc:Country_subdivisions_of_Asia .
+dbr:Yazidis	dct:subject	dbc:Ethnic_groups_in_Russia ,
+		dbc:Ethnic_groups_in_Syria ,
+		dbc:Ethnic_groups_in_Armenia ,
+		dbc:Ethnic_groups_in_Iran ,
+		dbc:Ethnic_groups_in_Iraq ,
+		dbc:Religion_in_Iraq ,
+		dbc:Religion_in_Kurdistan ,
+		dbc:Religion_in_Turkey .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Ancient_countries_of_Transcaucasia.jpg?width=300>	rdf:type	dbo:Image .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Ancient_countries_of_Transcaucasia.jpg>	rdf:type	dbo:Image .
+dbr:Bagratid_Armenia	rdf:type	dbo:PopulatedPlace ,
+		dbo:Country ;
+	dct:subject	dbc:Bagratid_Armenia .
+dbr:Orontid_Dynasty	rdf:type	yago:Person100007846 ,
+		yago:Ruler110541229 ,
+		yago:HeadOfState110164747 ,
+		yago:Negotiator110351874 ,
+		yago:Organism100004475 ,
+		yago:Object100002684 ,
+		yago:Representative110522035 ,
+		yago:Communicator109610660 ,
+		yago:Sovereign110628644 ,
+		yago:CausalAgent100007347 ,
+		yago:LivingThing100004258 ,
+		yago:Whole100003553 ;
+	dct:subject	<http://dbpedia.org/resource/Category:6th-century_BC_establishments_in_Asia> ,
+		dbc:Orontid_dynasty ,
+		<http://dbpedia.org/resource/Category:2nd-century_BC_disestablishments_in_Asia> .
+dbr:Caucasian_Albanian_language	rdf:type	yago:AncientLanguages ,
+		yago:Language106282651 ,
+		yago:Communication100033020 ;
+	dct:subject	dbc:Caucasian_Albania ,
+		dbc:Ancient_languages .
+dbo:Place	rdf:type	owl:Class ;
+	owl:equivalentClass	dbo:Location .
+@prefix schema:	<http://schema.org/> .
+dbo:Place	owl:equivalentClass	schema:Place ;
+	rdfs:subClassOf	owl:Thing ;
+	rdfs:label	"lekua"@eu ,
+		"lieu"@fr ,
+		"miejsce"@pl ,
+		"plaats"@nl ,
+		"lloc"@ca ,
+		"Ort"@de ,
+		"\u03C0\u03B5\u03C1\u03B9\u03BF\u03C7\u03AE"@el ,
+		"\u00E1it"@ga ,
+		"lugar"@pt ,
+		"\u7ACB\u5730"@ja ,
+		"place"@en ,
+		"\u0645\u0643\u0627\u0646"@ar ,
+		"lugar"@es ;
+	rdfs:comment	"Immobile things or locations."@en ,
+		"uma localiza\u00E7\u00E3o"@pt .
+@prefix ns24:	<http://mappings.dbpedia.org/index.php/OntologyClass:> .
+dbo:Place	prov:wasDerivedFrom	ns24:Place .
+dbo:Agent	rdf:type	owl:Class .
+@prefix ns25:	<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+dbo:Agent	owl:equivalentClass	ns25:Agent ;
+	rdfs:subClassOf	owl:Thing ;
+	rdfs:label	"\u03C0\u03C1\u03AC\u03BA\u03C4\u03BF\u03C1\u03B1\u03C2"@el ,
+		"\uC5D0\uC774\uC804\uD2B8"@ko ,
+		"Agent"@de ,
+		"agent"@nl ,
+		"agent"@fr ,
+		"axente"@gl ,
+		"agent"@en ,
+		"\u30A8\u30FC\u30B8\u30A7\u30F3\u30C8"@ja ,
+		"gn\u00EDomhaire"@ga ,
+		"agente"@it ,
+		"agente"@es ;
+	rdfs:comment	"\u0391\u03BD\u03AC\u03BB\u03BF\u03B3\u03B1 \u03BC\u03B5 \u03C4\u03B7\u03BD \u03BA\u03BB\u03AC\u03C3\u03B7 foaf:Agent, \u03AD\u03BD\u03B1\u03C2 \u03C0\u03C1\u03AC\u03BA\u03C4\u03BF\u03C1\u03B1\u03C2 \u03B5\u03AF\u03BD\u03B1\u03B9 \u03BC\u03B9\u03B1 \u03BF\u03BD\u03C4\u03CC\u03C4\u03B7\u03C4\u03B1 \u03C0\u03BF\u03C5 \u03B5\u03BD\u03B5\u03C1\u03B3\u03B5\u03AF. \u0391\u03C5\u03C4\u03CC \u03C0\u03C1\u03BF\u03BF\u03C1\u03AF\u03B6\u03B5\u03C4\u03B1\u03B9 \u03BD\u03B1 \u03B5\u03AF\u03BD\u03B1\u03B9 \u03BC\u03B9\u03B1 \u03C5\u03C0\u03B5\u03C1\u03BA\u03BB\u03AC\u03C3\u03B7 \u03C4\u03B7\u03C2 \u03BA\u03BB\u03AC\u03C3\u03B7\u03C2 \u0386\u03C4\u03CC\u03BC\u03BF \u03BA\u03B1\u03B9 \u039F\u03C1\u03B3\u03B1\u03BD\u03B9\u03C3\u03BC\u03CC\u03C2."@el ,
+		"Analogous to a foaf:Agent, an agent is an entity that acts. This is intended to be the super class of Person and Organisation."@en ,
+		"An\u00E1logo a foaf:Agent, un axente \u00E9 unha entidade que act\u00FAa. Dest\u00EDnase a ser a super clase de Persoa e Organizaci\u00F3n."@gl ;
+	owl:disjointWith	dbo:Place ;
+	prov:wasDerivedFrom	ns24:Agent .
+dbo:City	rdfs:subClassOf	dbo:Settlement .
+dbo:Country	rdfs:subClassOf	dbo:PopulatedPlace .
+dbo:Document	rdf:type	owl:Class .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+dbo:Document	owl:equivalentClass	foaf:Document ;
+	rdfs:subClassOf	dbo:Work ;
+	rdfs:label	"\u30C9\u30AD\u30E5\u30E1\u30F3\u30C8"@ja ,
+		"c\u00E1ip\u00E9is"@ga ,
+		"\u03AD\u03B3\u03B3\u03C1\u03B1\u03C6\u03BF"@el ,
+		"document"@nl ,
+		"document"@fr ,
+		"Dokument"@de ,
+		"documento"@it ,
+		"document"@en ;
+	rdfs:comment	"Any document"@en ;
+	prov:wasDerivedFrom	ns24:Document .
+dbo:Image	rdfs:subClassOf	dbo:Document .
+dbo:Legislature	rdfs:subClassOf	dbo:Organisation .
+dbo:Organisation	rdf:type	owl:Class ;
+	owl:equivalentClass	ns25:SocialPerson ,
+		wikidata:Q43229 ,
+		schema:Organization ;
+	rdfs:subClassOf	dbo:Agent ;
+	rdfs:label	"organizacija"@sl ,
+		"organisation"@en ,
+		"organiza\u00E7\u00E3o"@pt ,
+		"\u7D44\u7E54"@ja ,
+		"\u03BF\u03C1\u03B3\u03AC\u03BD\u03C9\u03C3\u03B7"@el ,
+		"organisatie"@nl ,
+		"organizaci\u00F3n"@es ,
+		"Organisation"@de ,
+		"organisation"@fr ,
+		"\uC870\uC9C1"@ko .
+@prefix ns27:	<http://dbpedia.org/ontology/wgs84_pos:> .
+dbo:Organisation	owl:disjointWith	ns27:SpatialThing ;
+	prov:wasDerivedFrom	ns24:Organisation .
+dbo:PopulatedPlace	rdf:type	owl:Class ;
+	owl:equivalentClass	wikidata:Q486972 ;
+	rdfs:subClassOf	dbo:Place ;
+	rdfs:label	"bebouwde omgeving"@nl ,
+		"\u03C0\u03C5\u03BA\u03BD\u03BF\u03BA\u03B1\u03C4\u03BF\u03B9\u03BA\u03B7\u03BC\u03AD\u03BD\u03B7 \u03C0\u03B5\u03C1\u03B9\u03BF\u03C7\u03AE"@el ,
+		"populated place"@en ,
+		"\u062A\u062C\u0645\u0639 \u0633\u0643\u0627\u0646\u064A"@ar ,
+		"lieu habit\u00E9"@fr ,
+		"bewohnter Ort"@de ;
+	rdfs:comment	"As defined by the United States Geological Survey, a populated place is a place or area with clustered or scattered buildings and a permanent human population (city, settlement, town, or village) referenced with geographic coordinates (http://en.wikipedia.org/wiki/Populated_place)."@en ,
+		"\u03A0\u03C5\u03BA\u03BD\u03BF\u03BA\u03B1\u03C4\u03BF\u03B9\u03BA\u03B7\u03BC\u03AD\u03BD\u03B7 \u03C0\u03B5\u03C1\u03B9\u03BF\u03C7\u03AE, \u03B5\u03AF\u03BD\u03B1\u03B9 \u03B7 \u03C0\u03B5\u03C1\u03B9\u03BF\u03C7\u03AE \u03AE \u03C4\u03BF \u03BC\u03AD\u03C1\u03BF\u03C2 \u03BC\u03B5 \u03BC\u03B5\u03B3\u03AC\u03BB\u03BF \u03B1\u03C1\u03B9\u03B8\u03BC\u03CC \u03BA\u03C4\u03B9\u03C1\u03AF\u03C9\u03BD \u03BA\u03B1\u03B9 \u03BC\u03B5\u03B3\u03AC\u03BB\u03BF \u03BC\u03CC\u03BD\u03B9\u03BC\u03BF \u03C0\u03BB\u03B7\u03B8\u03C5\u03C3\u03BC\u03CC, \u03C3\u03B5 \u03C3\u03CD\u03B3\u03BA\u03C1\u03B9\u03C3\u03B7 \u03BC\u03B5 \u03C4\u03B7\u03BD \u03B3\u03B5\u03C9\u03B3\u03C1\u03B1\u03C6\u03B9\u03BA\u03AE \u03C0\u03B5\u03C1\u03B9\u03BF\u03C7\u03AE \u03C0\u03BF\u03C5 \u03BA\u03B1\u03C4\u03B1\u03BB\u03B1\u03BC\u03B2\u03AC\u03BD\u03B5\u03B9 (\u03BC\u03B5\u03B3\u03B1\u03BB\u03BF\u03CD\u03C0\u03BF\u03BB\u03B7, \u03C0\u03CC\u03BB\u03B7 \u03AE \u03C7\u03C9\u03C1\u03B9\u03CC)."@el ;
+	prov:wasDerivedFrom	ns24:PopulatedPlace .
+dbo:Settlement	rdf:type	owl:Class ;
+	owl:equivalentClass	wikidata:Q486972 ;
+	rdfs:subClassOf	dbo:PopulatedPlace ;
+	rdfs:label	"\u03BF\u03B9\u03BA\u03B9\u03C3\u03BC\u03CC\u03C2"@el ,
+		"settlement"@en ,
+		"nederzetting"@nl ,
+		"Siedlung"@de ,
+		"bardas"@ga ,
+		"zone peupl\u00E9e"@fr ;
+	prov:wasDerivedFrom	ns24:Settlement .
+dbr:Armenians	rdf:type	yago:Group100031264 ,
+		yago:AncientPeoples ,
+		yago:People107942152 ,
+		yago:EthnicGroup107967382 ;
+	dct:subject	dbc:Ethnic_groups_in_Armenia ,
+		dbc:Armenian_people .
+dbr:Eastern_Armenian	dct:subject	dbc:Armenian_languages .
+@prefix dbp:	<http://dbpedia.org/property/> .
+dbr:Nathaniel_Pitcher	dbp:before	<http://dbpedia.org/resource/John_Palmer_(1785\u20131840)> .
+dbr:Asa_Adgate	dbp:after	<http://dbpedia.org/resource/John_Palmer_(1785\u20131840)> ;
+	dbp:successor	<http://dbpedia.org/resource/John_Palmer_(1785\u20131840)> ;
+	dbo:successor	<http://dbpedia.org/resource/John_Palmer_(1785\u20131840)> .
+dbr:Prime_Minister_of_Armenia	dct:subject	dbc:Prime_Ministers_of_Armenia ,
+		dbc:Lists_of_prime_ministers .
+dbr:Bartholomew_the_Apostle	dbo:deathPlace	dbr:Crucifixion ,
+		dbr:Armenia ,
+		dbr:Caucasian_Albania .
+dbc:Country_subdivisions_of_Asia	rdf:type	skos:Concept ;
+	dbo:wikiPageID	22049396 ;
+	dbo:wikiPageRevisionID	640478195 ;
+	owl:sameAs	ns18:Organización_territorial_de_Asia ,
+		ns16:Pembagian_administratif_Asia ,
+		dbpedia-wikidata:Q6491405 ,
+		wikidata:Q6491405 ,
+		ns14:アジアの地方区分 ,
+		ns17:Subdivisões_de_países_da_Ásia ;
+	rdfs:label	"Country subdivisions of Asia"@en ;
+	skos:broader	dbc:Country_subdivisions_by_continent ,
+		dbc:Geography_of_Asia ;
+	skos:prefLabel	"Country subdivisions of Asia"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Country_subdivisions_of_Asia?oldid=640478195> .
+dbc:Demographics_of_Iran	rdf:type	skos:Concept ;
+	dbo:wikiPageID	22558101 ;
+	dbo:wikiPageRevisionID	592364175 ;
+	owl:sameAs	ns16:Demografi_Iran ,
+		ns17:Demografia_do_Irão ,
+		<http://fr.dbpedia.org/resource/Cat\u00E9gorie:D\u00E9mographie_de_l\u0027Iran> ,
+		wikidata:Q8373006 ,
+		ns18:Demografía_de_Irán ,
+		dbpedia-wikidata:Q8373006 ;
+	rdfs:label	"Demographics of Iran"@en ;
+	skos:broader	dbc:Demographics_of_the_Middle_East ,
+		dbc:Demographics_by_country ,
+		dbc:Iranian_society ;
+	skos:prefLabel	"Demographics of Iran"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Demographics_of_Iran?oldid=592364175> .
+dbc:Lists_of_prime_ministers	skos:broader	dbc:Prime_ministers ,
+		dbc:Lists_of_government_ministers ,
+		dbc:Lists_of_political_office-holders .
+dbc:Orontid_dynasty	skos:broader	dbc:Orontid_Armenia ,
+		dbc:Achaemenid_satraps_of_Armenia ,
+		dbc:People_of_Iranian_descent ,
+		dbc:Kingdom_of_Armenia ,
+		dbc:Royal_families_of_Armenia ,
+		dbc:Armenian_noble_families ,
+		dbc:Dynasties_of_Armenia ,
+		dbc:Kings_of_Armenia .
+dbc:Unicameral_legislatures	skos:broader	dbc:Legislatures .
+<http://dbpedia.org/resource/Category:20th_century_in_Armenia>	skos:broader	<http://dbpedia.org/resource/Category:20th_century_in_Asia> ,
+		<http://dbpedia.org/resource/Category:20th_century_in_Europe> ,
+		<http://dbpedia.org/resource/Category:2nd_millennium_in_Armenia> ,
+		<http://dbpedia.org/resource/Category:20th_century_by_country> ,
+		dbc:Centuries_in_Armenia .
+<http://dbpedia.org/resource/Category:20th_century_in_Asia>	rdf:type	skos:Concept ;
+	dbo:wikiPageID	17345423 ;
+	dbo:wikiPageRevisionID	642255924 ;
+	owl:sameAs	dbpedia-wikidata:Q6517259 ,
+		ns18:Siglo_XX_en_Asia ,
+		<http://ko.dbpedia.org/resource/\uBD84\uB958:20\uC138\uAE30_\uC544\uC2DC\uC544> ,
+		wikidata:Q6517259 ,
+		<http://eu.dbpedia.org/resource/Kategoria:XX._mendea_Asian> ,
+		ns17:Século_XX_na_Ásia ,
+		<http://ja.dbpedia.org/resource/Category:20\u4E16\u7D00\u306E\u30A2\u30B8\u30A2> ;
+	rdfs:label	"20th century in Asia"@en ;
+	skos:broader	<http://dbpedia.org/resource/Category:20th_century_by_continent> ,
+		<http://dbpedia.org/resource/Category:2nd_millennium_in_Asia> ,
+		dbc:Centuries_in_Asia ;
+	skos:prefLabel	"20th century in Asia"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:20th_century_in_Asia?oldid=642255924> .
+<http://dbpedia.org/resource/Category:20th_century_in_Europe>	rdf:type	skos:Concept ;
+	dbo:wikiPageID	15808978 ;
+	dbo:wikiPageRevisionID	556199813 ;
+	owl:sameAs	ns15:Europa_w_XX_wieku ,
+		wikidata:Q6520387 ,
+		ns18:Siglo_XX_en_Europa ,
+		<http://ko.dbpedia.org/resource/\uBD84\uB958:20\uC138\uAE30_\uC720\uB7FD> ,
+		<http://eu.dbpedia.org/resource/Kategoria:XX._mendea_Europan> ,
+		ns16:Abad_ke-20_di_Eropa ,
+		dbpedia-wikidata:Q6520387 ,
+		ns17:Século_XX_na_Europa ,
+		<http://ja.dbpedia.org/resource/Category:20\u4E16\u7D00\u306E\u30E8\u30FC\u30ED\u30C3\u30D1> ;
+	rdfs:label	"20th century in Europe"@en ;
+	skos:broader	<http://dbpedia.org/resource/Category:20th_century_by_continent> ,
+		dbc:Centuries_in_Europe ,
+		dbc:Modern_Europe ;
+	skos:prefLabel	"20th century in Europe"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:20th_century_in_Europe?oldid=556199813> .
+dbc:Caucasian_Albania	skos:broader	dbc:Wikipedia_categories_named_after_former_countries ,
+		dbc:Former_countries_in_Europe ,
+		dbc:Caucasus ,
+		dbc:Lezgian_people ,
+		dbc:History_of_Azerbaijan .
+dbc:Centuries_in_Armenia	rdf:type	skos:Concept ;
+	dbo:wikiPageID	16008400 ;
+	dbo:wikiPageRevisionID	674267263 ;
+	owl:sameAs	wikidata:Q6517462 ,
+		ns17:Séculos_na_Armênia ,
+		ns19:세기별_아르메니아 ,
+		ns18:Siglos_en_Armenia ,
+		dbpedia-wikidata:Q6517462 ;
+	rdfs:label	"Centuries in Armenia"@en ;
+	skos:broader	dbc:Centuries_by_country ,
+		dbc:History_of_Armenia_by_period ,
+		dbc:Centuries_in_Europe ,
+		dbc:Centuries_in_Asia ;
+	skos:prefLabel	"Centuries in Armenia"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Centuries_in_Armenia?oldid=674267263> .
+dbc:Kingdom_of_Armenia	rdf:type	skos:Concept ;
+	dbo:wikiPageID	16995220 ;
+	dbo:wikiPageRevisionID	626014886 ;
+	owl:sameAs	ns13:Großarmenien ,
+		wikidata:Q8574232 ,
+		dbpedia-wikidata:Q8574232 ,
+		ns21:Arménie_Majeure ,
+		ns19:아르메니아_왕국 ;
+	rdfs:label	"Kingdom of Armenia"@en ;
+	skos:broader	dbc:History_of_Azerbaijan ,
+		<http://dbpedia.org/resource/Category:Ancient_history_of_Georgia_(country)> ,
+		dbc:States_in_Hellenistic_Anatolia ,
+		dbc:History_of_Turkey ,
+		dbc:History_of_Syria ,
+		dbc:Roman_Anatolia ,
+		dbc:Armenian_kingdoms ,
+		dbc:Seleucid_Empire_successor_states ,
+		dbc:Persian_history ,
+		dbc:Ancient_history_of_Iraq ,
+		dbc:Ancient_Armenia ;
+	skos:prefLabel	"Kingdom of Armenia"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Kingdom_of_Armenia?oldid=626014886> .
+dbr:Mer_Hayrenik	rdf:type	yago:Symbol106806469 ,
+		yago:Anthem107048928 ,
+		yago:AuditoryCommunication107109019 ,
+		yago:Signal106791372 ,
+		yago:Song107048000 ,
+		yago:MusicalComposition107037465 ,
+		yago:Music107020895 ,
+		yago:Communication100033020 ;
+	dct:subject	dbc:Armenian_music .
+dbc:Country_subdivisions_by_continent	rdf:type	skos:Concept ;
+	dbo:wikiPageID	25001563 ;
+	dbo:wikiPageRevisionID	553709803 ;
+	owl:sameAs	dbpedia-wikidata:Q6290363 ,
+		ns17:Subdivisões_de_países_por_continente ,
+		ns18:Organización_territorial_por_continente ,
+		ns14:大陸別の地方区分 ,
+		wikidata:Q6290363 ;
+	rdfs:label	"Country subdivisions by continent"@en ;
+	skos:broader	dbc:Country_subdivisions ,
+		dbc:Categories_by_continent ;
+	skos:prefLabel	"Country subdivisions by continent"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Country_subdivisions_by_continent?oldid=553709803> .
+dbr:Urartu	rdf:type	dbo:Country ,
+		yago:Object100002684 ,
+		dbo:PopulatedPlace ,
+		yago:Location100027167 ,
+		yago:Tract108673395 ,
+		yago:Region108630985 ,
+		yago:ArchaeologicalSitesInArmenia ,
+		yago:Site108651247 ,
+		yago:YagoGeoEntity ;
+	dct:subject	<http://dbpedia.org/resource/Category:9th-century_BC_establishments_in_Asia> ,
+		dbc:Ancient_Armenia ,
+		dbc:Bronze_Age_Asia ,
+		dbc:Archaeology_of_Armenia ,
+		<http://dbpedia.org/resource/Category:6th-century_BC_disestablishments_in_Asia> ,
+		dbc:Armenian_kingdoms ,
+		dbc:Ancient_history_of_Iran .
+<http://dbpedia.org/resource/Barda,_Azerbaijan>	rdf:type	yago:Capital108518505 ,
+		yago:YagoGeoEntity ,
+		yago:Center108523483 ,
+		yago:Area108497294 ,
+		yago:District108552138 ,
+		dbo:City ,
+		yago:Location100027167 ,
+		yago:Site108651247 ,
+		yago:AdministrativeDistrict108491826 ,
+		yago:Object100002684 ,
+		yago:Tract108673395 ,
+		yago:Seat108647945 ,
+		yago:Region108630985 ,
+		dbo:Settlement ,
+		dbo:PopulatedPlace ,
+		yago:CapitalsOfFormerNations ;
+	dct:subject	dbc:Caucasian_Albania ,
+		dbc:Capitals_of_former_nations .
+dbr:Qabala	rdf:type	dbo:City ,
+		dbo:PopulatedPlace ,
+		dbo:Settlement ;
+	dct:subject	dbc:Capitals_of_former_nations .
+dbc:Ancient_history	rdf:type	skos:Concept ;
+	dbo:wikiPageID	895826 ;
+	dbo:wikiPageRevisionID	647804863 ;
+	owl:sameAs	ns22:Starověk ,
+		wikidata:Q6499653 ,
+		ns21:Antiquité .
+@prefix ns29:	<http://el.dbpedia.org/resource/\u039A\u03B1\u03C4\u03B7\u03B3\u03BF\u03C1\u03AF\u03B1:> .
+dbc:Ancient_history	owl:sameAs	ns29:Αρχαία_ιστορία .
+@prefix ns30:	<http://nl.dbpedia.org/resource/Categorie:> .
+dbc:Ancient_history	owl:sameAs	ns30:Oudheid ,
+		ns18:Historia_antigua ,
+		ns16:Sejarah_kuno ,
+		ns20:Storia_antica ,
+		dbpedia-wikidata:Q6499653 ,
+		ns13:Altertum ,
+		ns15:Starożytność ,
+		ns14:古代史 ,
+		ns19:고대사 ,
+		ns17:História_da_Antiguidade .
+@prefix ns31:	<http://eu.dbpedia.org/resource/Kategoria:> .
+dbc:Ancient_history	owl:sameAs	ns31:Antzinaroa ;
+	rdfs:label	"Ancient history"@en ;
+	skos:broader	dbc:Fields_of_history ,
+		dbc:Historical_eras ;
+	skos:prefLabel	"Ancient history"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Ancient_history?oldid=647804863> ;
+	skos:related	dbc:Ancient_history_by_country .
+dbc:Armenia	rdf:type	skos:Concept ;
+	dbo:wikiPageID	713948 ;
+	dbo:wikiPageRevisionID	627208709 ;
+	owl:sameAs	ns14:アルメニア ,
+		ns18:Armenia ,
+		ns22:Arménie ,
+		ns16:Armenia ,
+		ns17:Arménia ,
+		ns31:Armenia ,
+		wikidata:Q7008726 ,
+		ns19:아르메니아 ,
+		ns21:Arménie ,
+		ns20:Armenia ,
+		dbpedia-wikidata:Q7008726 ,
+		ns13:Armenien ,
+		ns30:Armenië ,
+		ns15:Armenia ,
+		ns29:Αρμενία ;
+	rdfs:label	"Armenia"@en ;
+	skos:broader	dbc:Republics ,
+		dbc:Eastern_Europe ,
+		dbc:Wikipedia_categories_named_after_countries ,
+		dbc:Kurdish-speaking_countries_and_territories ,
+		dbc:Armenian-speaking_countries_and_territories ,
+		dbc:Countries_in_Asia ,
+		dbc:Countries_in_Europe ,
+		dbc:Caucasus ,
+		dbc:Landlocked_countries ,
+		dbc:Western_Asian_countries ;
+	skos:prefLabel	"Armenia"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Armenia?oldid=627208709> .
+dbc:Armenian_alphabet	skos:broader	dbc:Greek_alphabet ,
+		dbc:Writing_systems_derived_from_the_Phoenician ,
+		dbc:Armenian_language ,
+		dbc:Alphabets .
+dbc:Armenian_art	rdf:type	skos:Concept ;
+	dbo:wikiPageID	2339399 ;
+	dbo:wikiPageRevisionID	639117072 ;
+	owl:sameAs	wikidata:Q7317635 ,
+		dbpedia-wikidata:Q7317635 ,
+		ns31:Armeniako_artea ,
+		ns17:Artes_da_Armênia ,
+		ns18:Arte_de_Armenia ,
+		ns29:Τέχνες_στην_Αρμενία ,
+		ns19:아르메니아의_예술 ;
+	rdfs:label	"Armenian art"@en ;
+	skos:broader	dbc:Armenian_culture ,
+		dbc:Art_by_nationality ,
+		dbc:Works_by_Armenian_people ;
+	skos:prefLabel	"Armenian art"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Armenian_art?oldid=639117072> .
+dbc:Armenian_music	skos:broader	dbc:Caucasus_music ,
+		dbc:Music_by_nationality ,
+		dbc:Armenian_art ,
+		dbc:Eastern_European_music .
+dbc:Armenian_people	skos:broader	dbc:European_people ,
+		dbc:Indo-European_peoples ,
+		dbc:Peoples_of_the_Caucasus ,
+		dbc:Armenia ,
+		dbc:Armenian_society ,
+		dbc:People_of_Southwest_Asian_descent ,
+		dbc:People_by_nationality ,
+		dbc:Indigenous_peoples_of_Western_Asia .
+dbc:Armenian_society	rdf:type	skos:Concept ;
+	dbo:wikiPageID	2798284 ;
+	dbo:wikiPageRevisionID	674443139 ;
+	owl:sameAs	dbpedia-wikidata:Q7284802 ,
+		ns16:Masyarakat_Armenia ,
+		ns29:Κοινωνία_της_Αρμενίας ,
+		wikidata:Q7284802 ,
+		ns18:Sociedad_de_Armenia ,
+		ns17:Sociedade_da_Armênia ,
+		ns19:아르메니아의_사회 ,
+		ns14:アルメニアの社会 ;
+	rdfs:label	"Armenian society"@en ;
+	skos:broader	dbc:European_society_by_country ,
+		dbc:Society_by_nationality ,
+		dbc:Asian_society_by_country ,
+		dbc:Armenia ;
+	skos:prefLabel	"Armenian society"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Armenian_society?oldid=674443139> .
+dbc:Caucasus_music	rdf:type	skos:Concept ;
+	dbo:wikiPageID	729645 ;
+	dbo:wikiPageRevisionID	575987788 ;
+	owl:sameAs	dbpedia-wikidata:Q10203733 ,
+		wikidata:Q10203733 ;
+	rdfs:label	"Caucasus music"@en ;
+	skos:broader	dbc:Eastern_European_music ,
+		dbc:Culture_of_the_Caucasus ,
+		dbc:Middle_Eastern_music ;
+	skos:prefLabel	"Caucasus music"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Caucasus_music?oldid=575987788> .
+dbc:Classical_languages	rdf:type	skos:Concept ;
+	dbo:wikiPageID	995529 ;
+	dbo:wikiPageRevisionID	543847046 ;
+	owl:sameAs	ns17:Línguas_clássicas ,
+		dbpedia-wikidata:Q7135775 ,
+		wikidata:Q7135775 ,
+		ns18:Idiomas_clásicos ,
+		ns29:Κλασικές_γλώσσες ;
+	rdfs:label	"Classical languages"@en ;
+	skos:broader	dbc:Language_histories ,
+		dbc:Linguistic_purism ,
+		dbc:Standard_languages ,
+		dbc:Archaic_words_and_phrases ;
+	skos:prefLabel	"Classical languages"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Classical_languages?oldid=543847046> .
+dbc:Eastern_European_music	rdf:type	skos:Concept ;
+	dbo:wikiPageID	729626 ;
+	dbo:wikiPageRevisionID	546487292 ;
+	owl:sameAs	wikidata:Q7466770 ,
+		dbpedia-wikidata:Q7466770 ;
+	rdfs:label	"Eastern European music"@en ;
+	skos:broader	dbc:Eastern_Europe ,
+		dbc:European_music ;
+	skos:prefLabel	"Eastern European music"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Eastern_European_music?oldid=546487292> .
+dbc:European_people	rdf:type	skos:Concept ;
+	dbo:wikiPageID	903922 ;
+	dbo:wikiPageRevisionID	581812945 ;
+	owl:sameAs	ns31:Europarrak ,
+		wikidata:Q6866928 ,
+		dbpedia-wikidata:Q6866928 ,
+		ns19:유럽_사람 ,
+		ns29:Ευρωπαίοι ,
+		ns22:Evropané ,
+		ns17:Europeus ,
+		ns14:ヨーロッパの人物 ,
+		ns21:Personnalité_européenne ,
+		ns18:Europeos ,
+		ns16:Tokoh_Eropa ;
+	rdfs:label	"European people"@en ;
+	skos:broader	dbc:European_society ,
+		dbc:People_by_continent ,
+		dbc:Europe ;
+	skos:prefLabel	"European people"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:European_people?oldid=581812945> .
+dbc:Extinct_languages	rdf:type	skos:Concept ;
+	dbo:wikiPageID	694763 ;
+	dbo:wikiPageRevisionID	647529207 ;
+	owl:sameAs	ns18:Lenguas_muertas ,
+		ns29:Εξαφανισμένες_γλώσσες ,
+		ns22:Mrtvé_jazyky ,
+		ns20:Lingue_estinte ,
+		ns19:사어 ,
+		ns21:Langue_morte ,
+		ns31:Hizkuntza_hilak ,
+		ns14:死語 ,
+		ns15:Języki_wymarłe ,
+		ns30:Dode_taal ,
+		ns13:Ausgestorbene_Sprache ,
+		ns17:Línguas_extintas ,
+		dbpedia-wikidata:Q6097107 ,
+		wikidata:Q6097107 ;
+	rdfs:label	"Extinct languages"@en ;
+	skos:broader	dbc:Cultural_history ,
+		dbc:Historical_linguistics ,
+		dbc:Former_entities ,
+		dbc:Languages ;
+	skos:prefLabel	"Extinct languages"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Extinct_languages?oldid=647529207> .
+dbc:Former_countries	rdf:type	skos:Concept ;
+	dbo:wikiPageID	804303 ;
+	dbo:wikiPageRevisionID	668632882 ;
+	owl:sameAs	ns30:Historisch_land ,
+		ns15:Państwa_historyczne ,
+		ns13:Historischer_Staat ,
+		dbpedia-wikidata:Q7238252 ,
+		ns17:Estados_extintos ,
+		ns29:Ιστορικά_κράτη ,
+		ns31:Antzinako_herrialdeak ,
+		ns20:Stati_scomparsi ,
+		wikidata:Q7238252 ,
+		ns19:옛_나라 ,
+		ns18:Estados_desaparecidos ,
+		ns22:Zaniklé_státy ,
+		ns14:かつて存在した国家 ,
+		ns21:Ancien_État ,
+		ns16:Bekas_negara ;
+	rdfs:label	"Former countries"@en ;
+	skos:broader	dbc:Historical_regions ,
+		dbc:Former_administrative_territorial_entities ,
+		dbc:Historical_geography ,
+		dbc:Political_history ,
+		dbc:Countries ,
+		dbc:Disestablishments_by_type ;
+	skos:prefLabel	"Former countries"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Former_countries?oldid=668632882> .
+dbc:Historical_geography	rdf:type	skos:Concept ;
+	dbo:wikiPageID	1228643 ;
+	dbo:wikiPageRevisionID	597165398 ;
+	owl:sameAs	wikidata:Q6911635 ,
+		ns13:Historische_Geographie ,
+		ns17:Geografia_histórica ,
+		ns21:Géographie_historique ,
+		ns30:Historische_geografie ,
+		ns18:Geografía_histórica ,
+		ns29:Ιστορική_γεωγραφία ,
+		ns14:歴史地理学 ,
+		ns16:Geografi_sejarah ,
+		dbpedia-wikidata:Q6911635 ,
+		ns19:역사지리학 ,
+		ns22:Historická_geografie ,
+		ns15:Geografia_historyczna ;
+	rdfs:label	"Historical geography"@en ;
+	skos:broader	dbc:Human_geography ,
+		dbc:History ;
+	skos:prefLabel	"Historical geography"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Historical_geography?oldid=597165398> ;
+	skos:related	dbc:Paleogeography .
+dbc:History_of_Armenia	rdf:type	skos:Concept ;
+	dbo:wikiPageID	2091306 ;
+	dbo:wikiPageRevisionID	657462326 ;
+	owl:sameAs	ns30:Geschiedenis_van_Armenië ,
+		ns22:Dějiny_Arménie ,
+		ns14:アルメニアの歴史 ,
+		ns17:História_da_Arménia ,
+		ns29:Ιστορία_της_Αρμενίας ,
+		<http://it.dbpedia.org/resource/Categoria:Storia_dell\u0027Armenia> ,
+		ns16:Sejarah_Armenia ,
+		dbpedia-wikidata:Q6948296 ,
+		ns15:Historia_Armenii ,
+		wikidata:Q6948296 ,
+		ns31:Armeniako_historia ,
+		<http://de.dbpedia.org/resource/Kategorie:Geschichte_(Armenien)> ,
+		ns19:아르메니아의_역사 ,
+		ns18:Historia_de_Armenia ,
+		<http://fr.dbpedia.org/resource/Cat\u00E9gorie:Histoire_de_l\u0027Arm\u00E9nie> ;
+	rdfs:label	"History of Armenia"@en ;
+	skos:broader	dbc:History_of_Western_Asia ,
+		dbc:History_of_Asia_by_country ,
+		dbc:History_of_Armenia_by_period ,
+		dbc:History_by_country ,
+		dbc:History_of_Armenia_by_topic ,
+		dbc:History_of_the_Caucasus ,
+		dbc:History_of_Europe_by_country ,
+		dbc:Armenia ,
+		dbc:History_of_Turkey ;
+	skos:prefLabel	"History of Armenia"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:History_of_Armenia?oldid=657462326> .
+dbc:Lists_of_municipalities	skos:broader	dbc:Lists_of_country_subdivisions ,
+		dbc:Lists_of_populated_places ,
+		dbc:Municipalities .
+dbc:People_by_nationality	rdf:type	skos:Concept ;
+	dbo:wikiPageID	694532 ;
+	dbo:wikiPageRevisionID	667697978 ;
+	owl:sameAs	ns18:Personas_por_nacionalidad ,
+		ns15:Biografie_według_narodowości ,
+		ns17:Pessoas_por_nacionalidade ,
+		ns31:Biografiak_herrialdearen_arabera ,
+		ns13:Person_nach_Staatsangehörigkeit ,
+		dbpedia-wikidata:Q5818677 ,
+		ns19:나라별_사람 ,
+		ns20:Persone_per_nazionalità ,
+		ns30:Persoon_naar_nationaliteit ,
+		ns16:Tokoh_menurut_kewarganegaraan ,
+		ns14:各国の人物 ,
+		wikidata:Q5818677 ,
+		ns21:Personnalité_par_nationalité ;
+	rdfs:label	"People by nationality"@en ;
+	skos:broader	dbc:Categories_by_nationality ,
+		dbc:People_categories_by_parameter ,
+		dbc:People_associated_with_places ,
+		dbc:National_identities ;
+	skos:prefLabel	"People by nationality"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:People_by_nationality?oldid=667697978> ;
+	skos:related	dbc:Norsemen ,
+		dbc:European_people .
+dbc:Religion_by_country	rdf:type	skos:Concept ;
+	dbo:wikiPageID	694485 ;
+	dbo:wikiPageRevisionID	605551524 ;
+	owl:sameAs	ns29:Θρησκεία_ανά_χώρα ,
+		ns22:Náboženství_podle_zemí ,
+		ns19:나라별_종교 ,
+		ns31:Erlijioa_herrialdearen_arabera ,
+		dbpedia-wikidata:Q6977636 ,
+		ns20:Religione_per_Stato ,
+		ns18:Religión_por_país ,
+		ns13:Religion_nach_Staat ,
+		ns17:Religião_por_país ,
+		ns21:Religion_par_pays ,
+		ns30:Religie_naar_land ,
+		ns15:Religie_według_państw ,
+		ns14:各国の宗教 ,
+		ns16:Agama_menurut_negara ,
+		wikidata:Q6977636 ;
+	rdfs:label	"Religion by country"@en ;
+	skos:broader	dbc:Society_by_nationality ,
+		dbc:Categories_by_country ,
+		dbc:Religion_by_location ,
+		dbc:Geography_of_religion ;
+	skos:prefLabel	"Religion by country"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Religion_by_country?oldid=605551524> .
+dbc:Religion_in_Iraq	rdf:type	skos:Concept ;
+	dbo:wikiPageID	2764710 ;
+	dbo:wikiPageRevisionID	604764259 ;
+	owl:sameAs	ns30:Religie_in_Irak ,
+		wikidata:Q6615207 ,
+		ns18:Religión_en_Irak ,
+		ns14:イラクの宗教 ,
+		ns16:Agama_di_Irak ,
+		ns15:Religia_w_Iraku ,
+		ns19:이라크의_종교 ,
+		ns20:Religione_in_Iraq ,
+		dbpedia-wikidata:Q6615207 ,
+		<http://de.dbpedia.org/resource/Kategorie:Religion_(Irak)> ,
+		ns17:Religião_no_Iraque ,
+		ns21:Religion_en_Irak ;
+	rdfs:label	"Religion in Iraq"@en ;
+	skos:broader	dbc:Religion_in_the_Arab_world ,
+		dbc:Religion_by_country ,
+		dbc:Iraqi_culture ,
+		dbc:Iraqi_society ,
+		dbc:Religion_in_the_Middle_East ,
+		dbc:Religion_in_Asia_by_country ;
+	skos:prefLabel	"Religion in Iraq"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Religion_in_Iraq?oldid=604764259> .
+dbc:Religion_in_Syria	rdf:type	skos:Concept ;
+	dbo:wikiPageID	2835207 ;
+	dbo:wikiPageRevisionID	604764509 ;
+	owl:sameAs	wikidata:Q6615064 ,
+		<http://de.dbpedia.org/resource/Kategorie:Religion_(Syrien)> ,
+		ns22:Náboženství_v_Sýrii ,
+		ns15:Religia_w_Syrii ,
+		ns21:Religion_en_Syrie ,
+		ns18:Religión_en_Siria ,
+		ns19:시리아의_종교 ,
+		dbpedia-wikidata:Q6615064 ,
+		ns17:Religião_na_Síria ,
+		ns14:シリアの宗教 ,
+		ns20:Religione_in_Siria ,
+		ns30:Religie_in_Syrië ;
+	rdfs:label	"Religion in Syria"@en ;
+	skos:broader	dbc:Religion_in_the_Middle_East ,
+		dbc:Syrian_society ,
+		dbc:Syrian_culture ,
+		dbc:Religion_in_Asia_by_country ,
+		dbc:Religion_by_country ,
+		dbc:Religion_in_the_Arab_world ;
+	skos:prefLabel	"Religion in Syria"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Religion_in_Syria?oldid=604764509> .
+dbc:Religion_in_Turkey	rdf:type	skos:Concept ;
+	dbo:wikiPageID	2699295 ;
+	dbo:wikiPageRevisionID	604764551 ;
+	owl:sameAs	ns20:Religione_in_Turchia ,
+		ns21:Religion_en_Turquie ,
+		ns15:Religia_w_Turcji ,
+		<http://de.dbpedia.org/resource/Kategorie:Religion_(T\u00FCrkei)> ,
+		ns16:Agama_di_Turki ,
+		ns17:Religião_na_Turquia ,
+		ns19:터키의_종교 ,
+		ns18:Religión_en_Turquía ,
+		wikidata:Q6796251 ,
+		ns14:トルコの宗教 ,
+		dbpedia-wikidata:Q6796251 ,
+		ns30:Religie_in_Turkije ,
+		ns22:Náboženství_v_Turecku ;
+	rdfs:label	"Religion in Turkey"@en ;
+	skos:broader	dbc:Turkish_culture ,
+		dbc:Religion_in_Europe ,
+		dbc:Religion_in_Asia_by_country ,
+		dbc:Religion_by_country ,
+		dbc:Turkish_society ;
+	skos:prefLabel	"Religion in Turkey"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Religion_in_Turkey?oldid=604764551> .
+dbc:Subdivisions_of_Armenia	skos:broader	dbc:Geography_of_Armenia ,
+		dbc:Country_subdivisions_by_country ,
+		dbc:Country_subdivisions_of_Asia .
+dbc:Syrian_society	rdf:type	skos:Concept ;
+	dbo:wikiPageID	2835211 ;
+	dbo:wikiPageRevisionID	676501049 ;
+	owl:sameAs	ns19:시리아의_사회 ,
+		ns17:Sociedade_da_Síria ,
+		ns22:Syrská_společnost ,
+		wikidata:Q6445684 ,
+		ns18:Sociedad_de_Siria ,
+		dbpedia-wikidata:Q6445684 ;
+	rdfs:label	"Syrian society"@en ;
+	skos:broader	dbc:Society_by_nationality ,
+		dbc:Syria ,
+		dbc:Asian_society_by_country ,
+		dbc:Middle_Eastern_society ,
+		dbc:Arab_society ;
+	skos:prefLabel	"Syrian society"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Syrian_society?oldid=676501049> .
+dbc:Turkish_society	rdf:type	skos:Concept ;
+	dbo:wikiPageID	2699298 ;
+	dbo:wikiPageRevisionID	677426447 ;
+	owl:sameAs	ns22:Turecká_společnost ,
+		dbpedia-wikidata:Q7284959 ,
+		ns14:トルコの社会 ,
+		<http://de.dbpedia.org/resource/Kategorie:Gesellschaft_(T\u00FCrkei)> ,
+		ns17:Sociedade_da_Turquia ,
+		ns21:Société_turque ,
+		ns18:Sociedad_de_Turquía ,
+		ns30:Mens_en_maatschappij_in_Turkije ,
+		ns19:터키의_사회 ,
+		ns16:Masyarakat_Turki ,
+		wikidata:Q7284959 ;
+	rdfs:label	"Turkish society"@en ;
+	skos:broader	dbc:Asian_society_by_country ,
+		dbc:Turkey ,
+		dbc:Society_by_nationality ,
+		dbc:European_society_by_country ,
+		dbc:Middle_Eastern_society ;
+	skos:prefLabel	"Turkish society"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Turkish_society?oldid=677426447> .
+dbc:Reform	rdf:type	skos:Concept ;
+	dbo:wikiPageID	34582198 ;
+	dbo:wikiPageRevisionID	547775629 ;
+	owl:sameAs	ns14:改革 ,
+		ns13:Reform ,
+		dbpedia-wikidata:Q8645312 ,
+		ns19:개혁 ,
+		wikidata:Q8645312 ;
+	rdfs:label	"Reform"@en ;
+	skos:broader	dbc:Social_concepts ;
+	skos:prefLabel	"Reform"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Reform?oldid=547775629> .
+dbc:Armenia_geography-related_lists	skos:broader	dbc:Armenia-related_lists ,
+		dbc:Geography_of_Armenia ,
+		dbc:Geography-related_lists_by_country .
+<http://dbpedia.org/resource/Category:9th-century_BC_establishments_in_Asia>	skos:broader	dbc:Establishments_in_Asia_by_century ,
+		<http://dbpedia.org/resource/Category:1st-millennium_BC_establishments_in_Asia> ,
+		<http://dbpedia.org/resource/Category:9th_century_BC_in_Asia> .
+dbc:Archaeology_of_Armenia	skos:broader	dbc:History_of_Armenia ,
+		dbc:Archaeology_of_the_Caucasus ,
+		dbc:Archaeology_by_country .
+dbc:Orthography_reform	skos:broader	dbc:Language_policy ,
+		dbc:Orthography ,
+		dbc:Reform .
+<http://dbpedia.org/resource/Category:2nd_century_BC_in_Asia>	rdf:type	skos:Concept ;
+	dbo:wikiPageID	27179485 ;
+	dbo:wikiPageRevisionID	547222223 ;
+	owl:sameAs	<http://pt.dbpedia.org/resource/Categoria:S\u00E9culo_II_a.C._na_\u00C1sia> ,
+		dbpedia-wikidata:Q8208487 ,
+		wikidata:Q8208487 ;
+	rdfs:label	"2nd century BC in Asia"@en ;
+	skos:broader	dbc:Centuries_in_Asia ,
+		<http://dbpedia.org/resource/Category:2nd_century_BC_by_continent> ;
+	skos:prefLabel	"2nd century BC in Asia"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:2nd_century_BC_in_Asia?oldid=547222223> .
+dbc:Lists_of_populated_places	rdf:type	skos:Concept ;
+	dbo:wikiPageID	27482610 ;
+	dbo:wikiPageRevisionID	675120900 ;
+	owl:sameAs	ns30:Lijsten_van_plaatsen ,
+		ns18:Listas_de_Localidades ,
+		ns17:Listas_de_assentamentos ,
+		dbpedia-wikidata:Q8598242 ,
+		<http://de.dbpedia.org/resource/Kategorie:Liste_(Orte)> ,
+		wikidata:Q8598242 ;
+	rdfs:label	"Lists of populated places"@en ;
+	skos:broader	dbc:Lists_of_places ,
+		dbc:Populated_places ;
+	skos:prefLabel	"Lists of populated places"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Lists_of_populated_places?oldid=675120900> .
+dbc:People_of_Southwest_Asian_descent	rdf:type	skos:Concept ;
+	dbo:wikiPageID	27075944 ;
+	dbo:wikiPageRevisionID	664589670 ;
+	owl:sameAs	dbpedia-wikidata:Q13285349 ,
+		wikidata:Q13285349 ;
+	rdfs:label	"People of Southwest Asian descent"@en ;
+	skos:broader	dbc:West_Asian_people ,
+		dbc:People_of_Asian_descent ,
+		dbc:People_by_region_of_descent ;
+	skos:prefLabel	"People of Southwest Asian descent"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:People_of_Southwest_Asian_descent?oldid=664589670> .
+<http://dbpedia.org/resource/Category:2nd_millennium_in_Armenia>	rdf:type	skos:Concept ;
+	dbo:wikiPageID	35400352 ;
+	dbo:wikiPageRevisionID	555622116 ;
+	owl:sameAs	dbpedia-wikidata:Q8208523 ,
+		wikidata:Q8208523 ;
+	rdfs:label	"2nd millennium in Armenia"@en ;
+	skos:broader	dbc:Millennia_in_Armenia ,
+		<http://dbpedia.org/resource/Category:2nd_millennium_in_Asia> ,
+		<http://dbpedia.org/resource/Category:2nd_millennium_in_Europe> ,
+		<http://dbpedia.org/resource/Category:2nd_millennium_by_country> ;
+	skos:prefLabel	"2nd millennium in Armenia"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:2nd_millennium_in_Armenia?oldid=555622116> .
+<http://dbpedia.org/resource/Category:9th_century_BC_in_Asia>	rdf:type	skos:Concept ;
+	dbo:wikiPageID	35169347 ;
+	dbo:wikiPageRevisionID	672706319 ;
+	owl:sameAs	dbpedia-wikidata:Q8214338 ,
+		<http://es.dbpedia.org/resource/Categor\u00EDa:Siglo_IX_a._C._en_Asia> ,
+		wikidata:Q8214338 ;
+	rdfs:label	"9th century BC in Asia"@en ;
+	skos:broader	<http://dbpedia.org/resource/Category:9th_century_BC_by_continent> ,
+		dbc:Centuries_in_Asia ,
+		<http://dbpedia.org/resource/Category:1st_millennium_BC_in_Asia> ;
+	skos:prefLabel	"9th century BC in Asia"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:9th_century_BC_in_Asia?oldid=672706319> .
+dbc:History_of_Armenia_by_period	rdf:type	skos:Concept ;
+	dbo:wikiPageID	35397260 ;
+	dbo:wikiPageRevisionID	683201449 ;
+	owl:sameAs	dbpedia-wikidata:Q8517480 ,
+		wikidata:Q8517480 ;
+	rdfs:label	"History of Armenia by period"@en ;
+	skos:broader	dbc:History_of_countries_by_period ,
+		dbc:History_of_the_Middle_East_by_period ,
+		dbc:History_of_Armenia ;
+	skos:prefLabel	"History of Armenia by period"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:History_of_Armenia_by_period?oldid=683201449> .
+dbc:Prime_Ministers_by_country	rdf:type	skos:Concept ;
+	dbo:wikiPageID	35656523 ;
+	dbo:wikiPageRevisionID	570698963 ;
+	owl:sameAs	ns20:Primi_ministri_per_paese ,
+		dbpedia-wikidata:Q7068352 ,
+		ns15:Premierzy_według_państw ,
+		wikidata:Q7068352 ,
+		ns22:Premiéři_podle_zemí ,
+		ns19:나라별_총리 ,
+		ns14:各国の首相 ,
+		ns18:Primeros_ministros_por_país ;
+	rdfs:label	"Prime Ministers by country"@en ;
+	skos:broader	dbc:Categories_by_country ,
+		dbc:Prime_ministers ,
+		dbc:Heads_of_government_by_country ;
+	skos:prefLabel	"Prime Ministers by country"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Prime_Ministers_by_country?oldid=570698963> .
+dbc:Wikipedia_categories_named_after_former_countries	rdf:type	skos:Concept ;
+	dbo:wikiPageID	35320123 ;
+	dbo:wikiPageRevisionID	678089818 ;
+	owl:sameAs	wikidata:Q6963596 ,
+		ns13:Historischer_Staat_als_Thema ,
+		dbpedia-wikidata:Q6963596 ;
+	rdfs:label	"Wikipedia categories named after former countries"@en ;
+	skos:broader	dbc:Wikipedia_categories_named_after_countries ;
+	skos:prefLabel	"Wikipedia categories named after former countries"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Wikipedia_categories_named_after_former_countries?oldid=678089818> .
+dbc:Territorial_entities_in_Europe	rdf:type	skos:Concept ;
+	dbo:wikiPageID	37670486 ;
+	dbo:wikiPageRevisionID	668630245 ;
+	owl:sameAs	wikidata:Q8843935 ,
+		dbpedia-wikidata:Q8843935 ;
+	rdfs:label	"Territorial entities in Europe"@en ;
+	skos:broader	dbc:Administrative_territorial_entities_by_continent ,
+		dbc:Geography_of_Europe ;
+	skos:prefLabel	"Territorial entities in Europe"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Territorial_entities_in_Europe?oldid=668630245> .
+<http://dbpedia.org/resource/Category:1938_establishments_in_Armenia>	skos:broader	<http://dbpedia.org/resource/Category:1938_establishments_in_the_Soviet_Union> .
+<http://dbpedia.org/resource/Category:1922_in_Armenia>	owl:sameAs	wikidata:Q15103369 .
+dbc:Sasanian_Empire	rdf:type	skos:Concept ;
+	dbo:wikiPageID	40069566 ;
+	dbo:wikiPageRevisionID	666971880 ;
+	owl:sameAs	ns30:Sassaniden ,
+		ns21:Empire_sassanide ,
+		dbpedia-wikidata:Q6154095 ,
+		ns13:Sassanidenreich ,
+		ns18:Imperio_sasánida ,
+		ns17:Império_Sassânida ,
+		ns31:Sasaniar_Inperioa ,
+		wikidata:Q6154095 ;
+	rdfs:label	"Sasanian Empire"@en ;
+	skos:broader	dbc:Former_empires_of_Asia ,
+		dbc:Near_East_in_Classical_Antiquity ,
+		dbc:Wikipedia_categories_named_after_empires ,
+		dbc:Wikipedia_categories_named_after_former_countries ,
+		dbc:Persian_history ,
+		dbc:Former_empires_of_Europe ,
+		dbc:Late_Antiquity ,
+		dbc:Empires_and_kingdoms_of_Iran ;
+	skos:prefLabel	"Sasanian Empire"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Sasanian_Empire?oldid=666971880> .
+dbr:Armenia	dbp:establishedEvent	dbr:Orontid_Dynasty ,
+		dbr:Bagratid_Armenia ,
+		dbr:Urartu ;
+	dbp:ethnicGroups	dbr:Armenians ,
+		dbr:Yazidis ;
+	dbp:footnoteA	dbr:Armenian_orthography_reform ;
+	dbp:governmentType	dbr:Semi-presidential_system ;
+	dbp:languages	dbr:Eastern_Armenian ;
+	dbp:leaderTitle	dbr:Prime_Minister_of_Armenia ;
+	dbp:legislature	<http://dbpedia.org/resource/National_Assembly_(Armenia)> ;
+	dbp:nationalAnthem	dbr:Mer_Hayrenik ;
+	rdfs:seeAlso	dbr:List_of_municipalities_of_Armenia ;
+	dbo:anthem	dbr:Mer_Hayrenik ;
+	dbo:currency	dbr:Armenian_dram ;
+	dbo:ethnicGroup	dbr:Yazidis ,
+		dbr:Armenians ;
+	dbo:governmentType	dbr:Semi-presidential_system ;
+	dbo:language	dbr:Eastern_Armenian .
+dbr:Caucasian_Albania	dbp:capital	dbr:Qabala ,
+		<http://dbpedia.org/resource/Barda,_Azerbaijan> ;
+	dbp:commonLanguages	dbr:Middle_Persian ,
+		dbr:Caucasian_Albanian_language ;
+	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Ancient_countries_of_Transcaucasia.jpg> ;
+	dbo:thumbnail	<http://commons.wikimedia.org/wiki/Special:FilePath/Ancient_countries_of_Transcaucasia.jpg?width=300> ;
+	dbo:capital	dbr:Qabala ,
+		<http://dbpedia.org/resource/Barda,_Azerbaijan> .
+dbc:Religion_in_Kurdistan	skos:broader	dbc:Kurdish_culture ,
+		dbc:Kurdistan ,
+		dbc:Religion_in_Iraq ,
+		dbc:Religion_in_Turkey ,
+		dbc:Religion_in_Syria ,
+		dbc:Religion_in_Iran .
+<http://dbpedia.org/resource/Category:20th_century_by_country>	rdf:type	skos:Concept ;
+	dbo:wikiPageID	8088487 ;
+	dbo:wikiPageRevisionID	661439210 ;
+	owl:sameAs	ns16:Abad_ke-20_menurut_negara ,
+		ns17:Século_XX_por_país ,
+		ns18:Siglo_XX_por_país ,
+		ns19:나라별_20세기 ,
+		ns21:XXe_siècle_par_pays ,
+		dbpedia-wikidata:Q6180474 ,
+		<http://eu.dbpedia.org/resource/Kategoria:XX._mendea_herrialdearen_arabera> ,
+		wikidata:Q6180474 ,
+		<http://ja.dbpedia.org/resource/Category:20\u4E16\u7D00\u306E\u5404\u56FD> ;
+	rdfs:label	"20th century by country"@en ;
+	skos:broader	<http://dbpedia.org/resource/Category:20th_century> ,
+		dbc:Centuries_by_country ,
+		dbc:Modern_history_by_country ;
+	skos:prefLabel	"20th century by country"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:20th_century_by_country?oldid=661439210> .
+dbc:Armenian_kingdoms	rdf:type	skos:Concept ;
+	dbo:wikiPageID	8884998 ;
+	dbo:wikiPageRevisionID	661561276 ;
+	owl:sameAs	dbpedia-wikidata:Q7601893 ,
+		wikidata:Q7601893 ,
+		<http://it.dbpedia.org/resource/Categoria:Regni_dell\u0027Armenia> ;
+	rdfs:label	"Armenian kingdoms"@en ;
+	skos:broader	dbc:Political_history_of_Armenia ,
+		dbc:Former_kingdoms ,
+		dbc:Armenian_states ;
+	skos:prefLabel	"Armenian kingdoms"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Armenian_kingdoms?oldid=661561276> .
+dbc:Middle_Persian	skos:broader	dbc:Classical_languages ,
+		dbc:Sasanian_Empire ,
+		dbc:Persian_language ,
+		dbc:Medieval_languages .
+dbc:People_of_Iranian_descent	rdf:type	skos:Concept ;
+	dbo:wikiPageID	6301769 ;
+	dbo:wikiPageRevisionID	630573884 ;
+	owl:sameAs	dbpedia-wikidata:Q7291191 ,
+		ns19:이란계_사람 ,
+		wikidata:Q7291191 ,
+		ns14:イラン系人 ;
+	rdfs:label	"People of Iranian descent"@en ;
+	skos:broader	dbc:People_by_ethnic_or_national_descent ,
+		dbc:People_by_country_of_descent ,
+		dbc:People_by_Asian_country_of_descent ,
+		dbc:Iranian_diaspora ;
+	skos:prefLabel	"People of Iranian descent"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:People_of_Iranian_descent?oldid=630573884> .
+<http://dbpedia.org/resource/Augustus_C._Hand>	dbp:before	<http://dbpedia.org/resource/John_Palmer_(1785\u20131840)> .
+dbc:Religion_in_Asia_by_country	rdf:type	skos:Concept ;
+	dbo:wikiPageID	42524339 ;
+	dbo:wikiPageRevisionID	604762601 ;
+	owl:sameAs	dbpedia-wikidata:Q16804720 ,
+		wikidata:Q16804720 ;
+	rdfs:label	"Religion in Asia by country"@en ;
+	skos:broader	dbc:Religion_in_Asia ;
+	skos:prefLabel	"Religion in Asia by country"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Religion_in_Asia_by_country?oldid=604762601> .
+<http://dbpedia.org/resource/Category:2nd-century_BC_disestablishments_by_continent>	rdf:type	skos:Concept ;
+	dbo:wikiPageID	47064041 ;
+	dbo:wikiPageRevisionID	668392026 ;
+	rdfs:label	"2nd-century BC disestablishments by continent"@en ;
+	skos:broader	<http://dbpedia.org/resource/Category:2nd-century_BC_disestablishments> ,
+		<http://dbpedia.org/resource/Category:1st-millennium_BC_disestablishments_by_continent> ,
+		<http://dbpedia.org/resource/Category:2nd_century_BC_by_continent> ;
+	skos:prefLabel	"2nd-century BC disestablishments by continent"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:2nd-century_BC_disestablishments_by_continent?oldid=668392026> ;
+	skos:related	<http://dbpedia.org/resource/Category:130s_BC_disestablishments_by_continent> ,
+		<http://dbpedia.org/resource/Category:3rd-century_BC_disestablishments_by_continent> ,
+		<http://dbpedia.org/resource/Category:140s_BC_disestablishments_by_continent> ,
+		<http://dbpedia.org/resource/Category:100s_BC_disestablishments_by_continent> ,
+		<http://dbpedia.org/resource/Category:120s_BC_disestablishments_by_continent> ,
+		<http://dbpedia.org/resource/Category:110s_BC_disestablishments_by_continent> ,
+		<http://dbpedia.org/resource/Category:150s_BC_disestablishments_by_continent> ,
+		<http://dbpedia.org/resource/Category:160s_BC_disestablishments_by_continent> ,
+		<http://dbpedia.org/resource/Category:170s_BC_disestablishments_by_continent> ,
+		<http://dbpedia.org/resource/Category:1st-century_BC_disestablishments_by_continent> ,
+		<http://dbpedia.org/resource/Category:180s_BC_disestablishments_by_continent> ,
+		<http://dbpedia.org/resource/Category:190s_BC_disestablishments_by_continent> .
+<http://dbpedia.org/resource/Category:6th-century_BC_disestablishments_by_continent>	rdf:type	skos:Concept ;
+	dbo:wikiPageID	47096464 ;
+	dbo:wikiPageRevisionID	668962056 ;
+	rdfs:label	"6th-century BC disestablishments by continent"@en ;
+	skos:broader	<http://dbpedia.org/resource/Category:6th_century_BC_by_continent> ,
+		<http://dbpedia.org/resource/Category:1st-millennium_BC_disestablishments_by_continent> ,
+		<http://dbpedia.org/resource/Category:6th-century_BC_disestablishments> ;
+	skos:prefLabel	"6th-century BC disestablishments by continent"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:6th-century_BC_disestablishments_by_continent?oldid=668962056> ;
+	skos:related	<http://dbpedia.org/resource/Category:580s_BC_disestablishments_by_continent> ,
+		<http://dbpedia.org/resource/Category:590s_BC_disestablishments_by_continent> ,
+		<http://dbpedia.org/resource/Category:540s_BC_disestablishments_by_continent> ,
+		<http://dbpedia.org/resource/Category:550s_BC_disestablishments_by_continent> ,
+		<http://dbpedia.org/resource/Category:560s_BC_disestablishments_by_continent> ,
+		<http://dbpedia.org/resource/Category:570s_BC_disestablishments_by_continent> ,
+		<http://dbpedia.org/resource/Category:510s_BC_disestablishments_by_continent> ,
+		<http://dbpedia.org/resource/Category:520s_BC_disestablishments_by_continent> ,
+		<http://dbpedia.org/resource/Category:530s_BC_disestablishments_by_continent> ,
+		<http://dbpedia.org/resource/Category:500s_BC_disestablishments_by_continent> ,
+		<http://dbpedia.org/resource/Category:5th-century_BC_disestablishments_by_continent> ,
+		<http://dbpedia.org/resource/Category:7th-century_BC_disestablishments_by_continent> .
+<http://dbpedia.org/resource/Category:6th-century_BC_establishments_by_continent>	rdf:type	skos:Concept ;
+	dbo:wikiPageID	47099615 ;
+	dbo:wikiPageRevisionID	669011349 ;
+	rdfs:label	"6th-century BC establishments by continent"@en ;
+	skos:broader	<http://dbpedia.org/resource/Category:6th-century_BC_establishments> ,
+		<http://dbpedia.org/resource/Category:6th_century_BC_by_continent> ,
+		<http://dbpedia.org/resource/Category:1st-millennium_BC_establishments_by_continent> ;
+	skos:prefLabel	"6th-century BC establishments by continent"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:6th-century_BC_establishments_by_continent?oldid=669011349> ;
+	skos:related	<http://dbpedia.org/resource/Category:570s_BC_establishments_by_continent> ,
+		<http://dbpedia.org/resource/Category:580s_BC_establishments_by_continent> ,
+		<http://dbpedia.org/resource/Category:590s_BC_establishments_by_continent> ,
+		<http://dbpedia.org/resource/Category:500s_BC_establishments_by_continent> ,
+		<http://dbpedia.org/resource/Category:510s_BC_establishments_by_continent> ,
+		<http://dbpedia.org/resource/Category:520s_BC_establishments_by_continent> ,
+		<http://dbpedia.org/resource/Category:530s_BC_establishments_by_continent> ,
+		<http://dbpedia.org/resource/Category:540s_BC_establishments_by_continent> ,
+		<http://dbpedia.org/resource/Category:550s_BC_establishments_by_continent> ,
+		<http://dbpedia.org/resource/Category:560s_BC_establishments_by_continent> ,
+		<http://dbpedia.org/resource/Category:5th-century_BC_establishments_by_continent> ,
+		<http://dbpedia.org/resource/Category:7th-century_BC_establishments_by_continent> .
+dbc:Armenian_republics	rdf:type	skos:Concept ;
+	dbo:wikiPageID	46656023 ;
+	dbo:wikiPageRevisionID	661561375 ;
+	owl:sameAs	wikidata:Q19897793 ,
+		dbpedia-wikidata:Q19897793 ;
+	rdfs:label	"Armenian republics"@en ;
+	skos:broader	dbc:Republics ,
+		dbc:Political_history_of_Armenia ,
+		dbc:Armenian_states ;
+	skos:prefLabel	"Armenian republics"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Armenian_republics?oldid=661561375> .
+dbc:Armenian_states	rdf:type	skos:Concept ;
+	dbo:wikiPageID	46510972 ;
+	dbo:wikiPageRevisionID	661561541 ;
+	owl:sameAs	wikidata:Q19829686 ,
+		dbpedia-wikidata:Q19829686 ;
+	rdfs:label	"Armenian states"@en ;
+	skos:broader	dbc:States_in_history_of_Armenia ;
+	skos:prefLabel	"Armenian states"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Armenian_states?oldid=661561541> .
+dbc:Dynasties_of_Armenia	rdf:type	skos:Concept ;
+	dbo:wikiPageID	46469488 ;
+	dbo:wikiPageRevisionID	678682804 ;
+	owl:sameAs	ns18:Dinastías_de_Armenia ,
+		ns21:Dynastie_arménienne ,
+		wikidata:Q6221032 ,
+		dbpedia-wikidata:Q6221032 ;
+	rdfs:label	"Dynasties of Armenia"@en ;
+	skos:broader	dbc:Armenia ,
+		dbc:European_dynasties ,
+		dbc:Armenian_nobility ;
+	skos:prefLabel	"Dynasties of Armenia"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Dynasties_of_Armenia?oldid=678682804> .
+dbc:Ethnic_groups_in_Asia_by_country	rdf:type	skos:Concept ;
+	dbo:wikiPageID	46294387 ;
+	dbo:wikiPageRevisionID	654593819 ;
+	owl:sameAs	dbpedia-wikidata:Q19736645 ,
+		wikidata:Q19736645 ;
+	rdfs:label	"Ethnic groups in Asia by country"@en ;
+	skos:broader	dbc:Ethnic_groups_in_Asia ,
+		dbc:Categories_by_country ,
+		dbc:Ethnic_groups_by_country ;
+	skos:prefLabel	"Ethnic groups in Asia by country"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Ethnic_groups_in_Asia_by_country?oldid=654593819> .
+dbc:Orontid_Armenia	rdf:type	skos:Concept ;
+	dbo:wikiPageID	46504174 ;
+	dbo:wikiPageRevisionID	658921903 ;
+	owl:sameAs	wikidata:Q19828894 ,
+		dbpedia-wikidata:Q19828894 ;
+	rdfs:label	"Orontid Armenia"@en ;
+	skos:broader	dbc:Armenian_kingdoms ;
+	skos:prefLabel	"Orontid Armenia"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Orontid_Armenia?oldid=658921903> .
+dbc:Royal_families_of_Armenia	rdf:type	skos:Concept ;
+	dbo:wikiPageID	46469518 ;
+	dbo:wikiPageRevisionID	662580569 ;
+	owl:sameAs	dbpedia-wikidata:Q9967719 ,
+		wikidata:Q9967719 ;
+	rdfs:label	"Royal families of Armenia"@en ;
+	skos:broader	dbc:Asian_royal_families ,
+		dbc:Armenian_noble_families ,
+		dbc:European_royal_families ;
+	skos:prefLabel	"Royal families of Armenia"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Royal_families_of_Armenia?oldid=662580569> .
+dbr:John_Palmer	dbo:wikiPageDisambiguates	<http://dbpedia.org/resource/John_Palmer_(1785\u20131840)> .
+<http://dbpedia.org/resource/John_Palmer_(1785\u20131840)>	dbo:deathPlace	dbr:Bartholomew_the_Apostle .
+dbc:Country_subdivisions_by_country	rdf:type	skos:Concept ;
+	dbo:wikiPageID	37426256 ;
+	dbo:wikiPageRevisionID	681523194 ;
+	owl:sameAs	wikidata:Q7584657 ,
+		ns21:Subdivision_par_pays ,
+		dbpedia-wikidata:Q7584657 ,
+		ns14:各国の地方区分 ,
+		ns13:Verwaltungseinheit_nach_Staat ,
+		ns17:Subdivisões_por_país ,
+		ns20:Suddivisioni_degli_stati ;
+	rdfs:label	"Country subdivisions by country"@en ;
+	skos:broader	dbc:Geography_by_country ,
+		dbc:Categories_by_country ,
+		dbc:Country_subdivisions ;
+	skos:prefLabel	"Country subdivisions by country"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Country_subdivisions_by_country?oldid=681523194> .
+dbc:Kings_of_Armenia	rdf:type	skos:Concept ;
+	dbo:wikiPageID	46460325 ;
+	dbo:wikiPageRevisionID	675071330 ;
+	owl:sameAs	wikidata:Q19824408 ,
+		dbpedia-wikidata:Q19824408 ;
+	rdfs:label	"Kings of Armenia"@en ;
+	skos:broader	dbc:Armenian_kings ;
+	skos:prefLabel	"Kings of Armenia"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Kings_of_Armenia?oldid=675071330> .
+dbc:Communism_in_Armenia	rdf:type	skos:Concept ;
+	dbo:wikiPageID	32162251 ;
+	dbo:wikiPageRevisionID	582991980 ;
+	owl:sameAs	wikidata:Q8398229 ,
+		dbpedia-wikidata:Q8398229 ;
+	rdfs:label	"Communism in Armenia"@en ;
+	skos:broader	dbc:Politics_of_Armenia ,
+		dbc:Communism_in_Europe ,
+		dbc:Communism_in_Asia ,
+		dbc:Socialism_in_Armenia ,
+		dbc:Communism_by_country ;
+	skos:prefLabel	"Communism in Armenia"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Communism_in_Armenia?oldid=582991980> .
+dbc:Armenian_Soviet_Socialist_Republic	skos:broader	dbc:Communism_in_Armenia ,
+		dbc:Republics_of_the_Soviet_Union ,
+		dbc:Wikipedia_categories_named_after_former_countries ,
+		dbc:Post–Russian_Empire_states ,
+		dbc:Armenian_republics .
+<http://dbpedia.org/resource/Category:2nd-century_BC_disestablishments_in_Asia>	skos:broader	<http://dbpedia.org/resource/Category:2nd-century_BC_disestablishments_by_continent> ,
+		<http://dbpedia.org/resource/Category:2nd_century_BC_in_Asia> ,
+		<http://dbpedia.org/resource/Category:1st-millennium_BC_disestablishments_in_Asia> ,
+		dbc:Disestablishments_in_Asia_by_century .
+dbc:Achaemenid_satraps_of_Armenia	rdf:type	skos:Concept ;
+	dbo:wikiPageID	42082159 ;
+	dbo:wikiPageRevisionID	624320321 ;
+	owl:sameAs	dbpedia-wikidata:Q16777777 ,
+		wikidata:Q16777777 ;
+	rdfs:label	"Achaemenid satraps of Armenia"@en ;
+	skos:broader	dbc:Achaemenid_satraps ,
+		dbc:Ancient_Armenian_people ;
+	skos:prefLabel	"Achaemenid satraps of Armenia"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Achaemenid_satraps_of_Armenia?oldid=624320321> .
+dbc:Ancient_Asia	rdf:type	skos:Concept ;
+	dbo:wikiPageID	41254246 ;
+	dbo:wikiPageRevisionID	588135542 ;
+	owl:sameAs	ns16:Asia_Kuno ,
+		wikidata:Q15309760 ,
+		dbpedia-wikidata:Q15309760 ;
+	rdfs:label	"Ancient Asia"@en ;
+	skos:broader	dbc:Ancient_history_by_region ,
+		dbc:History_of_Asia_by_period ;
+	skos:prefLabel	"Ancient Asia"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Ancient_Asia?oldid=588135542> .
+dbc:Bagratid_Armenia	skos:broader	dbc:Armenian_kingdoms .
+<http://dbpedia.org/resource/John_Palmer_(1785-1840)>	dbo:wikiPageRedirects	<http://dbpedia.org/resource/John_Palmer_(1785\u20131840)> .
+<http://dbpedia.org/resource/John_Palmer_(New_York_Congressman)>	dbo:wikiPageRedirects	<http://dbpedia.org/resource/John_Palmer_(1785\u20131840)> .
+<http://dbpedia.org/resource/John_Palmer_(U.S._Congressman)>	dbo:wikiPageRedirects	<http://dbpedia.org/resource/John_Palmer_(1785\u20131840)> .
+<http://dbpedia.org/resource/Category:1938_establishments_in_the_Soviet_Union>	rdf:type	skos:Concept ;
+	dbo:wikiPageID	30164662 ;
+	dbo:wikiPageRevisionID	665870718 ;
+	owl:sameAs	wikidata:Q8137875 ,
+		dbpedia-wikidata:Q8137875 ;
+	rdfs:label	"1938 establishments in the Soviet Union"@en ;
+	skos:broader	<http://dbpedia.org/resource/Category:1938_establishments_in_Asia> ,
+		<http://dbpedia.org/resource/Category:1938_establishments_in_Europe> ;
+	skos:prefLabel	"1938 establishments in the Soviet Union"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:1938_establishments_in_the_Soviet_Union?oldid=665870718> .
+<http://dbpedia.org/resource/Category:6th-century_BC_disestablishments_in_Asia>	skos:broader	<http://dbpedia.org/resource/Category:1st-millennium_BC_disestablishments_in_Asia> ,
+		dbc:Disestablishments_in_Asia_by_century ,
+		<http://dbpedia.org/resource/Category:6th_century_BC_in_Asia> ,
+		<http://dbpedia.org/resource/Category:6th-century_BC_disestablishments_by_continent> .
+<http://dbpedia.org/resource/Category:6th-century_BC_establishments_in_Asia>	skos:broader	<http://dbpedia.org/resource/Category:1st-millennium_BC_establishments_in_Asia> ,
+		<http://dbpedia.org/resource/Category:6th_century_BC_in_Asia> ,
+		dbc:Establishments_in_Asia_by_century ,
+		<http://dbpedia.org/resource/Category:6th-century_BC_establishments_by_continent> .
+dbc:Agglutinative_languages	rdf:type	skos:Concept ;
+	dbo:wikiPageID	1179137 ;
+	dbo:wikiPageRevisionID	558878742 ;
+	owl:sameAs	ns21:Langue_agglutinante ,
+		ns14:膠着語 ,
+		ns17:Línguas_aglutinantes ,
+		ns20:Lingue_agglutinanti ,
+		dbpedia-wikidata:Q8791301 ,
+		ns18:Lenguas_aglutinantes ,
+		ns31:Hizkuntza_eranskariak ,
+		ns29:Συγκολλητικές_γλώσσες ,
+		ns19:교착어 ,
+		wikidata:Q8791301 ;
+	rdfs:label	"Agglutinative languages"@en ;
+	skos:broader	dbc:Synthetic_languages ;
+	skos:prefLabel	"Agglutinative languages"@en ;
+	prov:wasDerivedFrom	<http://en.wikipedia.org/wiki/Category:Agglutinative_languages?oldid=558878742> .
+dbc:Alphabets	rdf:type	skos:Concept ;
+	dbo:wikiPageID	36431011 ;
+	dbo:wikiPageRevisionID	546377753 ;
+	owl:sameAs	ns16:Alfabet ,
+		ns15:Alfabety ,
+		ns18:Alfabeto ,
+		ns13:Alphabet ,
+		ns22:Písma ,
+		ns19:음소_문자 ,
+		ns30:Alfabet ,
+		ns31:Alfabetoak ,
+		dbpedia-wikidata:Q5631254 ,
+		ns21:Alphabet ,
+		ns20:Alfabeti ,
+		wikidata:Q5631254 ,
+		ns14:アルファベット ,
+		ns17:Alfabetos ,
+		ns29:Αλφάβητο ;
+	rdfs:label	"Alphabets"@en ;
+	skos:broader	dbc:Writing_systems .
+dbc:Ancient_history_of_Iran	skos:broader	dbc:Ancient_history_by_country ,
+		dbc:History_of_Iran_by_period ,
+		dbc:Ancient_Asia ;
+	skos:related	dbc:Persian_history .
+dbc:Ancient_languages	skos:broader	dbc:Ancient_history ,
+		dbc:Language_histories ,
+		dbc:Archaic_words_and_phrases ,
+		dbc:Extinct_languages ,
+		dbc:Languages .
+dbc:Armenian_language	rdf:type	skos:Concept ;
+	dbo:wikiPageID	20813489 ;
+	dbo:wikiPageRevisionID	548071401 ;
+	owl:sameAs	dbpedia-wikidata:Q8881924 ,
+		ns30:Armeens ,
+		ns21:Langue_arménienne ,
+		ns17:Língua_armênia ,
+		ns16:Bahasa_Armenia ,
+		ns14:アルメニア語 ,
+		ns22:Arménština ,
+		ns31:Armeniera ,
+		ns18:Idioma_armenio ,
+		wikidata:Q8881924 ,
+		ns13:Armenische_Sprache ,
+		ns20:Lingua_armena ,
+		ns19:아르메니아어 ;
+	skos:broader	dbc:Armenian_languages ;
+	skos:prefLabel	"Armenian language"@en .
+dbc:Armenian_languages	skos:broader	dbc:Indo-European_languages ,
+		dbc:Agglutinative_languages ,
+		dbc:Languages_of_Armenia .
+dbc:Bronze_Age	rdf:type	skos:Concept ;
+	dbo:wikiPageID	2421067 ;
+	dbo:wikiPageRevisionID	619545299 ;
+	owl:sameAs	ns30:Bronstijd ,
+		ns14:青銅器時代 ,
+		ns15:Epoka_brązu ,
+		wikidata:Q8316510 ,
+		ns31:Brontze_Aroa ,
+		ns22:Doba_bronzová ,
+		ns18:Edad_del_Bronce ,
+		ns13:Bronzezeit ,
+		ns19:청동기_시대 ,
+		ns16:Zaman_Perunggu ,
+		dbpedia-wikidata:Q8316510 ,
+		ns21:Âge_du_bronze ,
+		ns20:Età_del_bronzo ,
+		ns17:Idade_do_Bronze ;
+	rdfs:label	"Bronze Age"@en ;
+	skos:broader	dbc:Periods_and_stages_in_archaeology ,
+		<http://dbpedia.org/resource/Category:2nd_millennium_BC> .
+dbc:Bronze_Age_Asia	skos:broader	dbc:Prehistoric_Asia ,
+		dbc:Bronze_Age .
+dbc:Capitals_of_former_nations	skos:broader	dbc:Former_countries ,
+		dbc:Historical_geography ,
+		dbc:Former_national_capitals ;
+	skos:related	dbc:Former_national_capitals .
+dbc:Caucasus	rdf:type	skos:Concept ;
+	dbo:wikiPageID	743031 ;
+	dbo:wikiPageRevisionID	587853183 ;
+	owl:sameAs	ns15:Kaukaz ,
+		ns16:Kaukasus ,
+		wikidata:Q7463169 ,
+		dbpedia-wikidata:Q7463169 ,
+		ns22:Kavkaz ,
+		ns31:Kaukasoa ,
+		ns30:Kaukasus ,
+		ns14:カフカス ,
+		ns21:Caucase ,
+		ns20:Caucaso ,
+		ns19:캅카스 ,
+		ns17:Cáucaso ,
+		ns18:Cáucaso ,
+		ns13:Kaukasus ;
+	rdfs:label	"Caucasus"@en ;
+	skos:broader	dbc:Regions_of_Europe ,
+		dbc:Regions_of_Asia ,
+		dbc:Eastern_Europe ,
+		dbc:Eurasia ,
+		dbc:Western_Asia ;
+	skos:prefLabel	"Caucasus"@en .
+dbc:Country_subdivisions_of_Europe	skos:broader	dbc:Territorial_entities_in_Europe ,
+		dbc:Country_subdivisions_by_continent .
+dbc:Demographics_of_Russia	rdf:type	skos:Concept ;
+	dbo:wikiPageID	3380655 ;
+	dbo:wikiPageRevisionID	577082477 ;
+	owl:sameAs	ns15:Demografia_Rosji ,
+		dbpedia-wikidata:Q6418957 ,
+		ns19:러시아의_인구 ,
+		ns18:Demografía_de_Rusia ,
+		wikidata:Q6418957 ,
+		ns30:Demografie_van_Rusland ,
+		ns22:Demografie_Ruska ,
+		ns17:Demografia_da_Rússia ,
+		ns21:Démographie_de_la_Russie ;
+	rdfs:label	"Demographics of Russia"@en ;
+	skos:broader	dbc:Demographics_by_country ,
+		dbc:Demographics_of_Central_Asia ,
+		dbc:Russian_society ;
+	skos:prefLabel	"Demographics of Russia"@en .
+dbc:Economies_by_country	rdf:type	skos:Concept ;
+	dbo:wikiPageID	2107063 ;
+	dbo:wikiPageRevisionID	599226534 ;
+	owl:sameAs	ns21:Économie_nationale ,
+		ns30:Economie_naar_land ,
+		wikidata:Q6939844 ,
+		ns15:Gospodarka_według_państw ,
+		ns29:Οικονομία_ανά_χώρα ,
+		ns20:Economia_per_nazione ,
+		ns18:Economía_por_país ,
+		ns16:Ekonomi_menurut_negara ,
+		ns22:Ekonomika_podle_zemí ,
+		ns17:Economia_por_país ,
+		ns19:나라별_경제 ,
+		ns13:Wirtschaft_nach_Staat ,
+		ns14:各国の経済 ,
+		ns31:Ekonomia_herrialdearen_arabera ,
+		dbpedia-wikidata:Q6939844 ;
+	rdfs:label	"Economies by country"@en ;
+	skos:broader	dbc:Economies ,
+		dbc:Economies_by_region .
+dbc:Economy_of_Armenia	skos:broader	dbc:Armenia ,
+		dbc:Economies_by_country .
+dbc:Ethnic_groups_in_Armenia	skos:broader	dbc:Armenian_society ,
+		dbc:Ethnic_groups_by_country .
+dbc:Ethnic_groups_in_Iran	skos:broader	dbc:Ethnic_groups_in_Asia_by_country ,
+		dbc:Demographics_of_Iran ,
+		dbc:Ethnic_groups_in_the_Middle_East ,
+		dbc:Ethnic_groups_by_country .
+dbc:Ethnic_groups_in_Iraq	skos:broader	dbc:Ethnic_groups_in_the_Middle_East ,
+		dbc:Ethnic_groups_in_the_Arab_League ,
+		dbc:Iraqi_society ,
+		dbc:Ethnic_groups_by_country .
+dbc:Ethnic_groups_in_Russia	skos:broader	dbc:Russian_population_groups ,
+		dbc:Ethnic_groups_in_Asia_by_country ,
+		dbc:Ethnic_groups_by_country ,
+		dbc:People_of_Russia ,
+		dbc:Ethnic_groups_in_Europe_by_country ,
+		dbc:Demographics_of_Russia .
+dbc:Ethnic_groups_in_Syria	skos:broader	dbc:Ethnic_groups_in_the_Arab_League ,
+		dbc:Ethnic_groups_in_the_Middle_East ,
+		dbc:Ethnic_groups_by_country ,
+		dbc:Syrian_society .
+dbc:Ethnic_groups_in_the_Arab_League	rdf:type	skos:Concept ;
+	dbo:wikiPageID	18922483 ;
+	dbo:wikiPageRevisionID	545399399 ;
+	owl:sameAs	wikidata:Q7480053 ,
+		dbpedia-wikidata:Q7480053 ;
+	rdfs:label	"Ethnic groups in the Arab League"@en ;
+	skos:broader	dbc:Ethnic_groups_by_location ;
+	skos:prefLabel	"Ethnic groups in the Arab League"@en .
+dbc:Ethnic_groups_in_the_Middle_East	rdf:type	skos:Concept ;
+	dbo:wikiPageID	3571378 ;
+	dbo:wikiPageRevisionID	588341187 ;
+	owl:sameAs	ns16:Suku_bangsa_di_Timur_Tengah ,
+		ns14:中東の民族 ,
+		ns19:중동의_민족 ,
+		dbpedia-wikidata:Q6979832 ,
+		ns18:Etnias_de_Oriente_Medio ,
+		wikidata:Q6979832 ,
+		ns15:Ludy_Bliskiego_Wschodu ;
+	rdfs:label	"Ethnic groups in the Middle East"@en ;
+	skos:broader	dbc:Middle_Eastern_people ,
+		dbc:Ethnic_groups_in_Asia ,
+		dbc:Middle_East ;
+	skos:prefLabel	"Ethnic groups in the Middle East"@en .
+dbc:Former_countries_in_Europe	rdf:type	skos:Concept ;
+	dbo:wikiPageID	2570727 ;
+	dbo:wikiPageRevisionID	595056380 ;
+	owl:sameAs	dbpedia-wikidata:Q4086837 ,
+		ns22:Zaniklé_státy_Evropy ,
+		wikidata:Q4086837 ,
+		ns16:Bekas_negara_di_Eropa ,
+		ns30:Historisch_land_in_Europa ,
+		ns15:Państwa_historyczne_w_Europie ,
+		ns20:Stati_europei_scomparsi ,
+		ns29:Πρώην_κράτη_της_Ευρώπης ,
+		<http://fr.dbpedia.org/resource/Cat\u00E9gorie:Ancien_pays_d\u0027Europe> ,
+		ns14:かつて存在したヨーロッパの国家 ,
+		ns17:Estados_extintos_da_Europa ,
+		ns19:유럽의_옛_나라 ,
+		ns13:Historischer_Staat_in_Europa ,
+		ns18:Estados_desaparecidos_de_Europa ;
+	rdfs:label	"Former countries in Europe"@en ;
+	skos:broader	dbc:Former_territorial_entities_in_Europe ,
+		dbc:Countries_in_Europe ,
+		dbc:Former_countries_by_continent ;
+	skos:prefLabel	"Former countries in Europe"@en .
+dbc:Former_national_capitals	rdf:type	skos:Concept ;
+	dbo:wikiPageID	7212492 ;
+	dbo:wikiPageRevisionID	595382315 ;
+	owl:sameAs	ns19:옛_수도 ,
+		wikidata:Q7214548 ,
+		ns14:古都 ,
+		ns21:Ancienne_capitale_de_pays ,
+		ns22:Bývalá_hlavní_města ,
+		ns18:Antiguas_capitales_nacionales ,
+		ns17:Antigas_capitais_nacionais ,
+		dbpedia-wikidata:Q7214548 ,
+		ns13:Ehemalige_Hauptstadt ;
+	rdfs:label	"Former national capitals"@en ;
+	skos:broader	dbc:Capitals ,
+		dbc:Historical_geography ,
+		dbc:Former_places ;
+	skos:prefLabel	"Former national capitals"@en .
+dbc:Geography_of_Armenia	rdf:type	skos:Concept ;
+	dbo:wikiPageID	1034104 ;
+	dbo:wikiPageRevisionID	578723583 ;
+	owl:sameAs	<http://de.dbpedia.org/resource/Kategorie:Geographie_(Armenien)> ,
+		ns30:Geografie_van_Armenië ,
+		ns22:Geografie_Arménie ,
+		ns19:아르메니아의_지리 ,
+		wikidata:Q6964861 ,
+		ns17:Geografia_da_Armênia ,
+		ns14:アルメニアの地理 ,
+		ns29:Γεωγραφία_της_Αρμενίας ,
+		ns18:Geografía_de_Armenia ,
+		ns16:Geografi_Armenia ,
+		ns15:Geografia_Armenii ,
+		<http://it.dbpedia.org/resource/Categoria:Geografia_dell\u0027Armenia> ,
+		<http://fr.dbpedia.org/resource/Cat\u00E9gorie:G\u00E9ographie_de_l\u0027Arm\u00E9nie> ,
+		ns31:Armeniako_geografia ,
+		dbpedia-wikidata:Q6964861 ;
+	rdfs:label	"Geography of Armenia"@en ;
+	skos:broader	dbc:Geography_of_the_Caucasus ,
+		dbc:Geography_by_country ,
+		dbc:Armenia ;
+	skos:prefLabel	"Geography of Armenia"@en .
+dbc:Geography_of_Asia	rdf:type	skos:Concept ;
+	dbo:wikiPageID	1638542 ;
+	dbo:wikiPageRevisionID	623125870 ;
+	owl:sameAs	ns31:Asiako_geografia ,
+		<http://it.dbpedia.org/resource/Categoria:Geografia_dell\u0027Asia> ,
+		ns14:アジアの地理 ,
+		ns30:Geografie_van_Azië ,
+		<http://de.dbpedia.org/resource/Kategorie:Geographie_(Asien)> ,
+		ns29:Γεωγραφία_της_Ασίας ,
+		ns18:Geografía_de_Asia ,
+		ns19:아시아의_지리 ,
+		ns17:Geografia_da_Ásia ,
+		wikidata:Q7143455 ,
+		<http://fr.dbpedia.org/resource/Cat\u00E9gorie:G\u00E9ographie_de_l\u0027Asie> ,
+		dbpedia-wikidata:Q7143455 ,
+		ns16:Geografi_Asia ,
+		ns15:Geografia_Azji ,
+		ns22:Geografie_Asie ;
+	rdfs:label	"Geography of Asia"@en ;
+	skos:broader	dbc:Geography_by_continent .
+dbc:Greek_alphabet	rdf:type	skos:Concept ;
+	dbo:wikiPageID	2047363 ;
+	dbo:wikiPageRevisionID	549808748 ;
+	owl:sameAs	ns14:ギリシア文字 ,
+		dbpedia-wikidata:Q8499843 ,
+		ns29:Ελληνικό_αλφάβητο ,
+		ns30:Grieks_alfabet ,
+		ns15:Alfabet_grecki ,
+		ns13:Griechische_Schrift ,
+		ns21:Alphabet_grec ,
+		ns18:Alfabeto_griego ,
+		wikidata:Q8499843 ,
+		ns17:Alfabeto_grego ,
+		ns16:Alfabet_Yunani ,
+		ns19:그리스_문자 ,
+		ns20:Alfabeto_greco ;
+	skos:broader	dbc:Greek_script ,
+		dbc:Hellenic_scripts ;
+	skos:prefLabel	"Greek alphabet"@en .
+dbc:Indo-European_languages	rdf:type	skos:Concept ;
+	dbo:wikiPageID	694817 ;
+	dbo:wikiPageRevisionID	543793523 ;
+	owl:sameAs	wikidata:Q7034313 ,
+		ns29:Ινδοευρωπαϊκές_γλώσσες ,
+		ns13:Indogermanische_Sprachen ,
+		ns31:Indoeuropar_hizkuntzak ,
+		ns15:Języki_indoeuropejskie ,
+		ns16:Bahasa_Indo-Eropa ,
+		ns17:Línguas_indo-europeias ,
+		ns30:Indo-Europese_taalfamilie ,
+		ns19:인도유럽어족 ,
+		ns18:Lenguas_indoeuropeas ,
+		ns14:インド・ヨーロッパ語族 ,
+		ns20:Lingue_indoeuropee ,
+		dbpedia-wikidata:Q7034313 ,
+		ns22:Indoevropské_jazyky ,
+		ns21:Langue_indo-européenne ;
+	rdfs:label	"Indo-European languages"@en ;
+	skos:broader	dbc:Language_families ;
+	skos:prefLabel	"Indo-European languages"@en .
+dbc:Indo-European_peoples	rdf:type	skos:Concept ;
+	dbo:wikiPageID	2519433 ;
+	dbo:wikiPageRevisionID	659141051 ;
+	owl:sameAs	ns17:Povos_indo-europeus ,
+		dbpedia-wikidata:Q8546934 ,
+		ns18:Pueblos_indoeuropeos ,
+		wikidata:Q8546934 ,
+		ns16:Bangsa_Indo-Eropa ,
+		ns14:インド・ヨーロッパ系諸民族 ,
+		ns21:Peuple_indo-européen ,
+		ns31:Indoeuropar_etniak ,
+		ns20:Popoli_indoeuropei ;
+	rdfs:label	"Indo-European peoples"@en ;
+	skos:broader	dbc:People_by_ethnicity ,
+		dbc:Ethnic_groups_by_language_family ,
+		dbc:Indo-European ,
+		dbc:Ethnic_groups_in_Asia ,
+		dbc:Ethnic_groups_in_Europe_by_language_family ;
+	skos:prefLabel	"Indo-European peoples"@en .
+dbc:Iraqi_culture	rdf:type	skos:Concept ;
+	dbo:wikiPageID	728122 ;
+	dbo:wikiPageRevisionID	600312631 ;
+	owl:sameAs	ns17:Cultura_do_Iraque ,
+		ns21:Culture_irakienne ,
+		ns19:이라크의_문화 ,
+		ns14:イラクの文化 ,
+		<http://de.dbpedia.org/resource/Kategorie:Kultur_(Irak)> ,
+		ns29:Πολιτισμός_του_Ιράκ ,
+		<http://it.dbpedia.org/resource/Categoria:Cultura_dell\u0027Iraq> ,
+		dbpedia-wikidata:Q7283101 ,
+		ns18:Cultura_de_Irak ,
+		ns31:Irakeko_kultura ,
+		ns30:Cultuur_in_Irak ,
+		ns16:Budaya_Irak ,
+		ns22:Irácká_kultura ,
+		wikidata:Q7283101 ;
+	rdfs:label	"Iraqi culture"@en ;
+	skos:broader	dbc:Iraqi_society ,
+		dbc:Culture_by_nationality ,
+		dbc:Arab_culture_by_nationality ,
+		dbc:Middle_Eastern_culture ,
+		dbc:Asian_culture ;
+	skos:prefLabel	"Iraqi culture"@en .
+dbc:Iraqi_society	rdf:type	skos:Concept ;
+	dbo:wikiPageID	2764713 ;
+	dbo:wikiPageRevisionID	674441045 ;
+	owl:sameAs	ns29:Κοινωνία_του_Ιράκ ,
+		ns17:Sociedade_do_Iraque ,
+		ns14:イラクの社会 ,
+		ns19:이라크의_사회 ,
+		wikidata:Q7141594 ,
+		dbpedia-wikidata:Q7141594 ,
+		ns16:Masyarakat_Irak ,
+		ns18:Sociedad_de_Irak ;
+	rdfs:label	"Iraqi society"@en ;
+	skos:broader	dbc:Asian_society_by_country ,
+		dbc:Middle_Eastern_society ,
+		dbc:Society_by_nationality ,
+		dbc:Iraq ,
+		dbc:Arab_society ;
+	skos:prefLabel	"Iraqi society"@en .
+dbc:Language_histories	rdf:type	skos:Concept ;
+	dbo:wikiPageID	4141163 ;
+	dbo:wikiPageRevisionID	675097707 ;
+	owl:sameAs	dbpedia-wikidata:Q6969700 ,
+		ns22:Historie_jazyků ,
+		wikidata:Q6969700 ,
+		ns16:Sejarah_bahasa ,
+		ns30:Taalgeschiedenis ,
+		ns18:Historia_de_idiomas ,
+		ns21:Histoire_des_langues ,
+		ns14:言語史 ,
+		ns17:História_dos_idiomas ,
+		ns19:언어사 ;
+	rdfs:label	"Language histories"@en ;
+	skos:broader	dbc:Categories_by_language ,
+		dbc:Historical_linguistics ,
+		dbc:Cultural_history ;
+	skos:prefLabel	"Language histories"@en .
+dbc:Languages	rdf:type	skos:Concept ;
+	dbo:wikiPageID	694748 ;
+	dbo:wikiPageRevisionID	548838905 ;
+	owl:sameAs	ns18:Lenguas ,
+		ns14:諸言語 ,
+		ns13:Einzelsprache_als_Thema ,
+		ns30:Taal ,
+		ns29:Γλώσσες ,
+		ns19:언어 ,
+		ns16:Bahasa ,
+		dbpedia-wikidata:Q4960490 ,
+		ns21:Langue ,
+		ns31:Hizkuntzak ,
+		wikidata:Q4960490 ,
+		ns17:Línguas ,
+		ns15:Języki_świata ,
+		ns22:Jazyky ,
+		ns20:Lingue ;
+	rdfs:label	"Languages"@en ;
+	skos:broader	dbc:Language .
+dbc:Languages_of_Armenia	rdf:type	skos:Concept ;
+	dbo:wikiPageID	946952 ;
+	dbo:wikiPageRevisionID	546490638 ;
+	owl:sameAs	dbpedia-wikidata:Q7316109 ,
+		<http://it.dbpedia.org/resource/Categoria:Lingue_dell\u0027Armenia> ,
+		<http://fr.dbpedia.org/resource/Cat\u00E9gorie:Langue_d\u0027Arm\u00E9nie> ,
+		ns18:Lenguas_de_Armenia ,
+		ns31:Armeniako_hizkuntzak ,
+		wikidata:Q7316109 ,
+		ns17:Línguas_da_Armênia ,
+		ns19:아르메니아의_언어 ,
+		ns22:Jazyky_Arménie ,
+		ns30:Taal_in_Armenië ,
+		ns16:Bahasa_di_Armenia ,
+		ns14:アルメニアの言語 ;
+	rdfs:label	"Languages of Armenia"@en ;
+	skos:broader	dbc:Armenian_society ,
+		dbc:Languages_by_country ,
+		dbc:Languages_of_Europe ;
+	skos:prefLabel	"Languages of Armenia"@en .
+dbc:Legislatures	rdf:type	skos:Concept ;
+	dbo:wikiPageID	701878 ;
+	dbo:wikiPageRevisionID	543795162 ;
+	owl:sameAs	ns21:Organe_législatif ,
+		ns22:Zákonodárné_sbory ,
+		ns30:Wetgevende_macht ,
+		dbpedia-wikidata:Q5902757 ,
+		ns19:입법부 ,
+		ns17:Legislaturas ,
+		ns13:Legislative ,
+		wikidata:Q5902757 ;
+	skos:broader	dbc:Political_congresses ,
+		dbc:Public_law ;
+	skos:prefLabel	"Legislatures"@en .
+dbc:Lists_of_country_subdivisions	rdf:type	skos:Concept ;
+	dbo:wikiPageID	7582582 ;
+	dbo:wikiPageRevisionID	670867370 ;
+	owl:sameAs	wikidata:Q6359939 ,
+		ns16:Daftar_wilayah_administratif_negara ,
+		ns14:地方区分の一覧 ,
+		ns30:Lijsten_met_bestuurlijke_indelingen .
+@prefix ns32:	<http://es.dbpedia.org/resource/Categor\u00EDa:Anexos:> .
+dbc:Lists_of_country_subdivisions	owl:sameAs	ns32:Subdivisiones_de_países ,
+		ns19:행정_구역_목록 ,
+		dbpedia-wikidata:Q6359939 ,
+		ns17:Listas_de_subdivisões_de_países ,
+		<http://de.dbpedia.org/resource/Kategorie:Liste_(Verwaltungseinheiten)> ;
+	rdfs:label	"Lists of country subdivisions"@en ;
+	skos:broader	dbc:Lists_of_administrative_territorial_entities .
+dbc:Medieval_languages	rdf:type	skos:Concept ;
+	dbo:wikiPageID	2665601 ;
+	dbo:wikiPageRevisionID	648627822 ;
+	owl:sameAs	ns15:Języki_w_średniowieczu ,
+		ns21:Langue_médiévale ,
+		dbpedia-wikidata:Q6408025 ,
+		ns31:Erdi_Aroko_hizkuntzak ,
+		wikidata:Q6408025 ,
+		ns17:Línguas_medievais ,
+		ns14:中世語 ,
+		ns18:Lenguas_medievales ,
+		ns20:Lingue_medievali ;
+	skos:broader	dbc:Languages ,
+		dbc:Cultural_history ,
+		dbc:Archaic_words_and_phrases ;
+	skos:prefLabel	"Medieval languages"@en .
+dbc:Municipalities	rdf:type	skos:Concept ;
+	dbo:wikiPageID	909258 ;
+	dbo:wikiPageRevisionID	681525922 ;
+	owl:sameAs	ns21:Municipalité ,
+		ns29:Δήμοι ,
+		ns13:Gemeinde ,
+		ns17:Municípios ,
+		ns18:Municipios ,
+		dbpedia-wikidata:Q6511271 ,
+		ns31:Udalerriak ,
+		ns20:Comuni ,
+		ns30:Gemeente ,
+		wikidata:Q6511271 ,
+		ns22:Obce ,
+		ns16:Munisipalitas ;
+	rdfs:label	"Municipalities"@en ;
+	skos:broader	dbc:Types_of_country_subdivisions .
+dbc:Orthography	rdf:type	skos:Concept ;
+	dbo:wikiPageID	5278974 ;
+	dbo:wikiPageRevisionID	594896533 ;
+	owl:sameAs	dbpedia-wikidata:Q8706029 ,
+		ns14:正書法 ,
+		ns31:Ortografia ,
+		ns16:Ortografi ,
+		wikidata:Q8706029 ,
+		ns13:Rechtschreibung ,
+		ns20:Ortografia ,
+		ns17:Ortografia ,
+		ns18:Ortografía ,
+		ns19:맞춤법 ,
+		ns22:Pravopis ,
+		ns21:Orthographe ;
+	skos:broader	dbc:Linguistics ;
+	skos:prefLabel	"Orthography"@en .
+dbc:People_of_Russia	rdf:type	skos:Concept ;
+	dbo:wikiPageID	42592883 ;
+	dbo:wikiPageRevisionID	676014540 ;
+	owl:sameAs	<http://de.dbpedia.org/resource/Kategorie:Person_(Russland)> ,
+		wikidata:Q9076545 ,
+		ns15:Osoby_związane_z_Rosją ,
+		dbpedia-wikidata:Q9076545 ;
+	rdfs:label	"People of Russia"@en ;
+	skos:broader	dbc:People_by_nationality ;
+	skos:prefLabel	"People of Russia"@en .
+dbc:Persian_history	rdf:type	skos:Concept ;
+	dbo:wikiPageID	944129 ;
+	dbo:wikiPageRevisionID	655882758 ;
+	owl:sameAs	ns31:Persiar_Inperioa ,
+		ns14:古代ペルシア ,
+		ns20:Persia ,
+		ns15:Starożytna_Persja ,
+		ns22:Starověká_Persie ,
+		ns29:Περσία ,
+		ns17:Pérsia ,
+		ns16:Persia ,
+		dbpedia-wikidata:Q6161979 ,
+		ns18:Historia_de_Persia ,
+		ns30:Perzië ,
+		ns19:페르시아 ,
+		ns21:Perse ,
+		ns13:Persien ,
+		wikidata:Q6161979 ;
+	rdfs:label	"Persian history"@en ;
+	skos:broader	dbc:Former_countries_in_the_Middle_East ,
+		dbc:History_of_Iran_by_period .
+dbc:Persian_language	rdf:type	skos:Concept ;
+	dbo:wikiPageID	2491913 ;
+	dbo:wikiPageRevisionID	658749692 ;
+	owl:sameAs	ns22:Perština ,
+		dbpedia-wikidata:Q7214945 ,
+		ns18:Idioma_persa ,
+		ns21:Langue_persane ,
+		ns31:Persiera ,
+		ns20:Lingua_persiana ,
+		ns13:Persische_Sprache ,
+		ns19:페르시아어 ,
+		ns14:ペルシア語 ,
+		ns16:Bahasa_Persia ,
+		ns17:Língua_persa ,
+		wikidata:Q7214945 ;
+	skos:broader	dbc:Southwestern_Iranian_languages ,
+		dbc:Languages_of_Tajikistan ,
+		dbc:Languages_of_Iraq ,
+		dbc:Languages_of_Afghanistan ,
+		dbc:Languages_of_Bahrain ;
+	skos:prefLabel	"Persian language"@en .
+dbc:Post–Russian_Empire_states	rdf:type	skos:Concept ;
+	dbo:wikiPageID	32653232 ;
+	dbo:wikiPageRevisionID	627202212 ;
+	owl:sameAs	ns15:Państwa_powstałe_po_rozpadzie_Imperium_Rosyjskiego ,
+		ns14:ロシア帝国の継承国家 ,
+		ns18:Países_sucesores_al_Imperio_ruso ,
+		wikidata:Q7707786 ,
+		ns21:Entité_politique_durant_la_guerre_civile_russe ,
+		dbpedia-wikidata:Q7707786 ;
+	rdfs:label	"Post\u2013Russian Empire states"@en ;
+	skos:broader	dbc:Former_countries_in_Asia ,
+		dbc:Russian_Revolution .
+dbc:Prime_ministers	rdf:type	skos:Concept ;
+	dbo:wikiPageID	725862 ;
+	dbo:wikiPageRevisionID	543798797 ;
+	owl:sameAs	ns14:首相 ,
+		ns31:Lehen_ministroak ,
+		ns22:Premiéři ,
+		ns17:Primeiros-ministros ,
+		ns29:Πρωθυπουργοί ,
+		wikidata:Q6571919 ,
+		ns18:Primeros_ministros ,
+		ns15:Premierzy ,
+		dbpedia-wikidata:Q6571919 ,
+		ns19:총리 ,
+		ns16:Perdana_menteri ;
+	skos:broader	dbc:Government_ministers_by_portfolio ;
+	skos:prefLabel	"Prime ministers"@en .
+dbc:Religion_in_Iran	rdf:type	skos:Concept ;
+	dbo:wikiPageID	2660133 ;
+	dbo:wikiPageRevisionID	665824881 ;
+	owl:sameAs	ns21:Religion_en_Iran ,
+		ns15:Religia_w_Iranie ,
+		wikidata:Q6614851 ,
+		ns20:Religione_in_Iran ,
+		ns16:Agama_di_Iran ,
+		ns17:Religião_no_Irã ,
+		dbpedia-wikidata:Q6614851 ,
+		ns19:이란의_종교 ,
+		ns18:Religión_en_Irán ,
+		<http://de.dbpedia.org/resource/Kategorie:Religion_(Iran)> ,
+		ns30:Religie_in_Iran ,
+		ns14:イランの宗教 ;
+	rdfs:label	"Religion in Iran"@en ;
+	skos:broader	dbc:Religion_in_the_Middle_East ,
+		dbc:Religion_by_country ;
+	skos:prefLabel	"Religion in Iran"@en .
+dbc:Republics_of_the_Soviet_Union	rdf:type	skos:Concept ;
+	dbo:wikiPageID	35780978 ;
+	dbo:wikiPageRevisionID	676030259 ;
+	owl:sameAs	ns15:Republiki_związkowe_ZSRR ,
+		ns22:Republiky_Sovětského_svazu ,
+		ns17:Repúblicas_da_União_Soviética ,
+		wikidata:Q4499 ,
+		ns13:Sozialistische_Sowjetrepublik ,
+		ns19:소련의_공화국 ,
+		dbpedia-wikidata:Q4499 ,
+		ns30:Sovjetrepubliek ,
+		ns21:République_soviétique ,
+		ns31:Sobietar_Batasuneko_errepublikak ,
+		ns18:Repúblicas_soviéticas ,
+		ns14:ソビエト連邦構成共和国 ,
+		<http://it.dbpedia.org/resource/Categoria:Repubbliche_dell\u0027Unione_Sovietica> ;
+	rdfs:label	"Republics of the Soviet Union"@en ;
+	skos:broader	dbc:Subdivisions_of_the_Soviet_Union .
+dbc:Russian_population_groups	rdf:type	skos:Concept ;
+	dbo:wikiPageID	1157026 ;
+	dbo:wikiPageRevisionID	680103535 ;
+	owl:sameAs	wikidata:Q7171519 ,
+		dbpedia-wikidata:Q7171519 ;
+	rdfs:label	"Russian population groups"@en ;
+	skos:broader	dbc:Demographics_of_Russia ,
+		dbc:Social_groups ;
+	skos:prefLabel	"Russian population groups"@en .
+dbc:Standard_languages	rdf:type	skos:Concept ;
+	dbo:wikiPageID	8672300 ;
+	dbo:wikiPageRevisionID	664216000 ;
+	owl:sameAs	ns19:표준어 ,
+		ns18:Lenguas_estándares ,
+		wikidata:Q7135834 ,
+		ns14:標準語 ,
+		dbpedia-wikidata:Q7135834 ;
+	skos:prefLabel	"Standard languages"@en .
+dbc:Turkish_culture	rdf:type	skos:Concept ;
+	dbo:wikiPageID	708510 ;
+	dbo:wikiPageRevisionID	682038597 ;
+	owl:sameAs	ns15:Kultura_Turcji ,
+		ns30:Cultuur_in_Turkije ,
+		<http://de.dbpedia.org/resource/Kategorie:Kultur_(T\u00FCrkei)> ,
+		dbpedia-wikidata:Q7283405 ,
+		wikidata:Q7283405 ,
+		ns22:Turecká_kultura ,
+		ns29:Πολιτισμός_της_Τουρκίας ,
+		ns14:トルコの文化 ,
+		ns19:터키의_문화 ,
+		ns17:Cultura_da_Turquia ,
+		ns18:Cultura_de_Turquía ,
+		ns20:Cultura_della_Turchia ,
+		ns16:Budaya_Turki ,
+		ns21:Culture_turque ,
+		ns31:Turkiako_kultura ;
+	rdfs:label	"Turkish culture"@en ;
+	skos:broader	dbc:Middle_Eastern_culture ,
+		dbc:Balkan_culture ,
+		dbc:European_culture ,
+		dbc:Western_Asian_culture ,
+		dbc:Turkish_society ,
+		dbc:Culture_by_nationality ,
+		dbc:Turkic_culture ;
+	skos:prefLabel	"Turkish culture"@en .
+dbc:Armenia-related_lists	rdf:type	skos:Concept ;
+	dbo:wikiPageID	5155732 ;
+	dbo:wikiPageRevisionID	546570896 ;
+	owl:sameAs	<http://fr.dbpedia.org/resource/Cat\u00E9gorie:Liste_en_rapport_avec_l\u0027Arm\u00E9nie> ,
+		ns17:Listas_da_Armênia ,
+		wikidata:Q7480030 ;
+	rdfs:label	"Armenia-related lists"@en ;
+	skos:broader	dbc:Europe-related_lists ,
+		dbc:Asia-related_lists .
+dbc:Peoples_of_the_Caucasus	rdf:type	skos:Concept ;
+	dbo:wikiPageID	8924363 ;
+	dbo:wikiPageRevisionID	580001800 ;
+	owl:sameAs	ns20:Gruppi_etnici_nel_Caucaso ,
+		ns30:Volk_in_de_Kaukasus ,
+		wikidata:Q9111595 ;
+	rdfs:label	"Peoples of the Caucasus"@en ;
+	skos:broader	dbc:Ethnic_groups_in_the_Middle_East ,
+		dbc:Ethnic_groups_in_Europe_by_region ,
+		dbc:Caucasus ;
+	skos:prefLabel	"Peoples of the Caucasus"@en .
+dbc:Writing_systems_derived_from_the_Phoenician	rdf:type	skos:Concept ;
+	dbo:wikiPageID	45232648 ;
+	dbo:wikiPageRevisionID	644469524 ;
+	owl:sameAs	wikidata:Q19569474 ;
+	skos:broader	dbc:Canaanite_writing_systems ,
+		dbc:Phoenician_alphabet ,
+		dbc:Writing_systems_by_origin ;
+	skos:prefLabel	"Writing systems derived from the Phoenician"@en .
+dbr:Crucifixion	foaf:depiction	<http://commons.wikimedia.org/wiki/Special:FilePath/Hortus_Deliciarum,_Die_Kreuzigung_Jesu_Christi.JPG> ;
+	dbo:thumbnail	<http://commons.wikimedia.org/wiki/Special:FilePath/Hortus_Deliciarum,_Die_Kreuzigung_Jesu_Christi.JPG?width=300> .
+dbc:History_of_Azerbaijan	rdf:type	skos:Concept ;
+	dbo:wikiPageID	3223153 ;
+	dbo:wikiPageRevisionID	683202056 ;
+	owl:sameAs	ns22:Dějiny_Ázerbájdžánu ,
+		ns30:Geschiedenis_van_Azerbeidzjan ,
+		ns17:História_do_Azerbaijão ,
+		<http://fr.dbpedia.org/resource/Cat\u00E9gorie:Histoire_de_l\u0027Azerba\u00EFdjan> ,
+		dbpedia-wikidata:Q6948382 ,
+		ns16:Sejarah_Azerbaijan ,
+		wikidata:Q6948382 ,
+		ns18:Historia_de_Azerbaiyán ,
+		ns14:アゼルバイジャンの歴史 ,
+		ns19:아제르바이잔의_역사 ,
+		ns31:Azerbaijango_historia ,
+		<http://it.dbpedia.org/resource/Categoria:Storia_dell\u0027Azerbaigian> ,
+		ns29:Ιστορία_του_Αζερμπαϊτζάν ,
+		<http://de.dbpedia.org/resource/Kategorie:Geschichte_(Aserbaidschan)> ,
+		ns15:Historia_Azerbejdżanu ;
+	rdfs:label	"History of Azerbaijan"@en ;
+	skos:broader	dbc:Azerbaijan ,
+		dbc:History_of_Western_Asia ,
+		dbc:History_of_the_Caucasus ;
+	skos:prefLabel	"History of Azerbaijan"@en .
+dbc:Kurdish_culture	rdf:type	skos:Concept ;
+	dbo:wikiPageID	3944249 ;
+	dbo:wikiPageRevisionID	683436142 ;
+	owl:sameAs	ns19:쿠르드의_문화 ,
+		ns13:Kurdische_Kultur ,
+		ns31:Kurdistango_kultura ,
+		ns15:Kultura_kurdyjska ,
+		ns21:Culture_kurde ,
+		dbpedia-wikidata:Q7217040 ,
+		wikidata:Q7217040 ;
+	rdfs:label	"Kurdish culture"@en ;
+	skos:broader	dbc:Kurdish_people ,
+		dbc:Iranian_culture ,
+		dbc:Iraqi_culture ,
+		dbc:Syrian_culture ,
+		dbc:Western_Asian_culture ,
+		dbc:Turkish_culture ,
+		dbc:Culture_by_ethnicity ;
+	skos:prefLabel	"Kurdish culture"@en .
+dbc:Kurdistan	rdf:type	skos:Concept ;
+	dbo:wikiPageID	3293985 ;
+	dbo:wikiPageRevisionID	679521766 ;
+	owl:sameAs	ns19:쿠르디스탄 ,
+		ns21:Kurdistan ,
+		ns13:Kurdistan ,
+		dbpedia-wikidata:Q7217195 ,
+		ns16:Kurdistan ,
+		ns15:Kurdystan ,
+		ns18:Kurdistán ;
+	rdfs:label	"Kurdistan"@en ;
+	skos:broader	dbc:Kurdish_people ,
+		dbc:Geography_of_Syria ,
+		dbc:Geography_of_Turkey ,
+		dbc:Geography_of_the_Middle_East ,
+		dbc:Geography_of_Iraq ,
+		dbc:Divided_regions ,
+		dbc:Geography_of_Iran ;
+	skos:prefLabel	"Kurdistan"@en .
+dbc:Music_by_nationality	rdf:type	skos:Concept ;
+	dbo:wikiPageID	3124867 ;
+	dbo:wikiPageRevisionID	619660833 ;
+	owl:sameAs	ns20:Musica_per_nazione ,
+		wikidata:Q6941785 ,
+		ns29:Μουσική_ανά_εθνικότητα ,
+		ns21:Musique_par_pays ,
+		ns17:Música_por_país ,
+		ns30:Muziek_naar_land ,
+		ns15:Muzyka_według_państw ,
+		ns19:나라별_음악 ,
+		dbpedia-wikidata:Q6941785 ,
+		ns14:各国の音楽 ,
+		ns18:Música_por_país ,
+		ns16:Musik_menurut_negara ,
+		ns31:Musika_herrialdearen_arabera ,
+		ns13:Musik_nach_Staat ,
+		ns22:Hudba_podle_národů ;
+	rdfs:label	"Music by nationality"@en ;
+	skos:broader	dbc:Music_by_geographical_categorization ,
+		dbc:Culture_by_nationality ;
+	skos:prefLabel	"Music by nationality"@en .
+dbc:Religion_in_Europe	rdf:type	skos:Concept ;
+	dbo:wikiPageID	5771784 ;
+	dbo:wikiPageRevisionID	547586670 ;
+	owl:sameAs	ns30:Religie_in_Europa ,
+		ns21:Religion_en_Europe ,
+		ns16:Agama_di_Eropa ,
+		dbpedia-wikidata:Q8647754 ,
+		<http://de.dbpedia.org/resource/Kategorie:Religion_(Europa)> ,
+		ns18:Religión_en_Europa ,
+		ns14:ヨーロッパの宗教 ;
+	rdfs:label	"Religion in Europe"@en ;
+	skos:broader	dbc:European_culture ,
+		dbc:European_society ,
+		dbc:Religion_by_continent ,
+		dbc:Europe ,
+		dbc:Demographics_of_Europe ;
+	skos:prefLabel	"Religion in Europe"@en .
+dbc:Religion_in_the_Middle_East	rdf:type	skos:Concept ;
+	dbo:wikiPageID	4751748 ;
+	dbo:wikiPageRevisionID	626417434 ;
+	owl:sameAs	wikidata:Q6565836 ,
+		ns14:中東の宗教 ,
+		ns17:Religião_no_Oriente_Médio ;
+	rdfs:label	"Religion in the Middle East"@en ;
+	skos:broader	dbc:Middle_East ,
+		dbc:Religion_in_Asia ;
+	skos:prefLabel	"Religion in the Middle East"@en .
+<http://dbpedia.org/resource/Ezra_C._Gross>	dbp:before	<http://dbpedia.org/resource/John_Palmer_(1785\u20131840)> .
+dbc:Lezgian_people	rdf:type	skos:Concept ;
+	dbo:wikiPageID	33113080 ;
+	dbo:wikiPageRevisionID	550545705 ;
+	owl:sameAs	dbpedia-wikidata:Q7486507 ;
+	rdfs:label	"Lezgian people"@en ;
+	skos:broader	dbc:Ethnic_groups_in_Azerbaijan ,
+		dbc:Ethnic_groups_in_Dagestan ,
+		dbc:Peoples_of_the_Caucasus ;
+	skos:prefLabel	"Lezgian people"@en .
+dbc:Political_history_of_Armenia	rdf:type	skos:Concept ;
+	dbo:wikiPageID	46257870 ;
+	dbo:wikiPageRevisionID	654036966 ;
+	owl:sameAs	dbpedia-wikidata:Q20087577 ;
+	rdfs:label	"Political history of Armenia"@en ;
+	skos:broader	dbc:Political_history_by_country ,
+		dbc:History_of_Armenia_by_topic .
+dbc:Ancient_history_by_country	rdf:type	skos:Concept ;
+	dbo:wikiPageID	10803059 ;
+	dbo:wikiPageRevisionID	612460770 ;
+	owl:sameAs	ns16:Sejarah_kuno_menurut_negara ,
+		<http://fr.dbpedia.org/resource/Cat\u00E9gorie:Histoire_de_l\u0027Antiquit\u00E9_par_pays> ,
+		ns13:Antike_Geschichte_nach_Staat ,
+		dbpedia-wikidata:Q6958374 ,
+		ns18:Historia_antigua_por_país ,
+		ns19:나라별_고대사 ,
+		wikidata:Q6958374 ;
+	rdfs:label	"Ancient history by country"@en ;
+	skos:broader	dbc:Ancient_history ;
+	skos:prefLabel	"Ancient history by country"@en .
+dbc:Archaeology_by_country	rdf:type	skos:Concept ;
+	dbo:wikiPageID	9359322 ;
+	dbo:wikiPageRevisionID	682607916 ;
+	owl:sameAs	ns17:Arqueologia_por_país ,
+		wikidata:Q6518332 ,
+		ns19:나라별_고고학 ,
+		ns29:Αρχαιολογία_ανά_χώρα ,
+		ns31:Arkeologia_herrialdearen_arabera ,
+		ns20:Archeologia_per_nazione ,
+		ns21:Archéologie_par_pays ;
+	skos:broader	dbc:History_by_country ;
+	skos:prefLabel	"Archaeology by country"@en .
+dbc:Government_ministers_of_Armenia	rdf:type	skos:Concept ;
+	dbo:wikiPageID	11678731 ;
+	dbo:wikiPageRevisionID	588425272 ;
+	owl:sameAs	dbpedia-wikidata:Q6337678 ,
+		ns16:Menteri_Armenia ;
+	rdfs:label	"Government ministers of Armenia"@en ;
+	skos:broader	dbc:Political_office-holders_in_Armenia ,
+		dbc:Government_of_Armenia .
+dbc:Linguistic_purism	rdf:type	skos:Concept ;
+	dbo:wikiPageID	10455325 ;
+	dbo:wikiPageRevisionID	588614021 ;
+	owl:sameAs	ns17:Normativismo_linguístico ,
+		ns14:言語純粋主義 ,
+		wikidata:Q7460369 ;
+	skos:broader	dbc:Sociolinguistics ;
+	skos:prefLabel	"Linguistic purism"@en .
+dbc:Lists_of_government_ministers	rdf:type	skos:Concept ;
+	dbo:wikiPageID	11544481 ;
+	dbo:wikiPageRevisionID	676715331 ;
+	owl:sameAs	ns20:Liste_di_ministri ,
+		dbpedia-wikidata:Q6418882 ,
+		<http://de.dbpedia.org/resource/Kategorie:Liste_(Minister)> ;
+	rdfs:label	"Lists of government ministers"@en ;
+	skos:broader	dbc:Government_ministers_by_country .
+dbc:Former_kingdoms	rdf:type	skos:Concept ;
+	dbo:wikiPageID	22462607 ;
+	dbo:wikiPageRevisionID	677059096 ;
+	owl:sameAs	ns14:かつて存在した王国 ,
+		dbpedia-wikidata:Q7643801 ,
+		ns30:Historisch_koninkrijk ,
+		ns29:Πρώην_βασίλεια ;
+	skos:broader	dbc:Kingdoms .
+dbr:Dudley_Farlin	dbp:after	<http://dbpedia.org/resource/John_Palmer_(1785\u20131840)> .
+dbc:Ethnic_groups_by_country	rdf:type	skos:Concept ;
+	dbo:wikiPageID	18890568 ;
+	dbo:wikiPageRevisionID	550322289 ;
+	owl:sameAs	ns19:나라별_민족 ,
+		ns17:Grupos_étnicos_por_país ,
+		ns15:Etnografia_według_państw ,
+		dbpedia-wikidata:Q3704268 ,
+		ns16:Suku_bangsa_menurut_negara ,
+		ns18:Etnias_por_país ,
+		ns29:Πληθυσμιακές_ομάδες_ανά_χώρα ,
+		ns20:Gruppi_etnici_per_nazione ,
+		ns31:Etniak_herrialdearen_arabera ,
+		wikidata:Q3704268 ,
+		ns22:Etnické_skupiny_podle_zemí ,
+		ns14:各国の民族 ,
+		ns21:Groupe_ethnique_par_pays ;
+	rdfs:label	"Ethnic groups by country"@en ;
+	skos:broader	dbc:Categories_by_country .
+dbc:Heads_of_government_in_Europe	rdf:type	skos:Concept ;
+	dbo:wikiPageID	23647719 ;
+	dbo:wikiPageRevisionID	624277064 ;
+	owl:sameAs	dbpedia-wikidata:Q8506767 ;
+	skos:broader	dbc:Heads_of_government_by_country ,
+		dbc:European_people_by_occupation .
+dbc:Armenian_noble_families	rdf:type	skos:Concept ;
+	dbo:wikiPageID	28740584 ;
+	dbo:wikiPageRevisionID	666983859 ;
+	owl:sameAs	ns30:Armeens_adellijk_huis ,
+		wikidata:Q7148660 ;
+	rdfs:label	"Armenian noble families"@en ;
+	skos:broader	dbc:European_noble_families ,
+		dbc:Armenian_nobility .
+<http://dbpedia.org/resource/Category:6th_century_BC_in_Asia>	rdf:type	skos:Concept ;
+	dbo:wikiPageID	29768511 ;
+	dbo:wikiPageRevisionID	482894741 ;
+	owl:sameAs	<http://pt.dbpedia.org/resource/Categoria:S\u00E9culo_VI_a.C._na_\u00C1sia> ,
+		dbpedia-wikidata:Q8212084 ,
+		wikidata:Q8212084 ;
+	rdfs:label	"6th century BC in Asia"@en ;
+	skos:broader	dbc:Centuries_in_Asia .
+dbc:Religion_in_the_Arab_world	rdf:type	skos:Concept ;
+	dbo:wikiPageID	31695654 ;
+	dbo:wikiPageRevisionID	557548804 ;
+	owl:sameAs	ns19:아랍의_종교 ,
+		wikidata:Q6614031 .
+@prefix ns33:	<http://www.wikidata.org/ontology#> .
+wikidata:Q15103369	rdf:type	ns33:Item ;
+	wikidata:P31c	wikidata:Q4167836 .
+<http://dbpedia.org/resource/John_Palmer_(1785%E2%80%931840)>	owl:sameAs	<http://dbpedia.org/resource/John_Palmer_(1785\u20131840)> .
+yago:YagoPermanentlyLocatedEntity	owl:equivalentClass	yago-res:yagoPermanentlyLocatedEntity .
+yago:YagoLegalActor	owl:equivalentClass	yago-res:yagoLegalActor ;
+	rdfs:subClassOf	yago:YagoLegalActorGeo .
+yago:GeographicalArea108574314	owl:equivalentClass	yago-res:wordnet_geographical_area_108574314 ;
+	rdfs:subClassOf	yago:Region108630985 .
+yago:Measure100033615	owl:equivalentClass	yago-res:wordnet_measure_100033615 ;
+	rdfs:subClassOf	yago:Abstraction100002137 .
+yago:MediumOfExchange113372961	owl:equivalentClass	yago-res:wordnet_medium_of_exchange_113372961 ;
+	rdfs:subClassOf	yago:Standard107260623 .
+yago:PhysicalEntity100001930	owl:equivalentClass	yago-res:wordnet_physical_entity_100001930 .
+<http://en.wikipedia.org/wiki/John_Palmer_(1785\u20131840)>	foaf:primaryTopic	<http://dbpedia.org/resource/John_Palmer_(1785\u20131840)> .

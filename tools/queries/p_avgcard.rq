@@ -1,5 +1,6 @@
-# PREFIX  xsd:  <http://www.w3.org/2001/XMLSchema#>
-# PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX up:<http://purl.uniprot.org/core/> 
+PREFIX  xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 SELECT ?p ?s_count ?o_count ?t ((xsd:float(?t)/xsd:float(?s_count)) AS ?card) ((xsd:float(?t)/xsd:float(?o_count)) AS ?inverseCard)
 WHERE {
     {

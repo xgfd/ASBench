@@ -1,0 +1,1003 @@
+@prefix dbp:	<http://dbpedia.org/property/> .
+@prefix dbr:	<http://dbpedia.org/resource/> .
+dbr:Kay_Hagan	dbp:percentage	0 .
+@prefix xsd:	<http://www.w3.org/2001/XMLSchema#> .
+<http://dbpedia.org/resource/Riccarton_(New_Zealand_electorate)>	dbp:percentage	0.02999999999999999889 .
+<http://dbpedia.org/resource/Uxbridge_and_South_Ruislip_(UK_Parliament_constituency)>	dbp:percentage	0 .
+dbr:Sixth_constituency_for_French_residents_overseas	dbp:percentage	0 ,
+		0.020000000000000000416 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1884>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Virginia,_2002>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/Cardiff_North_(UK_Parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Epping_Forest_(UK_Parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Leominster_(UK_Parliament_constituency)>	dbp:percentage	-2.6000000000000000888 .
+<http://dbpedia.org/resource/Massachusetts\u0027s_2nd_congressional_district>	dbp:percentage	0.010000000000000000208 ,
+		0.020000000000000000416 .
+<http://dbpedia.org/resource/Mitcham_and_Morden_(UK_Parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/New_Mexico\u0027s_1st_congressional_district>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/North_East_Derbyshire_(UK_Parliament_constituency)>	dbp:percentage	-10.300000000000000711 .
+<http://dbpedia.org/resource/Sutton_and_Cheam_(UK_Parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Tennessee\u0027s_5th_congressional_district>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Texas\u0027s_15th_congressional_district>	dbp:percentage	0.0030000000000000000625 ,
+		0 ,
+		0.010000000000000000208 ,
+		0.012999999999999999403 ,
+		0.020000000000000000416 .
+<http://dbpedia.org/resource/Texas\u0027s_18th_congressional_district>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/Twickenham_(UK_Parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Brighton_Pavilion_(UK_Parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Folkestone_and_Hythe_(UK_Parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Haltemprice_and_Howden_(UK_Parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Missouri,_2008>	dbp:percentage	0.020000000000000000416 ,
+		0 .
+<http://dbpedia.org/resource/Georgia\u0027s_7th_congressional_district>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/Missouri_gubernatorial_election,_1992>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Suryapet_(Assembly_constituency)>	dbp:percentage	0.0070000000000000001457 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1920>	dbp:percentage	0 .
+<http://dbpedia.org/resource/West_Virginia_Republican_caucuses_and_primary,_2008>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Chesterfield_by-election,_1984>	dbp:percentage	0 .
+dbr:Electoral_district_of_Badgerys_Creek	dbp:percentage	0 .
+<http://dbpedia.org/resource/Florida\u0027s_8th_congressional_district_election,_2006>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_New_Hampshire,_2014>	dbp:percentage	0.020000000000000000416 ,
+		0.02999999999999999889 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_California,_2012>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1922>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Brighton_(UK_Parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Bursa_(electoral_district)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/California\u0027s_33rd_State_Senate_district>	dbp:percentage	0 .
+<http://dbpedia.org/resource/California\u0027s_61st_State_Assembly_district>	dbp:percentage	0 .
+dbr:Candidates_in_the_New_Zealand_general_election_2011_by_electorate	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Chandni_Chowk_(Delhi_Assembly_constituency)>	dbp:percentage	0.020000000000000000416 ,
+		0.010000000000000000208 ,
+		0.02999999999999999889 .
+<http://dbpedia.org/resource/K\u0131r\u0131kkale_(electoral_district)>	dbp:percentage	0.02999999999999999889 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Arizona,_2006>	dbp:percentage	0.010000000000000000208 ,
+		0 .
+<http://dbpedia.org/resource/South_Carolina_gubernatorial_election,_1870>	dbp:percentage	0 .
+<http://dbpedia.org/resource/South_Carolina_gubernatorial_election,_1950>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_California,_2010>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Gandhi_Nagar_(Delhi_Assembly_constituency)>	dbp:percentage	0.020000000000000000416 ,
+		0.02999999999999999889 .
+<http://dbpedia.org/resource/Missouri_gubernatorial_election,_1944>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/South_Carolina_gubernatorial_election,_1900>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_West_Virginia,_2008>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Nkoranza_North_(Ghana_parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/North-West_France_(European_Parliament_constituency)>	dbp:percentage	0 ,
+		0.010000000000000000208 ,
+		0.02999999999999999889 ,
+		0.020000000000000000416 .
+<http://dbpedia.org/resource/Okhla_(Delhi_Assembly_constituency)>	dbp:percentage	0.02999999999999999889 ,
+		0.010000000000000000208 ,
+		0.020000000000000000416 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_California,_2000>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Colorado,_2008>	dbp:percentage	0 ,
+		0.010000000000000000208 .
+<http://dbpedia.org/resource/Arizona_Republican_primary,_2008>	dbp:percentage	0.010000000000000000208 ,
+		0.020000000000000000416 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_South_Carolina,_1968>	dbp:percentage	0 .
+<http://dbpedia.org/resource/California_State_Assembly_election,_2004>	dbp:percentage	0.02999999999999999889 ,
+		0 .
+<http://dbpedia.org/resource/Illinois_gubernatorial_election,_2002>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_2004>	dbp:percentage	0.02999999999999999889 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_South_Carolina,_1980>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_South_Carolina,_1998>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1900>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1904>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Epping_Forest_by-election,_1988>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Illinois_gubernatorial_election,_1976>	dbp:percentage	0.010000000000000000208 ,
+		0.020000000000000000416 .
+<http://dbpedia.org/resource/Karol_Bagh_(Delhi_Assembly_constituency)>	dbp:percentage	0.02999999999999999889 .
+<http://dbpedia.org/resource/Krishna_Nagar_(Delhi_Assembly_constituency)>	dbp:percentage	0.010000000000000000208 ,
+		0.020000000000000000416 ,
+		0.02999999999999999889 .
+<http://dbpedia.org/resource/Milton_Keynes_Council_election,_2012>	dbp:percentage	-16.699999999999999289 .
+<http://dbpedia.org/resource/Missouri_gubernatorial_election,_1928>	dbp:percentage	0.02999999999999999889 ,
+		0.020000000000000000416 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1954>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_South_Carolina,_1978>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Linda_McMahon_U.S._Senate_campaign,_2010>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Newark_by-election,_2014>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Brighton_by-election,_1842>	dbp:percentage	0 .
+dbr:Elizabeth_Esty	dbp:percentage	0 .
+<http://dbpedia.org/resource/Afyonkarahisar_(electoral_district)>	dbp:percentage	0.010000000000000000208 ,
+		0 .
+<http://dbpedia.org/resource/Ardahan_(electoral_district)>	dbp:percentage	0 ,
+		0.02999999999999999889 .
+<http://dbpedia.org/resource/California\u0027s_39th_State_Assembly_district>	dbp:percentage	0 .
+<http://dbpedia.org/resource/California_State_Senate_election,_2012>	dbp:percentage	0 .
+dbr:Donna_Howard	dbp:percentage	0.020000000000000000416 .
+dbr:Electoral_history_of_Dan_Coats	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Results_of_the_New_South_Wales_state_election,_2003_(Legislative_Council)>	dbp:percentage	0.010000000000000000208 ,
+		0.020000000000000000416 .
+dbr:Richard_Lugar	dbp:percentage	0 .
+<http://dbpedia.org/resource/Florida\u0027s_1st_congressional_district>	dbp:percentage	0 ,
+		0.010000000000000000208 .
+<http://dbpedia.org/resource/Iowa\u0027s_1st_congressional_district>	dbp:percentage	0.02999999999999999889 .
+<http://dbpedia.org/resource/Kentucky\u0027s_3rd_congressional_district>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Maryland\u0027s_8th_congressional_district>	dbp:percentage	0.02999999999999999889 .
+<http://dbpedia.org/resource/New_Mexico\u0027s_2nd_congressional_district>	dbp:percentage	0.02999999999999999889 ,
+		0.020000000000000000416 .
+<http://dbpedia.org/resource/New_Mexico\u0027s_3rd_congressional_district>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Bermondsey_and_Old_Southwark_(UK_Parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/California\u0027s_10th_congressional_district>	dbp:percentage	0 .
+<http://dbpedia.org/resource/California\u0027s_38th_congressional_district>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/California\u0027s_44th_congressional_district>	dbp:percentage	0 .
+<http://dbpedia.org/resource/California\u0027s_5th_congressional_district>	dbp:percentage	0 ,
+		0.010000000000000000208 .
+<http://dbpedia.org/resource/California\u0027s_8th_congressional_district>	dbp:percentage	0 .
+<http://dbpedia.org/resource/California\u0027s_9th_congressional_district>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Connecticut\u0027s_3rd_congressional_district>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Croydon_North_West_(UK_Parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Georgia\u0027s_1st_congressional_district>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Hong_Kong_Island_(constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Maryland\u0027s_1st_congressional_district>	dbp:percentage	0.02999999999999999889 .
+<http://dbpedia.org/resource/Maryland\u0027s_6th_congressional_district>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Massachusetts\u0027s_5th_congressional_district>	dbp:percentage	0.02999999999999999889 .
+<http://dbpedia.org/resource/New_Territories_West_(constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Puducherry_(Lok_Sabha_constituency)>	dbp:percentage	0.02999999999999999889 .
+<http://dbpedia.org/resource/Utah\u0027s_1st_congressional_district>	dbp:percentage	0.010000000000000000208 .
+dbr:Ben_Cayetano	dbp:percentage	0 .
+<http://dbpedia.org/resource/Tom_Campbell_(California_politician)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Steve_Martin_(Virginia_politician)>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/California\u0027s_75th_State_Assembly_district>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Connecticut\u0027s_1st_congressional_district>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/Connecticut\u0027s_5th_congressional_district>	dbp:percentage	0 ,
+		0.010000000000000000208 .
+<http://dbpedia.org/resource/Florida\u0027s_5th_congressional_district>	dbp:percentage	0.010000000000000000208 ,
+		0.020000000000000000416 .
+<http://dbpedia.org/resource/Indiana\u0027s_9th_congressional_district>	dbp:percentage	0.020000000000000000416 ,
+		0.02999999999999999889 .
+<http://dbpedia.org/resource/Oregon\u0027s_2nd_congressional_district>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Oregon\u0027s_4th_congressional_district>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Oregon\u0027s_5th_congressional_district>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Utah\u0027s_2nd_congressional_district>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Utah\u0027s_3rd_congressional_district>	dbp:percentage	0 ,
+		0.010000000000000000208 .
+<http://dbpedia.org/resource/Virginia\u0027s_10th_congressional_district>	dbp:percentage	0.010000000000000000208 ,
+		0.02999999999999999889 .
+<http://dbpedia.org/resource/Virginia\u0027s_2nd_congressional_district>	dbp:percentage	0.020000000000000000416 ,
+		0.010000000000000000208 .
+<http://dbpedia.org/resource/Florida\u0027s_17th_congressional_district>	dbp:percentage	0.02999999999999999889 .
+<http://dbpedia.org/resource/Florida\u0027s_22nd_congressional_district>	dbp:percentage	0.010000000000000000208 ,
+		0 .
+<http://dbpedia.org/resource/Northland_(New_Zealand_electorate)>	dbp:percentage	0.02999999999999999889 .
+dbr:Chip_Cravaack	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Hawaii,_2012>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Illinois,_2012>	dbp:percentage	0 ,
+		0.020000000000000000416 .
+dbr:Bonnie_Cullison	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Minnesota,_2012>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Missouri,_2012>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Wendy_Davis_(politician)>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_California,_2006>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Ankara_(2nd_electoral_district)>	dbp:percentage	0.02999999999999999889 ,
+		0.020000000000000000416 ,
+		0 .
+<http://dbpedia.org/resource/Kilis_(electoral_district)>	dbp:percentage	0.010000000000000000208 ,
+		0.020000000000000000416 ,
+		0 .
+<http://dbpedia.org/resource/Pennsylvania_gubernatorial_election,_1814>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Arkansas,_1980>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Sheffield_(UK_Parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Tokyo_gubernatorial_election,_2007>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1958>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1938>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Tennessee,_1994>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1900>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Ketu_South_(Ghana_parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Kowloon_West_(constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Malkajgiri_(Lok_Sabha_constituency)>	dbp:percentage	0.02999999999999999889 .
+<http://dbpedia.org/resource/Mangol_Puri_(Delhi_Assembly_constituency)>	dbp:percentage	0.02999999999999999889 ,
+		0.020000000000000000416 .
+<http://dbpedia.org/resource/Massif-central\u2013Centre_(European_Parliament_constituency)>	dbp:percentage	0 ,
+		0.020000000000000000416 ,
+		0.010000000000000000208 .
+<http://dbpedia.org/resource/California_State_Senate_election,_2004>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Pennsylvania_gubernatorial_election,_1848>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Texas_Legislature_elections,_2008>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Vermont,_1964>	dbp:percentage	0 .
+dbr:Tokyo_At-large_district	dbp:percentage	0 .
+<http://dbpedia.org/resource/California_State_Assembly_election,_2000>	dbp:percentage	0 .
+<http://dbpedia.org/resource/California_State_Assembly_election,_2002>	dbp:percentage	0.02999999999999999889 ,
+		0 .
+<http://dbpedia.org/resource/California_State_Senate_election,_2002>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Georgia,_2008>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Utah,_2012>	dbp:percentage	0.02999999999999999889 .
+<http://dbpedia.org/resource/Results_of_the_New_South_Wales_state_election,_1981_(Legislative_Council)>	dbp:percentage	0.02999999999999999889 .
+<http://dbpedia.org/resource/Ad\u0131yaman_(electoral_district)>	dbp:percentage	0 ,
+		0.02999999999999999889 ,
+		0.020000000000000000416 ,
+		0.010000000000000000208 .
+<http://dbpedia.org/resource/California\u0027s_10th_congressional_district_special_election,_2009>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Edinburgh_Pentlands_(Scottish_Parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Hackney_South_and_Shoreditch_(UK_Parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Maine\u0027s_1st_congressional_district>	dbp:percentage	0.02999999999999999889 ,
+		0.020000000000000000416 ,
+		0.010000000000000000208 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Iowa,_2014>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Maryland,_1988>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Tennessee,_2002>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/French_regional_elections,_2010>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/Asawase_(Ghana_parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Goshamahal_(Assembly_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Illinois\u0027s_9th_congressional_district>	dbp:percentage	0.02999999999999999889 .
+<http://dbpedia.org/resource/Illinois_gubernatorial_election,_1978>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Ohio\u0027s_16th_congressional_district>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Ohio,_2014>	dbp:percentage	0.010000000000000000208 ,
+		0.020000000000000000416 .
+<http://dbpedia.org/resource/Wyoming_elections,_2014>	dbp:percentage	0.010000000000000000208 ,
+		0 ,
+		0.020000000000000000416 ,
+		0.02999999999999999889 .
+dbr:Michael_Dukakis	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_North_Carolina,_2004>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Aksaray_(electoral_district)>	dbp:percentage	0.020000000000000000416 ,
+		0.02999999999999999889 ,
+		0 .
+<http://dbpedia.org/resource/Auckland_Central_(New_Zealand_electorate)>	dbp:percentage	0.020000000000000000416 ,
+		0.02999999999999999889 .
+<http://dbpedia.org/resource/Belfast_South_by-election,_1982>	dbp:percentage	0 .
+<http://dbpedia.org/resource/California\u0027s_5th_congressional_district_special_election,_2005>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Florida\u0027s_6th_congressional_district>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_California,_2008>	dbp:percentage	0.010000000000000000208 ,
+		0 ,
+		0.020000000000000000416 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Wisconsin,_2014>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_South_Carolina,_1996>	dbp:percentage	0 .
+dbr:Alex_Sink	dbp:percentage	0 .
+dbr:Bill_Bolling	dbp:percentage	0 .
+dbr:Jackie_Speier	dbp:percentage	0 .
+<http://dbpedia.org/resource/New_Territories_East_(constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/San_Francisco_mayoral_election,_2007>	dbp:percentage	0 ,
+		0.010000000000000000208 .
+<http://dbpedia.org/resource/California\u0027s_40th_State_Senate_district>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1874>	dbp:percentage	0 .
+dbr:Mad_Cow-Girl	dbp:percentage	0 .
+dbr:Muriel_Bowser	dbp:percentage	0 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_2008>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Arkansas,_2010>	dbp:percentage	0.02999999999999999889 .
+dbr:Bill_Paparian	dbp:percentage	0.010000000000000000208 .
+dbr:Blaine_Luetkemeyer	dbp:percentage	0.02999999999999999889 .
+<http://dbpedia.org/resource/Creigh_Deeds_gubernatorial_campaign,_2009>	dbp:percentage	0 .
+dbr:Patrick_Mara	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Illinois,_2010>	dbp:percentage	0.010000000000000000208 ,
+		0.020000000000000000416 .
+dbr:Aaron_Peña	dbp:percentage	0 .
+<http://dbpedia.org/resource/Campbelltown_state_by-election,_2001>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Massachusetts,_1936>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_New_Mexico,_1984>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1912>	dbp:percentage	0 .
+<http://dbpedia.org/resource/\u0130zmir_(1st_electoral_district)>	dbp:percentage	0 ,
+		0.02999999999999999889 .
+<http://dbpedia.org/resource/Colorado_gubernatorial_election,_2006>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Connecticut_gubernatorial_election,_2006>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Florida_gubernatorial_election,_2006>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Ohio\u0027s_2nd_congressional_district_special_election,_2005>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/Karawal_Nagar_(Delhi_Assembly_constituency)>	dbp:percentage	0.02999999999999999889 .
+<http://dbpedia.org/resource/San_Francisco_general_election,_November_2005>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1948>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Tennessee,_2006>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_South_Carolina,_1986>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1964>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Alabama_State_House_of_Representatives_elections,_2010>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Amasya_(electoral_district)>	dbp:percentage	0.020000000000000000416 ,
+		0.02999999999999999889 ,
+		0.010000000000000000208 .
+<http://dbpedia.org/resource/Antalya_(electoral_district)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/East_France_(European_Parliament_constituency)>	dbp:percentage	0.020000000000000000416 ,
+		0.010000000000000000208 ,
+		0 .
+<http://dbpedia.org/resource/Election_Committee_(constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Hari_Nagar_(Delhi_Assembly_constituency)>	dbp:percentage	0.02999999999999999889 ,
+		0.020000000000000000416 ,
+		0.010000000000000000208 .
+<http://dbpedia.org/resource/Haltemprice_and_Howden_by-election,_2008>	dbp:percentage	0 .
+<http://dbpedia.org/resource/California_State_Assembly_election,_2006>	dbp:percentage	0.02999999999999999889 .
+<http://dbpedia.org/resource/South_Carolina_gubernatorial_election,_1962>	dbp:percentage	0 .
+<http://dbpedia.org/resource/South_Carolina_gubernatorial_election,_1982>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Colorado,_2006>	dbp:percentage	0.02999999999999999889 ,
+		0 ,
+		0.010000000000000000208 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Illinois,_2004>	dbp:percentage	0 .
+<http://dbpedia.org/resource/South_Carolina_gubernatorial_election,_1888>	dbp:percentage	0 .
+<http://dbpedia.org/resource/New_Delhi_(Delhi_Assembly_constituency)>	dbp:percentage	0.02999999999999999889 ,
+		0.020000000000000000416 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1880>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Bath_and_North_East_Somerset_Council_election,_2015>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1954>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Bassetlaw_District_Council_election,_2011>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1944>	dbp:percentage	0 .
+<http://dbpedia.org/resource/George_Allen_(U.S._politician)>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/Kensington_(UK_Parliament_constituency)>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/Florida\u0027s_8th_congressional_district>	dbp:percentage	0 ,
+		0.020000000000000000416 ,
+		0.010000000000000000208 .
+dbr:Greg_Abbott	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_California,_2010>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1994>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Missouri,_1994>	dbp:percentage	0 .
+<http://dbpedia.org/resource/California_State_Senate_election,_2000>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_election_in_Wyoming,_2014>	dbp:percentage	0.010000000000000000208 .
+dbr:Mel_Watt	dbp:percentage	0 .
+dbr:Ellen_Tauscher	dbp:percentage	0 .
+<http://dbpedia.org/resource/Jim_Davis_(Florida_politician)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/New_York_City_mayoral_election,_2005>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_California,_2014>	dbp:percentage	0 ,
+		0.010000000000000000208 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1898>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Indiana\u0027s_3rd_congressional_district_special_election,_2010>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Wisconsin,_2004>	dbp:percentage	0.02999999999999999889 .
+<http://dbpedia.org/resource/Texas_general_election,_2006>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/Mitcham_and_Morden_by-election,_1982>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_election_in_North_Dakota,_2000>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Results_of_the_Australian_federal_election,_2007_(Senate)>	dbp:percentage	0.02999999999999999889 ,
+		0 ,
+		0.010000000000000000208 ,
+		0.020000000000000000416 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1916>	dbp:percentage	0 .
+dbr:Elissa_Silverman	dbp:percentage	0 .
+<http://dbpedia.org/resource/Illinois_gubernatorial_election,_1994>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Pennsylvania_gubernatorial_election,_1808>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Pennsylvania,_1962>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_South_Carolina,_1956>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_South_Carolina,_1960>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Maine,_1996>	dbp:percentage	0.02999999999999999889 .
+<http://dbpedia.org/resource/Detroit_mayoral_election,_2013>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/Illinois_gubernatorial_election,_2014>	dbp:percentage	0.02999999999999999889 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_South_Carolina,_1920>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Vermont,_1934>	dbp:percentage	0 .
+dbr:Moorthorpe	dbp:percentage	0 .
+dbr:Andrew_Gillum	dbp:percentage	0 .
+<http://dbpedia.org/resource/California_State_Assembly_election,_1992>	dbp:percentage	0.020000000000000000416 ,
+		0 .
+<http://dbpedia.org/resource/Great_Grimsby_(UK_Parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Huntingdon_(UK_Parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Richard_Raymond_(Texas_politician)>	dbp:percentage	0.020000000000000000416 ,
+		0.010000000000000000208 .
+dbr:Scott_Walker	dbp:percentage	0 .
+<http://dbpedia.org/resource/Erzincan_(electoral_district)>	dbp:percentage	0 ,
+		0.020000000000000000416 .
+<http://dbpedia.org/resource/Bristol_(UK_Parliament_constituency)>	dbp:percentage	0 .
+dbr:Elizabeth_Dole	dbp:percentage	0 ,
+		0.02999999999999999889 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Massachusetts,_1976>	dbp:percentage	0.010000000000000000208 .
+dbr:Mark_Neumann	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Kentucky,_2004>	dbp:percentage	0 .
+<http://dbpedia.org/resource/West_Derbyshire_(UK_Parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1928>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Florida_gubernatorial_election,_1998>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Michigan_House_of_Representatives_elections,_2006>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Pennsylvania_gubernatorial_election,_1926>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/San_Diego_mayoral_special_election,_2013\u20132014>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Indiana\u0027s_3rd_congressional_district>	dbp:percentage	0.010000000000000000208 .
+dbr:Jeff_Wentworth	dbp:percentage	0 .
+<http://dbpedia.org/resource/Alabama_State_Senate_elections,_2010>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Batman_(electoral_district)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Gaziantep_(electoral_district)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Hohoe_South_(Ghana_parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Michigan,_2014>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Arkansas_elections,_2010>	dbp:percentage	0.02999999999999999889 ,
+		0 .
+dbr:Jesse_Jackson	dbp:percentage	0.02999999999999999889 ,
+		0.020000000000000000416 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Massachusetts,_1994>	dbp:percentage	0.02999999999999999889 .
+<http://dbpedia.org/resource/Pennsylvania_gubernatorial_election,_1857>	dbp:percentage	0 .
+<http://dbpedia.org/resource/South_Carolina_gubernatorial_election,_1874>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Missouri,_2014>	dbp:percentage	0.02999999999999999889 ,
+		0.010000000000000000208 ,
+		0.020000000000000000416 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Florida,_2006>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Florida_gubernatorial_election,_2002>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Michigan_House_of_Representatives_elections,_2004>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Virgin_Islands\u0027s_at-large_congressional_district>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1956>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1960>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Vermont,_1938>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Ohio_elections,_2010>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/South-East_France_(European_Parliament_constituency)>	dbp:percentage	0.020000000000000000416 ,
+		0.010000000000000000208 ,
+		0.02999999999999999889 ,
+		0 .
+<http://dbpedia.org/resource/10th_Utah_Senate_District>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Adana_(electoral_district)>	dbp:percentage	0.02999999999999999889 ,
+		0 ,
+		0.020000000000000000416 .
+<http://dbpedia.org/resource/Trabzon_(electoral_district)>	dbp:percentage	0.020000000000000000416 ,
+		0 .
+<http://dbpedia.org/resource/Yozgat_(electoral_district)>	dbp:percentage	0 ,
+		0.02999999999999999889 .
+<http://dbpedia.org/resource/Croydon_North_West_by-election,_1981>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Results_of_the_Western_Australian_state_election,_2008_(Legislative_Council)>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/San_Francisco_general_election,_November_2011>	dbp:percentage	0 .
+dbr:Electoral_history_of_Nancy_Pelosi	dbp:percentage	0 .
+<http://dbpedia.org/resource/Pennsylvania_gubernatorial_election,_1918>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1894>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1952>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_West_Virginia,_2014>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1950>	dbp:percentage	0 .
+<http://dbpedia.org/resource/R_K_Puram_(Delhi_Assembly_constituency)>	dbp:percentage	0.02999999999999999889 .
+<http://dbpedia.org/resource/Rajouri_Garden_(Delhi_Assembly_constituency)>	dbp:percentage	0.02999999999999999889 .
+<http://dbpedia.org/resource/Results_breakdown_of_the_Turkish_general_election,_June_2015>	dbp:percentage	0 ,
+		0.010000000000000000208 ,
+		0.020000000000000000416 .
+<http://dbpedia.org/resource/Results_of_the_Australian_federal_election,_2004_(Senate)>	dbp:percentage	0.010000000000000000208 ,
+		0 ,
+		0.020000000000000000416 .
+<http://dbpedia.org/resource/Results_of_the_Australian_federal_election,_2010_(Senate)>	dbp:percentage	0 ,
+		0.010000000000000000208 ,
+		0.020000000000000000416 .
+<http://dbpedia.org/resource/Results_of_the_Australian_federal_election,_2013_(Senate)>	dbp:percentage	0 ,
+		0.010000000000000000208 ,
+		0.020000000000000000416 .
+<http://dbpedia.org/resource/Lowe_by-election,_1982>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Kent_County_Council_election,_2013>	dbp:percentage	0 .
+<http://dbpedia.org/resource/California_gubernatorial_election,_2006>	dbp:percentage	0 .
+dbr:Doris_Matsui	dbp:percentage	0 .
+dbr:John_Garamendi	dbp:percentage	0 .
+<http://dbpedia.org/resource/Alabama_gubernatorial_election,_1978>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/Seelampur_(Delhi_Assembly_constituency)>	dbp:percentage	0.020000000000000000416 .
+dbr:Stacey_Jordan	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1998>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1902>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1944>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Michigan_gubernatorial_election,_2002>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Georgia,_1992>	dbp:percentage	0 .
+<http://dbpedia.org/resource/California_elections,_2006>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Florida\u0027s_23rd_congressional_district>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/Florida\u0027s_2nd_congressional_district>	dbp:percentage	0.010000000000000000208 ,
+		0 .
+<http://dbpedia.org/resource/Missouri_gubernatorial_election,_2008>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Sivas_(electoral_district)>	dbp:percentage	0.020000000000000000416 .
+dbr:Greg_Brower	dbp:percentage	0 .
+dbr:Gregory_Creswell	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Michigan,_1984>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1952>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_North_Carolina,_2008>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Glasgow_City_Council_election,_2012>	dbp:percentage	0 .
+<http://dbpedia.org/resource/I\u011Fd\u0131r_(electoral_district)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Model_Town_(Delhi_Assembly_constituency)>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Connecticut,_2014>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_South_Carolina,_1954>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Tunceli_(electoral_district)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_2002>	dbp:percentage	0.020000000000000000416 ,
+		0.010000000000000000208 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1946>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1960>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Great_Grimsby_by-election,_1977>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Indiana,_2006>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Vadodara_(Lok_Sabha_constituency)>	dbp:percentage	0.010000000000000000208 ,
+		0.020000000000000000416 .
+<http://dbpedia.org/resource/Anlo_(Ghana_parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Christchurch_by-election,_1993>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Tema_East_(Ghana_parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Alabama,_2012>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1986>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Wisconsin,_2006>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/Delaware\u0027s_at-large_congressional_district>	dbp:percentage	0.0050000000000000001041 ,
+		0.0040000000000000000833 ,
+		0.00059999999999999994744 ,
+		0.0010000000000000000208 ,
+		0.0070000000000000001457 ,
+		0.0060000000000000001249 ,
+		0.010000000000000000208 ,
+		0.0020000000000000000416 ,
+		0.0080000000000000001665 .
+<http://dbpedia.org/resource/Sedgefield_Borough_Council_election,_2007>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Gatton_by-election,_1803>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Patel_Nagar_(Delhi_Assembly_constituency)>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/Florida_gubernatorial_election,_1986>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Missouri_gubernatorial_election,_1952>	dbp:percentage	0.010000000000000000208 ,
+		0.020000000000000000416 .
+<http://dbpedia.org/resource/Pennsylvania_gubernatorial_election,_1998>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Finchley_(UK_Parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Tri_Nagar_(Delhi_Assembly_constituency)>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Connecticut,_2006>	dbp:percentage	0 ,
+		0.020000000000000000416 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Connecticut,_2012>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Maine,_2014>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1934>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Southend_East_by-election,_1980>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Vermont,_1974>	dbp:percentage	0 .
+<http://dbpedia.org/resource/California\u0027s_19th_State_Senate_district>	dbp:percentage	0 .
+<http://dbpedia.org/resource/California\u0027s_1st_State_Senate_district>	dbp:percentage	0 .
+<http://dbpedia.org/resource/California\u0027s_2nd_State_Senate_district>	dbp:percentage	0 .
+<http://dbpedia.org/resource/California\u0027s_31st_State_Assembly_district>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Kahramanmara\u015F_(electoral_district)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Kars_(electoral_district)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Kayseri_(electoral_district)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/K\u0131r\u015Fehir_(electoral_district)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Florida_gubernatorial_election,_1990>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Results_of_the_New_South_Wales_state_election,_1999_(Legislative_Council)>	dbp:percentage	0.010000000000000000208 ,
+		0.020000000000000000416 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_2000>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Vermont,_1920>	dbp:percentage	0 .
+dbr:Bobby_Schilling	dbp:percentage	0.010000000000000000208 ,
+		0.0070000000000000001457 .
+<http://dbpedia.org/resource/California\u0027s_32nd_congressional_district_special_election,_2009>	dbp:percentage	0.010000000000000000208 ,
+		0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Connecticut,_2008>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1940>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_South_Carolina,_1936>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Oregon_gubernatorial_election,_1938>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1882>	dbp:percentage	0 .
+<http://dbpedia.org/resource/California_State_Assembly_election,_2010>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Pennsylvania_gubernatorial_election,_1890>	dbp:percentage	0 ,
+		0.020000000000000000416 .
+<http://dbpedia.org/resource/South_Carolina_gubernatorial_election,_1958>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Florida,_2014>	dbp:percentage	0 ,
+		0.020000000000000000416 ,
+		0.010000000000000000208 .
+dbr:Linda_McMahon	dbp:percentage	0 .
+dbr:Jerry_McNerney	dbp:percentage	0 .
+dbr:Jim_Graham	dbp:percentage	0 .
+dbr:Stephen_Webber	dbp:percentage	0 .
+<http://dbpedia.org/resource/Bermondsey_(UK_Parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Jaipur_(Lok_Sabha_constituency)>	dbp:percentage	0.020000000000000000416 ,
+		0.010000000000000000208 ,
+		0 .
+<http://dbpedia.org/resource/Mathura_(Lok_Sabha_constituency)>	dbp:percentage	0.010000000000000000208 ,
+		0.020000000000000000416 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Arizona,_2008>	dbp:percentage	0 .
+dbr:Alan_Mollohan	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Colorado,_2010>	dbp:percentage	0.010000000000000000208 ,
+		0 .
+dbr:Chip_Rogers	dbp:percentage	0 .
+<http://dbpedia.org/resource/Ed_Martin_(Missouri_politician)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Philippine_gubernatorial_elections,_2010>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/California_State_Assembly_election,_1996>	dbp:percentage	0 ,
+		0.010000000000000000208 ,
+		0.020000000000000000416 .
+<http://dbpedia.org/resource/United_States_Senate_special_election_in_Pennsylvania,_1930>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Warrington_by-election,_1981>	dbp:percentage	0 .
+dbr:Nancy_Floreen	dbp:percentage	0 .
+<http://dbpedia.org/resource/Saint_Andrew_West_Rural_(Jamaica_Parliament_constituency)>	dbp:percentage	0 .
+dbr:Curt_Clawson	dbp:percentage	0.010000000000000000208 .
+dbr:Maricé_Morales	dbp:percentage	0 .
+dbr:Nancy_Navarro	dbp:percentage	0 .
+<http://dbpedia.org/resource/Robert_J._Healey>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Arizona_gubernatorial_election,_2002>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/California_elections,_2014>	dbp:percentage	0.010000000000000000208 ,
+		0 .
+<http://dbpedia.org/resource/Pittsburgh_mayoral_election,_1989>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Arizona_gubernatorial_election,_2006>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Missouri,_2006>	dbp:percentage	0 .
+dbr:Phil_Mendelson	dbp:percentage	0 .
+dbr:Ijaz-ul-Haq	dbp:percentage	0 .
+<http://dbpedia.org/resource/Basildon_Borough_Council_election,_2012>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Pennsylvania_gubernatorial_election,_1854>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Results_of_the_New_South_Wales_state_election,_1991_(Legislative_Council)>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_New_Mexico,_2006>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/Bassetlaw_District_Council_election,_2008>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Glasgow_Hillhead_(UK_Parliament_constituency)>	dbp:percentage	0 .
+dbr:First_constituency_for_French_residents_overseas	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Missouri,_1988>	dbp:percentage	0 .
+<http://dbpedia.org/resource/California\u0027s_37th_congressional_district_special_election,_2007>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_South_Carolina,_1962>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1978>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Hertfordshire_County_Council_election,_2009>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Pennsylvania_gubernatorial_election,_1922>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Florida,_2000>	dbp:percentage	0.020000000000000000416 ,
+		0 ,
+		0.010000000000000000208 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1878>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1880>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Kensington_by-election,_1988>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/Pennsylvania_gubernatorial_election,_1938>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Pennsylvania_gubernatorial_election,_1902>	dbp:percentage	0.010000000000000000208 ,
+		0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_North_Carolina,_2004>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/Kowloon_East_(constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Pennsylvania,_1938>	dbp:percentage	0 .
+dbr:Rebecca_Cohn	dbp:percentage	0 .
+dbr:Terri_Lynn_Land	dbp:percentage	0 .
+<http://dbpedia.org/resource/Sedgefield_(UK_Parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/California\u0027s_12th_congressional_district>	dbp:percentage	0 .
+<http://dbpedia.org/resource/California\u0027s_15th_congressional_district>	dbp:percentage	0 .
+<http://dbpedia.org/resource/California\u0027s_1st_congressional_district>	dbp:percentage	0 .
+<http://dbpedia.org/resource/California\u0027s_21st_congressional_district>	dbp:percentage	0 .
+<http://dbpedia.org/resource/California\u0027s_23rd_congressional_district>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/California\u0027s_2nd_congressional_district>	dbp:percentage	0.010000000000000000208 ,
+		0 .
+<http://dbpedia.org/resource/California\u0027s_32nd_congressional_district>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/California\u0027s_34th_congressional_district>	dbp:percentage	0.020000000000000000416 ,
+		0 .
+<http://dbpedia.org/resource/California\u0027s_35th_congressional_district>	dbp:percentage	0 .
+<http://dbpedia.org/resource/California\u0027s_52nd_congressional_district>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Colorado\u0027s_3rd_congressional_district>	dbp:percentage	0.010000000000000000208 ,
+		0 .
+<http://dbpedia.org/resource/Colorado\u0027s_5th_congressional_district>	dbp:percentage	0.020000000000000000416 ,
+		0.010000000000000000208 ,
+		0 .
+<http://dbpedia.org/resource/Colorado\u0027s_6th_congressional_district>	dbp:percentage	0.010000000000000000208 ,
+		0 .
+<http://dbpedia.org/resource/Indiana\u0027s_1st_congressional_district>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Kentucky\u0027s_6th_congressional_district>	dbp:percentage	0.010000000000000000208 .
+dbr:Kenny_Hulshof	dbp:percentage	0 .
+<http://dbpedia.org/resource/California\u0027s_41st_congressional_district>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Florida\u0027s_10th_congressional_district>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Florida\u0027s_11th_congressional_district>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Florida\u0027s_9th_congressional_district>	dbp:percentage	0.010000000000000000208 ,
+		0 .
+<http://dbpedia.org/resource/Maine\u0027s_2nd_congressional_district>	dbp:percentage	0.020000000000000000416 ,
+		0.010000000000000000208 .
+<http://dbpedia.org/resource/Karaga_(Ghana_parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Florida,_2000>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Joseph_P._Teasdale>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1984>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Ayawaso_East_(Ghana_parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/\u0130stanbul_(1st_electoral_district)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Colchester_(UK_Parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Texas_gubernatorial_election,_2006>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/North_Devon_(UK_Parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Honolulu_mayoral_election,_2012>	dbp:percentage	0 .
+<http://dbpedia.org/resource/South_Carolina_gubernatorial_election,_1954>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Pennsylvania,_1926>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Florida,_2010>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Arizona,_2012>	dbp:percentage	0.020000000000000000416 ,
+		0.010000000000000000208 .
+<http://dbpedia.org/resource/Glasgow_Partick_(UK_Parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Overseas_Territories_of_France_(European_Parliament_constituency)>	dbp:percentage	0 ,
+		0.010000000000000000208 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Indiana,_2008>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Ho_Central_(Ghana_parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Pennsylvania_gubernatorial_election,_1820>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/Pennsylvania_gubernatorial_election,_1910>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Pennsylvania,_1968>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1958>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Connecticut_gubernatorial_election,_2002>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Florida,_1994>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1932>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Gandhinagar_(Lok_Sabha_constituency)>	dbp:percentage	0.010000000000000000208 ,
+		0.020000000000000000416 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Maryland,_1994>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Results_of_the_New_South_Wales_state_election,_1984_(Legislative_Council)>	dbp:percentage	0.020000000000000000416 ,
+		0.010000000000000000208 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1906>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Vermont,_1946>	dbp:percentage	0 .
+<http://dbpedia.org/resource/South_Carolina_gubernatorial_election,_1916>	dbp:percentage	0 .
+dbr:Alan_Autry	dbp:percentage	0.010000000000000000208 .
+dbr:Barbara_Lee	dbp:percentage	0 .
+dbr:Carl_Levin	dbp:percentage	0 .
+dbr:Jennifer_Granholm	dbp:percentage	0 .
+dbr:Kendrick_Meek	dbp:percentage	0 .
+dbr:Mike_Honda	dbp:percentage	0 .
+<http://dbpedia.org/resource/Mike_Thompson_(California_politician)>	dbp:percentage	0.020000000000000000416 ,
+		0.010000000000000000208 .
+dbr:Rick_Perry	dbp:percentage	0 .
+dbr:Sam_Farr	dbp:percentage	0 .
+dbr:Zoe_Lofgren	dbp:percentage	0 .
+<http://dbpedia.org/resource/Pennsylvania_gubernatorial_election,_1851>	dbp:percentage	0.020000000000000000416 ,
+		0 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1970>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Peoria,_Illinois_mayoral_election,_2005>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Vermont,_1916>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Idaho_gubernatorial_election,_2010>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Michigan,_2010>	dbp:percentage	0 ,
+		0.010000000000000000208 .
+dbr:Constituency_NA-50	dbp:percentage	0 .
+dbr:Constituency_NA-51	dbp:percentage	0 .
+dbr:Constituency_NA-58	dbp:percentage	0 .
+dbr:Constituency_NA-60	dbp:percentage	0 .
+dbr:Constituency_NA-74	dbp:percentage	0 .
+<http://dbpedia.org/resource/Georgia_gubernatorial_election,_2014>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/Idaho_gubernatorial_election,_2014>	dbp:percentage	0.020000000000000000416 .
+dbr:William_Enyart	dbp:percentage	0 .
+<http://dbpedia.org/resource/Hatay_(electoral_district)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Results_of_the_Victorian_state_election,_2014_(Legislative_Council)>	dbp:percentage	0.010000000000000000208 ,
+		0.020000000000000000416 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Massachusetts,_1982>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/United_States_Senate_special_election_in_Vermont,_1940>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1966>	dbp:percentage	0 .
+<http://dbpedia.org/resource/A\u011Fr\u0131_(electoral_district)>	dbp:percentage	0 ,
+		0.010000000000000000208 ,
+		0.020000000000000000416 .
+<http://dbpedia.org/resource/Badli_(Delhi_Assembly_constituency)>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/Bangalore_Central_(Lok_Sabha_constituency)>	dbp:percentage	-0.11999999999999999556 .
+<http://dbpedia.org/resource/Bangalore_North_(Lok_Sabha_constituency)>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/Ayd\u0131n_(electoral_district)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Bing\u00F6l_(electoral_district)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Massachusetts,_1984>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/Artvin_(electoral_district)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Bayburt_(electoral_district)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Bitlis_(electoral_district)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Denizli_(electoral_district)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Edirne_(electoral_district)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Elaz\u0131\u011F_(electoral_district)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Erzurum_(electoral_district)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Eski\u015Fehir_(electoral_district)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/G\u00FCm\u00FC\u015Fhane_(electoral_district)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Hakkari_(electoral_district)>	dbp:percentage	0.020000000000000000416 ,
+		0 .
+<http://dbpedia.org/resource/\u00C7orum_(electoral_district)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/\u0130stanbul_(2nd_electoral_district)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/\u0130stanbul_(3rd_electoral_district)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Texas,_1990>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1942>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Missouri,_2006>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Massachusetts,_1988>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_California,_2006>	dbp:percentage	0 ,
+		0.020000000000000000416 ,
+		0.010000000000000000208 .
+<http://dbpedia.org/resource/California_gubernatorial_election,_2010>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Glasgow_Hillhead_by-election,_1982>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Sedgefield_by-election,_2007>	dbp:percentage	0 .
+dbr:Margaret_Jane_Joachim	dbp:percentage	0 .
+<http://dbpedia.org/resource/Cook_Islands_general_election,_2010>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Falkland_Islands_general_election,_2013>	dbp:percentage	0.0020000000000000000416 ,
+		0.0030000000000000000625 .
+<http://dbpedia.org/resource/Val-de-Marne\u0027s_5th_constituency>	dbp:percentage	0 ,
+		0.010000000000000000208 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1982>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Michigan_gubernatorial_election,_1998>	dbp:percentage	0 ,
+		0.010000000000000000208 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Georgia,_1998>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Ohio,_1988>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Van_(electoral_district)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/\u00CEle-de-France_(European_Parliament_constituency)>	dbp:percentage	0 ,
+		0.020000000000000000416 ,
+		0.010000000000000000208 .
+dbr:Adrian_Fenty	dbp:percentage	0 .
+<http://dbpedia.org/resource/Chelsea_and_Fulham_(UK_Parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Christchurch_(UK_Parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Darlington_(UK_Parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Wa_Central_(Ghana_parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Bermondsey_by-election,_1983>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Darlington_by-election,_1983>	dbp:percentage	0 .
+dbr:Randy_Hultgren	dbp:percentage	0 .
+dbr:Jeff_Lamberti	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Frazier_Glenn_Miller,_Jr.>	dbp:percentage	0.010000000000000000208 ,
+		0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_California,_2012>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Mandi_(Lok_Sabha_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Missouri,_2010>	dbp:percentage	0.020000000000000000416 ,
+		0 .
+<http://dbpedia.org/resource/Wellington_Central_by-election,_1992>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Vermont,_1968>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Missouri_gubernatorial_election,_1948>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1976>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_2014>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Connecticut,_2006>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Missouri_gubernatorial_election,_1936>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/San_Francisco_mayoral_election,_1999>	dbp:percentage	0 .
+<http://dbpedia.org/resource/California\u0027s_12th_congressional_district_special_election,_2008>	dbp:percentage	0 .
+<http://dbpedia.org/resource/California_State_Senate_election,_2010>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Georgia,_2008>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Vermont,_1922>	dbp:percentage	0 .
+dbr:Dish_and_Dishonesty	dbp:percentage	0 .
+<http://dbpedia.org/resource/South_Carolina_gubernatorial_election,_1998>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Florida,_2006>	dbp:percentage	0 ,
+		0.010000000000000000208 .
+dbr:Anita_Bonds	dbp:percentage	0 .
+dbr:Illinois_gubernatorial_elections	dbp:percentage	0 ,
+		0.010000000000000000208 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Hawaii,_2012>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Philadelphia_mayoral_election,_2007>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Pennsylvania_gubernatorial_election,_1934>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Texas,_2014>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Illinois,_2008>	dbp:percentage	0.010000000000000000208 ,
+		0 ,
+		0.020000000000000000416 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Michigan,_2008>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/South-West_France_(European_Parliament_constituency)>	dbp:percentage	0 ,
+		0.010000000000000000208 ,
+		0.020000000000000000416 .
+dbr:Bulawayo_South	dbp:percentage	0 .
+<http://dbpedia.org/resource/New_Orleans_city_council_election,_2006>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Illinois,_2010>	dbp:percentage	0.020000000000000000416 ,
+		0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Connecticut,_2010>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Nebraska,_2000>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1872>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1940>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Ohio_gubernatorial_election,_1990>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Florida,_2012>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Illinois,_1998>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_New_York,_1980>	dbp:percentage	0.0010000000000000000208 .
+<http://dbpedia.org/resource/Guam_Republican_caucuses,_2012>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Pennsylvania_gubernatorial_election,_1906>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Michigan,_1978>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Ajumako-Enyan-Essiam_(Ghana_parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1888>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1904>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1906>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1920>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1936>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1968>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1972>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Vermont,_1970>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1884>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Bas-Rhin\u0027s_8th_constituency>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Florida,_2008>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Georgia,_2010>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Illinois,_2006>	dbp:percentage	0 ,
+		0.010000000000000000208 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_New_York,_2012>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Tennessee,_2008>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Texas,_2002>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Shakur_Basti_(Delhi_Assembly_constituency)>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1950>	dbp:percentage	0 .
+<http://dbpedia.org/resource/\u0130zmir_(2nd_electoral_district)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Missouri_gubernatorial_election,_1996>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Pennsylvania_gubernatorial_election,_1872>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Results_of_the_New_South_Wales_state_election,_1995_(Legislative_Council)>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Ankara_(1st_electoral_district)>	dbp:percentage	0.020000000000000000416 ,
+		0 .
+<http://dbpedia.org/resource/Wazirpur_(Delhi_Assembly_constituency)>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/California_Secretary_of_State_election,_2010>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Parramatta_by-election,_1973>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_presidential_election_in_North_Carolina,_1996>	dbp:percentage	0 ,
+		0.010000000000000000208 .
+<http://dbpedia.org/resource/California_State_Senate_election,_2008>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Okaikwei_North_(Ghana_parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1974>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1870>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1912>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Pennsylvania_gubernatorial_election,_1942>	dbp:percentage	0 .
+dbr:Electoral_history_of_Margaret_Thatcher	dbp:percentage	0 .
+dbr:Electoral_history_of_Tony_Blair	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Ohio,_2012>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1916>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1992>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Florida,_1976>	dbp:percentage	0 .
+<http://dbpedia.org/resource/California_State_Assembly_election,_2008>	dbp:percentage	0.010000000000000000208 ,
+		0.020000000000000000416 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Maine,_2010>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Ablekuma_Central_(Ghana_parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Florida\u0027s_19th_congressional_district_special_election,_2014>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Florida_gubernatorial_election,_1994>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Shai-Osudoku_(Ghana_parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Southend_East_(UK_Parliament_constituency)>	dbp:percentage	0 .
+dbr:Third_constituency_for_French_residents_overseas	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1874>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Warrington_(UK_Parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/California_State_Assembly_election,_1994>	dbp:percentage	0 .
+<http://dbpedia.org/resource/California_State_Assembly_election,_1998>	dbp:percentage	0 .
+<http://dbpedia.org/resource/California_State_Senate_election,_1992>	dbp:percentage	0 ,
+		0.020000000000000000416 .
+<http://dbpedia.org/resource/California_State_Senate_election,_1996>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/Pennsylvania_gubernatorial_election,_1886>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Indiana,_2014>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1964>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Vermont,_1958>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Lawra-Nandom_(Ghana_parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_South_Carolina,_1984>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Vend\u00E9e\u0027s_5th_constituency>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Rivers_State_gubernatorial_election,_2015>	dbp:percentage	0.020000000000000000416 ,
+		0.028000000000000000583 ,
+		0.022999999999999999611 ,
+		0.010000000000000000208 ,
+		0.016000000000000000333 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1918>	dbp:percentage	0 .
+dbr:Electoral_results_for_the_Division_of_Lowe	dbp:percentage	0 .
+dbr:Electoral_results_for_the_Division_of_Parramatta	dbp:percentage	0 .
+<http://dbpedia.org/resource/Colorado_Springs_mayoral_election,_2015>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Shalimar_Bagh_(Delhi_Assembly_constituency)>	dbp:percentage	0.020000000000000000416 ,
+		0.010000000000000000208 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1982>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1924>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1930>	dbp:percentage	0 .
+<http://dbpedia.org/resource/California_elections,_November_2010>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Results_of_the_New_South_Wales_state_election,_1978_(Legislative_Council)>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/California_State_Assembly_election,_2014>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1988>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1980>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1996>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Vermont,_1914>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Vermont,_1926>	dbp:percentage	0 .
+<http://dbpedia.org/resource/West_France_(European_Parliament_constituency)>	dbp:percentage	0.010000000000000000208 ,
+		0.020000000000000000416 ,
+		0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Arkansas,_2004>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_New_Hampshire,_2004>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Oregon_gubernatorial_election,_1930>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Pennsylvania_gubernatorial_election,_1894>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Philadelphia_mayoral_election,_2015>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Results_of_the_Western_Australian_state_election,_2005_(Legislative_Council)>	dbp:percentage	0.010000000000000000208 ,
+		0.020000000000000000416 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_election_in_Puerto_Rico,_1932>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Vermont,_1952>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1898>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1948>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1962>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1968>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_South_Carolina,_1942>	dbp:percentage	0 .
+dbr:Tenth_constituency_for_French_residents_overseas	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Pennsylvania_gubernatorial_election,_1847>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Pennsylvania_gubernatorial_election,_1863>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Pennsylvania_gubernatorial_election,_1882>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Ille-et-Vilaine\u0027s_5th_constituency>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/Burnley_Borough_Council_election,_2015>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1896>	dbp:percentage	0 .
+dbr:United_States_Senate_elections_in_Indiana	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1892>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1938>	dbp:percentage	0 .
+dbr:Electoral_history_of_Bob_McDonnell	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Illinois_elections,_2014>	dbp:percentage	0.020000000000000000416 .
+dbr:Electoral_history_of_Gary_Peters	dbp:percentage	0 .
+<http://dbpedia.org/resource/Maine_gubernatorial_election,_2014>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Tennessee_gubernatorial_election,_1998>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Thanet_District_Council_election,_2015>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Tennessee,_2014>	dbp:percentage	0.010000000000000000208 ,
+		0 .
+<http://dbpedia.org/resource/Halifax_Regional_Municipality_municipal_election,_2008>	dbp:percentage	0 .
+<http://dbpedia.org/resource/San_Francisco_Board_of_Supervisors_election,_2008>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/California_elections,_2009>	dbp:percentage	0 ,
+		0.010000000000000000208 .
+<http://dbpedia.org/resource/Pennsylvania_gubernatorial_election,_1823>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1936>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1910>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1956>	dbp:percentage	0 .
+<http://dbpedia.org/resource/New_Edubease_(Ghana_parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Pennsylvania_gubernatorial_election,_1898>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Pennsylvania_gubernatorial_election,_1930>	dbp:percentage	0 .
+<http://dbpedia.org/resource/South_Carolina\u0027s_2nd_congressional_district_special_election,_2001>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_South_Carolina,_1938>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_South_Carolina,_1944>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Rohtas_Nagar_(Delhi_Assembly_constituency)>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1902>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1908>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Missouri,_1940>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/United_States_Senate_special_election_in_Vermont,_1934>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1962>	dbp:percentage	0 .
+dbr:Electoral_results_for_the_district_of_Alma	dbp:percentage	0 .
+<http://dbpedia.org/resource/Janakpuri_(Delhi_Assembly_constituency)>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/Pennsylvania_gubernatorial_election,_1841>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Iowa,_1980>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Ohio,_1974>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Ohio,_1986>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Orange_state_by-election,_1996>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Peoria_County_Board_elections,_2004>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_California,_1982>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Florida,_1980>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Kentucky,_2014>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Texas_gubernatorial_election,_1986>	dbp:percentage	0.020000000000000000416 ,
+		0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Pennsylvania,_1932>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/California_State_Assembly_election,_2012>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Oregon_gubernatorial_election,_1942>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/United_States_presidential_election_in_Montana,_2012>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/Hawaii_Senate_elections,_2012>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Hawaii,_2014>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Illinois,_2014>	dbp:percentage	0.010000000000000000208 ,
+		0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Wisconsin,_2012>	dbp:percentage	0 ,
+		0.010000000000000000208 .
+<http://dbpedia.org/resource/United_States_Senate_special_election_in_Vermont,_1931>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Vermont_gubernatorial_election,_1926>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Bassetlaw_District_Council_election,_2003>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Medway_Council_election,_2015>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1872>	dbp:percentage	0 .
+dbr:Electoral_history_of_Marion_Barry	dbp:percentage	0 .
+<http://dbpedia.org/resource/Ghonda_(Delhi_Assembly_constituency)>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Wa_West_(Ghana_parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Pas-de-Calais\u0027_11th_constituency>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Cantal\u0027s_2nd_constituency>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Ceredigion_County_Council_election,_2012>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Nord\u0027s_21st_constituency>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/Pennsylvania_gubernatorial_election,_1790>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Pennsylvania_gubernatorial_election,_1817>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Pennsylvania,_1920>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Binduri_(Ghana_parliament_constituency)>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Pennsylvania_gubernatorial_election,_1844>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_Senate_election_in_Pennsylvania,_1974>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/United_States_Senate_special_election_in_Pennsylvania,_1922>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Illinois_gubernatorial_election,_1982>	dbp:percentage	0 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Michigan,_2014>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Missouri_gubernatorial_election,_1932>	dbp:percentage	0.020000000000000000416 .
+<http://dbpedia.org/resource/Missouri_gubernatorial_election,_1940>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Missouri_gubernatorial_election,_1976>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Missouri_gubernatorial_election,_1984>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Vishwas_Nagar_(Delhi_Assembly_constituency)>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Sadar_Bazar_(Delhi_Assembly_constituency)>	dbp:percentage	0.020000000000000000416 ,
+		0.010000000000000000208 .
+<http://dbpedia.org/resource/Results_of_the_New_South_Wales_state_election,_1988_(Legislative_Council)>	dbp:percentage	0.020000000000000000416 ,
+		0.010000000000000000208 .
+<http://dbpedia.org/resource/Hawaii\u0027s_2nd_congressional_district_special_elections,_2002-2003>	dbp:percentage	0.010000000000000000208 ,
+		0.020000000000000000416 .
+<http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_South_Carolina,_1876>	dbp:percentage	0 .
+<http://dbpedia.org/resource/Delhi_Cantt_(Delhi_Assembly_constituency)>	dbp:percentage	0.020000000000000000416 .
+dbr:List_of_Falkland_Islands_by-elections	dbp:percentage	0.010000000000000000208 ,
+		0.020000000000000000416 .
+<http://dbpedia.org/resource/Results_of_the_New_South_Wales_state_election,_2007_(Legislative_Council)>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Results_of_the_South_Australian_state_election,_2010_(Legislative_Council)>	dbp:percentage	0.010000000000000000208 .
+<http://dbpedia.org/resource/Results_of_the_South_Australian_state_election,_2014_(Legislative_Council)>	dbp:percentage	0.010000000000000000208 .

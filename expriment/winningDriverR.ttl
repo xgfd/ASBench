@@ -1,0 +1,20 @@
+@prefix dbp:	<http://dbpedia.org/property/> .
+@prefix dbr:	<http://dbpedia.org/resource/> .
+dbr:Superleague_Formula_round_Germany	dbp:winningDriverR	dbr:Álvaro_Parente ,
+		dbr:Yelmer_Buurman .
+dbr:Superleague_Formula_round_UK	dbp:winningDriverR	dbr:Narain_Karthikeyan ,
+		<http://dbpedia.org/resource/John_Martin_(Australian_racing_driver)> .
+dbr:Superleague_Formula_round_China	dbp:winningDriverR	dbr:Álvaro_Parente ,
+		dbr:Craig_Dolby .
+dbr:Superleague_Formula_round_Belgium	dbp:winningDriverR	dbr:Julien_Jousse ,
+		dbr:Chris_van_der_Drift .
+dbr:Superleague_Formula_round_France	dbp:winningDriverR	dbr:Max_Wissel ,
+		dbr:Yelmer_Buurman .
+dbr:Superleague_Formula_round_Italy	dbp:winningDriverR	dbr:Marcos_Martínez ,
+		dbr:Davide_Rigon .
+dbr:Superleague_Formula_round_Netherlands	dbp:winningDriverR	dbr:Duncan_Tappy ,
+		dbr:Yelmer_Buurman .
+dbr:Superleague_Formula_round_Portugal	dbp:winningDriverR	dbr:Neel_Jani ,
+		<http://dbpedia.org/resource/John_Martin_(Australian_racing_driver)> .
+dbr:Superleague_Formula_round_Spain	dbp:winningDriverR	dbr:Álvaro_Parente ,
+		<http://dbpedia.org/resource/John_Martin_(Australian_racing_driver)> .

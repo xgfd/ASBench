@@ -1,0 +1,78 @@
+@prefix dbp:	<http://dbpedia.org/property/> .
+@prefix dbr:	<http://dbpedia.org/resource/> .
+<http://dbpedia.org/resource/2015\u201316_Ascenso_MX_season>	dbp:domesticcup	dbr:Apertura_2015_Copa_MX .
+<http://dbpedia.org/resource/2008_Elite_League_speedway_season>	dbp:domesticcup	dbr:Craven_Shield ,
+		dbr:Elite_League_Knockout_Cup ,
+		<http://dbpedia.org/resource/Elite_League_Riders\u0027_Championship> ,
+		dbr:Elite_League_Pairs_Championship .
+<http://dbpedia.org/resource/1997_Elite_League_speedway_season>	dbp:domesticcup	<http://dbpedia.org/resource/Elite_League_Riders\u0027_Championship> ,
+		dbr:Elite_League_Knockout_Cup ,
+		dbr:Craven_Shield .
+<http://dbpedia.org/resource/2014_Premier_League_speedway_season>	dbp:domesticcup	"Premier League Pairs"@en ,
+		"Premier League KOC"@en ,
+		"Premier League Cup"@en .
+<http://dbpedia.org/resource/2000_Elite_League_speedway_season>	dbp:domesticcup	dbr:Elite_League_Knockout_Cup ,
+		dbr:Craven_Shield ,
+		<http://dbpedia.org/resource/Elite_League_Riders\u0027_Championship> .
+<http://dbpedia.org/resource/2009_Elite_League_speedway_season>	dbp:domesticcup	dbr:Elite_League_Knockout_Cup ,
+		dbr:Elite_League_Pairs_Championship ,
+		<http://dbpedia.org/resource/Elite_League_Riders\u0027_Championship> ,
+		dbr:Elite_Shield .
+<http://dbpedia.org/resource/2011_Elite_League_speedway_season>	dbp:domesticcup	dbr:Elite_League_Knockout_Cup ,
+		<http://dbpedia.org/resource/Elite_League_Riders\u0027_Championship> ,
+		dbr:Elite_League_Pairs_Championship .
+<http://dbpedia.org/resource/2015_Elite_League_speedway_season>	dbp:domesticcup	<http://dbpedia.org/resource/Elite_League_Riders\u0027_Championship> .
+<http://dbpedia.org/resource/2013_Elite_League_speedway_season>	dbp:domesticcup	<http://dbpedia.org/resource/Elite_League_Riders\u0027_Championship> .
+<http://dbpedia.org/resource/1998_Elite_League_speedway_season>	dbp:domesticcup	dbr:Craven_Shield ,
+		dbr:Elite_League_Knockout_Cup ,
+		<http://dbpedia.org/resource/Elite_League_Riders\u0027_Championship> .
+<http://dbpedia.org/resource/1999_Elite_League_speedway_season>	dbp:domesticcup	dbr:Elite_League_Knockout_Cup ,
+		<http://dbpedia.org/resource/Elite_League_Riders\u0027_Championship> ,
+		dbr:Craven_Shield .
+<http://dbpedia.org/resource/2001_Elite_League_speedway_season>	dbp:domesticcup	dbr:Craven_Shield ,
+		<http://dbpedia.org/resource/Elite_League_Riders\u0027_Championship> ,
+		dbr:Elite_League_Knockout_Cup .
+<http://dbpedia.org/resource/2002_Elite_League_speedway_season>	dbp:domesticcup	dbr:Elite_League_Knockout_Cup ,
+		dbr:Craven_Shield ,
+		<http://dbpedia.org/resource/Elite_League_Riders\u0027_Championship> .
+<http://dbpedia.org/resource/2003_Elite_League_speedway_season>	dbp:domesticcup	<http://dbpedia.org/resource/Elite_League_Riders\u0027_Championship> ,
+		dbr:Elite_League_Knockout_Cup .
+<http://dbpedia.org/resource/2004_Elite_League_speedway_season>	dbp:domesticcup	dbr:Craven_Shield ,
+		dbr:Elite_League_Knockout_Cup ,
+		<http://dbpedia.org/resource/Elite_League_Riders\u0027_Championship> ,
+		dbr:Elite_League_Pairs_Championship .
+<http://dbpedia.org/resource/2005_Elite_League_speedway_season>	dbp:domesticcup	<http://dbpedia.org/resource/Elite_League_Riders\u0027_Championship> ,
+		dbr:Craven_Shield ,
+		dbr:Elite_League_Pairs_Championship ,
+		dbr:Elite_League_Knockout_Cup .
+<http://dbpedia.org/resource/2006_Elite_League_speedway_season>	dbp:domesticcup	dbr:Craven_Shield ,
+		dbr:Elite_League_Knockout_Cup ,
+		<http://dbpedia.org/resource/Elite_League_Riders\u0027_Championship> ,
+		dbr:Elite_League_Pairs_Championship .
+<http://dbpedia.org/resource/2007_Elite_League_speedway_season>	dbp:domesticcup	dbr:Elite_League_Knockout_Cup ,
+		dbr:Elite_League_Pairs_Championship ,
+		dbr:Craven_Shield ,
+		<http://dbpedia.org/resource/Elite_League_Riders\u0027_Championship> .
+<http://dbpedia.org/resource/1989_British_League_season>	dbp:domesticcup	dbr:Elite_League_Knockout_Cup ,
+		<http://dbpedia.org/resource/British_League_Riders\u0027_Championship> .
+<http://dbpedia.org/resource/2013\u201314_Ascenso_MX_season>	dbp:domesticcup	"Clausura: Alebrijes de Oaxaca"@en .
+<http://dbpedia.org/resource/2014\u201315_Ascenso_MX_season>	dbp:domesticcup	"Clausura:"@en .
+<http://dbpedia.org/resource/2015_Premier_League_speedway_season>	dbp:domesticcup	"Premier League Fours"@en ,
+		"Premier League Cup"@en ,
+		"Premier League Riders' Championship"@en ,
+		"Premier League Pairs"@en ,
+		"Premier League KOC"@en .
+<http://dbpedia.org/resource/2013_Premier_League_speedway_season>	dbp:domesticcup	"Premier League Pairs"@en ,
+		"Premier League Fours"@en ,
+		"Premier League Riders Championship"@en .
+<http://dbpedia.org/resource/1990_National_League_season>	dbp:domesticcup	dbr:British_League_Division_Two_Riders_Championship ,
+		dbr:British_League_Division_Two_Four-Team_Tournament ,
+		dbr:National_League_Knockout_Cup ,
+		dbr:British_League_Division_Two_Pairs_Championship .
+<http://dbpedia.org/resource/2012_Elite_League_speedway_season>	dbp:domesticcup	dbr:Elite_League_Knockout_Cup ,
+		<http://dbpedia.org/resource/Elite_League_Riders\u0027_Championship> .
+<http://dbpedia.org/resource/2014_Elite_League_speedway_season>	dbp:domesticcup	<http://dbpedia.org/resource/Elite_League_Riders\u0027_Championship> .
+<http://dbpedia.org/resource/2010_Elite_League_speedway_season>	dbp:domesticcup	<http://dbpedia.org/resource/Elite_League_Riders\u0027_Championship> ,
+		dbr:Elite_League_Knockout_Cup ,
+		dbr:Elite_Shield ,
+		dbr:Elite_League_Pairs_Championship .
