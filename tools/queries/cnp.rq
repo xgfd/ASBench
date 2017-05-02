@@ -1,1 +1,0 @@
-CONSTRUCT {dbo:$1 ?p ?range} WHERE {?p rdfs:range ?range. FILTER regex(?range, \"^http://www.w3.org/2001/XMLSchema%23\", \"i\") {SELECT DISTINCT ?p WHERE { [] a dbo:$1; ?p []. } } }

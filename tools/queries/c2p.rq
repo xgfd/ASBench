@@ -1,2 +1,0 @@
-CONSTRUCT {dbo:$1 ?p dbo:$2}
-WHERE { [] a dbo:$1; ?p [ a dbo:$2]. }

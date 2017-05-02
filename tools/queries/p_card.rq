@@ -1,5 +1,0 @@
-SELECT (SAMPLE(?pred) AS ?p) ?s (COUNT(*) AS ?card)
-WHERE {
-    VALUES ?pred {$1}
-    ?s $1 ?o
-} GROUP BY ?s

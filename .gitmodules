@@ -1,0 +1,3 @@
+[submodule "tools/rdf-subgraph"]
+	path = tools/rdf-subgraph
+	url = https://github.com/xgfd/rdf-subgraph.git
